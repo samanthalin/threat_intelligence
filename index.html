@@ -11,7 +11,7 @@
 	<script src="script/jquery-2.1.0.min.js"></script>
 	<script src="script/style.js"></script>
 </head>
-<body>
+<body id="vm">
 	<div class="frame">
 		<header>
 			<nav>
@@ -22,9 +22,27 @@
 					<i class="ion-ios-menu"></i>
 				</a>
 			</nav>
-			<div class="main_menu"></div>
+			<div class="main_menu">
+				<a href="" class="vm">
+					<img src="img/virus.png" alt="">
+					Virus / Malware
+				</a>
+				<a href="" class="id">
+					<img src="img/detect.png" alt="">
+					Intrusion Detection
+				</a>
+			</div>
 		</header>
-
+		<div class="content">
+			<ul class="sub_menu">
+				<li class="encyclopedia">
+					<a href="#encyclopedia">Encyclopedia</a>
+				</li>
+				<li class="release-note">
+					<a href="#release-note">Release Note</a>
+				</li>
+			</ul>
+		</div><!-- content -->
 	</div><!-- frame -->
 </body>
 </html>

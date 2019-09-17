@@ -12,37 +12,62 @@
   box-sizing: border-box;
 }
 
-html body {
+html body#vm {
   font-size: 14px;
 }
-html body .frame header nav {
-  height: 45px;
+html body#vm .frame header nav {
+  height: 55px;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-html body .frame header nav .logo {
+html body#vm .frame header nav .logo {
   display: block;
 }
-html body .frame header nav .logo img {
-  height: 45px;
+html body#vm .frame header nav .logo img {
+  height: 55px;
 }
-html body .frame header nav .hamburger {
-  font-size: 32px;
+html body#vm .frame header nav .hamburger {
+  font-size: 28px;
   color: black;
   opacity: 0.5;
   transition: opacity 0.22s linear;
-  padding: 11px 35px;
+  padding: 10px 20px;
 }
-html body .frame header nav .hamburger:visited, html body .frame header nav .hamburger:active {
+html body#vm .frame header nav .hamburger:visited, html body#vm .frame header nav .hamburger:active {
   color: black;
 }
-html body .frame header nav .hamburger:hover {
+html body#vm .frame header nav .hamburger:hover {
   opacity: 1;
 }
-html body .frame header .main_menu {
-  height: 2000px;
+html body#vm .frame header .main_menu {
+  background-color: #575755;
+  padding: 10px;
+  display: flex;
+  padding-bottom: 100px;
+}
+html body#vm .frame header .main_menu a {
+  display: block;
+  color: white;
+  font-family: "GalanoSemiBold";
+  font-size: 16px;
+  text-align: center;
+  background-color: #878787;
+  border-radius: 7px;
+  flex: 1;
+  margin: 5px;
+  padding: 10px 0;
+}
+html body#vm .frame header .main_menu a img {
+  height: 50px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+html body#vm .frame header .main_menu a.id {
+  background: none;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
