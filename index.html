@@ -8,8 +8,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="fontawesome/all.css">
 	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-	<script src="script/jquery-2.1.0.min.js"></script>
-	<script src="script/style.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
+
 </head>
 <body id="vm">
 	<div class="frame">
@@ -23,7 +24,7 @@
 				</a>
 			</nav>
 			<div class="main_menu">
-				<a href="" class="vm">
+				<a href="" class="vm active">
 					<img src="img/virus.png" alt="">
 					Virus / Malware
 				</a>
@@ -35,14 +36,67 @@
 		</header>
 		<div class="content">
 			<ul class="sub_menu">
-				<li class="encyclopedia">
-					<a href="#encyclopedia">Encyclopedia</a>
+				<li class="encyclopedia-btn">
+					<a href="#encyclopedia">
+						<img src="img/ency_color.png" alt="">
+						<span>Encyclopedia</span>
+					</a>
 				</li>
-				<li class="release-note">
-					<a href="#release-note">Release Note</a>
+				<li class="release-note-btn">
+					<a href="#release-note">
+					<img src="img/rele_color.png" alt="">
+					<span>Release Note</span>
+				</a>
 				</li>
-			</ul>
+			</ul><!-- sub_menu -->
+			<div class="panel">
+
+<!-- ----------------------------------Encyclopedia--------------------------------------- -->
+				<div id="encyclopedia" class="enyclopedia">
+					<h1 class="title">Encyclopedia</h1>
+					<div class="search-bar">
+						<input type="text" id="ency_search" placeholder="search by virus/malware name or file hash to search">
+						<button id="ency_search_btn">
+							<i class="fas fa-search"></i>
+							search
+						</button>
+					</div>
+					<div class="ency-container">
+						<div class="intro">
+							<p>Welcome to the Zyxel Encyclopedia. </p>
+							<p>Want to know who creates threat and why?</p>
+							<p>Why are unwanted messages in email and social networks dangerous?</p>
+							<p>What are “vulnerabilities” and how do cybercriminals exploit them?</p>
+							<p>The answers to these and other questions are right here.</p>
+							<p>You can search by virus/malware name or file hash of virus/malware.</p>
+							<div class="question">
+								<div class="title">What is virus/malware name?</div>
+								<p>malware is any software intentionally designed to cause damage to a computer, server or network. For example, Wannacry</p>
+							</div>
+							<div class="question">
+								<div class="title">How to search with file hash? </div>
+								<p>To search, just enter its hash. Currently the allowed hashes are MD5. For example ‘fe31f2fac5ca0919d29bcf1fe79b9645’</p>
+							</div>
+						</div>
+						<div class="list"></div>
+						<div class="detail"></div>
+					</div>
+				</div><!-- encyclopedia -->
+<!-- ------------------------------Encyclopedia End--------------------------------------- -->
+
+<!-- ------------------------------Release Note------------------------------------------- -->
+				<div id="release_note" class="release-note">
+					
+				</div><!-- release-note -->
+<!-- ----------------------------Release Note End----------------------------------------- -->
+			</div><!-- panel -->
 		</div><!-- content -->
 	</div><!-- frame -->
+
+
+	<script src="script/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
+	<script src="script/style.js"></script>
 </body>
 </html>
