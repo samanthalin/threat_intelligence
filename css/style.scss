@@ -198,6 +198,80 @@ html{
 					}//ency-container
 				}//panel
 			}//content
+			footer{
+				width: 100%;
+				background-color: #f2f2f2;
+				margin-top: 60px;
+				padding-top: 20px;
+				.footer-container{
+					width: 100%;
+					max-width: 1164px;
+					margin: auto;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					display: none;
+					.footer-column{
+						a{
+							color: #898989;
+							line-height: 28px;
+							&:hover{
+								text-decoration: none;
+								color: $blue;
+							}
+						}
+						.menu-head{
+							font-family: 'GalanoSemiBold';
+							color: black;
+							margin-bottom: 8px;
+						    text-transform: uppercase;
+						    color: #343434;
+						}
+					}//footer-column
+				}//footer-container
+				.social-media{
+					width: 100%;
+					padding: 0 15px;
+					span{
+						display: none;
+					}
+					.icons{
+						display: flex;
+						justify-content: center;
+						flex-wrap: wrap;
+						a{
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							background-color: #ababab;
+							color: white;
+							text-align: center;
+							margin: 2px 2px;
+							line-height: 30px;
+						}
+					}
+
+				}//social-media
+				.legal{				
+					background-color: #545454;
+					color: #cdcdcd;
+					font-size: 12px;
+					padding: 10px 15px;
+					.legal-text{
+						text-align: center;
+					}
+					.legal-links{
+						display: flex;
+						justify-content: space-between;
+						a{
+							color: #efefef;
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}//footer
 		}//frame
 	}//body
 }

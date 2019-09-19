@@ -185,5 +185,76 @@ html body#vm .frame .content .panel .ency-container .intro img {
   right: 0;
   bottom: 0;
 }
+html body#vm .frame footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: 60px;
+  padding-top: 20px;
+}
+html body#vm .frame footer .footer-container {
+  width: 100%;
+  max-width: 1164px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: none;
+}
+html body#vm .frame footer .footer-container .footer-column a {
+  color: #898989;
+  line-height: 28px;
+}
+html body#vm .frame footer .footer-container .footer-column a:hover {
+  text-decoration: none;
+  color: #00b2ff;
+}
+html body#vm .frame footer .footer-container .footer-column .menu-head {
+  font-family: "GalanoSemiBold";
+  color: black;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: #343434;
+}
+html body#vm .frame footer .social-media {
+  width: 100%;
+  padding: 0 15px;
+}
+html body#vm .frame footer .social-media span {
+  display: none;
+}
+html body#vm .frame footer .social-media .icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+html body#vm .frame footer .social-media .icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ababab;
+  color: white;
+  text-align: center;
+  margin: 2px 2px;
+  line-height: 30px;
+}
+html body#vm .frame footer .legal {
+  background-color: #545454;
+  color: #cdcdcd;
+  font-size: 12px;
+  padding: 10px 15px;
+}
+html body#vm .frame footer .legal .legal-text {
+  text-align: center;
+}
+html body#vm .frame footer .legal .legal-links {
+  display: flex;
+  justify-content: space-between;
+}
+html body#vm .frame footer .legal .legal-links a {
+  color: #efefef;
+}
+html body#vm .frame footer .legal .legal-links a:hover {
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */
