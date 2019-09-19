@@ -50,7 +50,7 @@ html body#vm .frame header .main_menu {
   background-color: #575755;
   padding: 10px;
   display: flex;
-  padding-bottom: 70px;
+  padding-bottom: 73px;
 }
 html body#vm .frame header .main_menu a {
   display: block;
@@ -92,7 +92,7 @@ html body#vm .frame .content {
   overflow: hidden;
   width: calc(100% - 30px);
   margin: auto;
-  margin-top: -51px;
+  margin-top: -54px;
   padding-bottom: 140px;
   position: relative;
 }
@@ -120,6 +120,14 @@ html body#vm .frame .content .sub_menu li a span, html body#vm .frame .content .
   display: inline-block;
   line-height: 18px;
   vertical-align: middle;
+}
+html body#vm .frame .content .sub_menu .active {
+  background-color: white;
+  border-bottom: 3px solid #00b2ff;
+}
+html body#vm .frame .content .sub_menu .active img {
+  filter: grayscale(0);
+  opacity: 1;
 }
 html body#vm .frame .content .panel {
   padding: 10px;
@@ -184,6 +192,13 @@ html body#vm .frame .content .panel .ency-container .intro img {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+html body#vm .frame .content .panel .ency-container .list {
+  display: none;
+}
+html body#vm .frame .content .panel .ency-container .list table {
+  width: 100% !important;
+  font-size: 10px;
 }
 html body#vm .frame footer {
   width: 100%;
