@@ -93,6 +93,8 @@ html body#vm .frame .content {
   width: calc(100% - 30px);
   margin: auto;
   margin-top: -51px;
+  padding-bottom: 140px;
+  position: relative;
 }
 html body#vm .frame .content .sub_menu {
   background-color: #f6f6f6;
@@ -148,6 +150,7 @@ html body#vm .frame .content .panel .search-bar button {
   border: none;
   border-radius: 4px;
   margin-left: 5px;
+  outline: none;
 }
 html body#vm .frame .content .panel .search-bar button i {
   font-size: 12px;
@@ -164,15 +167,23 @@ html body#vm .frame .content .panel .ency-container .intro .question {
   position: relative;
 }
 html body#vm .frame .content .panel .ency-container .intro .question:before {
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
   content: "";
+  font-weight: 900;
   position: absolute;
   top: 0;
   left: 0;
+  color: #00b2ff;
 }
 html body#vm .frame .content .panel .ency-container .intro .question .title {
   border: none;
   font-size: 16px;
+}
+html body#vm .frame .content .panel .ency-container .intro img {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
