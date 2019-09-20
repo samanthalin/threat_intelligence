@@ -106,17 +106,17 @@ html body#vm .frame .content .sub_menu li {
   text-align: center;
   padding: 15px 0;
 }
-html body#vm .frame .content .sub_menu li a, html body#vm .frame .content .sub_menu li a:hover, html body#vm .frame .content .sub_menu li a:visited, html body#vm .frame .content .sub_menu li a:active, html body#vm .frame .content .sub_menu li a:focus {
+html body#vm .frame .content .sub_menu li a {
   color: #878787;
   text-decoration: none;
 }
-html body#vm .frame .content .sub_menu li a img, html body#vm .frame .content .sub_menu li a:hover img, html body#vm .frame .content .sub_menu li a:visited img, html body#vm .frame .content .sub_menu li a:active img, html body#vm .frame .content .sub_menu li a:focus img {
+html body#vm .frame .content .sub_menu li a img {
   height: 18px;
   margin-right: 5px;
   opacity: 0.6;
   filter: grayscale(100%);
 }
-html body#vm .frame .content .sub_menu li a span, html body#vm .frame .content .sub_menu li a:hover span, html body#vm .frame .content .sub_menu li a:visited span, html body#vm .frame .content .sub_menu li a:active span, html body#vm .frame .content .sub_menu li a:focus span {
+html body#vm .frame .content .sub_menu li a span {
   display: inline-block;
   line-height: 18px;
   vertical-align: middle;
@@ -125,8 +125,8 @@ html body#vm .frame .content .sub_menu .active {
   background-color: white;
   border-bottom: 3px solid #00b2ff;
 }
-html body#vm .frame .content .sub_menu .active img {
-  filter: grayscale(0);
+html body#vm .frame .content .sub_menu .active a img {
+  filter: grayscale(0%);
   opacity: 1;
 }
 html body#vm .frame .content .panel {

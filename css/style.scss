@@ -113,7 +113,7 @@ html{
 						flex: 1;
 						text-align: center;
 						padding: 15px 0;
-						a, a:hover, a:visited, a:active, a:focus{
+						a{
 							color: #878787;
 							text-decoration: none;
 							img{
@@ -133,9 +133,11 @@ html{
 					.active{
 						background-color: white;
 						border-bottom: 3px solid $blue;
-						img{
-							filter: grayscale(0);
-							opacity: 1;
+						a{
+							img{
+								filter: grayscale(0%);
+								opacity: 1;
+							}
 						}
 					}
 				}//sub_menu
@@ -208,8 +210,8 @@ html{
 							table{
 								width: 100% !important;
 								font-size: 10px;
-							}
-						}
+							}//table
+						}//list
 					}//ency-container
 				}//panel
 			}//content

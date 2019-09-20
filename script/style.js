@@ -23,8 +23,9 @@ $(document).ready(function(){
 	  });
 	});
 
-	$(function(){
-
+	$('#ency_search_btn').click(function(){
+		$('.intro').hide();
+		$('.list').show();
 	});
 });
 
