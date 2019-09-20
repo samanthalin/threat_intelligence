@@ -145,7 +145,7 @@ html{
 					padding: 10px;
 					.title{
 						color: $blue;
-						font-family: 'GalanoGrotesque-SemiBold';
+						font-family: 'GalanoSemiBold';
 						font-size: 28px;
 						border-bottom: 2px solid $blue;
 						display: inline-block;
@@ -210,7 +210,61 @@ html{
 							table{
 								width: 100% !important;
 								font-size: 10px;
+								border: 0;
+								text-align: center;
+								thead{
+									background-color: #d9d9d9;
+									color: black;
+									border: 0;
+									tr th{
+										border: 0;
+										padding: 10px 0;
+										font-family: 'GalanoSemiBold';
+									}
+								}
 							}//table
+							.dataTables_scrollBody{
+								border: 0;
+							}
+							.dataTables_paginate{
+								display: flex;
+								justify-content: center;
+								.paginate_button{
+									color: $blue !important;
+									border: 1px solid $blue;
+									margin: 0;
+									border-radius: 0;
+    								margin-left: -1px;
+    								padding: 0;
+    								width: 30px;
+    								height: 30px;
+    								line-height: 30px;
+								}
+								.current{
+									background: none;
+									color: white !important;
+									background-color: $blue;
+								}
+								#EncyTable_previous, #EncyTable_next{
+									color: white !important;
+									font-size: 1px;
+									border-radius: 4px 0 0 4px;
+									&:before{
+										font-family: 'Font Awesome 5 Free';
+										content: '\f100';
+										font-weight: 900;
+										position: absolute;
+										color: $blue;
+										margin-left: 8px;
+									}
+								}
+								#EncyTable_next{
+									border-radius: 0 4px 4px 0;
+									&:before{
+										content: '\f101';
+									}
+								}
+							}
 						}//list
 					}//ency-container
 				}//panel

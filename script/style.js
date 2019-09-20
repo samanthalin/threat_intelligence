@@ -26,15 +26,17 @@ $(document).ready(function(){
 	$('#ency_search_btn').click(function(){
 		$('.intro').hide();
 		$('.list').show();
+		$('#EncyTable').dataTable({
+	    	"scrollX": true,
+	    	"lengthChange": false,
+	    	"ordering": false,
+	    	"searching": false,
+	    	"pageLength": 20,
+	    	"info": false,
+	    });
 	});
 });
 
 $(document).ready(function(){
-    $('#EncyTable').dataTable({
-    	"scrollX": true,
-    	"lengthChange": false,
-    	"ordering": false,
-    	"searching": false,
-    	"pageLength": 20
-    });
+	 $.fn.DataTable.ext.pager.numbers_length = 5;
 });
