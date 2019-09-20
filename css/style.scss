@@ -16,6 +16,7 @@
 
 //color variables
 $blue: #00b2ff;
+$light-blue: #ccf0ff;
 
 *{
 	font-family: GalanoRegular, Helvetica, Arial, sans-serif;
@@ -26,7 +27,7 @@ html{
 	body#vm{
 		font-size: 14px;
 		.frame{
-			background-color: #ccf0ff;
+			background-color: $light-blue;
 			header{
 				nav{
 					height: 55px;
@@ -222,6 +223,11 @@ html{
 										font-family: 'GalanoSemiBold';
 									}
 								}
+								tbody tr{
+									&:hover{
+										background-color: $light-blue;
+									}
+								}
 							}//table
 							.dataTables_scrollBody{
 								border: 0;
@@ -239,14 +245,20 @@ html{
     								width: 30px;
     								height: 30px;
     								line-height: 30px;
+    								&:hover{
+    									background: none;
+    								}
 								}
 								.current{
 									background: none;
 									color: white !important;
 									background-color: $blue;
+									&:hover{
+										background-color: $blue;
+									}
 								}
 								#EncyTable_previous, #EncyTable_next{
-									color: white !important;
+									color: transparent !important;
 									font-size: 1px;
 									border-radius: 4px 0 0 4px;
 									&:before{
@@ -264,7 +276,12 @@ html{
 										content: '\f101';
 									}
 								}
-							}
+								.disabled{
+									&:before{
+										opacity: 0.4;
+									}
+								}
+							}//dataTables_paginate
 						}//list
 					}//ency-container
 				}//panel

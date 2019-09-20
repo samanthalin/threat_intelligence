@@ -212,6 +212,9 @@ html body#vm .frame .content .panel .ency-container .list table thead tr th {
   padding: 10px 0;
   font-family: "GalanoSemiBold";
 }
+html body#vm .frame .content .panel .ency-container .list table tbody tr:hover {
+  background-color: #ccf0ff;
+}
 html body#vm .frame .content .panel .ency-container .list .dataTables_scrollBody {
   border: 0;
 }
@@ -230,13 +233,19 @@ html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .
   height: 30px;
   line-height: 30px;
 }
+html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .paginate_button:hover {
+  background: none;
+}
 html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .current {
   background: none;
   color: white !important;
   background-color: #00b2ff;
 }
+html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .current:hover {
+  background-color: #00b2ff;
+}
 html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_previous, html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_next {
-  color: white !important;
+  color: transparent !important;
   font-size: 1px;
   border-radius: 4px 0 0 4px;
 }
@@ -253,6 +262,9 @@ html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #
 }
 html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_next:before {
   content: "";
+}
+html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .disabled:before {
+  opacity: 0.4;
 }
 html body#vm .frame footer {
   width: 100%;
