@@ -57,7 +57,7 @@
 			<div class="panel">
 
 <!-- ----------------------------------Encyclopedia--------------------------------------- -->
-				<div id="encyclopedia" class="enyclopedia">
+				<div id="encyclopedia" class="encyclopedia">
 					<h1 class="title">Encyclopedia</h1>
 					<div class="search-bar">
 						<input type="text" id="ency_search" placeholder="search by virus/malware name or file hash to search">
@@ -465,44 +465,64 @@
 				<div id="release_note" class="release-note">
 					<h1 class="title">Release Note</h1>
 					<div class="search-bar">
-						<form action="">
-							<select name="" id="">
+						<label for="" class="lb-mv-select">
+							<select name="" id="" class="model-version-select">
 								<option value="model">Model</option>
 								<option value="version">Version</option>
 							</select>
-							<select name="" id="">
-								<option value="">ATP 100</option>
-								<option value="">USG 210</option>
-								<option value="">USG 1100</option>
-							</select>
-						</form>
-						<button id="ency_search_btn">
-							<i class="fas fa-search"></i>
-							search
-						</button>
+						</label>	
+						<div class="model-search">
+							<label for="" class="lb-model-select">
+								<select name="" id="" class="model-select">
+									<option value="null">Select a model</option>
+									<option value="ATP100">ATP100</option>
+									<option value="ATP200">ATP200</option>
+									<option value="ATP500">ATP500</option>
+									<option value="ATP800">ATP800</option>
+									<option value="USG110">USG110</option>
+									<option value="USG1100">USG1100</option>
+									<option value="USG1900">USG1900</option>
+									<option value="USG210">USG210</option>
+									<option value="USG2200">USG2200</option>
+									<option value="USG310">USG310</option>
+									<option value="USG40">USG40</option>
+									<option value="USG40W">USG40W</option>
+									<option value="USG60">USG60</option>
+									<option value="USG60W">USG60W</option>
+									<option value="ZyWALL 110">ZyWALL 110</option>
+									<option value="ZyWALL 1100">ZyWALL 1100</option>
+									<option value="ZyWALL 310">ZyWALL 310</option>
+								</select>
+							</label>	
+							<div class="date-picker">
+								Last 7 Days
+							</div>
+							<button id="model_search_btn">
+								<i class="fas fa-search"></i>
+								search
+							</button>
+						</div>
+						<div class="version-search">
+							<input type="text" placeholder="search by version" class="version-number">
+							<button id="version_search_btn">
+								<i class="fas fa-search"></i>
+								search
+							</button>
+						</div>		
 					</div>
-					<div class="ency-container">
+					<div class="release-container">
 						
 						<div class="intro">
-							<p>Welcome to the Zyxel Encyclopedia. </p>
-							<p>Want to know who creates threat and why?</p>
-							<p>Why are unwanted messages in email and social networks dangerous?</p>
-							<p>What are “vulnerabilities” and how do cybercriminals exploit them?</p>
-							<p>The answers to these and other questions are right here.</p>
-							<p>You can search by virus/malware name or file hash of virus/malware.</p>
-							<div class="question">
-								<div class="title">What is virus/malware name?</div>
-								<p>malware is any software intentionally designed to cause damage to a computer, server or network. For example, Wannacry</p>
-							</div>
-							<div class="question">
-								<div class="title">How to search with file hash? </div>
-								<p>To search, just enter its hash. Currently the allowed hashes are MD5. For example ‘fe31f2fac5ca0919d29bcf1fe79b9645’</p>
-							</div>
-							<img src="img/human.png" alt="illustration">
+							Voluptate culpa ut est deserunt irure qui occaecat laboris quis nostrud.
 						</div><!-- intro -->
 
 						<div class="list">
-							<table class="table table-striped hover" id="EncyTable">
+							<p class="searchby">search by 
+								<span class="kind">model</span> : 
+								<span class="name">ATG 110</span> 
+								<span class="date">2018/12/10 ~ 2018/12/31</span>
+							</p>
+							<table class="table table-striped" id="ReleTable">
 								<caption></caption>
 								<thead>
 								    <tr>
@@ -512,361 +532,13 @@
 								    </tr>
 								 </thead>
 								 <tbody>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
+								   <tr>
+								   	<td>2018/12/27</td>
+								   	<td>V3.0.1.20190103.0</td>
+								   	<td>
+								   		<a href=""><i class="fas fa-download"></i></a>
+								   	</td>
+								   </tr>
 								    
 								 </tbody>
 							</table>

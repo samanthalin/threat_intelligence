@@ -24,9 +24,10 @@ $(document).ready(function(){
 	});
 
 	$('#ency_search_btn').click(function(){
-		$('.intro').hide();
-		$('.list').show();
+		$('.encyclopedia .intro').hide();
+		$('.encyclopedia .list').show();
 		$('#EncyTable').dataTable({
+			"retrieve": true,
 	    	"scrollX": true,
 	    	"lengthChange": false,
 	    	"ordering": false,
@@ -35,8 +36,60 @@ $(document).ready(function(){
 	    	"info": false,
 	    });
 	});
+
+	$('#model_search_btn').click(function(){
+		$('.release-note .intro').hide();
+		$('.release-note .list').show();
+		$('#ReleTable').dataTable({
+			"retrieve": true,
+	    	"scrollX": true,
+	    	"lengthChange": false,
+	    	"ordering": false,
+	    	"searching": false,
+	    	"pageLength": 20,
+	    	"info": false,
+	    });
+	    var searchby = $('.model-version-select').children('option:selected').val();
+	    var model = $('.model-select').children('option:selected').val();
+	    var date = $('.date-picker').text();
+	    $('.searchby .kind').html(searchby);
+	    $('.searchby .name').html(model);
+	    $('.searchby .date').html(date);
+	});
+
+	$('#version_search_btn').click(function(){
+		$('.release-note .intro').hide();
+		$('.release-note .list').show();
+		$('#ReleTable').dataTable({
+			"retrieve": true,
+	    	"scrollX": true,
+	    	"lengthChange": false,
+	    	"ordering": false,
+	    	"searching": false,
+	    	"pageLength": 20,
+	    	"info": false,
+	    });
+	    var searchby = $('.model-version-select').children('option:selected').val();
+	    var version_number = $('.version-number').val();
+	    $('.searchby .kind').html(searchby);
+	    $('.searchby .name').html(version_number);
+	    $('.searchby .date').html('&nbsp;');
+	});
+
+	$('.version-search').hide();
+	$('.model-version-select').on('change', function() {
+	  var class_name = $(this).children('option:selected').val();
+	  if (class_name == 'version'){
+	  	$('.version-search').show();
+	  	$('.model-search').hide();
+	  }else{
+	  	$('.model-search').show();
+	  	$('.version-search').hide();
+	  }
+	});
 });
 
 $(document).ready(function(){
-	 $.fn.DataTable.ext.pager.numbers_length = 5;
+	$.fn.DataTable.ext.pager.numbers_length = 5;
+
 });

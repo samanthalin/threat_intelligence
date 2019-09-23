@@ -132,19 +132,19 @@ html body#vm .frame .content .sub_menu .active a img {
 html body#vm .frame .content .panel {
   padding: 10px;
 }
-html body#vm .frame .content .panel .title {
+html body#vm .frame .content .panel .encyclopedia .title {
   color: #00b2ff;
   font-family: "GalanoSemiBold";
   font-size: 28px;
   border-bottom: 2px solid #00b2ff;
   display: inline-block;
 }
-html body#vm .frame .content .panel .search-bar {
+html body#vm .frame .content .panel .encyclopedia .search-bar {
   display: flex;
   height: 35px;
   margin-top: 15px;
 }
-html body#vm .frame .content .panel .search-bar input {
+html body#vm .frame .content .panel .encyclopedia .search-bar input {
   border: 1px solid #00b2ff;
   border-radius: 4px;
   flex: 1;
@@ -152,7 +152,7 @@ html body#vm .frame .content .panel .search-bar input {
   padding: 0 5px;
   outline: none;
 }
-html body#vm .frame .content .panel .search-bar button {
+html body#vm .frame .content .panel .encyclopedia .search-bar button {
   background-color: #00b2ff;
   color: white;
   border: none;
@@ -160,21 +160,21 @@ html body#vm .frame .content .panel .search-bar button {
   margin-left: 5px;
   outline: none;
 }
-html body#vm .frame .content .panel .search-bar button i {
+html body#vm .frame .content .panel .encyclopedia .search-bar button i {
   font-size: 12px;
 }
-html body#vm .frame .content .panel .ency-container {
+html body#vm .frame .content .panel .encyclopedia .ency-container {
   padding-top: 15px;
 }
-html body#vm .frame .content .panel .ency-container .intro p {
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro p {
   margin: 0;
 }
-html body#vm .frame .content .panel .ency-container .intro .question {
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question {
   padding-left: 15px;
   margin-top: 20px;
   position: relative;
 }
-html body#vm .frame .content .panel .ency-container .intro .question:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question:before {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -183,46 +183,46 @@ html body#vm .frame .content .panel .ency-container .intro .question:before {
   left: 0;
   color: #00b2ff;
 }
-html body#vm .frame .content .panel .ency-container .intro .question .title {
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title {
   border: none;
   font-size: 16px;
 }
-html body#vm .frame .content .panel .ency-container .intro img {
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro img {
   width: 100px;
   position: absolute;
   right: 0;
   bottom: 0;
 }
-html body#vm .frame .content .panel .ency-container .list {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list {
   display: none;
 }
-html body#vm .frame .content .panel .ency-container .list table {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table {
   width: 100% !important;
   font-size: 10px;
   border: 0;
   text-align: center;
 }
-html body#vm .frame .content .panel .ency-container .list table thead {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table thead {
   background-color: #d9d9d9;
   color: black;
   border: 0;
 }
-html body#vm .frame .content .panel .ency-container .list table thead tr th {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table thead tr th {
   border: 0;
   padding: 10px 0;
   font-family: "GalanoSemiBold";
 }
-html body#vm .frame .content .panel .ency-container .list table tbody tr:hover {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table tbody tr:hover {
   background-color: #ccf0ff;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_scrollBody {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_scrollBody {
   border: 0;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate {
   display: flex;
   justify-content: center;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .paginate_button {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button {
   color: #00b2ff !important;
   border: 1px solid #00b2ff;
   margin: 0;
@@ -233,23 +233,23 @@ html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .
   height: 30px;
   line-height: 30px;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .paginate_button:hover {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button:hover {
   background: none;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .current {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .current {
   background: none;
   color: white !important;
   background-color: #00b2ff;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .current:hover {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .current:hover {
   background-color: #00b2ff;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_previous, html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_next {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
   color: transparent !important;
   font-size: 1px;
   border-radius: 4px 0 0 4px;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_previous:before, html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_next:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous:before, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -257,13 +257,205 @@ html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #
   color: #00b2ff;
   margin-left: 8px;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_next {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
   border-radius: 0 4px 4px 0;
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate #EncyTable_next:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
   content: "";
 }
-html body#vm .frame .content .panel .ency-container .list .dataTables_paginate .disabled:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .disabled:before {
+  opacity: 0.4;
+}
+html body#vm .frame .content .panel .release-note .title {
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  font-size: 28px;
+  border-bottom: 2px solid #00b2ff;
+  display: inline-block;
+}
+html body#vm .frame .content .panel .release-note .search-bar {
+  margin-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select {
+  position: absolute;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
+  border: 1px solid #00b2ff;
+  border-radius: 4px 0 0 4px;
+  text-align-last: center;
+  background: none;
+  width: 100px;
+  color: #00b2ff;
+  height: 35px;
+}
+html body#vm .frame .content .panel .release-note .search-bar button {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+html body#vm .frame .content .panel .release-note .search-bar button i {
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
+  width: calc(100% - 99px);
+  position: relative;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
+  border: 1px solid #00b2ff;
+  background: white;
+  border-radius: 0 4px 4px 0;
+  height: 35px;
+  color: #00b2ff;
+  padding-left: 10px;
+  width: 100%;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker {
+  width: 100%;
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  color: #00b2ff;
+  height: 35px;
+  cursor: pointer;
+  padding-left: 10px;
+  line-height: 35px;
+  position: relative;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search button {
+  height: 35px;
+  width: 100%;
+  margin-top: 7px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search input {
+  border: 1px solid #00b2ff;
+  border-radius: 0 4px 4px 0;
+  width: calc(100% - 99px);
+  height: 35px;
+  padding-left: 10px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search button {
+  height: 35px;
+  width: 100%;
+  margin-top: 7px;
+}
+html body#vm .frame .content .panel .release-note .release-container {
+  padding-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list {
+  display: none;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table {
+  width: 100% !important;
+  font-size: 10px;
+  border: 0;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table thead {
+  background-color: #d9d9d9;
+  color: black;
+  border: 0;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table thead tr th {
+  border: 0;
+  padding: 10px 0;
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_scrollBody {
+  border: 0;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate {
+  display: flex;
+  justify-content: center;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .paginate_button {
+  color: #00b2ff !important;
+  border: 1px solid #00b2ff;
+  margin: 0;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .paginate_button:hover {
+  background: none;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .current {
+  background: none;
+  color: white !important;
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .current:hover {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_previous, html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next {
+  color: transparent !important;
+  font-size: 1px;
+  border-radius: 4px 0 0 4px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_previous:before, html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  color: #00b2ff;
+  margin-left: 8px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next {
+  border-radius: 0 4px 4px 0;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next:before {
+  content: "";
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .disabled:before {
   opacity: 0.4;
 }
 html body#vm .frame footer {
