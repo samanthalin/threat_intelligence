@@ -165,6 +165,7 @@ html body#vm .frame .content .panel .encyclopedia .search-bar button i {
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container {
   padding-top: 15px;
+  position: relative;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .intro p {
   margin: 0;
@@ -265,6 +266,13 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTab
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .disabled:before {
   opacity: 0.4;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
 }
 html body#vm .frame .content .panel .release-note .title {
   color: #00b2ff;
@@ -406,6 +414,9 @@ html body#vm .frame .content .panel .release-note .release-container .list table
   border: 0;
   padding: 10px 0;
   font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .release-note .release-container .list table tbody tr:hover {
+  background-color: #ccf0ff;
 }
 html body#vm .frame .content .panel .release-note .release-container .list .dataTables_scrollBody {
   border: 0;

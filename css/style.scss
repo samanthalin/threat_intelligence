@@ -178,6 +178,7 @@ html{
 						}//search-bar
 						.ency-container{
 							padding-top: 15px;
+							position: relative;
 							.intro{
 								p{
 									margin: 0;
@@ -284,6 +285,13 @@ html{
 									}
 								}//dataTables_paginate
 							}//list
+							.detail{
+								width: 100%;
+								height: 100%;
+								background-color: white;
+								position: absolute;
+								top: 0;
+							}
 						}//ency-container
 					}//encyclopedia
 					.release-note{
@@ -427,6 +435,11 @@ html{
 											border: 0;
 											padding: 10px 0;
 											font-family: 'GalanoSemiBold';
+										}
+									}
+									tbody tr{
+										&:hover{
+											background-color: $light-blue;
 										}
 									}
 								}//table
