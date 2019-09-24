@@ -216,6 +216,9 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list table th
 html body#vm .frame .content .panel .encyclopedia .ency-container .list table tbody tr:hover {
   background-color: #ccf0ff;
 }
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table .check {
+  background-color: #ccf0ff;
+}
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_scrollBody {
   border: 0;
 }
@@ -231,7 +234,6 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTab
   margin-left: -1px;
   padding: 0;
   width: 30px;
-  height: 30px;
   line-height: 30px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button:hover {
@@ -257,6 +259,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTab
   position: absolute;
   color: #00b2ff;
   margin-left: 8px;
+  font-size: 12px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
   border-radius: 0 4px 4px 0;
@@ -271,8 +274,128 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail {
   width: 100%;
   height: 100%;
   background-color: white;
+  position: relative;
+  display: none;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .hint {
+  margin-bottom: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile {
+  border: 1px solid #00b2ff;
+  padding: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .title {
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
+  margin-top: 20px;
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field p {
+  margin: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
+  font-size: 12px;
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  padding-left: 23px;
+  margin-bottom: 5px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3:before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   position: absolute;
-  top: 0;
+  left: 0px;
+}
+@media screen and (min-width: 350px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 350px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
+    font-size: 14px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a {
+  color: black;
+  text-decoration: underline;
+  display: inline-block;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -23px;
+  bottom: 2px;
+  font-size: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li.fill {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries ul.flags li {
+  margin-right: 5px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution {
+  margin-top: 5px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution .title {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  padding: 10px 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li {
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li span {
+  margin-left: 5px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back {
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  background: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  outline: none;
+  line-height: initial;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  width: 80px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back i {
+  margin-right: 3px;
 }
 html body#vm .frame .content .panel .release-note .title {
   color: #00b2ff;

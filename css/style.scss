@@ -208,6 +208,7 @@ html{
 									bottom: 0;
 								}
 							}//intro
+
 							.list{
 								display: none;
 								table{
@@ -230,6 +231,9 @@ html{
 											background-color: $light-blue;
 										}
 									}
+									.check{
+										background-color: $light-blue;
+									}
 								}//table
 								.dataTables_scrollBody{
 									border: 0;
@@ -245,7 +249,7 @@ html{
 	    								margin-left: -1px;
 	    								padding: 0;
 	    								width: 30px;
-	    								height: 30px;
+	    								// height: 30px;
 	    								line-height: 30px;
 	    								&:hover{
 	    									background: none;
@@ -270,6 +274,7 @@ html{
 											position: absolute;
 											color: $blue;
 											margin-left: 8px;
+											font-size: 12px;
 										}
 									}
 									#EncyTable_next{
@@ -285,13 +290,143 @@ html{
 									}
 								}//dataTables_paginate
 							}//list
+
 							.detail{
 								width: 100%;
 								height: 100%;
 								background-color: white;
-								position: absolute;
-								top: 0;
-							}
+								position: relative;
+								display: none;
+								.hint{
+									margin-bottom: 10px;
+								}
+								.virus-profile{
+									border: 1px solid $blue;
+									padding: 10px;
+									.title{
+										font-size: 18px;
+										border: none;
+										text-align: center;
+										width: 100%;
+									}
+									.field{
+										margin-top: 20px;
+										font-size: 12px;
+										p{
+											margin: 0;
+										}
+										h3{
+											font-size: 12px;
+											color: $blue;
+											font-family: 'GalanoSemiBold';
+											padding-left: 23px;
+											margin-bottom: 5px;
+											position: relative;
+											&:before{
+												content: '\f2c2';
+												font-family: 'Font Awesome 5 Free';
+												font-weight: 900;
+												position: absolute;
+												left: 0px;
+											}
+											@media screen and (min-width: 350px){
+												font-size: 14px;
+											}
+										}//h3
+										@media screen and (min-width: 350px){
+											font-size: 14px;
+										}
+									}//field
+									.virus-name{
+										
+									}
+									.file-hash{
+										h3:before{
+											content: '\f02b';
+										}
+										a{
+											color: black;
+											text-decoration: underline;
+											display: inline-block;
+											position: relative;
+											&:after{
+												content: '\f35d';
+												font-family: 'Font Awesome 5 Free';
+												font-weight: 900;
+												position: absolute;
+												right: -23px;
+												bottom: 2px;
+												font-size: 10px;
+											}
+										}
+									}//file-hash
+									.popularity{
+										h3:before{
+											content: '\f76b';
+										}
+										ul{
+											display: flex;
+											width: 70px;
+											justify-content: space-between;
+											li{
+												width: 10px;
+												height: 10px;
+												border-radius: 50%;
+												border: 1px solid $blue;
+											}
+											li.fill{
+												background-color: $blue;
+											}
+										}
+									}//popularity
+									.countries{
+										h3:before{
+											content: '\f57d';
+										}
+										ul.flags{
+											li{
+												margin-right: 5px;
+												box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+											}
+										}
+									}//countries
+								}//virus-profile
+								.zyxel-solution{
+									margin-top: 5px;
+									.title{
+										width: 100%;
+										text-align: center;
+										font-size: 18px;
+										border: none;
+										padding: 10px 0;
+									}
+									ul.model{
+										li{
+											font-family: 'GalanoSemiBold';
+											span{
+												margin-left: 5px;
+											}
+										}
+									}
+								}//zyxel-solution
+								button.back{
+									color: $blue;
+									border: 1px solid $blue;
+									border-radius: 4px;
+									background: white;
+									text-transform: uppercase;
+									padding: 5px 10px;
+									outline: none;
+									line-height: initial;
+									position: absolute;
+									right: 0;
+									margin-top: 20px;
+									width: 80px;
+									i{
+										margin-right: 3px;	
+									}
+								}
+							}//detail
 						}//ency-container
 					}//encyclopedia
 					.release-note{

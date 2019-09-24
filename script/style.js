@@ -23,11 +23,14 @@ $(document).ready(function(){
 	  });
 	});
 
+
+
 	$('#ency_search_btn').click(function(){
+		$('.detail').hide();
 		$('.encyclopedia .intro').hide();
 		$('.encyclopedia .list').show();
 		$('#EncyTable').dataTable({
-			"retrieve": true,
+			"destroy": true,
 	    	"scrollX": true,
 	    	"lengthChange": false,
 	    	"ordering": false,
@@ -41,7 +44,7 @@ $(document).ready(function(){
 		$('.release-note .intro').hide();
 		$('.release-note .list').show();
 		$('#ReleTable').dataTable({
-			"retrieve": true,
+			"destroy": true,
 	    	"scrollX": true,
 	    	"lengthChange": false,
 	    	"ordering": false,
@@ -61,7 +64,7 @@ $(document).ready(function(){
 		$('.release-note .intro').hide();
 		$('.release-note .list').show();
 		$('#ReleTable').dataTable({
-			"retrieve": true,
+			"destroy": true,
 	    	"scrollX": true,
 	    	"lengthChange": false,
 	    	"ordering": false,
@@ -86,6 +89,18 @@ $(document).ready(function(){
 	  	$('.model-search').show();
 	  	$('.version-search').hide();
 	  }
+	});
+
+	$('#EncyTable tr').click(function(){
+		$('.detail').show();
+		$('html, body').animate({
+	        scrollTop: $(".search-bar").offset().top
+	    }, 1000);
+	});
+
+	$('.detail .back').click(function(){
+		$('.detail').hide();
+		$('.list').show();
 	});
 });
 
