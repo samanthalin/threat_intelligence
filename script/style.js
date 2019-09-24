@@ -108,6 +108,8 @@ $(document).ready(function(){
 	        scrollTop: $('table').offset().top
 	    }, 1000);
 	});
+
+	$('[data-toggle="tooltip"]').tooltip();
 });
 
 $(document).ready(function(){
