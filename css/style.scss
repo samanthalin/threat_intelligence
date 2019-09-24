@@ -390,6 +390,16 @@ html{
 											}
 										}
 									}//countries
+									.file-type{
+										h3:before{
+											content: '\f07c';
+										}
+									}//file-type
+									.file-size{
+										h3:before{
+											content: '\f496';
+										}
+									}
 								}//virus-profile
 								.zyxel-solution{
 									margin-top: 5px;

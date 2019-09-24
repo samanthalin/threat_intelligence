@@ -364,6 +364,12 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus
   margin-right: 5px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 }
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-type h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-size h3:before {
+  content: "";
+}
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution {
   margin-top: 5px;
 }
