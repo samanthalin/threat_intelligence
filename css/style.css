@@ -192,7 +192,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro img {
   width: 100px;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -150px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list {
   display: none;
