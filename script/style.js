@@ -92,15 +92,21 @@ $(document).ready(function(){
 	});
 
 	$('#EncyTable tr').click(function(){
+		$('.list').hide();
 		$('.detail').show();
 		$('html, body').animate({
 	        scrollTop: $(".search-bar").offset().top
 	    }, 1000);
+	    $('.check').removeClass('check');
+	    $(this).addClass('check');
 	});
 
 	$('.detail .back').click(function(){
 		$('.detail').hide();
 		$('.list').show();
+		$('html, body').animate({
+	        scrollTop: $('table').offset().top
+	    }, 1000);
 	});
 });
 
