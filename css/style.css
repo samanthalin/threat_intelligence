@@ -199,7 +199,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list {
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list table {
   width: 100% !important;
-  font-size: 10px;
+  font-size: 12px;
   border: 0;
   text-align: center;
 }
