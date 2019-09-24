@@ -569,7 +569,7 @@ html{
 								display: none;
 								table{
 									width: 100% !important;
-									font-size: 10px;
+									font-size: 12px;
 									border: 0;
 									text-align: center;
 									thead{
@@ -585,6 +585,13 @@ html{
 									tbody tr{
 										&:hover{
 											background-color: $light-blue;
+										}
+									}
+									a{
+										color: #575755;
+										display: inline-block;
+										&:hover{
+											color: $blue;
 										}
 									}
 								}//table

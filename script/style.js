@@ -24,7 +24,6 @@ $(document).ready(function(){
 	});
 
 
-
 	$('#ency_search_btn').click(function(){
 		$('.detail').hide();
 		$('.encyclopedia .intro').hide();
@@ -110,9 +109,43 @@ $(document).ready(function(){
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
+
 });
 
 $(document).ready(function(){
 	$.fn.DataTable.ext.pager.numbers_length = 5;
+	
+	$(function() {
 
+	    var start = moment().subtract(6, 'days');
+	    var end = moment();
+	    var earliest = moment().subtract(1, 'years');
+
+	    function cb(start, end) {
+	        $('.date-picker span').html(start.format('YYYY/MM/DD') + ' ~ ' + end.format('YYYY/MM/DD'));
+	    }
+
+	    $('.date-picker').daterangepicker({
+	        opens: 'left',
+	        startDate: start,
+	        endDate: end,
+	        ranges: {
+	           'Today': [moment(), moment()],
+	           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+	           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+	           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+	           // 'This Month': [moment().startOf('month'), moment().endOf('month')],
+	           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+	        },
+	        maxSpan: {
+		        'days': 30
+		    },
+		    maxDate: end,
+		    minDate: earliest,
+	    }, cb);
+
+	    cb(start, end);
+
+	});
 });
+
