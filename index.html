@@ -11,37 +11,44 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
 	<link rel="stylesheet" href="flag-icon-css-master/css/flag-icon.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
 	<link rel="stylesheet" href="css/style.css">
 	
 	<script src="script/jquery-3.4.1.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script src="script/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
+	<script type="text/javascript" src="script/moment.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+	<script type="text/javascript" src="script/daterangepicker.min.js"></script>
 	<script src="script/style.js"></script>
 </head>
 <body id="vm">
 	<div class="frame">
 		<header>
 			<nav>
-				<a href="" class="logo">
-					<img src="img/logo-zyxel.png" alt="Zyxel Logo">
-				</a>
-				<a href="" class="hamburger">
-					<i class="ion-ios-menu"></i>
-				</a>
+				<div class="nav-container">
+					<a href="" class="logo">
+						<img src="img/logo-zyxel.png" alt="Zyxel Logo">
+					</a>
+					<a href="" class="hamburger">
+						<i class="ion-ios-menu"></i>
+					</a>
+				</div>
 			</nav>
 			<div class="main_menu">
-				<a href="" class="vm active">
-					<img src="img/virus.png" alt="">
-					Virus / Malware
-				</a>
-				<a href="" class="id">
-					<img src="img/detect.png" alt="">
-					Intrusion Detection
-				</a>
+				<div class="main-menu-container">
+					<a href="" class="vm active">
+						<img src="img/virus.png" alt="">
+						<span>Virus / Malware</span>
+					</a>
+					<a href="" class="id">
+						<img src="img/detect.png" alt="">
+						<span>Intrusion Detection</span>
+					</a>
+				</div>
 			</div>
 		</header>
 		<div class="content">
@@ -710,8 +717,8 @@
 				</ul>
 			</div><!-- footer-container -->
 			<div class="social-media">
-				<span>fallow us</span>
 				<ul class="icons">
+					<span>FALLOW US</span>
 					<li class="facebook">
 						<a href="">
 							<i class="fab fa-facebook-f"></i>

@@ -1,547 +1,841 @@
+@charset "UTF-8";
 @import url(reset.css);
 @font-face {
-  font-family: 'GalanoRegular';
-  src: url("../fonts/GalanoGrotesque-Regular.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular.eot") format("embedded-opentype"); }
+  font-family: "GalanoRegular";
+  src: url("../fonts/GalanoGrotesque-Regular.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular.eot") format("embedded-opentype");
+}
 @font-face {
-  font-family: 'GalanoSemiBold';
-  src: url("../fonts/GalanoGrotesque-SemiBold.woff") format("woff"), url("../fonts/GalanoGrotesque-SemiBold.otf") format("opentype"), url("../fonts/GalanoGrotesque-SemiBold.eot") format("embedded-opentype"); }
+  font-family: "GalanoSemiBold";
+  src: url("../fonts/GalanoGrotesque-SemiBold.woff") format("woff"), url("../fonts/GalanoGrotesque-SemiBold.otf") format("opentype"), url("../fonts/GalanoGrotesque-SemiBold.eot") format("embedded-opentype");
+}
 * {
   font-family: GalanoRegular, Helvetica, Arial, sans-serif;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html body#vm {
-  font-size: 14px; }
-  html body#vm .frame {
-    background-color: #ccf0ff; }
-    html body#vm .frame header nav {
-      height: 55px;
-      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      background-color: white; }
-      html body#vm .frame header nav .logo {
-        display: block; }
-        html body#vm .frame header nav .logo img {
-          height: 55px; }
-      html body#vm .frame header nav .hamburger {
-        font-size: 28px;
-        color: black;
-        opacity: 0.5;
-        transition: opacity .22s linear;
-        padding: 10px 20px; }
-        html body#vm .frame header nav .hamburger:visited, html body#vm .frame header nav .hamburger:active {
-          color: black; }
-        html body#vm .frame header nav .hamburger:hover {
-          opacity: 1; }
-    html body#vm .frame header .main_menu {
-      background-color: #575755;
-      padding: 10px;
-      display: flex;
-      padding-bottom: 73px; }
-      html body#vm .frame header .main_menu a {
-        display: block;
-        color: white;
-        font-family: 'GalanoSemiBold';
-        font-size: 16px;
-        text-align: center;
-        background-color: #878787;
-        border-radius: 4px;
-        flex: 1;
-        margin: 5px;
-        padding: 10px 0;
-        position: relative; }
-        html body#vm .frame header .main_menu a img {
-          height: 50px;
-          display: block;
-          margin: auto;
-          margin-bottom: 10px; }
-      html body#vm .frame header .main_menu a.id {
-        background: none;
-        opacity: 0.5; }
-      html body#vm .frame header .main_menu .active:after {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 13px 10px;
-        border-color: transparent transparent #ffffff transparent;
-        position: absolute;
-        content: '';
-        left: calc(50% - 10px);
-        bottom: -24px; }
-    html body#vm .frame .content {
-      background-color: white;
-      border-radius: 4px;
-      overflow: hidden;
-      width: calc(100% - 30px);
-      margin: auto;
-      margin-top: -54px;
-      padding-bottom: 140px;
-      position: relative; }
-      html body#vm .frame .content .sub_menu {
-        background-color: #f6f6f6;
-        display: flex;
-        width: 100%; }
-        html body#vm .frame .content .sub_menu li {
-          flex: 1;
-          text-align: center;
-          padding: 15px 0; }
-          html body#vm .frame .content .sub_menu li a {
-            color: #878787;
-            text-decoration: none; }
-            html body#vm .frame .content .sub_menu li a img {
-              height: 18px;
-              margin-right: 5px;
-              opacity: 0.6;
-              filter: grayscale(100%); }
-            html body#vm .frame .content .sub_menu li a span {
-              display: inline-block;
-              line-height: 18px;
-              vertical-align: middle; }
-        html body#vm .frame .content .sub_menu .active {
-          background-color: white;
-          border-bottom: 3px solid #00b2ff; }
-          html body#vm .frame .content .sub_menu .active a img {
-            filter: grayscale(0%);
-            opacity: 1; }
-      html body#vm .frame .content .panel {
-        padding: 10px; }
-        html body#vm .frame .content .panel .encyclopedia .title {
-          color: #00b2ff;
-          font-family: 'GalanoSemiBold';
-          font-size: 28px;
-          border-bottom: 2px solid #00b2ff;
-          display: inline-block; }
-        html body#vm .frame .content .panel .encyclopedia .search-bar {
-          display: flex;
-          height: 35px;
-          margin-top: 15px; }
-          html body#vm .frame .content .panel .encyclopedia .search-bar input {
-            border: 1px solid #00b2ff;
-            border-radius: 4px;
-            flex: 1;
-            font-size: 12px;
-            padding: 0 5px;
-            outline: none; }
-          html body#vm .frame .content .panel .encyclopedia .search-bar button {
-            background-color: #00b2ff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            margin-left: 5px;
-            outline: none; }
-            html body#vm .frame .content .panel .encyclopedia .search-bar button i {
-              font-size: 12px; }
-        html body#vm .frame .content .panel .encyclopedia .ency-container {
-          padding-top: 15px;
-          position: relative; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro p {
-            margin: 0; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question {
-            padding-left: 15px;
-            margin-top: 20px;
-            position: relative; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question:before {
-              font-family: 'Font Awesome 5 Free';
-              content: '\f105';
-              font-weight: 900;
-              position: absolute;
-              top: 0;
-              left: 0;
-              color: #00b2ff; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title {
-              border: none;
-              font-size: 16px; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro img {
-            width: 100px;
-            position: absolute;
-            right: 0;
-            bottom: -150px; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .list {
-            display: none; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .list table {
-              width: 100% !important;
-              font-size: 12px;
-              border: 0;
-              text-align: center; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list table thead {
-                background-color: #d9d9d9;
-                color: black;
-                border: 0; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .list table thead tr th {
-                  border: 0;
-                  padding: 10px 0;
-                  font-family: 'GalanoSemiBold'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list table tbody tr:hover {
-                background-color: #ccf0ff; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list table .check {
-                background-color: #ccf0ff; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_scrollBody {
-              border: 0; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate {
-              display: flex;
-              justify-content: center; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button {
-                color: #00b2ff !important;
-                border: 1px solid #00b2ff;
-                margin: 0;
-                border-radius: 0;
-                margin-left: -1px;
-                padding: 0;
-                width: 30px;
-                line-height: 30px; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button:hover {
-                  background: none; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .current {
-                background: none;
-                color: white !important;
-                background-color: #00b2ff; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .current:hover {
-                  background-color: #00b2ff; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
-                color: transparent !important;
-                font-size: 1px;
-                border-radius: 4px 0 0 4px; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous:before, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
-                  font-family: 'Font Awesome 5 Free';
-                  content: '\f100';
-                  font-weight: 900;
-                  position: absolute;
-                  color: #00b2ff;
-                  margin-left: 8px;
-                  font-size: 12px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
-                border-radius: 0 4px 4px 0; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
-                  content: '\f101'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .disabled:before {
-                opacity: 0.4; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .detail {
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            position: relative;
-            display: none; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail .hint {
-              margin-bottom: 10px; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile {
-              border: 1px solid #00b2ff;
-              padding: 10px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .title {
-                font-size: 18px;
-                border: none;
-                text-align: center;
-                width: 100%; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
-                margin-top: 20px;
-                font-size: 12px; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field p {
-                  margin: 0; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
-                  font-size: 12px;
-                  color: #00b2ff;
-                  font-family: 'GalanoSemiBold';
-                  padding-left: 23px;
-                  margin-bottom: 5px;
-                  position: relative; }
-                  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3:before {
-                    content: '\f2c2';
-                    font-family: 'Font Awesome 5 Free';
-                    font-weight: 900;
-                    position: absolute;
-                    left: 0px; }
-                  @media screen and (min-width: 350px) {
-                    html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
-                      font-size: 14px; } }
-                @media screen and (min-width: 350px) {
-                  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
-                    font-size: 14px; } }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash h3:before {
-                content: '\f02b'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a {
-                color: black;
-                text-decoration: underline;
-                display: inline-block;
-                position: relative; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a:after {
-                  content: '\f35d';
-                  font-family: 'Font Awesome 5 Free';
-                  font-weight: 900;
-                  position: absolute;
-                  right: -23px;
-                  bottom: 2px;
-                  font-size: 10px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity h3:before {
-                content: '\f76b'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul {
-                display: flex;
-                width: 70px;
-                justify-content: space-between; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li {
-                  width: 10px;
-                  height: 10px;
-                  border-radius: 50%;
-                  border: 1px solid #00b2ff; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li.fill {
-                  background-color: #00b2ff; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries h3:before {
-                content: '\f57d'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries ul.flags li {
-                margin-right: 5px;
-                box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3); }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-type h3:before {
-                content: '\f07c'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-size h3:before {
-                content: '\f496'; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution {
-              margin-top: 5px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution .title {
-                width: 100%;
-                text-align: center;
-                font-size: 18px;
-                border: none;
-                padding: 10px 0; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li {
-                font-family: 'GalanoSemiBold'; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li span {
-                  margin-left: 5px; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back {
-              color: #00b2ff;
-              border: 1px solid #00b2ff;
-              border-radius: 4px;
-              background: white;
-              text-transform: uppercase;
-              padding: 5px 10px;
-              outline: none;
-              line-height: initial;
-              position: absolute;
-              right: 0;
-              margin-top: 20px;
-              width: 80px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back i {
-                margin-right: 3px; }
-        html body#vm .frame .content .panel .release-note .title {
-          color: #00b2ff;
-          font-family: 'GalanoSemiBold';
-          font-size: 28px;
-          border-bottom: 2px solid #00b2ff;
-          display: inline-block; }
-        html body#vm .frame .content .panel .release-note .search-bar {
-          margin-top: 15px; }
-          html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select {
-            position: absolute; }
-            html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
-              content: '\f0d7';
-              font-family: 'Font Awesome 5 Free';
-              font-weight: 900;
-              position: absolute;
-              right: 0;
-              top: 0;
-              color: #00b2ff;
-              width: 25px;
-              line-height: 35px;
-              text-align: center; }
-            html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
-              border: 1px solid #00b2ff;
-              border-radius: 4px 0 0 4px;
-              text-align-last: center;
-              background: none;
-              width: 100px;
-              color: #00b2ff;
-              height: 35px; }
-          html body#vm .frame .content .panel .release-note .search-bar button {
-            background-color: #00b2ff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            outline: none; }
-            html body#vm .frame .content .panel .release-note .search-bar button i {
-              font-size: 12px; }
-          html body#vm .frame .content .panel .release-note .search-bar .model-search {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end; }
-            html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
-              width: calc(100% - 99px);
-              position: relative; }
-              html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
-                border: 1px solid #00b2ff;
-                background: white;
-                border-radius: 0 4px 4px 0;
-                height: 35px;
-                color: #00b2ff;
-                padding-left: 10px;
-                width: 100%; }
-              html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
-                content: '\f0d7';
-                font-family: 'Font Awesome 5 Free';
-                font-weight: 900;
-                position: absolute;
-                right: 0;
-                top: 0;
-                color: #00b2ff;
-                width: 25px;
-                line-height: 35px;
-                text-align: center; }
-            html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker {
-              width: 100%;
-              border: 1px solid #00b2ff;
-              border-radius: 4px;
-              color: #00b2ff;
-              height: 35px;
-              cursor: pointer;
-              padding-left: 10px;
-              line-height: 35px;
-              position: relative; }
-              html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
-                content: '\f0d7';
-                font-family: 'Font Awesome 5 Free';
-                font-weight: 900;
-                position: absolute;
-                right: 0;
-                top: 0;
-                color: #00b2ff;
-                width: 25px;
-                line-height: 35px;
-                text-align: center; }
-            html body#vm .frame .content .panel .release-note .search-bar .model-search button {
-              height: 35px;
-              width: 100%;
-              margin-top: 7px; }
-          html body#vm .frame .content .panel .release-note .search-bar .version-search {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end; }
-            html body#vm .frame .content .panel .release-note .search-bar .version-search input {
-              border: 1px solid #00b2ff;
-              border-radius: 0 4px 4px 0;
-              width: calc(100% - 99px);
-              height: 35px;
-              padding-left: 10px; }
-            html body#vm .frame .content .panel .release-note .search-bar .version-search button {
-              height: 35px;
-              width: 100%;
-              margin-top: 7px; }
-        html body#vm .frame .content .panel .release-note .release-container {
-          padding-top: 15px; }
-          html body#vm .frame .content .panel .release-note .release-container .list {
-            display: none; }
-            html body#vm .frame .content .panel .release-note .release-container .list table {
-              width: 100% !important;
-              font-size: 12px;
-              border: 0;
-              text-align: center; }
-              html body#vm .frame .content .panel .release-note .release-container .list table thead {
-                background-color: #d9d9d9;
-                color: black;
-                border: 0; }
-                html body#vm .frame .content .panel .release-note .release-container .list table thead tr th {
-                  border: 0;
-                  padding: 10px 0;
-                  font-family: 'GalanoSemiBold'; }
-              html body#vm .frame .content .panel .release-note .release-container .list table tbody tr:hover {
-                background-color: #ccf0ff; }
-              html body#vm .frame .content .panel .release-note .release-container .list table a {
-                color: #575755;
-                display: inline-block; }
-                html body#vm .frame .content .panel .release-note .release-container .list table a:hover {
-                  color: #00b2ff; }
-            html body#vm .frame .content .panel .release-note .release-container .list .dataTables_scrollBody {
-              border: 0; }
-            html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate {
-              display: flex;
-              justify-content: center; }
-              html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .paginate_button {
-                color: #00b2ff !important;
-                border: 1px solid #00b2ff;
-                margin: 0;
-                border-radius: 0;
-                margin-left: -1px;
-                padding: 0;
-                width: 30px;
-                height: 30px;
-                line-height: 30px; }
-                html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .paginate_button:hover {
-                  background: none; }
-              html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .current {
-                background: none;
-                color: white !important;
-                background-color: #00b2ff; }
-                html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .current:hover {
-                  background-color: #00b2ff; }
-              html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_previous, html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next {
-                color: transparent !important;
-                font-size: 1px;
-                border-radius: 4px 0 0 4px; }
-                html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_previous:before, html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next:before {
-                  font-family: 'Font Awesome 5 Free';
-                  content: '\f100';
-                  font-weight: 900;
-                  position: absolute;
-                  color: #00b2ff;
-                  margin-left: 8px; }
-              html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next {
-                border-radius: 0 4px 4px 0; }
-                html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next:before {
-                  content: '\f101'; }
-              html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .disabled:before {
-                opacity: 0.4; }
-    html body#vm .frame footer {
-      width: 100%;
-      background-color: #f2f2f2;
-      margin-top: 60px;
-      padding-top: 20px; }
-      html body#vm .frame footer .footer-container {
-        width: 100%;
-        max-width: 1164px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        display: none; }
-        html body#vm .frame footer .footer-container .footer-column a {
-          color: #898989;
-          line-height: 28px; }
-          html body#vm .frame footer .footer-container .footer-column a:hover {
-            text-decoration: none;
-            color: #00b2ff; }
-        html body#vm .frame footer .footer-container .footer-column .menu-head {
-          font-family: 'GalanoSemiBold';
-          color: black;
-          margin-bottom: 8px;
-          text-transform: uppercase;
-          color: #343434; }
-      html body#vm .frame footer .social-media {
-        width: 100%;
-        padding: 0 15px; }
-        html body#vm .frame footer .social-media span {
-          display: none; }
-        html body#vm .frame footer .social-media .icons {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap; }
-          html body#vm .frame footer .social-media .icons a {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #ababab;
-            color: white;
-            text-align: center;
-            margin: 2px 2px;
-            line-height: 30px; }
-      html body#vm .frame footer .legal {
-        background-color: #545454;
-        color: #cdcdcd;
-        font-size: 12px;
-        padding: 10px 15px; }
-        html body#vm .frame footer .legal .legal-text {
-          text-align: center; }
-        html body#vm .frame footer .legal .legal-links {
-          display: flex;
-          justify-content: space-between; }
-          html body#vm .frame footer .legal .legal-links a {
-            color: #efefef; }
-            html body#vm .frame footer .legal .legal-links a:hover {
-              text-decoration: none; }
+  font-size: 14px;
+}
+html body#vm .frame {
+  background-color: #ccf0ff;
+}
+html body#vm .frame header nav {
+  height: 55px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
+  width: 100%;
+  background-color: white;
+}
+html body#vm .frame header nav .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+html body#vm .frame header nav .nav-container .logo {
+  display: block;
+}
+html body#vm .frame header nav .nav-container .logo img {
+  height: 55px;
+}
+html body#vm .frame header nav .nav-container .hamburger {
+  font-size: 28px;
+  color: black;
+  opacity: 0.5;
+  transition: opacity 0.22s linear;
+  padding: 10px 20px;
+}
+html body#vm .frame header nav .nav-container .hamburger:visited, html body#vm .frame header nav .nav-container .hamburger:active {
+  color: black;
+}
+html body#vm .frame header nav .nav-container .hamburger:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header nav .nav-container {
+    max-width: 992px;
+    margin: auto;
+  }
+}
+html body#vm .frame header .main_menu {
+  background-color: #575755;
+  padding: 10px;
+  padding-bottom: 73px;
+}
+html body#vm .frame header .main_menu .main-menu-container {
+  display: flex;
+}
+html body#vm .frame header .main_menu .main-menu-container a {
+  display: block;
+  color: white;
+  font-family: "GalanoSemiBold";
+  font-size: 16px;
+  text-align: center;
+  background-color: #878787;
+  border-radius: 4px;
+  flex: 1;
+  margin: 5px;
+  padding: 10px 0;
+  position: relative;
+}
+html body#vm .frame header .main_menu .main-menu-container a img {
+  height: 50px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu .main-menu-container a img {
+    display: inline-block;
+    margin: 0;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+html body#vm .frame header .main_menu .main-menu-container a span {
+  font-family: "GalanoSemiBold";
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu .main-menu-container a {
+    display: inline-block;
+    padding: 10px 50px;
+  }
+}
+html body#vm .frame header .main_menu .main-menu-container a.id {
+  background: none;
+  opacity: 0.5;
+}
+html body#vm .frame header .main_menu .main-menu-container .active:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 13px 10px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  content: "";
+  left: calc(50% - 10px);
+  bottom: -24px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu .main-menu-container {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame header .main_menu .main-menu-container {
+    max-width: 992px;
+    margin: auto;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu {
+    padding-top: 20px 0 73px 0;
+  }
+}
+html body#vm .frame .content {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  width: calc(100% - 30px);
+  margin: auto;
+  margin-top: -54px;
+  padding-bottom: 140px;
+  position: relative;
+}
+html body#vm .frame .content .sub_menu {
+  background-color: #f6f6f6;
+  display: flex;
+  width: 100%;
+}
+html body#vm .frame .content .sub_menu li {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+html body#vm .frame .content .sub_menu li a {
+  color: #878787;
+  text-decoration: none;
+}
+html body#vm .frame .content .sub_menu li a img {
+  height: 18px;
+  margin-right: 5px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li a img {
+    display: block;
+    height: 35px;
+    margin: auto;
+  }
+}
+html body#vm .frame .content .sub_menu li a span {
+  display: inline-block;
+  line-height: 18px;
+  vertical-align: middle;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li a span {
+    display: block;
+    font-size: 10px;
+    margin: auto;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li {
+    height: 110px;
+    padding: 30px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+html body#vm .frame .content .sub_menu .active {
+  background-color: white;
+  border-bottom: 3px solid #00b2ff;
+}
+html body#vm .frame .content .sub_menu .active a img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu .active {
+    border: none;
+    border-left: 4px solid #00b2ff;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu {
+    width: 115px;
+    display: block;
+  }
+}
+html body#vm .frame .content .panel {
+  padding: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .title {
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  font-size: 22px;
+  border-bottom: 2px solid #00b2ff;
+  display: inline-block;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar {
+  display: flex;
+  height: 35px;
+  margin-top: 15px;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar input {
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  flex: 1;
+  font-size: 12px;
+  padding: 0 5px;
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar input {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar button {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+  outline: none;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar button i {
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar button:active {
+  filter: brightness(90%);
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar button {
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 0 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar {
+    height: 40px;
+    margin: 20px 0;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container {
+  padding-top: 15px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro p {
+  margin: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question {
+  padding-left: 15px;
+  margin-top: 20px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title {
+  border: none;
+  font-size: 16px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro img {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list {
+  display: none;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table {
+  width: 100% !important;
+  font-size: 12px;
+  border: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table thead {
+  background-color: #d9d9d9;
+  color: black;
+  border: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table thead tr th {
+  border: 0;
+  padding: 10px;
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table tbody tr:hover {
+  background-color: #ccf0ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list table .check {
+  background-color: #ccf0ff;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .list table {
+    font-size: 14px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_scrollBody {
+  border: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate {
+  display: flex;
+  justify-content: center;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button {
+  color: #00b2ff !important;
+  border: 1px solid #00b2ff;
+  margin: 0;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 0;
+  width: 30px;
+  line-height: 30px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .paginate_button:hover {
+  background: none;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .current {
+  background: none;
+  color: white !important;
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .current:hover {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
+  color: transparent !important;
+  font-size: 1px;
+  border-radius: 4px 0 0 4px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous:before, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  color: #00b2ff;
+  margin-left: 8px;
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
+  border-radius: 0 4px 4px 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .disabled:before {
+  opacity: 0.4;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate {
+    float: none;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  display: none;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .hint {
+  margin-bottom: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile {
+  border: 1px solid #00b2ff;
+  padding: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .title {
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
+  margin-top: 20px;
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field p {
+  margin: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
+  font-size: 12px;
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  padding-left: 23px;
+  margin-bottom: 5px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3:before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0px;
+}
+@media screen and (min-width: 350px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 350px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
+    font-size: 14px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a {
+  color: black;
+  text-decoration: underline;
+  display: inline-block;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -23px;
+  bottom: 2px;
+  font-size: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li.fill {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries ul.flags li {
+  margin-right: 5px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-type h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-size h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution {
+  margin-top: 5px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution .title {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  padding: 10px 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li {
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li span {
+  margin-left: 5px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back {
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  background: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  outline: none;
+  line-height: initial;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  width: 80px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back i {
+  margin-right: 3px;
+}
+html body#vm .frame .content .panel .release-note .title {
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  font-size: 28px;
+  border-bottom: 2px solid #00b2ff;
+  display: inline-block;
+}
+html body#vm .frame .content .panel .release-note .search-bar {
+  margin-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select {
+  position: absolute;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
+  border: 1px solid #00b2ff;
+  border-radius: 4px 0 0 4px;
+  text-align-last: center;
+  background: none;
+  width: 100px;
+  color: #00b2ff;
+  height: 35px;
+}
+html body#vm .frame .content .panel .release-note .search-bar button {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+html body#vm .frame .content .panel .release-note .search-bar button i {
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
+  width: calc(100% - 99px);
+  position: relative;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
+  border: 1px solid #00b2ff;
+  background: white;
+  border-radius: 0 4px 4px 0;
+  height: 35px;
+  color: #00b2ff;
+  padding-left: 10px;
+  width: 100%;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker {
+  width: 100%;
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  color: #00b2ff;
+  height: 35px;
+  cursor: pointer;
+  padding-left: 10px;
+  line-height: 35px;
+  position: relative;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search button {
+  height: 35px;
+  width: 100%;
+  margin-top: 7px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search input {
+  border: 1px solid #00b2ff;
+  border-radius: 0 4px 4px 0;
+  width: calc(100% - 99px);
+  height: 35px;
+  padding-left: 10px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search button {
+  height: 35px;
+  width: 100%;
+  margin-top: 7px;
+}
+html body#vm .frame .content .panel .release-note .release-container {
+  padding-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list {
+  display: none;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table {
+  width: 100% !important;
+  font-size: 12px;
+  border: 0;
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table thead {
+  background-color: #d9d9d9;
+  color: black;
+  border: 0;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table thead tr th {
+  border: 0;
+  padding: 10px 0;
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .release-note .release-container .list table tbody tr:hover {
+  background-color: #ccf0ff;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table a {
+  color: #575755;
+  display: inline-block;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table a:hover {
+  color: #00b2ff;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_scrollBody {
+  border: 0;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate {
+  display: flex;
+  justify-content: center;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .paginate_button {
+  color: #00b2ff !important;
+  border: 1px solid #00b2ff;
+  margin: 0;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .paginate_button:hover {
+  background: none;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .current {
+  background: none;
+  color: white !important;
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .current:hover {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_previous, html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next {
+  color: transparent !important;
+  font-size: 1px;
+  border-radius: 4px 0 0 4px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_previous:before, html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  color: #00b2ff;
+  margin-left: 8px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next {
+  border-radius: 0 4px 4px 0;
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate #ReleTable_next:before {
+  content: "";
+}
+html body#vm .frame .content .panel .release-note .release-container .list .dataTables_paginate .disabled:before {
+  opacity: 0.4;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel {
+    padding: 25px 4%;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content {
+    max-width: 962px;
+    margin: auto;
+    margin-top: -54px;
+    display: flex;
+    padding: 0;
+  }
+}
+html body#vm .frame footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: 60px;
+  padding-top: 20px;
+}
+html body#vm .frame footer .footer-container {
+  width: 100%;
+  max-width: 1164px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 15px;
+  display: none;
+  font-size: 12px;
+}
+html body#vm .frame footer .footer-container .footer-column {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+html body#vm .frame footer .footer-container .footer-column a {
+  color: #898989;
+  line-height: 24px;
+}
+html body#vm .frame footer .footer-container .footer-column a:hover {
+  text-decoration: none;
+  color: #00b2ff;
+}
+html body#vm .frame footer .footer-container .footer-column .menu-head {
+  font-family: "GalanoSemiBold";
+  color: black;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: #343434;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .footer-container {
+    display: flex;
+  }
+}
+html body#vm .frame footer .social-media {
+  width: 100%;
+  padding: 0 15px;
+}
+html body#vm .frame footer .social-media ul.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+html body#vm .frame footer .social-media ul.icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ababab;
+  color: white;
+  text-align: center;
+  margin: 2px 2px;
+  line-height: 30px;
+}
+html body#vm .frame footer .social-media ul.icons span {
+  color: #898989;
+  display: none;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .social-media ul.icons span {
+    display: block;
+  }
+}
+html body#vm .frame footer .legal {
+  background-color: #545454;
+  color: #cdcdcd;
+  font-size: 12px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+html body#vm .frame footer .legal .legal-text {
+  text-align: center;
+}
+html body#vm .frame footer .legal .legal-links {
+  display: flex;
+  justify-content: space-between;
+}
+html body#vm .frame footer .legal .legal-links a {
+  color: #efefef;
+}
+html body#vm .frame footer .legal .legal-links a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .legal .legal-links {
+    width: 270px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .legal {
+    display: flex;
+    justify-content: space-between;
+  }
+  html body#vm .frame footer .legal br {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
