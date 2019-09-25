@@ -60,6 +60,9 @@ html{
 						@media screen and (min-width: 992px){
 							max-width: 992px;
 							margin: auto;
+							@media screen and (min-width: 1200px){
+								max-width: 1200px;
+							}
 						}
 					}//container
 				}//nav
@@ -121,13 +124,15 @@ html{
 							@media screen and (min-width: 992px){
 								max-width: 992px;
 								margin: auto;
-								padding: 0 10px;
+								padding: 0 5px;
+								@media screen and (min-width: 1200px){
+									max-width: 1200px;
+								}
 							}
 						}
 					}//main-menu-container
 					@media screen and (min-width: 768px){
-						padding-top: 20px 0 73px 0;
-
+						padding: 20px 0 73px 10px;
 					}
 				}//main_menu
 			}//header
@@ -177,7 +182,7 @@ html{
 						}
 						@media screen and (min-width: 992px){
 							height: 110px;
-							padding: 30px 0;
+							padding: 30px 0 0 4px;
 							border-bottom: 1px solid #e8e8e8;
 						}
 					}//li
@@ -193,6 +198,7 @@ html{
 						@media screen and (min-width: 992px){
 							border: none;
 							border-left: 4px solid $blue;
+							padding-left: 0;
 						}
 					}
 					@media screen and (min-width: 992px){
@@ -209,6 +215,9 @@ html{
 							font-size: 22px;
 							border-bottom: 2px solid $blue;
 							display: inline-block;
+							@media screen and (min-width: 992px){
+								font-size: 28px;
+							}
 						}//title
 						.search-bar{
 							display: flex;
@@ -243,6 +252,13 @@ html{
 									font-size: 14px;
 									margin-left: 10px;
 									padding: 0 12px;
+									@media screen and (min-width: 992px) {
+										@media screen and (min-width: 1200px) {
+											font-size: 16px;
+										    margin-left: 10px;
+										    padding: 0 22px;
+										}
+									}
 								}
 							}
 							@media screen and (min-width: 768px){
@@ -280,6 +296,13 @@ html{
 									position: absolute;
 									right: 0;
 									bottom: -150px;
+									@media screen and (min-width: 992px){
+										position: relative;
+									    bottom: initial;
+									    display: block;
+									    margin-left: 90%;
+									    margin-top: 40px;
+									}
 								}
 							}//intro
 
@@ -314,6 +337,11 @@ html{
 								.dataTables_scrollBody{
 									border: 0;
 								}
+								.dataTables_info{
+									font-size: 10px;
+									float: none;
+									text-align: center;
+								}
 								.dataTables_paginate{
 									display: flex;
 									justify-content: center;
@@ -340,29 +368,13 @@ html{
 										}
 									}
 									#EncyTable_previous, #EncyTable_next{
-										color: transparent !important;
-										font-size: 1px;
 										border-radius: 4px 0 0 4px;
-										&:before{
-											font-family: 'Font Awesome 5 Free';
-											content: '\f100';
-											font-weight: 900;
-											position: absolute;
-											color: $blue;
-											margin-left: 8px;
-											font-size: 12px;
-										}
 									}
 									#EncyTable_next{
 										border-radius: 0 4px 4px 0;
-										&:before{
-											content: '\f101';
-										}
 									}
 									.disabled{
-										&:before{
-											opacity: 0.4;
-										}
+										color: #99E0FE !important;
 									}
 									@media screen and (min-width: 768px){
 										float: none;
@@ -376,130 +388,156 @@ html{
 								background-color: white;
 								position: relative;
 								display: none;
-								.hint{
-									margin-bottom: 10px;
-								}
-								.virus-profile{
-									border: 1px solid $blue;
-									padding: 10px;
-									.title{
-										font-size: 18px;
-										border: none;
-										text-align: center;
-										width: 100%;
+								a.back_text{
+									color: $blue;
+									text-decoration: none;
+									display: inline-block;
+									font-size: 12px;
+									margin-bottom: 8px;
+									&:hover{
+										text-decoration: underline;
 									}
-									.field{
-										margin-top: 20px;
-										font-size: 12px;
-										p{
-											margin: 0;
+									i{
+										margin-right: 5px;
+									}
+								}
+								.detail-container{
+									.virus-profile{
+										border: 1px solid $blue;
+										padding: 10px;
+										.title{
+											font-size: 18px;
+											border: none;
+											text-align: center;
+											width: 100%;
 										}
-										h3{
+										.field{
+											margin-top: 20px;
 											font-size: 12px;
-											color: $blue;
-											font-family: 'GalanoSemiBold';
-											padding-left: 23px;
-											margin-bottom: 5px;
-											position: relative;
-											&:before{
-												content: '\f2c2';
-												font-family: 'Font Awesome 5 Free';
-												font-weight: 900;
-												position: absolute;
-												left: 0px;
+											p{
+												margin: 0;
 											}
+											h3{
+												font-size: 12px;
+												color: $blue;
+												font-family: 'GalanoSemiBold';
+												padding-left: 23px;
+												margin-bottom: 5px;
+												position: relative;
+												&:before{
+													content: '\f2c2';
+													font-family: 'Font Awesome 5 Free';
+													font-weight: 900;
+													position: absolute;
+													left: 0px;
+												}
+												@media screen and (min-width: 350px){
+													font-size: 14px;
+												}
+											}//h3
 											@media screen and (min-width: 350px){
 												font-size: 14px;
 											}
-										}//h3
-										@media screen and (min-width: 350px){
-											font-size: 14px;
+										}//field
+										.virus-name{
+											
 										}
-									}//field
-									.virus-name{
-										
-									}
-									.file-hash{
-										h3:before{
-											content: '\f02b';
-										}
-										a{
-											color: black;
-											text-decoration: underline;
-											display: inline-block;
-											position: relative;
-											&:after{
-												content: '\f35d';
-												font-family: 'Font Awesome 5 Free';
-												font-weight: 900;
-												position: absolute;
-												right: -23px;
-												bottom: 2px;
-												font-size: 10px;
+										.file-hash{
+											h3:before{
+												content: '\f02b';
+											}
+											a{
+												color: black;
+												text-decoration: underline;
+												display: inline-block;
+												position: relative;
+												&:after{
+													content: '\f35d';
+													font-family: 'Font Awesome 5 Free';
+													font-weight: 900;
+													position: absolute;
+													right: -23px;
+													bottom: 2px;
+													font-size: 10px;
+												}
+											}
+										}//file-hash
+										.popularity{
+											h3:before{
+												content: '\f76b';
+											}
+											ul{
+												display: flex;
+												width: 70px;
+												justify-content: space-between;
+												li{
+													width: 10px;
+													height: 10px;
+													border-radius: 50%;
+													border: 1px solid $blue;
+												}
+												li.fill{
+													background-color: $blue;
+												}
+											}
+										}//popularity
+										.countries{
+											h3:before{
+												content: '\f57d';
+											}
+											ul.flags{
+												li{
+													margin-right: 5px;
+													box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+												}
+											}
+										}//countries
+										.file-type{
+											h3:before{
+												content: '\f07c';
+											}
+										}//file-type
+										.file-size{
+											h3:before{
+												content: '\f496';
 											}
 										}
-									}//file-hash
-									.popularity{
-										h3:before{
-											content: '\f76b';
+										@media screen and (min-width: 992px){;
+											flex: 1;
 										}
-										ul{
-											display: flex;
-											width: 70px;
-											justify-content: space-between;
+									}//virus-profile
+									.zyxel-solution{
+										margin-top: 5px;
+										.title{
+											width: 100%;
+											text-align: center;
+											font-size: 18px;
+											border: none;
+											padding: 10px 0;
+										}
+										ul.model{
+											margin-bottom: 20px;
+	    									font-size: 12px;
 											li{
-												width: 10px;
-												height: 10px;
-												border-radius: 50%;
-												border: 1px solid $blue;
+												font-family: 'GalanoSemiBold';
+												span{
+													margin-left: 5px;
+												}
 											}
-											li.fill{
-												background-color: $blue;
+											@media screen and (min-width: 768px){
+												font-size: 14px;
 											}
+										}//model
+										@media screen and (min-width: 992px){
+											flex: 1;
+											margin-left: 20px;
 										}
-									}//popularity
-									.countries{
-										h3:before{
-											content: '\f57d';
-										}
-										ul.flags{
-											li{
-												margin-right: 5px;
-												box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
-											}
-										}
-									}//countries
-									.file-type{
-										h3:before{
-											content: '\f07c';
-										}
-									}//file-type
-									.file-size{
-										h3:before{
-											content: '\f496';
-										}
+									}//zyxel-solution
+									@media screen  and (min-width: 992px){
+										display: flex;
 									}
-								}//virus-profile
-								.zyxel-solution{
-									margin-top: 5px;
-									.title{
-										width: 100%;
-										text-align: center;
-										font-size: 18px;
-										border: none;
-										padding: 10px 0;
-									}
-									ul.model{
-										   margin-bottom: 20px;
-    									font-size: 12px;
-										li{
-											font-family: 'GalanoSemiBold';
-											span{
-												margin-left: 5px;
-											}
-										}
-									}
-								}//zyxel-solution
+								}//detail-container
+									
 								button.back{
 									color: $blue;
 									border: 1px solid $blue;
@@ -513,10 +551,19 @@ html{
 									right: 0;
 									margin-top: 20px;
 									width: 80px;
+									&:hover{
+										background-color: $blue;
+										color: white;
+										transition: all 0.2s linear;
+									}
 									i{
 										margin-right: 3px;	
 									}
-								}
+									@media screen and (min-width: 992px){ 
+										position: relative;
+										margin-left: 90%;
+									}
+								}//button
 							}//detail
 						}//ency-container
 					}//encyclopedia
@@ -734,6 +781,10 @@ html{
 					}//release-note
 					@media screen and (min-width: 768px){
 						padding: 25px 4%;
+						@media screen and (min-width: 992px){
+							flex: 1;
+							padding: 4%;
+						}
 					}
 				}//panel
 				@media screen and (min-width: 992px){
@@ -742,6 +793,9 @@ html{
 					margin-top: -54px;
 					display: flex;
 					padding: 0;
+					@media screen and (min-width: 1200px){
+						max-width: 1170px;
+					}
 				}
 			}//content
 			footer{

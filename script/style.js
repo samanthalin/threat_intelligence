@@ -25,6 +25,7 @@ $(document).ready(function(){
 
 
 	$('#ency_search_btn').click(function(){
+		
 		$('.detail').hide();
 		$('.encyclopedia .intro').hide();
 		$('.encyclopedia .list').show();
@@ -35,8 +36,15 @@ $(document).ready(function(){
 	    	"ordering": false,
 	    	"searching": false,
 	    	"pageLength": 20,
-	    	"info": false,
+	    	"info": true,
+	    	"language": {
+			    "paginate": {
+			      "previous": "<i class='fas fa-angle-left'></i>",
+			      "next": "<i class='fas fa-angle-right'></i>",
+			    },
+		  	}
 	    });
+	    $(".dataTables_info").insertAfter(".dataTables_paginate");
 	});
 
 	$('#model_search_btn').click(function(){
@@ -49,8 +57,15 @@ $(document).ready(function(){
 	    	"ordering": false,
 	    	"searching": false,
 	    	"pageLength": 20,
-	    	"info": false,
+	    	"info": true,
+	    	"language": {
+			    "paginate": {
+			      "previous": "<i class='fas fa-angle-left'></i>",
+			      "next": "<i class='fas fa-angle-right'></i>",
+			    },
+		  	}
 	    });
+	    $(".dataTables_info").insertAfter(".dataTables_paginate");
 	    var searchby = $('.model-version-select').children('option:selected').val();
 	    var model = $('.model-select').children('option:selected').val();
 	    var date = $('.date-picker').text();
@@ -69,8 +84,15 @@ $(document).ready(function(){
 	    	"ordering": false,
 	    	"searching": false,
 	    	"pageLength": 20,
-	    	"info": false,
+	    	"info": true,
+	    	"language": {
+			    "paginate": {
+			      "previous": "<i class='fas fa-angle-left'></i>",
+			      "next": "<i class='fas fa-angle-right'></i>",
+			    },
+		  	}
 	    });
+	    $(".dataTables_info").insertAfter(".dataTables_paginate");
 	    var searchby = $('.model-version-select').children('option:selected').val();
 	    var version_number = $('.version-number').val();
 	    $('.searchby .kind').html(searchby);
@@ -108,11 +130,19 @@ $(document).ready(function(){
 	    }, 1000);
 	});
 
-	$('[data-toggle="tooltip"]').tooltip();
+	$('.detail .back_text').click(function(){
+		$('.detail').hide();
+		$('.list').show();
+		$('html, body').animate({
+	        scrollTop: $('table').offset().top
+	    }, 1000);
+	});
 
+	$('[data-toggle="tooltip"]').tooltip();
 });
 
 $(document).ready(function(){
+
 	$.fn.DataTable.ext.pager.numbers_length = 10;
 	
 	$(function() {
@@ -147,5 +177,6 @@ $(document).ready(function(){
 	    cb(start, end);
 
 	});
+	
 });
 
