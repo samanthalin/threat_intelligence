@@ -55,6 +55,11 @@ html body#vm .frame header nav .nav-container .hamburger:hover {
     margin: auto;
   }
 }
+@media screen and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame header nav .nav-container {
+    max-width: 1200px;
+  }
+}
 html body#vm .frame header .main_menu {
   background-color: #575755;
   padding: 10px;
@@ -123,12 +128,17 @@ html body#vm .frame header .main_menu .main-menu-container .active:after {
   html body#vm .frame header .main_menu .main-menu-container {
     max-width: 992px;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 5px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame header .main_menu .main-menu-container {
+    max-width: 1200px;
   }
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame header .main_menu {
-    padding-top: 20px 0 73px 0;
+    padding: 20px 0 73px 10px;
   }
 }
 html body#vm .frame .content {
@@ -185,7 +195,7 @@ html body#vm .frame .content .sub_menu li a span {
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu li {
     height: 110px;
-    padding: 30px 0;
+    padding: 30px 0 0 4px;
     border-bottom: 1px solid #e8e8e8;
   }
 }
@@ -201,6 +211,7 @@ html body#vm .frame .content .sub_menu .active a img {
   html body#vm .frame .content .sub_menu .active {
     border: none;
     border-left: 4px solid #00b2ff;
+    padding-left: 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -218,6 +229,11 @@ html body#vm .frame .content .panel .encyclopedia .title {
   font-size: 22px;
   border-bottom: 2px solid #00b2ff;
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .title {
+    font-size: 28px;
+  }
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar {
   display: flex;
@@ -259,6 +275,13 @@ html body#vm .frame .content .panel .encyclopedia .search-bar button:active {
     padding: 0 12px;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar button {
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 0 22px;
+  }
+}
 @media screen and (min-width: 768px) {
   html body#vm .frame .content .panel .encyclopedia .search-bar {
     height: 40px;
@@ -296,6 +319,15 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro img {
   right: 0;
   bottom: -150px;
 }
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .intro img {
+    position: relative;
+    bottom: initial;
+    display: block;
+    margin-left: 90%;
+    margin-top: 40px;
+  }
+}
 html body#vm .frame .content .panel .encyclopedia .ency-container .list {
   display: none;
 }
@@ -328,6 +360,11 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list table .c
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_scrollBody {
   border: 0;
 }
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_info {
+  font-size: 10px;
+  float: none;
+  text-align: center;
+}
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate {
   display: flex;
   justify-content: center;
@@ -354,27 +391,13 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTab
   background-color: #00b2ff;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
-  color: transparent !important;
-  font-size: 1px;
   border-radius: 4px 0 0 4px;
-}
-html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_previous:before, html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
-  font-family: "Font Awesome 5 Free";
-  content: "";
-  font-weight: 900;
-  position: absolute;
-  color: #00b2ff;
-  margin-left: 8px;
-  font-size: 12px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next {
   border-radius: 0 4px 4px 0;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate #EncyTable_next:before {
-  content: "";
-}
-html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .disabled:before {
-  opacity: 0.4;
+html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate .disabled {
+  color: #99E0FE !important;
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame .content .panel .encyclopedia .ency-container .list .dataTables_paginate {
@@ -388,27 +411,37 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail {
   position: relative;
   display: none;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .hint {
-  margin-bottom: 10px;
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text {
+  color: #00b2ff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 8px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text:hover {
+  text-decoration: underline;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text i {
+  margin-right: 5px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
   border: 1px solid #00b2ff;
   padding: 10px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .title {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title {
   font-size: 18px;
   border: none;
   text-align: center;
   width: 100%;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field {
   margin-top: 20px;
   font-size: 12px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field p {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field p {
   margin: 0;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
   font-size: 12px;
   color: #00b2ff;
   font-family: "GalanoSemiBold";
@@ -416,7 +449,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus
   margin-bottom: 5px;
   position: relative;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3:before {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -424,25 +457,25 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus
   left: 0px;
 }
 @media screen and (min-width: 350px) {
-  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field h3 {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
     font-size: 14px;
   }
 }
 @media screen and (min-width: 350px) {
-  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .field {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field {
     font-size: 14px;
   }
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash h3:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash h3:before {
   content: "";
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a {
   color: black;
   text-decoration: underline;
   display: inline-block;
   position: relative;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-hash a:after {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -451,55 +484,76 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus
   bottom: 2px;
   font-size: 10px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity h3:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity h3:before {
   content: "";
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul {
   display: flex;
   width: 70px;
   justify-content: space-between;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1px solid #00b2ff;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .popularity ul li.fill {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill {
   background-color: #00b2ff;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries h3:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before {
   content: "";
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .countries ul.flags li {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries ul.flags li {
   margin-right: 5px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-type h3:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-type h3:before {
   content: "";
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .virus-profile .file-size h3:before {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before {
   content: "";
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution {
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
+    flex: 1;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
   margin-top: 5px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution .title {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution .title {
   width: 100%;
   text-align: center;
   font-size: 18px;
   border: none;
   padding: 10px 0;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model {
   margin-bottom: 20px;
   font-size: 12px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li {
   font-family: "GalanoSemiBold";
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .detail .zyxel-solution ul.model li span {
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li span {
   margin-left: 5px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
+    flex: 1;
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container {
+    display: flex;
+  }
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back {
   color: #00b2ff;
@@ -515,8 +569,19 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail button
   margin-top: 20px;
   width: 80px;
 }
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back:hover {
+  background-color: #00b2ff;
+  color: white;
+  transition: all 0.2s linear;
+}
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back i {
   margin-right: 3px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back {
+    position: relative;
+    margin-left: 90%;
+  }
 }
 html body#vm .frame .content .panel .release-note .title {
   color: #00b2ff;
@@ -725,6 +790,12 @@ html body#vm .frame .content .panel .release-note .release-container .list .data
     padding: 25px 4%;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame .content .panel {
+    flex: 1;
+    padding: 4%;
+  }
+}
 @media screen and (min-width: 992px) {
   html body#vm .frame .content {
     max-width: 962px;
@@ -732,6 +803,11 @@ html body#vm .frame .content .panel .release-note .release-container .list .data
     margin-top: -54px;
     display: flex;
     padding: 0;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame .content {
+    max-width: 1170px;
   }
 }
 html body#vm .frame footer {
