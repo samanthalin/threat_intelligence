@@ -113,7 +113,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$.fn.DataTable.ext.pager.numbers_length = 5;
+	$.fn.DataTable.ext.pager.numbers_length = 10;
 	
 	$(function() {
 
