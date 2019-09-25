@@ -17,6 +17,15 @@
 //color variables
 $blue: #00b2ff;
 $light-blue: #ccf0ff;
+$none: none;
+//mixin
+@mixin appearance($none) {
+  -webkit-appearance: $none;
+  -moz-appearance: $none;
+  -ms-appearance: $none;
+  -o-appearance: $none;
+  appearance: $none;
+}
 
 *{
 	font-family: GalanoRegular, Helvetica, Arial, sans-serif;
@@ -182,7 +191,7 @@ html{
 						}
 						@media screen and (min-width: 992px){
 							height: 110px;
-							padding: 30px 0 0 4px;
+							padding: 30px 6px 0 4px;
 							border-bottom: 1px solid #e8e8e8;
 						}
 					}//li
@@ -399,6 +408,9 @@ html{
 									}
 									i{
 										margin-right: 5px;
+									}
+									@media screen and (min-width: 1200px) {
+										font-size: 14px;
 									}
 								}
 								.detail-container{
@@ -752,29 +764,14 @@ html{
 										}
 									}
 									#ReleTable_previous, #ReleTable_next{
-										color: transparent !important;
-										font-size: 1px;
+										color: $blue;
 										border-radius: 4px 0 0 4px;
-										&:before{
-											font-family: 'Font Awesome 5 Free';
-											content: '\f100';
-											font-weight: 900;
-											position: absolute;
-											color: $blue;
-											margin-left: 8px;
-										}
 									}
 									#ReleTable_next{
 										border-radius: 0 4px 4px 0;
-										&:before{
-											content: '\f101';
-										}
 									}
 									.disabled{
-										&:before{
-											opacity: 0.4;
-										}
-									}
+										color: #99E0FE !important;					}
 								}//dataTables_paginate
 							}//list
 						}//release-container
@@ -893,4 +890,12 @@ html{
 			}//footer
 		}//frame
 	}//body
+}
+
+select{
+	@include appearance(none);
+}
+
+.dataTables_paginate{
+	margin-top: 10px;
 }

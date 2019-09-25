@@ -44,7 +44,7 @@ $(document).ready(function(){
 			    },
 		  	}
 	    });
-	    $(".dataTables_info").insertAfter(".dataTables_paginate");
+	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
 	});
 
 	$('#model_search_btn').click(function(){
@@ -65,7 +65,7 @@ $(document).ready(function(){
 			    },
 		  	}
 	    });
-	    $(".dataTables_info").insertAfter(".dataTables_paginate");
+	    $("#release_note .dataTables_info").insertAfter("#release_note .dataTables_paginate");
 	    var searchby = $('.model-version-select').children('option:selected').val();
 	    var model = $('.model-select').children('option:selected').val();
 	    var date = $('.date-picker').text();
@@ -92,7 +92,7 @@ $(document).ready(function(){
 			    },
 		  	}
 	    });
-	    $(".dataTables_info").insertAfter(".dataTables_paginate");
+	    $("#release_note .dataTables_info").insertAfter("#release_note .dataTables_paginate");
 	    var searchby = $('.model-version-select').children('option:selected').val();
 	    var version_number = $('.version-number').val();
 	    $('.searchby .kind').html(searchby);
