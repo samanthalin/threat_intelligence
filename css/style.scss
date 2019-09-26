@@ -213,10 +213,12 @@ html{
 					@media screen and (min-width: 992px){
 						width: 115px;
 						display: block;
+						margin: 0;
 					}
 				}//sub_menu
 				.panel{
 					padding: 10px;
+					min-height: 500px;
 					.encyclopedia{	
 						.title{
 							color: $blue;
@@ -317,84 +319,6 @@ html{
 
 							.list{
 								display: none;
-								table{
-									width: 100% !important;
-									font-size: 12px;
-									border: 0;
-									thead{
-										background-color: #d9d9d9;
-										color: black;
-										border: 0;
-										tr th{
-											border: 0;
-											padding: 10px;
-											font-family: 'GalanoSemiBold';
-											&:last-child{
-												text-align: center;
-											}
-										}
-									}
-									tbody tr{
-										&:hover{
-											background-color: $light-blue;
-										}
-										td:last-child{
-											text-align: center;
-										}
-									}
-									.check{
-										background-color: $light-blue;
-									}
-									@media screen and (min-width: 768px){
-										font-size: 14px;
-									}
-								}//table
-								.dataTables_scrollBody{
-									border: 0;
-								}
-								.dataTables_info{
-									font-size: 10px;
-									float: none;
-									text-align: center;
-								}
-								.dataTables_paginate{
-									display: flex;
-									justify-content: center;
-									.paginate_button{
-										color: $blue !important;
-										border: 1px solid $blue;
-										margin: 0;
-										border-radius: 0;
-	    								margin-left: -1px;
-	    								padding: 0;
-	    								width: 30px;
-	    								// height: 30px;
-	    								line-height: 30px;
-	    								&:hover{
-	    									background: none;
-	    								}
-									}
-									.current{
-										background: none;
-										color: white !important;
-										background-color: $blue;
-										&:hover{
-											background-color: $blue;
-										}
-									}
-									#EncyTable_previous, #EncyTable_next{
-										border-radius: 4px 0 0 4px;
-									}
-									#EncyTable_next{
-										border-radius: 0 4px 4px 0;
-									}
-									.disabled{
-										color: #99E0FE !important;
-									}
-									@media screen and (min-width: 768px){
-										float: none;
-									}
-								}//dataTables_paginate
 							}//list
 
 							.detail{
@@ -589,9 +513,12 @@ html{
 						.title{
 							color: $blue;
 							font-family: 'GalanoSemiBold';
-							font-size: 28px;
+							font-size: 22px;
 							border-bottom: 2px solid $blue;
 							display: inline-block;
+							@media screen and (min-width: 992px) {
+								font-size: 28px;								
+							}
 						}//title
 						.search-bar{
 							margin-top: 15px;
@@ -608,6 +535,9 @@ html{
 									width: 25px;
     								line-height: 35px;
     								text-align: center;
+    								@media screen and (min-width: 768px) {
+    									line-height: 40px;
+    								}
 								}
 								.model-version-select{
 									border: 1px solid $blue;
@@ -617,16 +547,32 @@ html{
 									width: 100px;
 									color: $blue;
 									height: 35px;
+									@media screen and (min-width: 768px){
+										height: 40px;
+									}
 								}//model_version_select
-							}	
+							}//lb-mv-select
 						    button{
 								background-color: $blue;
 								color: white;
 								border: none;
 								border-radius: 4px;
 								outline: none;
+								height: 35px;
+								width: 100%;
+								margin-top: 7px;
 								i{
 									font-size: 12px;
+								}
+								@media screen and (min-width: 768px){
+									padding: 0 12px;
+									width: initial;
+									margin: 0 0 0 10px;
+									height: 40px;
+									@media screen and (min-width: 1200px){
+									    padding: 0 22px;
+									    font-size: 16px;
+									}
 								}
 							}//button
 							.model-search{
@@ -644,7 +590,9 @@ html{
 									    color: $blue;
 									    padding-left: 10px;
 									    width: 100%;
-
+										@media screen and (min-width: 768px){
+											height: 40px;
+										}
 									}
 									&:after{
 										content: '\f0d7';
@@ -658,7 +606,14 @@ html{
 	    								line-height: 35px;
 	    								text-align: center;
 									}
-								}	
+									@media screen and (min-width: 768px){
+										width: initial;
+   										flex: 1;
+   										&:after{
+   											line-height: 40px;
+   										}
+									}
+								}//label
 									
 								.date-picker{
 									width: 100%;
@@ -682,11 +637,23 @@ html{
 	    								line-height: 35px;
 	    								text-align: center;
 									}
-								}
-								button{
-									height: 35px;
-									width: 100%;
-									margin-top: 7px;
+									@media screen and (min-width: 768px) {
+										width: initial;
+									    flex: 1;
+									    margin-left: 10px;
+									    height: 40px;
+									    line-height: 40px;
+									    &:after{
+   											line-height: 40px;
+   										}
+									}
+								}//date-picker
+								@media screen and (min-width: 768px) {
+									justify-content: space-between;
+    								padding-left: 99px;
+    								@media screen and (min-width: 992px){
+										
+									}
 								}
 							}//model-search
 							.version-search{
@@ -699,13 +666,20 @@ html{
 									width: calc(100% - 99px);
 									height: 35px;
 									padding-left: 10px;
+									@media screen and (min-width: 768px){
+										width: initial;
+   										flex: 1;
+   										height: 40px;
+									}
 								}
-								button{
-									height: 35px;
-									width: 100%;
-									margin-top: 7px;
+								@media screen and (min-width: 768px){
+									justify-content: space-between;
+    								padding-left: 99px;
 								}
 							}//version-search
+							@media screen and (min-width: 768px) {
+								margin: 20px 0;
+							}
 						}//search-bar
 						.release-container{
 							padding-top: 15px;
@@ -714,71 +688,22 @@ html{
 							.list{
 								display: none;
 								table{
-									width: 100% !important;
-									font-size: 12px;
-									border: 0;
-									text-align: center;
-									thead{
-										background-color: #d9d9d9;
-										color: black;
-										border: 0;
-										tr th{
-											border: 0;
-											padding: 10px 0;
-											font-family: 'GalanoSemiBold';
+									tr{
+										th, td{
+											&:last-child{
+												text-align: center;
+											}
 										}
-									}
-									tbody tr{
-										&:hover{
-											background-color: $light-blue;
-										}
-									}
-									a{
-										color: #575755;
-										display: inline-block;
-										&:hover{
-											color: $blue;
+										td a{
+											display: inline-block;
+											color: #575755;
+											&:hover{
+												color: $blue;
+												transition:  all 0.2s linear;
+											}
 										}
 									}
 								}//table
-								.dataTables_scrollBody{
-									border: 0;
-								}
-								.dataTables_paginate{
-									display: flex;
-									justify-content: center;
-									.paginate_button{
-										color: $blue !important;
-										border: 1px solid $blue;
-										margin: 0;
-										border-radius: 0;
-	    								margin-left: -1px;
-	    								padding: 0;
-	    								width: 30px;
-	    								height: 30px;
-	    								line-height: 30px;
-	    								&:hover{
-	    									background: none;
-	    								}
-									}
-									.current{
-										background: none;
-										color: white !important;
-										background-color: $blue;
-										&:hover{
-											background-color: $blue;
-										}
-									}
-									#ReleTable_previous, #ReleTable_next{
-										color: $blue;
-										border-radius: 4px 0 0 4px;
-									}
-									#ReleTable_next{
-										border-radius: 0 4px 4px 0;
-									}
-									.disabled{
-										color: #99E0FE !important;					}
-								}//dataTables_paginate
 							}//list
 						}//release-container
 					}//release-note
@@ -838,6 +763,7 @@ html{
 						@media screen and (min-width: 992px){
 							max-width: 992px;
 							margin: auto;
+							justify-content: space-around;
 							@media screen and (min-width: 1200px){
 								max-width: 1200px;
 							}
@@ -913,8 +839,94 @@ html{
 
 select{
 	@include appearance(none);
+	outline: none;
 }
 
-.dataTables_paginate{
-	margin-top: 10px;
+
+
+
+
+//paginate-style
+#encyclopedia, #release_note{
+	table{
+		width: 100% !important;
+		font-size: 12px;
+		border: 0;
+		thead{
+			background-color: #d9d9d9;
+			color: black;
+			border: 0;
+			tr th{
+				padding: 10px;
+				border: 0 !important;
+				font-family: 'GalanoSemiBold';
+			}
+		}
+		tbody tr{
+			&:hover{
+				background-color: $light-blue;
+			}
+		}
+		.check{
+			background-color: $light-blue;
+		}
+		@media screen and (min-width: 768px){
+			font-size: 14px;
+		}
+	}//table
+
+	.dataTables_scrollFoot{
+		display: none;
+	}
+	.dataTables_scrollBody{
+	border: 0 !important;
+	}
+	.dataTables_info{
+		font-size: 10px;
+		float: none !important;
+		text-align: center;
+		@media screen and (min-width: 768px) {
+			font-size: 12px;
+		}
+	}
+	.dataTables_paginate{
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+		.paginate_button{
+			color: $blue !important;
+			border: 1px solid $blue;
+			margin: 0;
+			border-radius: 0;
+			margin-left: -1px;
+			padding: 0;
+			width: 30px;
+			// height: 30px;
+			line-height: 30px;
+			&:hover{
+				background: none;
+			}
+		}
+		.current{
+			background: none;
+			color: white !important;
+			background-color: $blue;
+			&:hover{
+				background-color: $blue;
+			}
+		}
+		.previous{
+			border-radius: 4px 0 0 4px;
+		}
+		.next{
+			border-radius: 0 4px 4px 0;
+		}
+		.disabled{
+			color: #99E0FE !important;
+		}
+		@media screen and (min-width: 768px){
+			float: none;
+		}
+	}//dataTables_paginate
 }
+
