@@ -112,7 +112,7 @@ $(document).ready(function(){
 	  }
 	});
 
-	$('#EncyTable tr').click(function(){
+	$('#EncyTable tbody tr').click(function(){
 		$('.list').hide();
 		$('.detail').show();
 		$('html, body').animate({
