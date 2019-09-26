@@ -175,8 +175,6 @@ $(document).ready(function(){
 	    }, cb);
 
 	    cb(start, end);
-
 	});
-	
 });
 
