@@ -329,11 +329,17 @@ html{
 											border: 0;
 											padding: 10px;
 											font-family: 'GalanoSemiBold';
+											&:last-child{
+												text-align: center;
+											}
 										}
 									}
 									tbody tr{
 										&:hover{
 											background-color: $light-blue;
+										}
+										td:last-child{
+											text-align: center;
 										}
 									}
 									.check{
@@ -829,6 +835,13 @@ html{
 					}//footer-column
 					@media screen and (min-width: 768px) {
 						display: flex;
+						@media screen and (min-width: 992px){
+							max-width: 992px;
+							margin: auto;
+							@media screen and (min-width: 1200px){
+								max-width: 1200px;
+							}
+						}
 					}
 				}//footer-container
 				.social-media{
@@ -885,6 +898,12 @@ html{
 						br{display: none;}
 						display: flex;
 						justify-content: space-between;
+						@media screen and (min-width: 992px) {
+							padding: 10px calc(50vw - 496px);
+							@media screen and (min-width: 1200px){
+								padding: 10px calc(50vw - 600px);
+							}
+						}
 					}
 				}//legal
 			}//footer
