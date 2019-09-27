@@ -987,4 +987,9 @@ select {
   }
 }
 
+.menu-open {
+  transform: translateX(-300px);
+  transition: all 0.2s linear;
+}
+
 /*# sourceMappingURL=style.css.map */

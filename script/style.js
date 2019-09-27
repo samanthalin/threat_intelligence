@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	$(function(){
 	  // 預設顯示第一個 Tab
 	  var _showTab = 0;
@@ -23,6 +24,12 @@ $(document).ready(function(){
 	  });
 	});
 
+	$('.hamburger').click(function(){
+		$('.menu').toggleClass('menu-open');
+		$('header').toggleClass('menu-open');
+		$('.content').toggleClass('menu-open');
+		$('footer').toggleClass('menu-open');
+	});
 
 	$('#ency_search_btn').click(function(){
 		
