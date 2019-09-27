@@ -19,7 +19,7 @@ html body#vm {
 html body#vm .frame {
   background-color: #ccf0ff;
 }
-html body#vm .frame #accordion {
+html body#vm .frame .menu {
   position: fixed;
   width: 300px;
   top: 0;
@@ -31,10 +31,10 @@ html body#vm .frame #accordion {
   border-left: 1px solid #dedede;
   overflow-y: auto;
 }
-html body#vm .frame #accordion .card {
+html body#vm .frame .menu .card {
   border: 0;
 }
-html body#vm .frame #accordion .card .card-header {
+html body#vm .frame .menu .card .card-header {
   text-align: left;
   border: 0;
 }

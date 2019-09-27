@@ -37,7 +37,7 @@ html{
 		font-size: 14px;
 		.frame{
 			background-color: $light-blue;
-			#accordion{
+			.menu{
 			  position: fixed;
 			  width: 300px;
 			  top: 0;
@@ -55,7 +55,7 @@ html{
 			      border: 0;
 			    }
 			  }
-			}
+			}//menu
 			header{
 				nav{
 					height: 55px;
