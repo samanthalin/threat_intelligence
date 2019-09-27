@@ -18,7 +18,7 @@ html body#vm {
       width: 300px;
       top: 0;
       height: 100%;
-      right: -300px;
+      right: 0;
       z-index: 999999;
       width: 300px;
       background-color: #f9f9f9;
@@ -759,9 +759,5 @@ select {
   @media screen and (min-width: 768px) {
     #encyclopedia .dataTables_paginate, #release_note .dataTables_paginate {
       float: none; } }
-
-.menu-open {
-  transform: translateX(-300px);
-  transition: all 0.2s linear; }
 
 /*# sourceMappingURL=style.css.map */

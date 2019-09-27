@@ -24,13 +24,6 @@ $(document).ready(function(){
 	  });
 	});
 
-	$('.hamburger').click(function(){
-		$('.menu').toggleClass('menu-open');
-		$('header').toggleClass('menu-open');
-		$('.content').toggleClass('menu-open');
-		$('footer').toggleClass('menu-open');
-	});
-
 	$('#ency_search_btn').click(function(){
 		
 		$('.detail').hide();
@@ -110,7 +103,7 @@ $(document).ready(function(){
 	$('.version-search').hide();
 	$('.model-version-select').on('change', function() {
 	  var class_name = $(this).children('option:selected').val();
-	  if (class_name == 'version'){
+	  if (class_name == 'Version'){
 	  	$('.version-search').show();
 	  	$('.model-search').hide();
 	  }else{
