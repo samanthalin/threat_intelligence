@@ -37,6 +37,25 @@ html{
 		font-size: 14px;
 		.frame{
 			background-color: $light-blue;
+			.menu{
+			  position: fixed;
+			  width: 300px;
+			  top: 0;
+			  height: 100%;
+			  right: 0;
+			  z-index: 999999;
+			  width: 300px;
+			  background-color: #f9f9f9;
+			  border-left: 1px solid #dedede;
+			  overflow-y: auto;
+			  .card{
+			    border: 0;
+			    .card-header{
+			      text-align: left;
+			      border: 0;
+			    }
+			  }
+			}
 			header{
 				nav{
 					height: 55px;
