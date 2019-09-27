@@ -19,22 +19,22 @@ html body#vm {
 html body#vm .frame {
   background-color: #ccf0ff;
 }
-html body#vm .frame .menu {
+html body#vm .frame #accordion {
   position: fixed;
   width: 300px;
   top: 0;
   height: 100%;
-  right: -300px;
+  right: 0;
   z-index: 999999;
   width: 300px;
   background-color: #f9f9f9;
   border-left: 1px solid #dedede;
   overflow-y: auto;
 }
-html body#vm .frame .menu .card {
+html body#vm .frame #accordion .card {
   border: 0;
 }
-html body#vm .frame .menu .card .card-header {
+html body#vm .frame #accordion .card .card-header {
   text-align: left;
   border: 0;
 }
@@ -985,11 +985,6 @@ select {
   #encyclopedia .dataTables_paginate, #release_note .dataTables_paginate {
     float: none;
   }
-}
-
-.menu-open {
-  transform: translateX(-300px);
-  transition: all 0.2s linear;
 }
 
 /*# sourceMappingURL=style.css.map */

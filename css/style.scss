@@ -37,25 +37,25 @@ html{
 		font-size: 14px;
 		.frame{
 			background-color: $light-blue;
-			.menu{
-				position: fixed;
-				width: 300px;
-				top: 0;
-				height: 100%;
-				right: -300px;
-				z-index: 999999;
-				width: 300px;
-				background-color: #f9f9f9;
-				border-left: 1px solid #dedede;
-				overflow-y: auto;
-				.card{
-					border: 0;
-					.card-header{
-						text-align: left;
-						border: 0;
-					}
-				}
-			}//menu
+			#accordion{
+			  position: fixed;
+			  width: 300px;
+			  top: 0;
+			  height: 100%;
+			  right: 0;
+			  z-index: 999999;
+			  width: 300px;
+			  background-color: #f9f9f9;
+			  border-left: 1px solid #dedede;
+			  overflow-y: auto;
+			  .card{
+			    border: 0;
+			    .card-header{
+			      text-align: left;
+			      border: 0;
+			    }
+			  }
+			}
 			header{
 				nav{
 					height: 55px;
@@ -862,9 +862,6 @@ select{
 }
 
 
-
-
-
 //paginate-style
 #encyclopedia, #release_note{
 	table{
@@ -949,7 +946,3 @@ select{
 	}//dataTables_paginate
 }
 
-.menu-open{
-	transform: translateX(-300px);
-	transition: all 0.2s linear;
-}
