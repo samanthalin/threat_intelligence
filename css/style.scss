@@ -27,6 +27,21 @@ $none: none;
   appearance: $none;
 }
 
+@mixin display-flex{
+	display: -webkit-flex; 
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: -o-flex;
+	display: flex;
+}
+@mixin flex($value){
+	-webkit-flex: $value;
+	-moz-flex: $value;
+	-ms-flex: $value;
+	-o-flex: $value;
+	flex: $value;
+}
+
 *{
 	font-family: 'GalanoRegular', Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
@@ -128,7 +143,7 @@ html{
 					transition: all 0.2s ease;
 					.nav-container{
 						width: 100%;
-						display: flex;
+						@include display-flex;
 						justify-content: space-between;
 						.logo{
 							display: block;
@@ -163,7 +178,7 @@ html{
 					padding: 10px;
 					padding-bottom: 73px;
 					.main-menu-container{
-						display: flex;
+						@include display-flex;
 						a{
 							display: block;
 							color: white;
@@ -172,7 +187,7 @@ html{
 							text-align: center;
 							background-color: #878787;
 							border-radius: 4px;
-							flex: 1;
+							@include flex(1);
 							margin: 5px;
 							padding: 10px 0;
 							position: relative;
@@ -240,10 +255,10 @@ html{
 				transition: all 0.2s ease;
 				.sub_menu{
 					background-color: #f6f6f6;
-					display: flex;
+					@include display-flex;
 					width: 100%;
 					li{
-						flex: 1;
+						@include flex(1);
 						text-align: center;
 						padding: 15px 0;
 						cursor: pointer;
@@ -315,13 +330,13 @@ html{
 							}
 						}//title
 						.search-bar{
-							display: flex;
+							@include display-flex;
 							height: 35px;
 							margin-top: 15px;
 							input{
 								border: 1px solid $blue;
 								border-radius: 4px;
-								flex: 1;
+								@include flex(1);
 								font-size: 12px;
 								padding: 0 5px;
 								outline: none;
@@ -493,7 +508,7 @@ html{
 												content: '\f76b';
 											}
 											ul{
-												display: flex;
+												@include display-flex;
 												width: 70px;
 												justify-content: space-between;
 												li{
@@ -529,7 +544,7 @@ html{
 											}
 										}
 										@media screen and (min-width: 992px){;
-											flex: 1;
+											@include flex(1);
 											background-image: url(../img/detail_bg.png);
 											background-repeat: no-repeat;
 										    background-size: 45%;
@@ -559,12 +574,12 @@ html{
 											}
 										}//model
 										@media screen and (min-width: 992px){
-											flex: 1;
+											@include flex(1);
 											margin-left: 20px;
 										}
 									}//zyxel-solution
 									@media screen  and (min-width: 992px){
-										display: flex;
+										@include display-flex;
 									}
 								}//detail-container
 									
@@ -664,7 +679,7 @@ html{
 								}
 							}//button
 							.model-search{
-								display: flex;
+								@include display-flex;
 								flex-wrap: wrap;
 								justify-content: flex-end;
 								label.lb-model-select{
@@ -696,7 +711,7 @@ html{
 									}
 									@media screen and (min-width: 768px){
 										width: initial;
-   										flex: 1;
+   										@include flex(1);
    										&:after{
    											line-height: 40px;
    										}
@@ -727,7 +742,7 @@ html{
 									}
 									@media screen and (min-width: 768px) {
 										width: initial;
-									    flex: 1;
+									    @include flex(1);
 									    margin-left: 10px;
 									    height: 40px;
 									    line-height: 40px;
@@ -745,7 +760,7 @@ html{
 								}
 							}//model-search
 							.version-search{
-								display: flex;
+								@include display-flex;
 								flex-wrap: wrap;
 								justify-content: flex-end;
 								input{
@@ -756,7 +771,7 @@ html{
 									padding-left: 10px;
 									@media screen and (min-width: 768px){
 										width: initial;
-   										flex: 1;
+   										@include flex(1);
    										height: 40px;
 									}
 								}
@@ -798,7 +813,7 @@ html{
 					@media screen and (min-width: 768px){
 						padding: 25px 4%;
 						@media screen and (min-width: 992px){
-							flex: 1;
+							@include flex(1);
 							padding: 4%;
 						}
 					}
@@ -807,7 +822,7 @@ html{
 					max-width: 962px;
 					margin: auto;
 					margin-top: -54px;
-					display: flex;
+					@include display-flex;
 					padding: 0;
 					@media screen and (min-width: 1200px){
 						max-width: 1170px;
@@ -848,7 +863,7 @@ html{
 						}
 					}//footer-column
 					@media screen and (min-width: 768px) {
-						display: flex;
+						@include display-flex;
 						@media screen and (min-width: 992px){
 							max-width: 992px;
 							margin: auto;
@@ -863,7 +878,7 @@ html{
 					width: 100%;
 					padding: 0 15px;
 					ul.icons{
-						display: flex;
+						@include display-flex;
 						justify-content: center;
 						flex-wrap: wrap;
 						align-items: center;
@@ -933,7 +948,7 @@ html{
 						text-align: center;
 					}
 					.legal-links{
-						display: flex;
+						@include display-flex;
 						justify-content: space-between;
 						a{
 							color: #efefef;
@@ -947,7 +962,7 @@ html{
 					}
 					@media screen and (min-width: 768px){
 						br{display: none;}
-						display: flex;
+						@include display-flex;
 						justify-content: space-between;
 						@media screen and (min-width: 992px) {
 							padding: 10px calc(50vw - 496px);
@@ -1012,7 +1027,7 @@ select{
 		}
 	}
 	.dataTables_paginate{
-		display: flex;
+		@include display-flex; 
 		justify-content: center;
 		margin-top: 20px;
 		.paginate_button{

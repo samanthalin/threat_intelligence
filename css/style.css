@@ -108,6 +108,10 @@ html body#vm .frame header nav {
 }
 html body#vm .frame header nav .nav-container {
   width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   justify-content: space-between;
 }
@@ -147,6 +151,10 @@ html body#vm .frame header .main_menu {
   padding-bottom: 73px;
 }
 html body#vm .frame header .main_menu .main-menu-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
 }
 html body#vm .frame header .main_menu .main-menu-container a {
@@ -157,6 +165,10 @@ html body#vm .frame header .main_menu .main-menu-container a {
   text-align: center;
   background-color: #878787;
   border-radius: 4px;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
   flex: 1;
   margin: 5px;
   padding: 10px 0;
@@ -235,10 +247,18 @@ html body#vm .frame .content {
 }
 html body#vm .frame .content .sub_menu {
   background-color: #f6f6f6;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   width: 100%;
 }
 html body#vm .frame .content .sub_menu li {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
   flex: 1;
   text-align: center;
   padding: 15px 0;
@@ -320,6 +340,10 @@ html body#vm .frame .content .panel .encyclopedia .title {
   }
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   height: 35px;
   margin-top: 15px;
@@ -327,6 +351,10 @@ html body#vm .frame .content .panel .encyclopedia .search-bar {
 html body#vm .frame .content .panel .encyclopedia .search-bar input {
   border: 1px solid #00b2ff;
   border-radius: 4px;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
   flex: 1;
   font-size: 12px;
   padding: 0 5px;
@@ -504,6 +532,10 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
   content: "";
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   width: 70px;
   justify-content: space-between;
@@ -532,6 +564,10 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
     flex: 1;
     background-image: url(../img/detail_bg.png);
     background-repeat: no-repeat;
@@ -566,12 +602,20 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
     flex: 1;
     margin-left: 20px;
   }
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     display: flex;
   }
 }
@@ -680,6 +724,10 @@ html body#vm .frame .content .panel .release-note .search-bar button i {
   }
 }
 html body#vm .frame .content .panel .release-note .search-bar .model-search {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -717,6 +765,10 @@ html body#vm .frame .content .panel .release-note .search-bar .model-search labe
 @media screen and (min-width: 768px) {
   html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
     width: initial;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
     flex: 1;
   }
   html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
@@ -749,6 +801,10 @@ html body#vm .frame .content .panel .release-note .search-bar .model-search .dat
 @media screen and (min-width: 768px) {
   html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker {
     width: initial;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
     flex: 1;
     margin-left: 10px;
     height: 40px;
@@ -765,6 +821,10 @@ html body#vm .frame .content .panel .release-note .search-bar .model-search .dat
   }
 }
 html body#vm .frame .content .panel .release-note .search-bar .version-search {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -779,6 +839,10 @@ html body#vm .frame .content .panel .release-note .search-bar .version-search in
 @media screen and (min-width: 768px) {
   html body#vm .frame .content .panel .release-note .search-bar .version-search input {
     width: initial;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
     flex: 1;
     height: 40px;
   }
@@ -818,6 +882,10 @@ html body#vm .frame .content .panel .release-note .release-container .list table
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
   html body#vm .frame .content .panel {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
     flex: 1;
     padding: 4%;
   }
@@ -827,6 +895,10 @@ html body#vm .frame .content .panel .release-note .release-container .list table
     max-width: 962px;
     margin: auto;
     margin-top: -54px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     display: flex;
     padding: 0;
   }
@@ -873,6 +945,10 @@ html body#vm .frame footer .footer-container .footer-column .menu-head {
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame footer .footer-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     display: flex;
   }
 }
@@ -893,6 +969,10 @@ html body#vm .frame footer .social-media {
   padding: 0 15px;
 }
 html body#vm .frame footer .social-media ul.icons {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -965,6 +1045,10 @@ html body#vm .frame footer .legal .legal-text {
   text-align: center;
 }
 html body#vm .frame footer .legal .legal-links {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   justify-content: space-between;
 }
@@ -981,6 +1065,10 @@ html body#vm .frame footer .legal .legal-links a:hover {
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame footer .legal {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     display: flex;
     justify-content: space-between;
   }
@@ -1051,6 +1139,10 @@ select {
   }
 }
 #encyclopedia .dataTables_paginate, #release_note .dataTables_paginate {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
   display: flex;
   justify-content: center;
   margin-top: 20px;
