@@ -530,6 +530,10 @@ html{
 										}
 										@media screen and (min-width: 992px){;
 											flex: 1;
+											background-image: url(../img/detail_bg.png);
+											background-repeat: no-repeat;
+										    background-size: 45%;
+										    background-position: 102% 106%;
 										}
 									}//virus-profile
 									.zyxel-solution{
@@ -880,6 +884,42 @@ html{
 							@media screen and (min-width: 768px){
 								display: block;
 							}
+						}
+						.facebook a:hover{
+							background-color: #3765a3;
+						}
+						.linedin a:hover{
+							background-color: #0077b5;
+						}
+						.twitter a:hover{
+							background-color: #41abe1;
+						}
+						.google a:hover{
+							background-color: #db4437;
+						}
+						.blog a:hover{
+							background-color: #ff8900;
+						}
+						.youtube a:hover{
+							background-color: #e22c28;
+						}
+						.instagram a:hover{
+							background-color: #d93175;
+						}
+						.xing a:hover{
+							background-color: #026466;
+						}
+						.pinterest a:hover{
+							background-color: #bd081c;
+						}
+						.comments a:hover{
+							background-color: #ffc800;
+						}
+						.email a:hover{
+							background-color: #009688;
+						}
+						.habr a:hover{
+							background-color: #78a1b5;
 						}
 					}//icons
 				}//social-media

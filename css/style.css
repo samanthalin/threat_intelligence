@@ -533,6 +533,10 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
     flex: 1;
+    background-image: url(../img/detail_bg.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: 102% 106%;
   }
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
@@ -913,6 +917,42 @@ html body#vm .frame footer .social-media ul.icons span {
   html body#vm .frame footer .social-media ul.icons span {
     display: block;
   }
+}
+html body#vm .frame footer .social-media ul.icons .facebook a:hover {
+  background-color: #3765a3;
+}
+html body#vm .frame footer .social-media ul.icons .linedin a:hover {
+  background-color: #0077b5;
+}
+html body#vm .frame footer .social-media ul.icons .twitter a:hover {
+  background-color: #41abe1;
+}
+html body#vm .frame footer .social-media ul.icons .google a:hover {
+  background-color: #db4437;
+}
+html body#vm .frame footer .social-media ul.icons .blog a:hover {
+  background-color: #ff8900;
+}
+html body#vm .frame footer .social-media ul.icons .youtube a:hover {
+  background-color: #e22c28;
+}
+html body#vm .frame footer .social-media ul.icons .instagram a:hover {
+  background-color: #d93175;
+}
+html body#vm .frame footer .social-media ul.icons .xing a:hover {
+  background-color: #026466;
+}
+html body#vm .frame footer .social-media ul.icons .pinterest a:hover {
+  background-color: #bd081c;
+}
+html body#vm .frame footer .social-media ul.icons .comments a:hover {
+  background-color: #ffc800;
+}
+html body#vm .frame footer .social-media ul.icons .email a:hover {
+  background-color: #009688;
+}
+html body#vm .frame footer .social-media ul.icons .habr a:hover {
+  background-color: #78a1b5;
 }
 html body#vm .frame footer .legal {
   background-color: #545454;
