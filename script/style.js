@@ -31,6 +31,10 @@ $(document).ready(function(){
 		$('footer').toggleClass('menu-open');
 	});
 
+	$('.menu-close-btn').click(function(){
+		$('.menu-open').removeClass('menu-open');
+	});
+
 	$('#ency_search_btn').click(function(){
 		
 		$('.detail').hide();

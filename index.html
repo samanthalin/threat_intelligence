@@ -7,6 +7,7 @@
 	<title></title>
 	<link rel="stylesheet" href="fontawesome/all.css">
 	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
@@ -31,11 +32,12 @@
 	<div class="frame">
 <!---------- menu --------------->
 		<div id="accordion" class="menu">
-		  <div class="card">
-		     <button class="btn btn-link card-header"  id="headingOne" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-		          Home
-		      </button>
-		  </div>
+			<a href="#" class="menu-close-btn"><i class="ionicons ion-ios-close-empty"></i></a>
+			<div class="card">
+				<button class="btn btn-link card-header"  id="headingOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+				  Home
+				</button>
+			</div>
 		  <div class="card">
 		    <button class="card-header btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 		      What's New
@@ -103,7 +105,7 @@
 						<img src="img/logo-zyxel.png" alt="Zyxel Logo">
 					</a>
 					<a href="#" class="hamburger">
-						<i class="ion-ios-menu"></i>
+						<i class="ionicons ion-navicon"></i>
 					</a>
 				</div>
 			</nav>
