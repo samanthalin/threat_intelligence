@@ -17,7 +17,7 @@
 //color variables
 $blue: #00b2ff;
 $light-blue: #ccf0ff;
-$none: none;
+
 //mixin
 @mixin appearance($none) {
   -webkit-appearance: $none;
