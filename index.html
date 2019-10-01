@@ -5,16 +5,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="fontawesome/all.css">
 	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
 	<link rel="stylesheet" href="flag-icon-css-master/css/flag-icon.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
 	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
-	
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
 	
 	<script src="script/jquery-3.4.1.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -25,16 +26,18 @@
 	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
 	<script type="text/javascript" src="script/daterangepicker.min.js"></script>
 	<script src="script/style.js"></script>
+	<script src="script/cookie-agree.js"></script>
 </head>
 <body id="vm">
 	<div class="frame">
 <!---------- menu --------------->
 		<div id="accordion" class="menu">
-		  <div class="card">
-		     <button class="btn btn-link card-header"  id="headingOne" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-		          Home
-		      </button>
-		  </div>
+			<a href="#" class="menu-close-btn"><i class="ionicons ion-ios-close-empty"></i></a>
+			<div class="card">
+				<button class="btn btn-link card-header"  id="headingOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+				  Home
+				</button>
+			</div>
 		  <div class="card">
 		    <button class="card-header btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 		      What's New
@@ -102,7 +105,7 @@
 						<img src="img/logo-zyxel.png" alt="Zyxel Logo">
 					</a>
 					<a href="#" class="hamburger">
-						<i class="ion-ios-menu"></i>
+						<i class="ionicons ion-navicon"></i>
 					</a>
 				</div>
 			</nav>
@@ -803,16 +806,16 @@
 							<i class="fab fa-twitter"></i>
 						</a>
 					</li>
-					<li class="google">
+					<!-- <li class="google">
 						<a href="">
 							<i class="fab fa-google-plus-g"></i>
 						</a>
-					</li>
-					<li class="blog">
+					</li> -->
+					<!-- <li class="blog">
 						<a href="">
 							<i class="fas fa-blog"></i>
 						</a>
-					</li>
+					</li> -->
 					<li class="youtube">
 						<a href="">
 							<i class="fab fa-youtube"></i>
@@ -823,31 +826,31 @@
 							<i class="fab fa-instagram"></i>
 						</a>
 					</li>
-					<li class="xing">
+					<!-- <li class="xing">
 						<a href="">
 							<i class="fab fa-xing"></i>
 						</a>
-					</li>
-					<li class="pinterest">
+					</li> -->
+					<!-- <li class="pinterest">
 						<a href="">
 							<i class="fab fa-pinterest-p"></i>
 						</a>
-					</li>
+					</li> -->
 					<li class="comments">
 						<a href="">
 							<i class="fas fa-comments"></i>
 						</a>
 					</li>
-					<li class="email">
+					<!-- <li class="email">
 						<a href="">
 							<i class="fas fa-envelope"></i>
 						</a>
-					</li>
-					<li class="habr">
+					</li> -->
+					<!-- <li class="habr">
 						<a href="">
 							<img src="img/ico-habr.png" alt="">
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div><!-- social media -->
 			<div class="legal">

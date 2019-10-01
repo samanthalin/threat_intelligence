@@ -24,6 +24,17 @@ $(document).ready(function(){
 	  });
 	});
 
+	$('.hamburger').click(function(){
+		$('.menu').toggleClass('menu-open');
+		$('header').toggleClass('menu-open');
+		$('.content').toggleClass('menu-open');
+		$('footer').toggleClass('menu-open');
+	});
+
+	$('.menu-close-btn').click(function(){
+		$('.menu-open').removeClass('menu-open');
+	});
+
 	$('#ency_search_btn').click(function(){
 		
 		$('.detail').hide();
