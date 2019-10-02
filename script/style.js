@@ -48,10 +48,13 @@ $(document).ready(function(){
 	    	"searching": false,
 	    	"pageLength": 20,
 	    	"info": true,
+	    	"pagingType": 'full_numbers',
 	    	"language": {
 			    "paginate": {
 			      "previous": "<i class='fas fa-angle-left'></i>",
 			      "next": "<i class='fas fa-angle-right'></i>",
+			      "first": "<i class='fas fa-angle-double-left'></i>",
+			      "last": "<i class='fas fa-angle-double-right'></i>",
 			    },
 		  	}
 	    });
@@ -69,10 +72,13 @@ $(document).ready(function(){
 	    	"searching": false,
 	    	"pageLength": 20,
 	    	"info": true,
+	    	"pagingType": 'full_numbers',
 	    	"language": {
 			    "paginate": {
 			      "previous": "<i class='fas fa-angle-left'></i>",
 			      "next": "<i class='fas fa-angle-right'></i>",
+			      "first": "<i class='fas fa-angle-double-left'></i>",
+			      "last": "<i class='fas fa-angle-double-right'></i>",
 			    },
 		  	}
 	    });
@@ -96,10 +102,13 @@ $(document).ready(function(){
 	    	"searching": false,
 	    	"pageLength": 20,
 	    	"info": true,
+	    	"pagingType": 'full_numbers',
 	    	"language": {
 			    "paginate": {
 			      "previous": "<i class='fas fa-angle-left'></i>",
 			      "next": "<i class='fas fa-angle-right'></i>",
+			      "first": "<i class='fas fa-angle-double-left'></i>",
+			      "last": "<i class='fas fa-angle-double-right'></i>",
 			    },
 		  	}
 	    });
