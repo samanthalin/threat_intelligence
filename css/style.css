@@ -920,9 +920,9 @@ select {
     background-color: #00b2ff; }
     #encyclopedia .dataTables_paginate .current:hover, #release_note .dataTables_paginate .current:hover {
       background-color: #00b2ff; }
-  #encyclopedia .dataTables_paginate .previous, #release_note .dataTables_paginate .previous {
+  #encyclopedia .dataTables_paginate .first, #release_note .dataTables_paginate .first {
     border-radius: 4px 0 0 4px; }
-  #encyclopedia .dataTables_paginate .next, #release_note .dataTables_paginate .next {
+  #encyclopedia .dataTables_paginate .last, #release_note .dataTables_paginate .last {
     border-radius: 0 4px 4px 0; }
   #encyclopedia .dataTables_paginate .disabled, #release_note .dataTables_paginate .disabled {
     color: #99E0FE !important; }
