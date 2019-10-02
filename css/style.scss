@@ -313,6 +313,7 @@ html{
 						width: 115px;
 						display: block;
 						margin: 0;
+						flex: none;
 					}
 				}//sub_menu
 				.panel{
@@ -549,6 +550,7 @@ html{
 											background-repeat: no-repeat;
 										    background-size: 45%;
 										    background-position: 102% 106%;
+										    width: 385px;
 										}
 									}//virus-profile
 									.zyxel-solution{
@@ -563,6 +565,8 @@ html{
 										ul.model{
 											margin-bottom: 20px;
 	    									font-size: 12px;
+	    									overflow: hidden;
+	    									overflow-wrap: break-word;
 											li{
 												font-family: 'GalanoSemiBold';
 												span{
@@ -576,6 +580,7 @@ html{
 										@media screen and (min-width: 992px){
 											@include flex(1);
 											margin-left: 20px;
+											width: 385px;
 										}
 									}//zyxel-solution
 									@media screen  and (min-width: 992px){
