@@ -50,7 +50,7 @@ $light-blue: #ccf0ff;
 
 
 html{
-	body#vm{
+	body#vm, #id{
 		font-size: 14px;
 		.frame{
 			background-color: $light-blue;
@@ -191,6 +191,8 @@ html{
 							margin: 5px;
 							padding: 10px 0;
 							position: relative;
+							opacity: 0.5;
+							background: none;
 							img{
 								height: 50px;
 								display: block;
@@ -211,20 +213,25 @@ html{
 								padding: 10px 50px;
 							}
 						}
-						a.id{
-							background: none;
-							opacity: 0.5;
-						}//id
-						.active:after{
-						    width: 0;
-						    height: 0;
-						    border-style: solid;
-						    border-width: 0 10px 13px 10px;
-						    border-color: transparent transparent #ffffff transparent;
-						    position: absolute;
-						    content: '';
-						    left: calc(50% - 10px);
-	    					bottom: -24px;
+						// a.id{
+						// 	background: none;
+						// 	opacity: 0.5;
+						// }//id
+						.active{
+							background: #878787;
+							opacity: 1;
+							&:after{
+								width: 0;
+							    height: 0;
+							    border-style: solid;
+							    border-width: 0 10px 13px 10px;
+							    border-color: transparent transparent #ffffff transparent;
+							    position: absolute;
+							    content: '';
+							    left: calc(50% - 10px);
+		    					bottom: -24px;
+							}    
+							    
 						}
 						@media screen and (min-width: 768px){
 							display: block;
@@ -419,6 +426,12 @@ html{
 
 							.list{
 								display: none;
+								p.search-by{
+									margin-bottom: 18px;
+									span{
+										font-family: 'GalanoSemiBold';
+									}
+								}
 							}//list
 
 							.detail{
@@ -1002,9 +1015,15 @@ select{
 				padding: 10px;
 				border: 0 !important;
 				font-family: 'GalanoSemiBold';
+				&:last-child{
+					text-align: center;
+				}
 			}
 		}
 		tbody tr{
+			td:last-child{
+				text-align: center;
+			}
 			&:hover{
 				background-color: $light-blue;
 			}
@@ -1075,4 +1094,8 @@ select{
 .menu-open{
 	transform: translateX(-300px);
 	transition: all 0.2s ease; 
+}
+
+.no-country{
+
 }

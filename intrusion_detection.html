@@ -28,7 +28,7 @@
 	<script src="script/style.js"></script>
 	<!-- <script src="script/cookie-agree.js"></script> -->
 </head>
-<body id="vm">
+<body id="id">
 	<div class="frame">
 <!---------- menu --------------->
 		<div id="accordion" class="menu">
@@ -111,18 +111,17 @@
 			</nav>
 			<div class="main_menu">
 				<div class="main-menu-container">
-					<a href="index.html" class="vm active">
+					<a href="index.html" class="vm">
 						<img src="img/virus.png" alt="">
 						<span>Virus / Malware</span>
 					</a>
-					<a href="intrusion_detection.html" class="id">
+					<a href="intrusion_detection.html" class="id active">
 						<img src="img/detect.png" alt="">
 						<span>Intrusion Detection</span>
 					</a>
 				</div>
 			</div>
 		</header>
-
 		<div class="content ">
 			<ul class="sub_menu">
 				<li class="encyclopedia-btn">
@@ -144,7 +143,7 @@
 				<div id="encyclopedia" class="encyclopedia">
 					<h1 class="title">Encyclopedia</h1>
 					<div class="search-bar">
-						<input type="search" id="ency_search" placeholder="search by virus/malware name or file hash to search">
+						<input type="search" id="ency_search" placeholder="Signature name, signature ID or CVE number">
 						<button id="ency_search_btn">
 							<i class="fas fa-search"></i>
 							search
@@ -158,383 +157,94 @@
 							<p>Why are unwanted messages in email and social networks dangerous?</p>
 							<p>What are “vulnerabilities” and how do cybercriminals exploit them?</p>
 							<p>The answers to these and other questions are right here.</p>
-							<p>You can search by virus/malware name or file hash of virus/malware.</p>
 							<div class="question">
-								<div class="title">What is virus/malware name?</div>
+								<div class="title">What is intrusion name?</div>
 								<p>malware is any software intentionally designed to cause damage to a computer, server or network. For example, Wannacry</p>
 							</div>
 							<div class="question">
-								<div class="title">How to search with file hash? </div>
+								<div class="title">How to find Zyxel signature ID?</div>
+								<p>To search, just enter its hash. Currently the allowed hashes are MD5. For example ‘fe31f2fac5ca0919d29bcf1fe79b9645’</p>
+							</div>
+							<div class="question">
+								<div class="title">What is CVE number?</div>
 								<p>To search, just enter its hash. Currently the allowed hashes are MD5. For example ‘fe31f2fac5ca0919d29bcf1fe79b9645’</p>
 							</div>
 							<img src="img/human.png" alt="illustration">
 						</div><!-- intro -->
 
 						<div class="list">
+							<p class="search-by">
+								Result for “<span>Signature ID</span> : <span>d3jdksldf49wdlsd</span>”
+							</p>
 							<table class="table table-striped hover" id="EncyTable">
 								<caption></caption>
 								<thead>
 								    <tr>
-								      <th scope="col">Virus/Malware Name</th>
-								      <th scope="col">Hash MD5</th>
-								      <th scope="col">Update Date</th>
+								      <th scope="col">Signature Name</th>
+								      <th scope="col">Description</th>
+								      <th scope="col">Release Date</th>
 								    </tr>
 								 </thead>
 								 <tbody>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>EXPLOIT Microsoft Windows DNSA</td>
+								    	<td>This module exploits a buffer underrun vulnerability in Microsoft DNSAPI.dll as distributed with Windows Vista and later without KB2509553.</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>FTP site Exec Format String</td>
+								    	<td>This module exploits a format string vulnerability in version of the Washington University FTP</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>SSHv2 Multiple Vulnerabilities</td>
+								    	<td>Multiple SSH2 servers and clients do not properly handle large packets or large fields, which may allow remote attackers to cause a denial of service or possibly execute arbitrary code via buffer overflow attacks, as demonstrated by the</td>
+								    	<td>2018/12/24</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>EXPLOIT Microsoft Windows DNSA</td>
+								    	<td>This module exploits a buffer underrun vulnerability in Microsoft DNSAPI.dll as distributed with Windows Vista and later without KB2509553.</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>FTP site Exec Format String</td>
+								    	<td>This module exploits a format string vulnerability in version of the Washington University FTP</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>SSHv2 Multiple Vulnerabilities</td>
+								    	<td>Multiple SSH2 servers and clients do not properly handle large packets or large fields, which may allow remote attackers to cause a denial of service or possibly execute arbitrary code via buffer overflow attacks, as demonstrated by the</td>
+								    	<td>2018/12/24</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>EXPLOIT Microsoft Windows DNSA</td>
+								    	<td>This module exploits a buffer underrun vulnerability in Microsoft DNSAPI.dll as distributed with Windows Vista and later without KB2509553.</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>FTP site Exec Format String</td>
+								    	<td>This module exploits a format string vulnerability in version of the Washington University FTP</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>SSHv2 Multiple Vulnerabilities</td>
+								    	<td>Multiple SSH2 servers and clients do not properly handle large packets or large fields, which may allow remote attackers to cause a denial of service or possibly execute arbitrary code via buffer overflow attacks, as demonstrated by the</td>
+								    	<td>2018/12/24</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>EXPLOIT Microsoft Windows DNSA</td>
+								    	<td>This module exploits a buffer underrun vulnerability in Microsoft DNSAPI.dll as distributed with Windows Vista and later without KB2509553.</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>FTP site Exec Format String</td>
+								    	<td>This module exploits a format string vulnerability in version of the Washington University FTP</td>
+								    	<td>2018/12/27</td>
 								    </tr>
 								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
-								    </tr>
-								    <tr>
-								      <td>Wildcore.Virus.ed516918</td>
-								      <td>ECA6440A037C3A589EDB1E5F495775</td>
-								      <td>2018/12/27</td>
+								    	<td>SSHv2 Multiple Vulnerabilities</td>
+								    	<td>Multiple SSH2 servers and clients do not properly handle large packets or large fields, which may allow remote attackers to cause a denial of service or possibly execute arbitrary code via buffer overflow attacks, as demonstrated by the</td>
+								    	<td>2018/12/24</td>
 								    </tr>
 								    
 								 </tbody>

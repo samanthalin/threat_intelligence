@@ -56,7 +56,12 @@ $(document).ready(function(){
 			      "first": "<i class='fas fa-angle-double-left'></i>",
 			      "last": "<i class='fas fa-angle-double-right'></i>",
 			    },
-		  	}
+		  	},
+		  	"columns": [
+			    null,
+			    { "width": "50%" },
+			    { "width": "140px" },
+			  ]
 	    });
 	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
 	});
