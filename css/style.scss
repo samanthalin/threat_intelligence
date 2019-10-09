@@ -559,6 +559,9 @@ html{
 											h3:before{
 												content: '\f496';
 											}
+											span:after{
+												content: 'bytes';
+											}
 										}
 										@media screen and (min-width: 992px){;
 											@include flex(1);
@@ -1062,7 +1065,7 @@ select{
 		justify-content: center;
 		margin-top: 20px;
 		.paginate_button{
-			color: $blue !important;
+			color: black !important;
 			//border: 1px solid $blue;
 			margin: 0;
 			border-radius: 0;
@@ -1078,8 +1081,9 @@ select{
 		}
 		.current{
 			background: none;
-			color: white !important;
-			background-color: $blue;
+			color: $blue !important;
+			font-family: 'GalanoSemiBold';
+			//background-color: $blue;
 			border: 0;
 			&:hover{
 				background-color: $blue;
@@ -1092,7 +1096,7 @@ select{
 			border-radius: 0 4px 4px 0;
 		}
 		.disabled{
-			color: #99E0FE !important;
+			color: gray !important;
 		}
 		@media screen and (min-width: 768px){
 			float: none;
