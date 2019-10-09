@@ -451,6 +451,7 @@ html body#vm, html #id {
               html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before {
                 content: '\f496'; }
               html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size span:after, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size span:after {
+                margin-left: 5px;
                 content: 'bytes'; }
               @media screen and (min-width: 992px) {
                 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {

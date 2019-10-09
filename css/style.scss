@@ -559,8 +559,11 @@ html{
 											h3:before{
 												content: '\f496';
 											}
-											span:after{
-												content: 'bytes';
+											span{
+												&:after{
+													margin-left: 5px;
+													content: 'bytes';
+												}
 											}
 										}
 										@media screen and (min-width: 992px){;
