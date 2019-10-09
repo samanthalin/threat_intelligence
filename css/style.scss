@@ -1080,6 +1080,7 @@ select{
 			background: none;
 			color: white !important;
 			background-color: $blue;
+			border: 0;
 			&:hover{
 				background-color: $blue;
 			}

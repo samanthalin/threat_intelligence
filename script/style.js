@@ -58,9 +58,9 @@ $(document).ready(function(){
 			    },
 		  	},
 		  	"columns": [
-			    null,
-			    { "width": "50%" },
-			    { "width": "140px" },
+			    { "width": "30%" },
+			    { "width": "55%" },
+			    { "width": "15%" },
 			  ]
 	    });
 	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
