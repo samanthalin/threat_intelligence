@@ -334,7 +334,6 @@ html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .conte
   color: #00b2ff;
   font-family: "GalanoSemiBold";
   font-size: 22px;
-  border-bottom: 2px solid #00b2ff;
   display: inline-block;
 }
 @media screen and (min-width: 992px) {
