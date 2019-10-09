@@ -409,7 +409,10 @@ html{
 										font-size: 16px;
 									}
 								}
-								img{
+								img.manual{
+									width: 100%;
+								}
+								img.illustration{
 									width: 100px;
 									position: absolute;
 									right: 0;
@@ -635,7 +638,7 @@ html{
 							color: $blue;
 							font-family: 'GalanoSemiBold';
 							font-size: 22px;
-							border-bottom: 2px solid $blue;
+							//border-bottom: 2px solid $blue;
 							display: inline-block;
 							@media screen and (min-width: 992px) {
 								font-size: 28px;								
@@ -804,7 +807,11 @@ html{
 						}//search-bar
 						.release-container{
 							padding-top: 15px;
-							.intro{						
+							.intro{
+								img.manual{
+									width: 100%;
+									margin-top: 15px;
+								}						
 							}//intro
 							.list{
 								display: none;
@@ -1056,7 +1063,7 @@ select{
 		margin-top: 20px;
 		.paginate_button{
 			color: $blue !important;
-			border: 1px solid $blue;
+			//border: 1px solid $blue;
 			margin: 0;
 			border-radius: 0;
 			margin-left: -1px;
@@ -1065,6 +1072,7 @@ select{
 			// height: 30px;
 			line-height: 30px;
 			&:hover{
+				border: 0;
 				background: none;
 			}
 		}
