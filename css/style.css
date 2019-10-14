@@ -1,878 +1,1116 @@
+@charset "UTF-8";
 @import url(reset.css);
 @font-face {
-  font-family: 'GalanoRegular';
-  src: url("../fonts/GalanoGrotesque-Regular.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular.eot") format("embedded-opentype"); }
+  font-family: "GalanoRegular";
+  src: url("../fonts/GalanoGrotesque-Regular.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular.eot") format("embedded-opentype");
+}
 @font-face {
-  font-family: 'GalanoSemiBold';
-  src: url("../fonts/GalanoGrotesque-SemiBold.woff") format("woff"), url("../fonts/GalanoGrotesque-SemiBold.otf") format("opentype"), url("../fonts/GalanoGrotesque-SemiBold.eot") format("embedded-opentype"); }
+  font-family: "GalanoSemiBold";
+  src: url("../fonts/GalanoGrotesque-SemiBold.woff") format("woff"), url("../fonts/GalanoGrotesque-SemiBold.otf") format("opentype"), url("../fonts/GalanoGrotesque-SemiBold.eot") format("embedded-opentype");
+}
 * {
-  font-family: 'GalanoRegular', Helvetica, Arial, sans-serif;
-  box-sizing: border-box; }
+  font-family: "GalanoRegular", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
 
 html body#vm, html #id {
-  font-size: 14px; }
-  html body#vm .frame, html #id .frame {
-    background-color: #ccf0ff; }
-    html body#vm .frame .menu, html #id .frame .menu {
-      position: fixed;
-      width: 300px;
-      top: 0;
-      right: -300px;
-      height: 100%;
-      z-index: 999999;
-      width: 300px;
-      background-color: #f9f9f9;
-      border-left: 1px solid #dedede;
-      overflow-y: auto;
-      transition: all 0.2s ease;
-      padding: 30px;
-      padding-top: 50px; }
-      html body#vm .frame .menu .menu-close-btn, html #id .frame .menu .menu-close-btn {
-        position: absolute;
-        font-size: 42px;
-        top: 5px;
-        right: 16px;
-        color: #898989;
-        transition: all 0.3s ease; }
-        html body#vm .frame .menu .menu-close-btn:hover, html #id .frame .menu .menu-close-btn:hover {
-          color: black;
-          transition: all 0.3s ease; }
-      html body#vm .frame .menu .card, html #id .frame .menu .card {
-        border: 0; }
-        html body#vm .frame .menu .card button, html #id .frame .menu .card button {
-          font-family: 'GalanoSemiBold';
-          font-size: 16px;
-          color: #898989;
-          text-decoration: none; }
-          html body#vm .frame .menu .card button:hover, html #id .frame .menu .card button:hover {
-            color: #00b2ff; }
-          html body#vm .frame .menu .card button:after, html #id .frame .menu .card button:after {
-            font-family: Ionicons;
-            font-weight: 400;
-            content: "\f489";
-            position: absolute;
-            font-size: 25px;
-            right: 2px;
-            top: -2px; }
-        html body#vm .frame .menu .card button[aria-expanded="true"], html #id .frame .menu .card button[aria-expanded="true"] {
-          color: black; }
-          html body#vm .frame .menu .card button[aria-expanded="true"]:after, html #id .frame .menu .card button[aria-expanded="true"]:after {
-            content: "\f462"; }
-        html body#vm .frame .menu .card .collapse, html body#vm .frame .menu .card .collapsing, html #id .frame .menu .card .collapse, html #id .frame .menu .card .collapsing {
-          background-color: #f9f9f9; }
-          html body#vm .frame .menu .card .collapse ul.card-body, html body#vm .frame .menu .card .collapsing ul.card-body, html #id .frame .menu .card .collapse ul.card-body, html #id .frame .menu .card .collapsing ul.card-body {
-            padding-left: 35px; }
-            html body#vm .frame .menu .card .collapse ul.card-body li, html body#vm .frame .menu .card .collapsing ul.card-body li, html #id .frame .menu .card .collapse ul.card-body li, html #id .frame .menu .card .collapsing ul.card-body li {
-              padding: 6px 0;
-              font-size: 15px; }
-              html body#vm .frame .menu .card .collapse ul.card-body li a, html body#vm .frame .menu .card .collapsing ul.card-body li a, html #id .frame .menu .card .collapse ul.card-body li a, html #id .frame .menu .card .collapsing ul.card-body li a {
-                color: #898989; }
-                html body#vm .frame .menu .card .collapse ul.card-body li a:hover, html body#vm .frame .menu .card .collapsing ul.card-body li a:hover, html #id .frame .menu .card .collapse ul.card-body li a:hover, html #id .frame .menu .card .collapsing ul.card-body li a:hover {
-                  color: #00b2ff; }
-        html body#vm .frame .menu .card:nth-child(2) button:after, html #id .frame .menu .card:nth-child(2) button:after {
-          display: none; }
-        html body#vm .frame .menu .card .card-header, html #id .frame .menu .card .card-header {
-          text-align: left;
-          border: 0; }
-    html body#vm .frame header, html #id .frame header {
-      transition: all 0.2s ease; }
-      html body#vm .frame header nav, html #id .frame header nav {
-        height: 55px;
-        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
-        width: 100%;
-        background-color: white;
-        transition: all 0.2s ease; }
-        html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
-          width: 100%;
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: -o-flex;
-          display: flex;
-          justify-content: space-between; }
-          html body#vm .frame header nav .nav-container .logo, html #id .frame header nav .nav-container .logo {
-            display: block; }
-            html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
-              height: 55px; }
-          html body#vm .frame header nav .nav-container .hamburger, html #id .frame header nav .nav-container .hamburger {
-            font-size: 32px;
-            color: black;
-            opacity: 0.5;
-            transition: opacity .22s linear;
-            padding: 10px 20px; }
-            html body#vm .frame header nav .nav-container .hamburger:visited, html body#vm .frame header nav .nav-container .hamburger:active, html #id .frame header nav .nav-container .hamburger:visited, html #id .frame header nav .nav-container .hamburger:active {
-              color: black; }
-            html body#vm .frame header nav .nav-container .hamburger:hover, html #id .frame header nav .nav-container .hamburger:hover {
-              opacity: 1; }
-          @media screen and (min-width: 992px) {
-            html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
-              max-width: 992px;
-              margin: auto; } }
-  @media screen and (min-width: 992px) and (min-width: 1200px) {
-    html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
-      max-width: 1200px; } }
-
-      html body#vm .frame header .main_menu, html #id .frame header .main_menu {
-        background-color: #575755;
-        padding: 10px;
-        padding-bottom: 73px; }
-        html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: -o-flex;
-          display: flex; }
-          html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
-            display: block;
-            color: white;
-            font-family: 'GalanoSemiBold';
-            font-size: 16px;
-            text-align: center;
-            background-color: #878787;
-            border-radius: 4px;
-            -webkit-flex: 1;
-            -moz-flex: 1;
-            -ms-flex: 1;
-            -o-flex: 1;
-            flex: 1;
-            margin: 5px;
-            padding: 10px 0;
-            position: relative;
-            opacity: 0.5;
-            background: none; }
-            html body#vm .frame header .main_menu .main-menu-container a img, html #id .frame header .main_menu .main-menu-container a img {
-              height: 50px;
-              display: block;
-              margin: auto;
-              margin-bottom: 10px; }
-              @media screen and (min-width: 768px) {
-                html body#vm .frame header .main_menu .main-menu-container a img, html #id .frame header .main_menu .main-menu-container a img {
-                  display: inline-block;
-                  margin: 0;
-                  height: 30px;
-                  margin-right: 5px; } }
-            html body#vm .frame header .main_menu .main-menu-container a span, html #id .frame header .main_menu .main-menu-container a span {
-              font-family: 'GalanoSemiBold'; }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
-                display: inline-block;
-                padding: 10px 50px; } }
-          html body#vm .frame header .main_menu .main-menu-container .active, html #id .frame header .main_menu .main-menu-container .active {
-            background: #878787;
-            opacity: 1; }
-            html body#vm .frame header .main_menu .main-menu-container .active:after, html #id .frame header .main_menu .main-menu-container .active:after {
-              width: 0;
-              height: 0;
-              border-style: solid;
-              border-width: 0 10px 13px 10px;
-              border-color: transparent transparent #ffffff transparent;
-              position: absolute;
-              content: '';
-              left: calc(50% - 10px);
-              bottom: -24px; }
-          @media screen and (min-width: 768px) {
-            html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
-              display: block; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
-    html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
-      max-width: 992px;
-      margin: auto;
-      padding: 0 5px; } }
-
-  @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
-    html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
-      max-width: 1200px; } }
-
-        @media screen and (min-width: 768px) {
-          html body#vm .frame header .main_menu, html #id .frame header .main_menu {
-            padding: 20px 0 73px 10px; } }
-    html body#vm .frame .content, html #id .frame .content {
-      background-color: white;
-      border-radius: 4px;
-      overflow: hidden;
-      width: calc(100% - 30px);
-      margin: auto;
-      margin-top: -54px;
-      padding-bottom: 140px;
-      position: relative;
-      transition: all 0.2s ease; }
-      html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
-        background-color: #f6f6f6;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: -o-flex;
-        display: flex;
-        width: 100%; }
-        html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
-          -webkit-flex: 1;
-          -moz-flex: 1;
-          -ms-flex: 1;
-          -o-flex: 1;
-          flex: 1;
-          text-align: center;
-          padding: 15px 0;
-          cursor: pointer; }
-          html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
-            color: #878787;
-            text-decoration: none; }
-            html body#vm .frame .content .sub_menu li a img, html #id .frame .content .sub_menu li a img {
-              height: 18px;
-              margin-right: 5px;
-              opacity: 0.6;
-              filter: grayscale(100%); }
-              @media screen and (min-width: 992px) {
-                html body#vm .frame .content .sub_menu li a img, html #id .frame .content .sub_menu li a img {
-                  display: block;
-                  height: 35px;
-                  margin: auto; } }
-            html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
-              display: inline-block;
-              line-height: 18px;
-              vertical-align: middle; }
-              @media screen and (min-width: 992px) {
-                html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
-                  display: block;
-                  font-size: 10px;
-                  margin: auto;
-                  margin-top: 5px; } }
-          @media screen and (min-width: 992px) {
-            html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
-              height: 110px;
-              padding: 30px 6px 0 4px;
-              border-bottom: 1px solid #e8e8e8; } }
-        html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
-          background-color: white;
-          border-bottom: 3px solid #00b2ff; }
-          html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .sub_menu .active a img {
-            filter: grayscale(0%);
-            opacity: 1; }
-          @media screen and (min-width: 992px) {
-            html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
-              border: none;
-              border-left: 4px solid #00b2ff;
-              padding-left: 0; } }
-        @media screen and (min-width: 992px) {
-          html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
-            width: 115px;
-            display: block;
-            margin: 0;
-            flex: none; } }
-      html body#vm .frame .content .panel, html #id .frame .content .panel {
-        padding: 10px;
-        min-height: 500px; }
-        html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
-          color: #00b2ff;
-          font-family: 'GalanoSemiBold';
-          font-size: 22px;
-          display: inline-block; }
-          @media screen and (min-width: 992px) {
-            html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
-              font-size: 28px; } }
-        html body#vm .frame .content .panel .encyclopedia .search-bar, html #id .frame .content .panel .encyclopedia .search-bar {
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: -o-flex;
-          display: flex;
-          height: 35px;
-          margin-top: 15px; }
-          html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .frame .content .panel .encyclopedia .search-bar input {
-            border: 1px solid #00b2ff;
-            border-radius: 4px;
-            -webkit-flex: 1;
-            -moz-flex: 1;
-            -ms-flex: 1;
-            -o-flex: 1;
-            flex: 1;
-            font-size: 12px;
-            padding: 0 5px;
-            outline: none; }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .frame .content .panel .encyclopedia .search-bar input {
-                font-size: 14px;
-                padding: 0 10px; } }
-          html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
-            background-color: #00b2ff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            margin-left: 5px;
-            outline: none; }
-            html body#vm .frame .content .panel .encyclopedia .search-bar button i, html #id .frame .content .panel .encyclopedia .search-bar button i {
-              font-size: 12px; }
-            html body#vm .frame .content .panel .encyclopedia .search-bar button:active, html #id .frame .content .panel .encyclopedia .search-bar button:active {
-              filter: brightness(90%); }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
-                font-size: 14px;
-                margin-left: 10px;
-                padding: 0 12px; } }
+  font-size: 14px;
+}
+html body#vm .frame, html #id .frame {
+  background-color: #ccf0ff;
+}
+html body#vm .frame .menu, html #id .frame .menu {
+  position: fixed;
+  width: 300px;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  z-index: 999999;
+  width: 300px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #dedede;
+  overflow-y: auto;
+  transition: all 0.2s ease;
+  padding: 30px;
+  padding-top: 50px;
+}
+html body#vm .frame .menu .menu-close-btn, html #id .frame .menu .menu-close-btn {
+  position: absolute;
+  font-size: 42px;
+  top: 5px;
+  right: 16px;
+  color: #898989;
+  transition: all 0.3s ease;
+}
+html body#vm .frame .menu .menu-close-btn:hover, html #id .frame .menu .menu-close-btn:hover {
+  color: black;
+  transition: all 0.3s ease;
+}
+html body#vm .frame .menu .card, html #id .frame .menu .card {
+  border: 0;
+}
+html body#vm .frame .menu .card button, html #id .frame .menu .card button {
+  font-family: "GalanoSemiBold";
+  font-size: 16px;
+  color: #898989;
+  text-decoration: none;
+}
+html body#vm .frame .menu .card button:hover, html #id .frame .menu .card button:hover {
+  color: #00b2ff;
+}
+html body#vm .frame .menu .card button:after, html #id .frame .menu .card button:after {
+  font-family: Ionicons;
+  font-weight: 400;
+  content: "";
+  position: absolute;
+  font-size: 25px;
+  right: 2px;
+  top: -2px;
+}
+html body#vm .frame .menu .card button[aria-expanded=true], html #id .frame .menu .card button[aria-expanded=true] {
+  color: black;
+}
+html body#vm .frame .menu .card button[aria-expanded=true]:after, html #id .frame .menu .card button[aria-expanded=true]:after {
+  content: "";
+}
+html body#vm .frame .menu .card .collapse, html body#vm .frame .menu .card .collapsing, html #id .frame .menu .card .collapse, html #id .frame .menu .card .collapsing {
+  background-color: #f9f9f9;
+}
+html body#vm .frame .menu .card .collapse ul.card-body, html body#vm .frame .menu .card .collapsing ul.card-body, html #id .frame .menu .card .collapse ul.card-body, html #id .frame .menu .card .collapsing ul.card-body {
+  padding-left: 35px;
+}
+html body#vm .frame .menu .card .collapse ul.card-body li, html body#vm .frame .menu .card .collapsing ul.card-body li, html #id .frame .menu .card .collapse ul.card-body li, html #id .frame .menu .card .collapsing ul.card-body li {
+  padding: 6px 0;
+  font-size: 15px;
+}
+html body#vm .frame .menu .card .collapse ul.card-body li a, html body#vm .frame .menu .card .collapsing ul.card-body li a, html #id .frame .menu .card .collapse ul.card-body li a, html #id .frame .menu .card .collapsing ul.card-body li a {
+  color: #898989;
+}
+html body#vm .frame .menu .card .collapse ul.card-body li a:hover, html body#vm .frame .menu .card .collapsing ul.card-body li a:hover, html #id .frame .menu .card .collapse ul.card-body li a:hover, html #id .frame .menu .card .collapsing ul.card-body li a:hover {
+  color: #00b2ff;
+}
+html body#vm .frame .menu .card:nth-child(2) button:after, html #id .frame .menu .card:nth-child(2) button:after {
+  display: none;
+}
+html body#vm .frame .menu .card .card-header, html #id .frame .menu .card .card-header {
+  text-align: left;
+  border: 0;
+}
+html body#vm .frame header, html #id .frame header {
+  transition: all 0.2s ease;
+}
+html body#vm .frame header nav, html #id .frame header nav {
+  height: 55px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
+  width: 100%;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+html body#vm .frame header nav .nav-container .logo, html #id .frame header nav .nav-container .logo {
+  display: block;
+}
+html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
+  height: 55px;
+}
+html body#vm .frame header nav .nav-container .hamburger, html #id .frame header nav .nav-container .hamburger {
+  font-size: 32px;
+  color: black;
+  opacity: 0.5;
+  transition: opacity 0.22s linear;
+  padding: 10px 20px;
+}
+html body#vm .frame header nav .nav-container .hamburger:visited, html body#vm .frame header nav .nav-container .hamburger:active, html #id .frame header nav .nav-container .hamburger:visited, html #id .frame header nav .nav-container .hamburger:active {
+  color: black;
+}
+html body#vm .frame header nav .nav-container .hamburger:hover, html #id .frame header nav .nav-container .hamburger:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
+    max-width: 992px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
+    max-width: 1200px;
+  }
+}
+html body#vm .frame header .main_menu, html #id .frame header .main_menu {
+  background-color: #575755;
+  padding: 10px;
+  padding-bottom: 73px;
+}
+html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+}
+html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
+  display: block;
+  color: white;
+  font-family: "GalanoSemiBold";
+  font-size: 16px;
+  text-align: center;
+  background-color: #878787;
+  border-radius: 4px;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  margin: 5px;
+  padding: 10px 0;
+  position: relative;
+  opacity: 0.5;
+  background: none;
+}
+html body#vm .frame header .main_menu .main-menu-container a img, html #id .frame header .main_menu .main-menu-container a img {
+  height: 50px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu .main-menu-container a img, html #id .frame header .main_menu .main-menu-container a img {
+    display: inline-block;
+    margin: 0;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+html body#vm .frame header .main_menu .main-menu-container a span, html #id .frame header .main_menu .main-menu-container a span {
+  font-family: "GalanoSemiBold";
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
+    display: inline-block;
+    padding: 10px 50px;
+  }
+}
+html body#vm .frame header .main_menu .main-menu-container .active, html #id .frame header .main_menu .main-menu-container .active {
+  background: #878787;
+  opacity: 1;
+}
+html body#vm .frame header .main_menu .main-menu-container .active:after, html #id .frame header .main_menu .main-menu-container .active:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 13px 10px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  content: "";
+  left: calc(50% - 10px);
+  bottom: -24px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
+    max-width: 992px;
+    margin: auto;
+    padding: 0 5px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu, html #id .frame header .main_menu {
+    padding: 20px 0 73px 10px;
+  }
+}
+html body#vm .frame .content, html #id .frame .content {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  width: calc(100% - 30px);
+  margin: auto;
+  margin-top: -54px;
+  padding-bottom: 140px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
+  background-color: #f6f6f6;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  width: 100%;
+}
+html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
+  color: #878787;
+  text-decoration: none;
+}
+html body#vm .frame .content .sub_menu li a img, html #id .frame .content .sub_menu li a img {
+  height: 18px;
+  margin-right: 5px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  -ms-display: none;
+  -ms-padding-top: 27px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li a img, html #id .frame .content .sub_menu li a img {
+    display: block;
+    -ms-display: none;
+    height: 35px;
+    margin: auto;
+  }
+}
+html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
+  display: inline-block;
+  line-height: 18px;
+  vertical-align: middle;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
+    display: block;
+    font-size: 10px;
+    margin: auto;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
+    height: 110px;
+    padding: 30px 6px 0 4px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
+  background-color: white;
+  border-bottom: 3px solid #00b2ff;
+}
+html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .sub_menu .active a img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
+    border: none;
+    border-left: 4px solid #00b2ff;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
+    width: 115px;
+    display: block;
+    margin: 0;
+    flex: none;
+  }
+}
+html body#vm .frame .content .panel, html #id .frame .content .panel {
+  padding: 10px;
+  min-height: 500px;
+}
+html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  font-size: 22px;
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
+    font-size: 28px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar, html #id .frame .content .panel .encyclopedia .search-bar {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  height: 35px;
+  margin-top: 15px;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .frame .content .panel .encyclopedia .search-bar input {
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  font-size: 12px;
+  padding: 0 5px;
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .frame .content .panel .encyclopedia .search-bar input {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+  outline: none;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar button i, html #id .frame .content .panel .encyclopedia .search-bar button i {
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .search-bar button:active, html #id .frame .content .panel .encyclopedia .search-bar button:active {
+  filter: brightness(90%);
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 0 12px;
+  }
+}
 @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
   html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
     font-size: 16px;
     margin-left: 10px;
-    padding: 0 22px; } }
-
-          @media screen and (min-width: 768px) {
-            html body#vm .frame .content .panel .encyclopedia .search-bar, html #id .frame .content .panel .encyclopedia .search-bar {
-              height: 40px;
-              margin: 20px 0; } }
-        html body#vm .frame .content .panel .encyclopedia .ency-container, html #id .frame .content .panel .encyclopedia .ency-container {
-          padding-top: 15px;
-          position: relative; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro p, html #id .frame .content .panel .encyclopedia .ency-container .intro p {
-            margin: 0; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question, html #id .frame .content .panel .encyclopedia .ency-container .intro .question {
-            padding-left: 15px;
-            margin-top: 20px;
-            position: relative; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question:before, html #id .frame .content .panel .encyclopedia .ency-container .intro .question:before {
-              font-family: 'Font Awesome 5 Free';
-              content: '\f105';
-              font-weight: 900;
-              position: absolute;
-              top: 0;
-              left: 0;
-              color: #00b2ff; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .title {
-              border: none;
-              font-size: 16px; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.manual, html #id .frame .content .panel .encyclopedia .ency-container .intro img.manual {
-            width: 100%; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.illustration, html #id .frame .content .panel .encyclopedia .ency-container .intro img.illustration {
-            width: 100px;
-            position: absolute;
-            right: 0;
-            bottom: -150px; }
-            @media screen and (min-width: 992px) {
-              html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.illustration, html #id .frame .content .panel .encyclopedia .ency-container .intro img.illustration {
-                position: relative;
-                bottom: initial;
-                display: block;
-                margin-left: 90%;
-                margin-top: 40px; } }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .list, html #id .frame .content .panel .encyclopedia .ency-container .list {
-            display: none; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .list p.search-by, html #id .frame .content .panel .encyclopedia .ency-container .list p.search-by {
-              margin-bottom: 18px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .list p.search-by span, html #id .frame .content .panel .encyclopedia .ency-container .list p.search-by span {
-                font-family: 'GalanoSemiBold'; }
-          html body#vm .frame .content .panel .encyclopedia .ency-container .detail, html #id .frame .content .panel .encyclopedia .ency-container .detail {
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            position: relative;
-            display: none; }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text {
-              color: #00b2ff;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 12px;
-              margin-bottom: 8px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text:hover, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text:hover {
-                text-decoration: underline; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text i, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text i {
-                margin-right: 5px; }
-              @media screen and (min-width: 1200px) {
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text {
-                  font-size: 14px; } }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
-              border: 1px solid #00b2ff;
-              padding: 10px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title {
-                font-size: 18px;
-                border: none;
-                text-align: center;
-                width: 100%; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field {
-                margin-top: 20px;
-                font-size: 12px; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field p, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field p {
-                  margin: 0; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
-                  font-size: 12px;
-                  color: #00b2ff;
-                  font-family: 'GalanoSemiBold';
-                  padding-left: 23px;
-                  margin-bottom: 5px;
-                  position: relative; }
-                  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3:before {
-                    content: '\f2c2';
-                    font-family: 'Font Awesome 5 Free';
-                    font-weight: 900;
-                    position: absolute;
-                    left: 0px; }
-                  @media screen and (min-width: 350px) {
-                    html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
-                      font-size: 14px; } }
-                @media screen and (min-width: 350px) {
-                  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field {
-                    font-size: 14px; } }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash h3:before {
-                content: '\f02b'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a {
-                color: black;
-                text-decoration: underline;
-                display: inline-block;
-                position: relative; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after {
-                  content: '\f35d';
-                  font-family: 'Font Awesome 5 Free';
-                  font-weight: 900;
-                  position: absolute;
-                  right: -23px;
-                  bottom: 2px;
-                  font-size: 10px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity h3:before {
-                content: '\f76b'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul {
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
-                display: flex;
-                width: 70px;
-                justify-content: space-between; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li {
-                  width: 10px;
-                  height: 10px;
-                  border-radius: 50%;
-                  border: 1px solid #00b2ff; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill {
-                  background-color: #00b2ff; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before {
-                content: '\f57d'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries ul.flags li, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries ul.flags li {
-                margin-right: 5px;
-                box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3); }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-type h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-type h3:before {
-                content: '\f07c'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before {
-                content: '\f496'; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size span:after, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size span:after {
-                margin-left: 5px;
-                content: 'bytes'; }
-              @media screen and (min-width: 992px) {
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
-                  -webkit-flex: 1;
-                  -moz-flex: 1;
-                  -ms-flex: 1;
-                  -o-flex: 1;
-                  flex: 1;
-                  background-image: url(../img/detail_bg.png);
-                  background-repeat: no-repeat;
-                  background-size: 45%;
-                  background-position: 102% 106%;
-                  width: 385px; } }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
-              margin-top: 5px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution .title, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution .title {
-                width: 100%;
-                text-align: center;
-                font-size: 18px;
-                border: none;
-                padding: 10px 0; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model {
-                margin-bottom: 20px;
-                font-size: 12px;
-                overflow: hidden;
-                overflow-wrap: break-word; }
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li {
-                  font-family: 'GalanoSemiBold'; }
-                  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li span, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li span {
-                    margin-left: 5px; }
-                @media screen and (min-width: 768px) {
-                  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model {
-                    font-size: 14px; } }
-              @media screen and (min-width: 992px) {
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
-                  -webkit-flex: 1;
-                  -moz-flex: 1;
-                  -ms-flex: 1;
-                  -o-flex: 1;
-                  flex: 1;
-                  margin-left: 20px;
-                  width: 385px; } }
-            @media screen and (min-width: 992px) {
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container {
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
-                display: flex; } }
-            html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back {
-              color: #00b2ff;
-              border: 1px solid #00b2ff;
-              border-radius: 4px;
-              background: white;
-              text-transform: uppercase;
-              padding: 5px 10px;
-              outline: none;
-              line-height: initial;
-              position: absolute;
-              right: 0;
-              margin-top: 20px;
-              width: 80px; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back:hover, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back:hover {
-                background-color: #00b2ff;
-                color: white;
-                transition: all 0.2s linear; }
-              html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back i, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back i {
-                margin-right: 3px; }
-              @media screen and (min-width: 992px) {
-                html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back {
-                  position: relative;
-                  margin-left: 90%; } }
-        html body#vm .frame .content .panel .release-note .title, html #id .frame .content .panel .release-note .title {
-          color: #00b2ff;
-          font-family: 'GalanoSemiBold';
-          font-size: 22px;
-          display: inline-block; }
-          @media screen and (min-width: 992px) {
-            html body#vm .frame .content .panel .release-note .title, html #id .frame .content .panel .release-note .title {
-              font-size: 28px; } }
-        html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .content .panel .release-note .search-bar {
-          margin-top: 15px; }
-          html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select {
-            position: absolute; }
-            html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
-              content: '\f0d7';
-              font-family: 'Font Awesome 5 Free';
-              font-weight: 900;
-              position: absolute;
-              right: 0;
-              top: 0;
-              color: #00b2ff;
-              width: 25px;
-              line-height: 35px;
-              text-align: center; }
-              @media screen and (min-width: 768px) {
-                html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
-                  line-height: 40px; } }
-            html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
-              border: 1px solid #00b2ff;
-              border-radius: 4px 0 0 4px;
-              text-align-last: center;
-              background: none;
-              width: 100px;
-              color: #00b2ff;
-              height: 35px; }
-              @media screen and (min-width: 768px) {
-                html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
-                  height: 40px; } }
-          html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
-            background-color: #00b2ff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            outline: none;
-            height: 35px;
-            width: 100%;
-            margin-top: 7px; }
-            html body#vm .frame .content .panel .release-note .search-bar button i, html #id .frame .content .panel .release-note .search-bar button i {
-              font-size: 12px; }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
-                padding: 0 12px;
-                width: initial;
-                margin: 0 0 0 10px;
-                height: 40px; } }
-  @media screen and (min-width: 768px) and (min-width: 1200px) {
-    html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
-      padding: 0 22px;
-      font-size: 16px; } }
-
-          html body#vm .frame .content .panel .release-note .search-bar .model-search, html #id .frame .content .panel .release-note .search-bar .model-search {
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flexbox;
-            display: -o-flex;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end; }
-            html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
-              width: calc(100% - 99px);
-              position: relative; }
-              html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
-                border: 1px solid #00b2ff;
-                background: white;
-                border-radius: 0 4px 4px 0;
-                height: 35px;
-                color: #00b2ff;
-                padding-left: 10px;
-                width: 100%; }
-                @media screen and (min-width: 768px) {
-                  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
-                    height: 40px; } }
-              html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
-                content: '\f0d7';
-                font-family: 'Font Awesome 5 Free';
-                font-weight: 900;
-                position: absolute;
-                right: 0;
-                top: 0;
-                color: #00b2ff;
-                width: 25px;
-                line-height: 35px;
-                text-align: center; }
-              @media screen and (min-width: 768px) {
-                html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
-                  width: initial;
-                  -webkit-flex: 1;
-                  -moz-flex: 1;
-                  -ms-flex: 1;
-                  -o-flex: 1;
-                  flex: 1; }
-                  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
-                    line-height: 40px; } }
-            html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker {
-              width: 100%;
-              border: 1px solid #00b2ff;
-              border-radius: 4px;
-              color: #00b2ff;
-              height: 35px;
-              cursor: pointer;
-              padding-left: 10px;
-              line-height: 35px;
-              position: relative; }
-              html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
-                content: '\f0d7';
-                font-family: 'Font Awesome 5 Free';
-                font-weight: 900;
-                position: absolute;
-                right: 0;
-                top: 0;
-                color: #00b2ff;
-                width: 25px;
-                line-height: 35px;
-                text-align: center; }
-              @media screen and (min-width: 768px) {
-                html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker {
-                  width: initial;
-                  -webkit-flex: 1;
-                  -moz-flex: 1;
-                  -ms-flex: 1;
-                  -o-flex: 1;
-                  flex: 1;
-                  margin-left: 10px;
-                  height: 40px;
-                  line-height: 40px; }
-                  html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
-                    line-height: 40px; } }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame .content .panel .release-note .search-bar .model-search, html #id .frame .content .panel .release-note .search-bar .model-search {
-                justify-content: space-between;
-                padding-left: 99px; } }
-          html body#vm .frame .content .panel .release-note .search-bar .version-search, html #id .frame .content .panel .release-note .search-bar .version-search {
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flexbox;
-            display: -o-flex;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end; }
-            html body#vm .frame .content .panel .release-note .search-bar .version-search input, html #id .frame .content .panel .release-note .search-bar .version-search input {
-              border: 1px solid #00b2ff;
-              border-radius: 0 4px 4px 0;
-              width: calc(100% - 99px);
-              height: 35px;
-              padding-left: 10px; }
-              @media screen and (min-width: 768px) {
-                html body#vm .frame .content .panel .release-note .search-bar .version-search input, html #id .frame .content .panel .release-note .search-bar .version-search input {
-                  width: initial;
-                  -webkit-flex: 1;
-                  -moz-flex: 1;
-                  -ms-flex: 1;
-                  -o-flex: 1;
-                  flex: 1;
-                  height: 40px; } }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame .content .panel .release-note .search-bar .version-search, html #id .frame .content .panel .release-note .search-bar .version-search {
-                justify-content: space-between;
-                padding-left: 99px; } }
-          @media screen and (min-width: 768px) {
-            html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .content .panel .release-note .search-bar {
-              margin: 20px 0; } }
-        html body#vm .frame .content .panel .release-note .release-container, html #id .frame .content .panel .release-note .release-container {
-          padding-top: 15px; }
-          html body#vm .frame .content .panel .release-note .release-container .intro img.manual, html #id .frame .content .panel .release-note .release-container .intro img.manual {
-            width: 100%;
-            margin-top: 15px; }
-          html body#vm .frame .content .panel .release-note .release-container .list, html #id .frame .content .panel .release-note .release-container .list {
-            display: none; }
-            html body#vm .frame .content .panel .release-note .release-container .list table tr th:last-child, html body#vm .frame .content .panel .release-note .release-container .list table tr td:last-child, html #id .frame .content .panel .release-note .release-container .list table tr th:last-child, html #id .frame .content .panel .release-note .release-container .list table tr td:last-child {
-              text-align: center; }
-            html body#vm .frame .content .panel .release-note .release-container .list table tr td a, html #id .frame .content .panel .release-note .release-container .list table tr td a {
-              display: inline-block;
-              color: #575755; }
-              html body#vm .frame .content .panel .release-note .release-container .list table tr td a:hover, html #id .frame .content .panel .release-note .release-container .list table tr td a:hover {
-                color: #00b2ff;
-                transition: all 0.2s linear; }
-        @media screen and (min-width: 768px) {
-          html body#vm .frame .content .panel, html #id .frame .content .panel {
-            padding: 25px 4%; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
-    html body#vm .frame .content .panel, html #id .frame .content .panel {
-      -webkit-flex: 1;
-      -moz-flex: 1;
-      -ms-flex: 1;
-      -o-flex: 1;
-      flex: 1;
-      padding: 4%; } }
-
-      @media screen and (min-width: 992px) {
-        html body#vm .frame .content, html #id .frame .content {
-          max-width: 962px;
-          margin: auto;
-          margin-top: -54px;
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: -o-flex;
-          display: flex;
-          padding: 0; } }
-  @media screen and (min-width: 992px) and (min-width: 1200px) {
-    html body#vm .frame .content, html #id .frame .content {
-      max-width: 1170px; } }
-
-    html body#vm .frame footer, html #id .frame footer {
-      width: 100%;
-      background-color: #f2f2f2;
-      margin-top: 60px;
-      padding-top: 20px;
-      transition: all 0.2s ease; }
-      html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
-        width: 100%;
-        max-width: 1164px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        padding: 15px;
-        display: none;
-        font-size: 12px; }
-        html body#vm .frame footer .footer-container .footer-column, html #id .frame footer .footer-container .footer-column {
-          margin-right: 30px;
-          margin-bottom: 20px; }
-          html body#vm .frame footer .footer-container .footer-column a, html #id .frame footer .footer-container .footer-column a {
-            color: #898989;
-            line-height: 24px; }
-            html body#vm .frame footer .footer-container .footer-column a:hover, html #id .frame footer .footer-container .footer-column a:hover {
-              text-decoration: none;
-              color: #00b2ff; }
-          html body#vm .frame footer .footer-container .footer-column .menu-head, html #id .frame footer .footer-container .footer-column .menu-head {
-            font-family: 'GalanoSemiBold';
-            color: black;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            color: #343434; }
-        @media screen and (min-width: 768px) {
-          html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flexbox;
-            display: -o-flex;
-            display: flex; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
-    html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
-      max-width: 992px;
-      margin: auto;
-      justify-content: space-around; } }
-
-  @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
-    html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
-      max-width: 1200px; } }
-
-      html body#vm .frame footer .social-media, html #id .frame footer .social-media {
-        width: 100%;
-        padding: 0 15px; }
-        html body#vm .frame footer .social-media ul.icons, html #id .frame footer .social-media ul.icons {
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: -o-flex;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          align-items: center; }
-          html body#vm .frame footer .social-media ul.icons a, html #id .frame footer .social-media ul.icons a {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #ababab;
-            color: white;
-            text-align: center;
-            margin: 2px 2px;
-            line-height: 30px; }
-          html body#vm .frame footer .social-media ul.icons span, html #id .frame footer .social-media ul.icons span {
-            color: #898989;
-            display: none;
-            margin-right: 10px; }
-            @media screen and (min-width: 768px) {
-              html body#vm .frame footer .social-media ul.icons span, html #id .frame footer .social-media ul.icons span {
-                display: block; } }
-          html body#vm .frame footer .social-media ul.icons .facebook a:hover, html #id .frame footer .social-media ul.icons .facebook a:hover {
-            background-color: #3765a3; }
-          html body#vm .frame footer .social-media ul.icons .linedin a:hover, html #id .frame footer .social-media ul.icons .linedin a:hover {
-            background-color: #0077b5; }
-          html body#vm .frame footer .social-media ul.icons .twitter a:hover, html #id .frame footer .social-media ul.icons .twitter a:hover {
-            background-color: #41abe1; }
-          html body#vm .frame footer .social-media ul.icons .google a:hover, html #id .frame footer .social-media ul.icons .google a:hover {
-            background-color: #db4437; }
-          html body#vm .frame footer .social-media ul.icons .blog a:hover, html #id .frame footer .social-media ul.icons .blog a:hover {
-            background-color: #ff8900; }
-          html body#vm .frame footer .social-media ul.icons .youtube a:hover, html #id .frame footer .social-media ul.icons .youtube a:hover {
-            background-color: #e22c28; }
-          html body#vm .frame footer .social-media ul.icons .instagram a:hover, html #id .frame footer .social-media ul.icons .instagram a:hover {
-            background-color: #d93175; }
-          html body#vm .frame footer .social-media ul.icons .xing a:hover, html #id .frame footer .social-media ul.icons .xing a:hover {
-            background-color: #026466; }
-          html body#vm .frame footer .social-media ul.icons .pinterest a:hover, html #id .frame footer .social-media ul.icons .pinterest a:hover {
-            background-color: #bd081c; }
-          html body#vm .frame footer .social-media ul.icons .comments a:hover, html #id .frame footer .social-media ul.icons .comments a:hover {
-            background-color: #ffc800; }
-          html body#vm .frame footer .social-media ul.icons .email a:hover, html #id .frame footer .social-media ul.icons .email a:hover {
-            background-color: #009688; }
-          html body#vm .frame footer .social-media ul.icons .habr a:hover, html #id .frame footer .social-media ul.icons .habr a:hover {
-            background-color: #78a1b5; }
-      html body#vm .frame footer .legal, html #id .frame footer .legal {
-        background-color: #545454;
-        color: #cdcdcd;
-        font-size: 12px;
-        padding: 10px 15px;
-        margin-top: 20px; }
-        html body#vm .frame footer .legal .legal-text, html #id .frame footer .legal .legal-text {
-          text-align: center; }
-        html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .legal-links {
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: -o-flex;
-          display: flex;
-          justify-content: space-between; }
-          html body#vm .frame footer .legal .legal-links a, html #id .frame footer .legal .legal-links a {
-            color: #efefef; }
-            html body#vm .frame footer .legal .legal-links a:hover, html #id .frame footer .legal .legal-links a:hover {
-              text-decoration: none; }
-          @media screen and (min-width: 768px) {
-            html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .legal-links {
-              width: 270px; } }
-        @media screen and (min-width: 768px) {
-          html body#vm .frame footer .legal, html #id .frame footer .legal {
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flexbox;
-            display: -o-flex;
-            display: flex;
-            justify-content: space-between; }
-            html body#vm .frame footer .legal br, html #id .frame footer .legal br {
-              display: none; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
-    html body#vm .frame footer .legal, html #id .frame footer .legal {
-      padding: 10px calc(50vw - 496px); } }
-
-  @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
-    html body#vm .frame footer .legal, html #id .frame footer .legal {
-      padding: 10px calc(50vw - 600px); } }
+    padding: 0 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .search-bar, html #id .frame .content .panel .encyclopedia .search-bar {
+    height: 40px;
+    margin: 20px 0;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container, html #id .frame .content .panel .encyclopedia .ency-container {
+  padding-top: 15px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro p, html #id .frame .content .panel .encyclopedia .ency-container .intro p {
+  margin: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question, html #id .frame .content .panel .encyclopedia .ency-container .intro .question {
+  padding-left: 15px;
+  margin-top: 20px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question:before, html #id .frame .content .panel .encyclopedia .ency-container .intro .question:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .title {
+  border: none;
+  font-size: 16px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.manual, html #id .frame .content .panel .encyclopedia .ency-container .intro img.manual {
+  width: 100%;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.illustration, html #id .frame .content .panel .encyclopedia .ency-container .intro img.illustration {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.illustration, html #id .frame .content .panel .encyclopedia .ency-container .intro img.illustration {
+    position: relative;
+    bottom: auto;
+    display: block;
+    margin-left: 90%;
+    margin-top: 40px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list, html #id .frame .content .panel .encyclopedia .ency-container .list {
+  display: none;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list p.search-by, html #id .frame .content .panel .encyclopedia .ency-container .list p.search-by {
+  margin-bottom: 18px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .list p.search-by span, html #id .frame .content .panel .encyclopedia .ency-container .list p.search-by span {
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail, html #id .frame .content .panel .encyclopedia .ency-container .detail {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  display: none;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text {
+  color: #00b2ff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text:hover, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text:hover {
+  text-decoration: underline;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text i, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text i {
+  margin-right: 5px;
+}
+@media screen and (min-width: 1200px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text {
+    font-size: 14px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
+  border: 1px solid #00b2ff;
+  padding: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title {
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field {
+  margin-top: 20px;
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field p, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field p {
+  margin: 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
+  font-size: 12px;
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  padding-left: 23px;
+  margin-bottom: 5px;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3:before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0px;
+}
+@media screen and (min-width: 350px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 350px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field {
+    font-size: 14px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a {
+  color: black;
+  text-decoration: underline;
+  display: inline-block;
+  position: relative;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -23px;
+  bottom: 2px;
+  font-size: 10px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries ul.flags li, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries ul.flags li {
+  margin-right: 5px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-type h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-type h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size h3:before {
+  content: "";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size span:after, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-size span:after {
+  margin-left: 5px;
+  content: "bytes";
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    background-image: url(../img/detail_bg.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: 102% 106%;
+    width: 385px;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
+  margin-top: 5px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution .title, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution .title {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  padding: 10px 0;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model {
+  margin-bottom: 20px;
+  font-size: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li {
+  font-family: "GalanoSemiBold";
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li span, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model li span {
+  margin-left: 5px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution ul.model {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .zyxel-solution {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    margin-left: 20px;
+    width: 385px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+  }
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back {
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  background: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  outline: none;
+  line-height: initial;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  width: 80px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back:hover, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back:hover {
+  background-color: #00b2ff;
+  color: white;
+  transition: all 0.2s linear;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back i, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back i {
+  margin-right: 3px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back {
+    position: relative;
+    margin-left: 90%;
+  }
+}
+html body#vm .frame .content .panel .release-note .title, html #id .frame .content .panel .release-note .title {
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+  font-size: 22px;
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .release-note .title, html #id .frame .content .panel .release-note .title {
+    font-size: 28px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .content .panel .release-note .search-bar {
+  margin-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select {
+  position: absolute;
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
+    line-height: 40px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
+  border: 1px solid #00b2ff;
+  border-radius: 4px 0 0 4px;
+  text-align-last: center;
+  background: none;
+  width: 100px;
+  color: #00b2ff;
+  height: 35px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
+    height: 40px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  height: 35px;
+  width: 100%;
+  margin-top: 7px;
+}
+html body#vm .frame .content .panel .release-note .search-bar button i, html #id .frame .content .panel .release-note .search-bar button i {
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
+    padding: 0 12px;
+    width: auto;
+    margin: 0 0 0 10px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
+    padding: 0 22px;
+    font-size: 16px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search, html #id .frame .content .panel .release-note .search-bar .model-search {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
+  width: calc(100% - 99px);
+  position: relative;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
+  border: 1px solid #00b2ff;
+  background: white;
+  border-radius: 0 4px 4px 0;
+  height: 35px;
+  color: #00b2ff;
+  padding-left: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
+    height: 40px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
+    width: initial;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+  }
+  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
+    line-height: 40px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker {
+  width: 100%;
+  border: 1px solid #00b2ff;
+  border-radius: 4px;
+  color: #00b2ff;
+  height: 35px;
+  cursor: pointer;
+  padding-left: 10px;
+  line-height: 35px;
+  position: relative;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #00b2ff;
+  width: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker {
+    width: initial;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+  }
+  html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .model-search, html #id .frame .content .panel .release-note .search-bar .model-search {
+    justify-content: space-between;
+    padding-left: 99px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search, html #id .frame .content .panel .release-note .search-bar .version-search {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search input, html #id .frame .content .panel .release-note .search-bar .version-search input {
+  border: 1px solid #00b2ff;
+  border-radius: 0 4px 4px 0;
+  width: calc(100% - 99px);
+  height: 35px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .version-search input, html #id .frame .content .panel .release-note .search-bar .version-search input {
+    width: initial;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .version-search, html #id .frame .content .panel .release-note .search-bar .version-search {
+    justify-content: space-between;
+    padding-left: 99px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .content .panel .release-note .search-bar {
+    margin: 20px 0;
+  }
+}
+html body#vm .frame .content .panel .release-note .release-container, html #id .frame .content .panel .release-note .release-container {
+  padding-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .release-container .intro img.manual, html #id .frame .content .panel .release-note .release-container .intro img.manual {
+  width: 100%;
+  margin-top: 15px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list, html #id .frame .content .panel .release-note .release-container .list {
+  display: none;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table tr th:last-child, html body#vm .frame .content .panel .release-note .release-container .list table tr td:last-child, html #id .frame .content .panel .release-note .release-container .list table tr th:last-child, html #id .frame .content .panel .release-note .release-container .list table tr td:last-child {
+  text-align: center;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table tr td a, html #id .frame .content .panel .release-note .release-container .list table tr td a {
+  display: inline-block;
+  color: #575755;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table tr td a:hover, html #id .frame .content .panel .release-note .release-container .list table tr td a:hover {
+  color: #00b2ff;
+  transition: all 0.2s linear;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel, html #id .frame .content .panel {
+    padding: 25px 4%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame .content .panel, html #id .frame .content .panel {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    padding: 4%;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content, html #id .frame .content {
+    max-width: 962px;
+    margin: auto;
+    margin-top: -54px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame .content, html #id .frame .content {
+    max-width: 1170px;
+  }
+}
+html body#vm .frame footer, html #id .frame footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: 60px;
+  padding-top: 20px;
+  transition: all 0.2s ease;
+}
+html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
+  width: 100%;
+  max-width: 1164px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 15px;
+  display: none;
+  font-size: 12px;
+}
+html body#vm .frame footer .footer-container .footer-column, html #id .frame footer .footer-container .footer-column {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+html body#vm .frame footer .footer-container .footer-column a, html #id .frame footer .footer-container .footer-column a {
+  color: #898989;
+  line-height: 24px;
+}
+html body#vm .frame footer .footer-container .footer-column a:hover, html #id .frame footer .footer-container .footer-column a:hover {
+  text-decoration: none;
+  color: #00b2ff;
+}
+html body#vm .frame footer .footer-container .footer-column .menu-head, html #id .frame footer .footer-container .footer-column .menu-head {
+  font-family: "GalanoSemiBold";
+  color: black;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: #343434;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
+    max-width: 992px;
+    margin: auto;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame footer .footer-container, html #id .frame footer .footer-container {
+    max-width: 1200px;
+  }
+}
+html body#vm .frame footer .social-media, html #id .frame footer .social-media {
+  width: 100%;
+  padding: 0 15px;
+}
+html body#vm .frame footer .social-media ul.icons, html #id .frame footer .social-media ul.icons {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+html body#vm .frame footer .social-media ul.icons a, html #id .frame footer .social-media ul.icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ababab;
+  color: white;
+  text-align: center;
+  margin: 2px 2px;
+  line-height: 30px;
+}
+html body#vm .frame footer .social-media ul.icons span, html #id .frame footer .social-media ul.icons span {
+  color: #898989;
+  display: none;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .social-media ul.icons span, html #id .frame footer .social-media ul.icons span {
+    display: block;
+  }
+}
+html body#vm .frame footer .social-media ul.icons .facebook a:hover, html #id .frame footer .social-media ul.icons .facebook a:hover {
+  background-color: #3765a3;
+}
+html body#vm .frame footer .social-media ul.icons .linedin a:hover, html #id .frame footer .social-media ul.icons .linedin a:hover {
+  background-color: #0077b5;
+}
+html body#vm .frame footer .social-media ul.icons .twitter a:hover, html #id .frame footer .social-media ul.icons .twitter a:hover {
+  background-color: #41abe1;
+}
+html body#vm .frame footer .social-media ul.icons .google a:hover, html #id .frame footer .social-media ul.icons .google a:hover {
+  background-color: #db4437;
+}
+html body#vm .frame footer .social-media ul.icons .blog a:hover, html #id .frame footer .social-media ul.icons .blog a:hover {
+  background-color: #ff8900;
+}
+html body#vm .frame footer .social-media ul.icons .youtube a:hover, html #id .frame footer .social-media ul.icons .youtube a:hover {
+  background-color: #e22c28;
+}
+html body#vm .frame footer .social-media ul.icons .instagram a:hover, html #id .frame footer .social-media ul.icons .instagram a:hover {
+  background-color: #d93175;
+}
+html body#vm .frame footer .social-media ul.icons .xing a:hover, html #id .frame footer .social-media ul.icons .xing a:hover {
+  background-color: #026466;
+}
+html body#vm .frame footer .social-media ul.icons .pinterest a:hover, html #id .frame footer .social-media ul.icons .pinterest a:hover {
+  background-color: #bd081c;
+}
+html body#vm .frame footer .social-media ul.icons .comments a:hover, html #id .frame footer .social-media ul.icons .comments a:hover {
+  background-color: #ffc800;
+}
+html body#vm .frame footer .social-media ul.icons .email a:hover, html #id .frame footer .social-media ul.icons .email a:hover {
+  background-color: #009688;
+}
+html body#vm .frame footer .social-media ul.icons .habr a:hover, html #id .frame footer .social-media ul.icons .habr a:hover {
+  background-color: #78a1b5;
+}
+html body#vm .frame footer .legal, html #id .frame footer .legal {
+  background-color: #545454;
+  color: #cdcdcd;
+  font-size: 12px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+html body#vm .frame footer .legal .legal-text, html #id .frame footer .legal .legal-text {
+  text-align: center;
+}
+html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .legal-links {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+html body#vm .frame footer .legal .legal-links a, html #id .frame footer .legal .legal-links a {
+  color: #efefef;
+}
+html body#vm .frame footer .legal .legal-links a:hover, html #id .frame footer .legal .legal-links a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .legal-links {
+    width: 270px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame footer .legal, html #id .frame footer .legal {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body#vm .frame footer .legal br, html #id .frame footer .legal br {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame footer .legal, html #id .frame footer .legal {
+    padding: 10px calc(50vw - 496px);
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame footer .legal, html #id .frame footer .legal {
+    padding: 10px calc(50vw - 600px);
+  }
+}
 
 select {
   -webkit-appearance: none;
@@ -880,42 +1118,61 @@ select {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  outline: none; }
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
 
 #encyclopedia table, #release_note table {
   width: 100% !important;
   font-size: 12px;
-  border: 0; }
-  #encyclopedia table thead, #release_note table thead {
-    background-color: #d9d9d9;
-    color: black;
-    border: 0; }
-    #encyclopedia table thead tr th, #release_note table thead tr th {
-      padding: 10px;
-      border: 0 !important;
-      font-family: 'GalanoSemiBold'; }
-      #encyclopedia table thead tr th:last-child, #release_note table thead tr th:last-child {
-        text-align: center; }
-  #encyclopedia table tbody tr td:last-child, #release_note table tbody tr td:last-child {
-    text-align: center; }
-  #encyclopedia table tbody tr:hover, #release_note table tbody tr:hover {
-    background-color: #ccf0ff; }
-  #encyclopedia table .check, #release_note table .check {
-    background-color: #ccf0ff; }
-  @media screen and (min-width: 768px) {
-    #encyclopedia table, #release_note table {
-      font-size: 14px; } }
+  border: 0;
+}
+#encyclopedia table thead, #release_note table thead {
+  background-color: #d9d9d9;
+  color: black;
+  border: 0;
+}
+#encyclopedia table thead tr th, #release_note table thead tr th {
+  padding: 10px;
+  border: 0 !important;
+  font-family: "GalanoSemiBold";
+}
+#encyclopedia table thead tr th:last-child, #release_note table thead tr th:last-child {
+  text-align: center;
+}
+#encyclopedia table tbody tr td:last-child, #release_note table tbody tr td:last-child {
+  text-align: center;
+}
+#encyclopedia table tbody tr:hover, #release_note table tbody tr:hover {
+  background-color: #ccf0ff;
+}
+#encyclopedia table .check, #release_note table .check {
+  background-color: #ccf0ff;
+}
+@media screen and (min-width: 768px) {
+  #encyclopedia table, #release_note table {
+    font-size: 14px;
+  }
+}
 #encyclopedia .dataTables_scrollFoot, #release_note .dataTables_scrollFoot {
-  display: none; }
+  display: none;
+}
 #encyclopedia .dataTables_scrollBody, #release_note .dataTables_scrollBody {
-  border: 0 !important; }
+  border: 0 !important;
+}
 #encyclopedia .dataTables_info, #release_note .dataTables_info {
   font-size: 10px;
   float: none !important;
-  text-align: center; }
-  @media screen and (min-width: 768px) {
-    #encyclopedia .dataTables_info, #release_note .dataTables_info {
-      font-size: 12px; } }
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  #encyclopedia .dataTables_info, #release_note .dataTables_info {
+    font-size: 12px;
+  }
+}
 #encyclopedia .dataTables_paginate, #release_note .dataTables_paginate {
   display: -webkit-flex;
   display: -moz-flex;
@@ -923,37 +1180,48 @@ select {
   display: -o-flex;
   display: flex;
   justify-content: center;
-  margin-top: 20px; }
-  #encyclopedia .dataTables_paginate .paginate_button, #release_note .dataTables_paginate .paginate_button {
-    color: black !important;
-    margin: 0;
-    border-radius: 0;
-    margin-left: -1px;
-    padding: 0;
-    width: 30px;
-    line-height: 30px; }
-    #encyclopedia .dataTables_paginate .paginate_button:hover, #release_note .dataTables_paginate .paginate_button:hover {
-      border: 0;
-      background: none; }
-  #encyclopedia .dataTables_paginate .current, #release_note .dataTables_paginate .current {
-    background: none;
-    color: #00b2ff !important;
-    font-family: 'GalanoSemiBold';
-    border: 0; }
-    #encyclopedia .dataTables_paginate .current:hover, #release_note .dataTables_paginate .current:hover {
-      background-color: #00b2ff; }
-  #encyclopedia .dataTables_paginate .first, #release_note .dataTables_paginate .first {
-    border-radius: 4px 0 0 4px; }
-  #encyclopedia .dataTables_paginate .last, #release_note .dataTables_paginate .last {
-    border-radius: 0 4px 4px 0; }
-  #encyclopedia .dataTables_paginate .disabled, #release_note .dataTables_paginate .disabled {
-    color: gray !important; }
-  @media screen and (min-width: 768px) {
-    #encyclopedia .dataTables_paginate, #release_note .dataTables_paginate {
-      float: none; } }
+  margin-top: 20px;
+}
+#encyclopedia .dataTables_paginate .paginate_button, #release_note .dataTables_paginate .paginate_button {
+  color: black !important;
+  margin: 0;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 0;
+  width: 30px;
+  line-height: 30px;
+}
+#encyclopedia .dataTables_paginate .paginate_button:hover, #release_note .dataTables_paginate .paginate_button:hover {
+  border: 0;
+  background: none;
+}
+#encyclopedia .dataTables_paginate .current, #release_note .dataTables_paginate .current {
+  background: none;
+  color: #00b2ff !important;
+  font-family: "GalanoSemiBold";
+  border: 0;
+}
+#encyclopedia .dataTables_paginate .current:hover, #release_note .dataTables_paginate .current:hover {
+  background-color: #00b2ff;
+}
+#encyclopedia .dataTables_paginate .first, #release_note .dataTables_paginate .first {
+  border-radius: 4px 0 0 4px;
+}
+#encyclopedia .dataTables_paginate .last, #release_note .dataTables_paginate .last {
+  border-radius: 0 4px 4px 0;
+}
+#encyclopedia .dataTables_paginate .disabled, #release_note .dataTables_paginate .disabled {
+  color: gray !important;
+}
+@media screen and (min-width: 768px) {
+  #encyclopedia .dataTables_paginate, #release_note .dataTables_paginate {
+    float: none;
+  }
+}
 
 .menu-open {
   transform: translateX(-300px);
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+}
 
 /*# sourceMappingURL=style.css.map */
