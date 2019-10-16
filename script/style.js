@@ -186,7 +186,13 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-	$.fn.DataTable.ext.pager.numbers_length = 10;
+	var wdth = $(window).width();
+	if (wdth >= 768){
+		$.fn.DataTable.ext.pager.numbers_length = 10;
+	}else{
+		$.fn.DataTable.ext.pager.numbers_length = 5;
+	}
+	
 	
 	$(function() {
 
