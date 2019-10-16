@@ -1,40 +1,36 @@
 $(document).ready(function(){
 	
+	//Encyclopedia/Release Note切換
 	$(function(){
-	  // 預設顯示第一個 Tab
 	  var _showTab = 0;
 	  var $defaultLi = $('ul.sub_menu li').eq(_showTab).addClass('active');
 	  $($defaultLi.find('a').attr('href')).siblings().hide();
-	 
-	  // 當 li 頁籤被點擊時...
-	  // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
 	  $('ul.sub_menu li').click(function() {
-	    // 找出 li 中的超連結 href(#id)
 	    var $this = $(this),
 	      _clickTab = $this.find('a').attr('href');
-	    // 把目前點擊到的 li 頁籤加上 .active
-	    // 並把兄弟元素中有 .active 的都移除 class
 	    $this.addClass('active').siblings('.active').removeClass('active');
-	    // 淡入相對應的內容並隱藏兄弟元素
 	    $(_clickTab).stop(false, true).fadeIn().siblings().hide();
-	 
 	    return false;
 	  }).find('a').focus(function(){
 	    this.blur();
 	  });
 	});
 
+	//menu
+	$('.menu .card-body li a').attr('target','_blank');
+	//menu-open
 	$('.hamburger').click(function(){
 		$('.menu').toggleClass('menu-open');
 		$('header').toggleClass('menu-open');
 		$('.content').toggleClass('menu-open');
 		$('footer').toggleClass('menu-open');
 	});
-
+	//menu-close
 	$('.menu-close-btn').click(function(){
 		$('.menu-open').removeClass('menu-open');
 	});
 
+	//Encyclopedia-table
 	$('#ency_search_btn').click(function(){
 		
 		$('.detail').hide();
@@ -64,8 +60,30 @@ $(document).ready(function(){
 			  ]
 	    });
 	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
+	    var wdth = $(window).width();
+	    if (wdth <= 320){
+	    	var description = $('#id #EncyTable tbody tr td:nth-child(2)')
+	    	var $len = 30;
+	    	$(description).each(function(){
+		        if($(this).text().length > $len){
+		            var text = $(this).text().substring(0,$len-1)+"...";
+		            $(this).text(text);
+		        }
+		    });
+
+	    }else{
+	    	var description = $('#id #EncyTable tbody tr td:nth-child(2)')
+	    	var $len = 100;
+	    	$(description).each(function(){
+		        if($(this).text().length > $len){
+		            var text = $(this).text().substring(0,$len-1)+"...";
+		            $(this).text(text);
+		        }
+		    });
+	    }
 	});
 
+	//ReleaseNote-table
 	$('#model_search_btn').click(function(){
 		$('.release-note .intro').hide();
 		$('.release-note .list').show();
