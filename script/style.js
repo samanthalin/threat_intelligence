@@ -182,6 +182,10 @@ $(document).ready(function(){
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
+
+	//footer-year
+	var currentYear = (new Date).getFullYear();
+	$(".current-year").text( (new Date).getFullYear() );
 });
 
 $(document).ready(function(){

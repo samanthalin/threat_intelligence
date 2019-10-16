@@ -979,11 +979,12 @@ html{
 					padding: 10px 15px;
 					margin-top: 20px;
 					.legal-text{
-						text-align: center;
+						text-align: left;
 					}
 					.legal-links{
 						@include display-flex;
 						justify-content: space-between;
+						flex-wrap: wrap;
 						a{
 							color: #efefef;
 							&:hover{
@@ -991,14 +992,14 @@ html{
 							}
 						}
 						@media screen and (min-width: 768px){
-							width: 270px;
+							width: 385px;
 						}
 					}
 					@media screen and (min-width: 768px){
 						br{display: none;}
-						@include display-flex;
-						justify-content: space-between;
-						@media screen and (min-width: 992px) {
+						@media screen and (min-width: 992px) {							
+							@include display-flex;
+							justify-content: space-between;
 							padding: 10px calc(50vw - 496px);
 							@media screen and (min-width: 1200px){
 								padding: 10px calc(50vw - 600px);

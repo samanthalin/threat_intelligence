@@ -1067,7 +1067,7 @@ html body#vm .frame footer .legal, html #id .frame footer .legal {
   margin-top: 20px;
 }
 html body#vm .frame footer .legal .legal-text, html #id .frame footer .legal .legal-text {
-  text-align: center;
+  text-align: left;
 }
 html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .legal-links {
   display: -webkit-flex;
@@ -1076,6 +1076,7 @@ html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .l
   display: -o-flex;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 html body#vm .frame footer .legal .legal-links a, html #id .frame footer .legal .legal-links a {
   color: #efefef;
@@ -1085,10 +1086,15 @@ html body#vm .frame footer .legal .legal-links a:hover, html #id .frame footer .
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame footer .legal .legal-links, html #id .frame footer .legal .legal-links {
-    width: 270px;
+    width: 385px;
   }
 }
 @media screen and (min-width: 768px) {
+  html body#vm .frame footer .legal br, html #id .frame footer .legal br {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
   html body#vm .frame footer .legal, html #id .frame footer .legal {
     display: -webkit-flex;
     display: -moz-flex;
@@ -1096,13 +1102,6 @@ html body#vm .frame footer .legal .legal-links a:hover, html #id .frame footer .
     display: -o-flex;
     display: flex;
     justify-content: space-between;
-  }
-  html body#vm .frame footer .legal br, html #id .frame footer .legal br {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 992px) {
-  html body#vm .frame footer .legal, html #id .frame footer .legal {
     padding: 10px calc(50vw - 496px);
   }
 }
