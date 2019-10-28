@@ -242,6 +242,7 @@ html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
   display: -o-flex;
   display: flex;
   width: 100%;
+  justify-content: space-around;
 }
 html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
   text-align: center;
@@ -249,9 +250,6 @@ html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li
   cursor: pointer;
   border: 1px solid #00b2ff;
   border-radius: 20px;
-}
-html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .sub_menu li:last-child {
-  margin-left: 10px;
 }
 html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
   color: #00b2ff;

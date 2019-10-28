@@ -263,6 +263,7 @@ html{
 					padding: 22px 0;
 					@include display-flex;
 					width: 100%;
+					justify-content: space-around;
 					li{
 						// @include flex(1);
 						text-align: center;
@@ -270,9 +271,6 @@ html{
 						cursor: pointer;
 						border: 1px solid #00b2ff;
 						border-radius: 20px;
-						&:last-child{
-							margin-left: 10px;
-						}
 						a{
 							color: $blue;
 							text-decoration: none;
