@@ -100,11 +100,13 @@ html body#vm .frame header, html #id .frame header {
   transition: all 0.2s ease;
 }
 html body#vm .frame header nav, html #id .frame header nav {
-  height: 55px;
+  height: 70px;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   width: 100%;
   background-color: white;
   transition: all 0.2s ease;
+  position: fixed;
+  z-index: 1000;
 }
 html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
   width: 100%;
@@ -119,14 +121,14 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
   display: block;
 }
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
-  height: 55px;
+  height: 70px;
 }
 html body#vm .frame header nav .nav-container .hamburger, html #id .frame header nav .nav-container .hamburger {
-  font-size: 32px;
+  font-size: 38px;
   color: black;
   opacity: 0.5;
   transition: opacity 0.22s linear;
-  padding: 10px 20px;
+  padding: 10px 24px;
 }
 html body#vm .frame header nav .nav-container .hamburger:visited, html body#vm .frame header nav .nav-container .hamburger:active, html #id .frame header nav .nav-container .hamburger:visited, html #id .frame header nav .nav-container .hamburger:active {
   color: black;
@@ -146,9 +148,8 @@ html body#vm .frame header nav .nav-container .hamburger:hover, html #id .frame 
   }
 }
 html body#vm .frame header .main_menu, html #id .frame header .main_menu {
-  background-color: #575755;
-  padding: 10px;
-  padding-bottom: 73px;
+  background-color: #f8f8f8;
+  padding: 80px 10px 15px 10px;
 }
 html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
   display: -webkit-flex;
@@ -159,7 +160,7 @@ html body#vm .frame header .main_menu .main-menu-container, html #id .frame head
 }
 html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
   display: block;
-  color: white;
+  color: #00b2ff;
   font-family: "GalanoSemiBold";
   font-size: 16px;
   text-align: center;
@@ -200,19 +201,9 @@ html body#vm .frame header .main_menu .main-menu-container a span, html #id .fra
   }
 }
 html body#vm .frame header .main_menu .main-menu-container .active, html #id .frame header .main_menu .main-menu-container .active {
-  background: #878787;
+  background: white;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
   opacity: 1;
-}
-html body#vm .frame header .main_menu .main-menu-container .active:after, html #id .frame header .main_menu .main-menu-container .active:after {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 10px 13px 10px;
-  border-color: transparent transparent #ffffff transparent;
-  position: absolute;
-  content: "";
-  left: calc(50% - 10px);
-  bottom: -24px;
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
@@ -238,17 +229,13 @@ html body#vm .frame header .main_menu .main-menu-container .active:after, html #
 }
 html body#vm .frame .content, html #id .frame .content {
   background-color: white;
-  border-radius: 4px;
   overflow: hidden;
-  width: calc(100% - 30px);
-  margin: auto;
-  margin-top: -54px;
-  padding-bottom: 140px;
+  padding: 0 15px 140px 15px;
   position: relative;
   transition: all 0.2s ease;
 }
 html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
-  background-color: #f6f6f6;
+  padding: 22px 0;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -257,34 +244,18 @@ html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
   width: 100%;
 }
 html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  -o-flex: 1;
-  flex: 1;
   text-align: center;
-  padding: 15px 0;
+  padding: 8px 20px;
   cursor: pointer;
+  border: 1px solid #00b2ff;
+  border-radius: 20px;
+}
+html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .sub_menu li:last-child {
+  margin-left: 10px;
 }
 html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
-  color: #878787;
+  color: #00b2ff;
   text-decoration: none;
-}
-html body#vm .frame .content .sub_menu li a img, html #id .frame .content .sub_menu li a img {
-  height: 18px;
-  margin-right: 5px;
-  opacity: 0.6;
-  filter: grayscale(100%);
-  -ms-display: none;
-  -ms-padding-top: 27px;
-}
-@media screen and (min-width: 992px) {
-  html body#vm .frame .content .sub_menu li a img, html #id .frame .content .sub_menu li a img {
-    display: block;
-    -ms-display: none;
-    height: 35px;
-    margin: auto;
-  }
 }
 html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
   display: inline-block;
@@ -307,8 +278,10 @@ html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_
   }
 }
 html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
-  background-color: white;
-  border-bottom: 3px solid #00b2ff;
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .sub_menu .active a, html #id .frame .content .sub_menu .active a {
+  color: white;
 }
 html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .sub_menu .active a img {
   filter: grayscale(0%);
