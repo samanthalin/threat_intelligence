@@ -89,15 +89,24 @@ html body#vm .frame .menu .card .collapse ul.card-body li a, html body#vm .frame
 html body#vm .frame .menu .card .collapse ul.card-body li a:hover, html body#vm .frame .menu .card .collapsing ul.card-body li a:hover, html #id .frame .menu .card .collapse ul.card-body li a:hover, html #id .frame .menu .card .collapsing ul.card-body li a:hover {
   color: #00b2ff;
 }
-html body#vm .frame .menu .card:nth-child(2) button:after, html #id .frame .menu .card:nth-child(2) button:after {
+html body#vm .frame .menu .card:nth-child(7) button:after, html body#vm .frame .menu .card:nth-child(8) button:after, html body#vm .frame .menu .card:nth-child(9) button:after, html body#vm .frame .menu .card:nth-child(10) button:after, html body#vm .frame .menu .card:nth-child(11) button:after, html #id .frame .menu .card:nth-child(7) button:after, html #id .frame .menu .card:nth-child(8) button:after, html #id .frame .menu .card:nth-child(9) button:after, html #id .frame .menu .card:nth-child(10) button:after, html #id .frame .menu .card:nth-child(11) button:after {
   display: none;
 }
 html body#vm .frame .menu .card .card-header, html #id .frame .menu .card .card-header {
   text-align: left;
   border: 0;
 }
+html body#vm .frame .menu a, html #id .frame .menu a {
+  font-family: "GalanoSemiBold";
+  color: #898989;
+}
+html body#vm .frame .menu a:hover, html body#vm .frame .menu a:active, html #id .frame .menu a:hover, html #id .frame .menu a:active {
+  color: #00b2ff;
+}
 html body#vm .frame header, html #id .frame header {
   transition: all 0.2s ease;
+  background-color: #f8f8f8;
+  padding-top: 70px;
 }
 html body#vm .frame header nav, html #id .frame header nav {
   height: 70px;
@@ -106,10 +115,12 @@ html body#vm .frame header nav, html #id .frame header nav {
   background-color: white;
   transition: all 0.2s ease;
   position: fixed;
+  top: 0;
   z-index: 1000;
 }
 html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
   width: 100%;
+  height: 70px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -123,18 +134,44 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
   height: 70px;
 }
-html body#vm .frame header nav .nav-container .hamburger, html #id .frame header nav .nav-container .hamburger {
+html body#vm .frame header nav .nav-container .nav-right, html #id .frame header nav .nav-container .nav-right {
+  display: flex;
+}
+html body#vm .frame header nav .nav-container .nav-right .desktop-menu, html #id .frame header nav .nav-container .nav-right .desktop-menu {
+  display: none;
+  align-items: center;
+}
+html body#vm .frame header nav .nav-container .nav-right .desktop-menu li a, html #id .frame header nav .nav-container .nav-right .desktop-menu li a {
+  font-size: 16px;
+  color: #898989;
+  padding: 0 15px;
+}
+html body#vm .frame header nav .nav-container .nav-right .desktop-menu li a:hover, html #id .frame header nav .nav-container .nav-right .desktop-menu li a:hover {
+  font-family: "GalanoSemiBold";
+  color: black;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header nav .nav-container .nav-right .desktop-menu, html #id .frame header nav .nav-container .nav-right .desktop-menu {
+    display: flex;
+  }
+}
+html body#vm .frame header nav .nav-container .nav-right .hamburger, html #id .frame header nav .nav-container .nav-right .hamburger {
   font-size: 38px;
   color: black;
   opacity: 0.5;
   transition: opacity 0.22s linear;
   padding: 10px 24px;
 }
-html body#vm .frame header nav .nav-container .hamburger:visited, html body#vm .frame header nav .nav-container .hamburger:active, html #id .frame header nav .nav-container .hamburger:visited, html #id .frame header nav .nav-container .hamburger:active {
+html body#vm .frame header nav .nav-container .nav-right .hamburger:visited, html body#vm .frame header nav .nav-container .nav-right .hamburger:active, html #id .frame header nav .nav-container .nav-right .hamburger:visited, html #id .frame header nav .nav-container .nav-right .hamburger:active {
   color: black;
 }
-html body#vm .frame header nav .nav-container .hamburger:hover, html #id .frame header nav .nav-container .hamburger:hover {
+html body#vm .frame header nav .nav-container .nav-right .hamburger:hover, html #id .frame header nav .nav-container .nav-right .hamburger:hover {
   opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header nav .nav-container .nav-right .hamburger, html #id .frame header nav .nav-container .nav-right .hamburger {
+    display: none;
+  }
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
@@ -147,9 +184,46 @@ html body#vm .frame header nav .nav-container .hamburger:hover, html #id .frame 
     max-width: 1200px;
   }
 }
+html body#vm .frame header .breadcrumbs, html #id .frame header .breadcrumbs {
+  padding: 20px 0;
+}
+html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
+  display: flex;
+  align-items: center;
+}
+html body#vm .frame header .breadcrumbs .breadcrumb-container h1, html #id .frame header .breadcrumbs .breadcrumb-container h1 {
+  font-family: "GalanoSemiBold";
+  font-size: 24px;
+  margin-right: 30px;
+}
+html body#vm .frame header .breadcrumbs .breadcrumb-container a, html #id .frame header .breadcrumbs .breadcrumb-container a {
+  color: #00b2ff;
+  font-size: 13px;
+  padding: 0 5px;
+}
+html body#vm .frame header .breadcrumbs .breadcrumb-container a:hover, html #id .frame header .breadcrumbs .breadcrumb-container a:hover {
+  text-decoration: underline;
+}
+html body#vm .frame header .breadcrumbs .breadcrumb-container i, html #id .frame header .breadcrumbs .breadcrumb-container i {
+  font-size: 12px;
+  color: #ccc;
+  padding: 0 5px;
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
+    max-width: 992px;
+    margin: auto;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
+  html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
+    max-width: 1200px;
+  }
+}
 html body#vm .frame header .main_menu, html #id .frame header .main_menu {
   background-color: #f8f8f8;
-  padding: 80px 10px 15px 10px;
+  padding: 0 0 30px 10px;
 }
 html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
   display: -webkit-flex;
@@ -178,18 +252,10 @@ html body#vm .frame header .main_menu .main-menu-container a, html #id .frame he
   background: none;
 }
 html body#vm .frame header .main_menu .main-menu-container a img, html #id .frame header .main_menu .main-menu-container a img {
-  height: 50px;
+  height: 60px;
   display: block;
   margin: auto;
   margin-bottom: 10px;
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame header .main_menu .main-menu-container a img, html #id .frame header .main_menu .main-menu-container a img {
-    display: inline-block;
-    margin: 0;
-    height: 30px;
-    margin-right: 5px;
-  }
 }
 html body#vm .frame header .main_menu .main-menu-container a span, html #id .frame header .main_menu .main-menu-container a span {
   font-family: "GalanoSemiBold";
@@ -222,11 +288,6 @@ html body#vm .frame header .main_menu .main-menu-container .active, html #id .fr
     max-width: 1200px;
   }
 }
-@media screen and (min-width: 768px) {
-  html body#vm .frame header .main_menu, html #id .frame header .main_menu {
-    padding: 20px 0 73px 10px;
-  }
-}
 html body#vm .frame .content, html #id .frame .content {
   background-color: white;
   overflow: hidden;
@@ -242,7 +303,7 @@ html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
   display: -o-flex;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
   text-align: center;
@@ -250,6 +311,9 @@ html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li
   cursor: pointer;
   border: 1px solid #00b2ff;
   border-radius: 20px;
+}
+html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .sub_menu li:last-child {
+  margin-left: 15px;
 }
 html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
   color: #00b2ff;
@@ -890,7 +954,6 @@ html body#vm .frame .content .panel .release-note .release-container .list table
   html body#vm .frame .content, html #id .frame .content {
     max-width: 962px;
     margin: auto;
-    margin-top: -54px;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
