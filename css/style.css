@@ -186,10 +186,13 @@ html body#vm .frame header nav .nav-container .nav-right .hamburger:hover, html 
 }
 html body#vm .frame header .breadcrumbs, html #id .frame header .breadcrumbs {
   padding: 35px 0;
+  display: none;
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
   display: flex;
   align-items: center;
+  width: calc(100% - 30px);
+  margin: auto;
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container h1, html #id .frame header .breadcrumbs .breadcrumb-container h1 {
   font-family: "GalanoSemiBold";
@@ -221,9 +224,14 @@ html body#vm .frame header .breadcrumbs .breadcrumb-container i, html #id .frame
     max-width: 1200px;
   }
 }
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .breadcrumbs, html #id .frame header .breadcrumbs {
+    display: block;
+  }
+}
 html body#vm .frame header .main_menu, html #id .frame header .main_menu {
   background-color: #f8f8f8;
-  padding: 0 0 30px 10px;
+  padding: 15px 10px;
 }
 html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
   display: -webkit-flex;
@@ -286,6 +294,11 @@ html body#vm .frame header .main_menu .main-menu-container .active, html #id .fr
 @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
   html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
     max-width: 1200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame header .main_menu, html #id .frame header .main_menu {
+    padding: 0 0 30px 10px;
   }
 }
 html body#vm .frame .content, html #id .frame .content {
@@ -733,121 +746,47 @@ html body#vm .frame .content .panel .release-note .title, html #id .frame .conte
 }
 html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .content .panel .release-note .search-bar {
   margin-top: 15px;
-}
-html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select {
-  position: absolute;
-}
-html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: #00b2ff;
-  width: 25px;
-  line-height: 35px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select:after, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select:after {
-    line-height: 40px;
-  }
-}
-html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
-  border: 1px solid #00b2ff;
-  border-radius: 4px 0 0 4px;
-  text-align-last: center;
-  background: none;
-  width: 100px;
-  color: #00b2ff;
-  height: 35px;
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select, html #id .frame .content .panel .release-note .search-bar label.lb-mv-select .model-version-select {
-    height: 40px;
-  }
-}
-html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
-  background-color: #00b2ff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  height: 35px;
-  width: 100%;
-  margin-top: 7px;
-}
-html body#vm .frame .content .panel .release-note .search-bar button i, html #id .frame .content .panel .release-note .search-bar button i {
-  font-size: 12px;
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
-    padding: 0 12px;
-    width: auto;
-    margin: 0 0 0 10px;
-    height: 40px;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  html body#vm .frame .content .panel .release-note .search-bar button, html #id .frame .content .panel .release-note .search-bar button {
-    padding: 0 22px;
-    font-size: 16px;
-  }
-}
-html body#vm .frame .content .panel .release-note .search-bar .model-search, html #id .frame .content .panel .release-note .search-bar .model-search {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -o-flex;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
 }
-html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
-  width: calc(100% - 99px);
-  position: relative;
+html body#vm .frame .content .panel .release-note .search-bar .model-version-select, html #id .frame .content .panel .release-note .search-bar .model-version-select {
+  width: 115px;
 }
-html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
+html body#vm .frame .content .panel .release-note .search-bar .model-version-select button, html #id .frame .content .panel .release-note .search-bar .model-version-select button {
   border: 1px solid #00b2ff;
-  background: white;
+  background-color: white;
+  color: #00b2ff;
+  border-radius: 4px 0 0 4px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-select, html #id .frame .content .panel .release-note .search-bar .model-select {
+  margin-left: -1px;
+  width: calc(100% - 114px);
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-select button, html #id .frame .content .panel .release-note .search-bar .model-select button {
+  border: 1px solid #00b2ff;
+  background-color: white;
+  color: #00b2ff;
   border-radius: 0 4px 4px 0;
-  height: 35px;
-  color: #00b2ff;
-  padding-left: 10px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .release-note .search-bar .model-select, html #id .frame .content .panel .release-note .search-bar .model-select {
+    width: calc(100% - 507px);
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar #model_search_btn, html #id .frame .content .panel .release-note .search-bar #model_search_btn {
   width: 100%;
+  color: white;
+  background-color: #00b2ff;
+  margin-top: 10px;
 }
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select select {
-    height: 40px;
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .release-note .search-bar #model_search_btn, html #id .frame .content .panel .release-note .search-bar #model_search_btn {
+    width: 113px;
+    margin-top: 0;
+    margin-left: 10px;
   }
 }
-html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: #00b2ff;
-  width: 25px;
-  line-height: 35px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select {
-    width: initial;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
-  }
-  html body#vm .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after, html #id .frame .content .panel .release-note .search-bar .model-search label.lb-model-select:after {
-    line-height: 40px;
-  }
-}
-html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker {
+html body#vm .frame .content .panel .release-note .search-bar .date-picker, html #id .frame .content .panel .release-note .search-bar .date-picker {
   width: 100%;
   border: 1px solid #00b2ff;
   border-radius: 4px;
@@ -857,8 +796,9 @@ html body#vm .frame .content .panel .release-note .search-bar .model-search .dat
   padding-left: 10px;
   line-height: 35px;
   position: relative;
+  margin-top: 10px;
 }
-html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
+html body#vm .frame .content .panel .release-note .search-bar .date-picker:after, html #id .frame .content .panel .release-note .search-bar .date-picker:after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -870,59 +810,16 @@ html body#vm .frame .content .panel .release-note .search-bar .model-search .dat
   line-height: 35px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker {
-    width: initial;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .release-note .search-bar .date-picker, html #id .frame .content .panel .release-note .search-bar .date-picker {
+    width: 260px;
+    height: 38px;
+    line-height: 40px;
+    margin-top: 0;
     margin-left: 10px;
-    height: 40px;
+  }
+  html body#vm .frame .content .panel .release-note .search-bar .date-picker:after, html #id .frame .content .panel .release-note .search-bar .date-picker:after {
     line-height: 40px;
-  }
-  html body#vm .frame .content .panel .release-note .search-bar .model-search .date-picker:after, html #id .frame .content .panel .release-note .search-bar .model-search .date-picker:after {
-    line-height: 40px;
-  }
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar .model-search, html #id .frame .content .panel .release-note .search-bar .model-search {
-    justify-content: space-between;
-    padding-left: 99px;
-  }
-}
-html body#vm .frame .content .panel .release-note .search-bar .version-search, html #id .frame .content .panel .release-note .search-bar .version-search {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -o-flex;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-html body#vm .frame .content .panel .release-note .search-bar .version-search input, html #id .frame .content .panel .release-note .search-bar .version-search input {
-  border: 1px solid #00b2ff;
-  border-radius: 0 4px 4px 0;
-  width: calc(100% - 99px);
-  height: 35px;
-  padding-left: 10px;
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar .version-search input, html #id .frame .content .panel .release-note .search-bar .version-search input {
-    width: initial;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
-    height: 40px;
-  }
-}
-@media screen and (min-width: 768px) {
-  html body#vm .frame .content .panel .release-note .search-bar .version-search, html #id .frame .content .panel .release-note .search-bar .version-search {
-    justify-content: space-between;
-    padding-left: 99px;
   }
 }
 @media screen and (min-width: 768px) {
