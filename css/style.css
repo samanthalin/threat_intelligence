@@ -17,7 +17,7 @@ html body#vm, html #id {
   font-size: 14px;
 }
 html body#vm .frame, html #id .frame {
-  background-color: #ccf0ff;
+  background-color: white;
 }
 html body#vm .frame .menu, html #id .frame .menu {
   position: fixed;
@@ -185,7 +185,7 @@ html body#vm .frame header nav .nav-container .nav-right .hamburger:hover, html 
   }
 }
 html body#vm .frame header .breadcrumbs, html #id .frame header .breadcrumbs {
-  padding: 20px 0;
+  padding: 35px 0;
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
   display: flex;
@@ -194,7 +194,7 @@ html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame h
 html body#vm .frame header .breadcrumbs .breadcrumb-container h1, html #id .frame header .breadcrumbs .breadcrumb-container h1 {
   font-family: "GalanoSemiBold";
   font-size: 24px;
-  margin-right: 30px;
+  margin-right: 50px;
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container a, html #id .frame header .breadcrumbs .breadcrumb-container a {
   color: #00b2ff;
@@ -315,6 +315,11 @@ html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li
 html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .sub_menu li:last-child {
   margin-left: 15px;
 }
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .sub_menu li:last-child {
+    margin-left: 0;
+  }
+}
 html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
   color: #00b2ff;
   text-decoration: none;
@@ -327,16 +332,24 @@ html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
     display: block;
-    font-size: 10px;
+    font-size: 16px;
     margin: auto;
-    margin-top: 5px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
+    color: #b2b2b2;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
-    height: 110px;
-    padding: 30px 6px 0 4px;
+    border: none;
+    padding: 0;
+    border-radius: 0;
     border-bottom: 1px solid #e8e8e8;
+    margin-top: 15px;
   }
 }
 html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
@@ -351,14 +364,17 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
-    border: none;
     border-left: 4px solid #00b2ff;
     padding-left: 0;
+    background-color: white;
+  }
+  html body#vm .frame .content .sub_menu .active a, html #id .frame .content .sub_menu .active a {
+    color: #878787;
   }
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
-    width: 115px;
+    width: 145px;
     display: block;
     margin: 0;
     flex: none;
