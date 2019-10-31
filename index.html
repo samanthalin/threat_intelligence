@@ -15,12 +15,14 @@
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
 	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="bootstrap-select-1.13.9/dist/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	
 	<script src="script/jquery-3.4.1.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script src="script/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="bootstrap-select-1.13.9/dist/js/bootstrap-select.min.js"></script>
 	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
 	<script type="text/javascript" src="script/moment.min.js"></script>
 	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
@@ -176,6 +178,8 @@
 					<i class="fas fa-angle-right"></i>
 					<a href="https://www.zyxel.com/solutions/All-Solutions.shtml" target="_blank">Solutions</a>
 					<i class="fas fa-angle-right"></i>
+					<a href="https://www.zyxel.com/solutions/All-Solutions.shtml" target="_blank">One Security Solution</a>
+					<i class="fas fa-angle-right"></i>
 					<span>Threat Intelligence</span>
 				</div>
 				
@@ -186,10 +190,10 @@
 						<img src="img/virus.png" alt="">
 						<span>Virus / Malware</span>
 					</a>
-					<a href="intrusion_detection.html" class="id">
+					<!-- <a href="intrusion_detection.html" class="id">
 						<img src="img/detect.png" alt="">
 						<span>Intrusion Detection</span>
-					</a>
+					</a> -->
 				</div>
 			</div>
 		</header>
@@ -706,51 +710,51 @@
 				<div id="release_note" class="release-note">
 					<h1 class="title">Release Note</h1>
 					<div class="search-bar">
-						<label for="" class="lb-mv-select">
-							<select name="" id="" class="model-version-select">
+						
+						<div class="model-version-select">
+							<select name="" id="" class="selectpicker" data-width="115px">
 								<option value="Model">Model</option>
 								<option value="Version">Version</option>
 							</select>
-						</label>	
-						<div class="model-search">
-							<label for="" class="lb-model-select">
-								<select name="" id="" class="model-select">
-									<option value="null">Select a model</option>
-									<option value="ATP100">ATP100</option>
-									<option value="ATP200">ATP200</option>
-									<option value="ATP500">ATP500</option>
-									<option value="ATP800">ATP800</option>
-									<option value="USG110">USG110</option>
-									<option value="USG1100">USG1100</option>
-									<option value="USG1900">USG1900</option>
-									<option value="USG210">USG210</option>
-									<option value="USG2200">USG2200</option>
-									<option value="USG310">USG310</option>
-									<option value="USG40">USG40</option>
-									<option value="USG40W">USG40W</option>
-									<option value="USG60">USG60</option>
-									<option value="USG60W">USG60W</option>
-									<option value="ZyWALL 110">ZyWALL 110</option>
-									<option value="ZyWALL 1100">ZyWALL 1100</option>
-									<option value="ZyWALL 310">ZyWALL 310</option>
-								</select>
-							</label>	
-							<div class="date-picker">
-								<i class="far fa-calendar-alt"></i>
-								<span></span>
-							</div>
-							<button id="model_search_btn">
-								<i class="fas fa-search"></i>
-								search
-							</button>
+						</div>	
+												
+						<div class="model-search model-select">
+							<select name="" id="" class="selectpicker" data-live-search="true" title="Choose one of the following..." data-width="100%">
+								<option value="ATP100">ATP100</option>
+								<option value="ATP200">ATP200</option>
+								<option value="ATP500">ATP500</option>
+								<option value="ATP800">ATP800</option>
+								<option value="USG110">USG110</option>
+								<option value="USG1100">USG1100</option>
+								<option value="USG1900">USG1900</option>
+								<option value="USG210">USG210</option>
+								<option value="USG2200">USG2200</option>
+								<option value="USG310">USG310</option>
+								<option value="USG40">USG40</option>
+								<option value="USG40W">USG40W</option>
+								<option value="USG60">USG60</option>
+								<option value="USG60W">USG60W</option>
+								<option value="ZyWALL 110">ZyWALL 110</option>
+								<option value="ZyWALL 1100">ZyWALL 1100</option>
+								<option value="ZyWALL 310">ZyWALL 310</option>
+							</select>
 						</div>
-						<div class="version-search">
-							<input type="text" placeholder="search by version" class="version-number">
-							<button id="version_search_btn">
-								<i class="fas fa-search"></i>
-								search
-							</button>
-						</div>		
+							
+
+						<div class="model-search date-picker">
+							<i class="far fa-calendar-alt"></i>
+							<span></span>
+						</div>
+						<button id="model_search_btn" class="btn model-search">
+							<i class="fas fa-search"></i>
+							search
+						</button>
+<!-- ------------------------------------------------------------------------------------------ -->
+						<input type="text" placeholder="search by version" class="version-search version-number">
+						<button id="version_search_btn" class="btn version-search">
+							<i class="fas fa-search"></i>
+							search
+						</button>	
 					</div>
 					<div class="release-container">
 						

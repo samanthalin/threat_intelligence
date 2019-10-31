@@ -268,9 +268,9 @@ html body#vm .frame header .main_menu .main-menu-container a img, html #id .fram
 html body#vm .frame header .main_menu .main-menu-container a span, html #id .frame header .main_menu .main-menu-container a span {
   font-family: "GalanoSemiBold";
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
-    display: inline-block;
+    flex: initial;
     padding: 10px 50px;
   }
 }
@@ -281,7 +281,7 @@ html body#vm .frame header .main_menu .main-menu-container .active, html #id .fr
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame header .main_menu .main-menu-container, html #id .frame header .main_menu .main-menu-container {
-    display: block;
+    display: flex;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
@@ -395,7 +395,7 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
 }
 html body#vm .frame .content .panel, html #id .frame .content .panel {
   padding: 10px;
-  min-height: 500px;
+  min-height: 800px;
 }
 html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
   color: #00b2ff;
@@ -820,6 +820,26 @@ html body#vm .frame .content .panel .release-note .search-bar .date-picker:after
   }
   html body#vm .frame .content .panel .release-note .search-bar .date-picker:after, html #id .frame .content .panel .release-note .search-bar .date-picker:after {
     line-height: 40px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-number, html #id .frame .content .panel .release-note .search-bar .version-number {
+  flex: 1;
+  border: 1px solid #00b2ff;
+  border-radius: 0 4px 4px 0;
+  margin-left: -1px;
+  padding-left: 5px;
+}
+html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn {
+  width: 100%;
+  color: white;
+  background-color: #00b2ff;
+  margin-top: 10px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn {
+    width: 113px;
+    margin-top: 0;
+    margin-left: 10px;
   }
 }
 @media screen and (min-width: 768px) {
