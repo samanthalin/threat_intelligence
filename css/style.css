@@ -14,7 +14,7 @@
 }
 
 html body#vm, html #id {
-  font-size: 14px;
+  font-size: 16px;
 }
 html body#vm .frame, html #id .frame {
   background-color: white;
@@ -89,6 +89,10 @@ html body#vm .frame .menu .card .collapse ul.card-body li a, html body#vm .frame
 html body#vm .frame .menu .card .collapse ul.card-body li a:hover, html body#vm .frame .menu .card .collapsing ul.card-body li a:hover, html #id .frame .menu .card .collapse ul.card-body li a:hover, html #id .frame .menu .card .collapsing ul.card-body li a:hover {
   color: #00b2ff;
 }
+html body#vm .frame .menu .card:nth-child(7) a, html body#vm .frame .menu .card:nth-child(8) a, html body#vm .frame .menu .card:nth-child(9) a, html body#vm .frame .menu .card:nth-child(10) a, html body#vm .frame .menu .card:nth-child(11) a, html #id .frame .menu .card:nth-child(7) a, html #id .frame .menu .card:nth-child(8) a, html #id .frame .menu .card:nth-child(9) a, html #id .frame .menu .card:nth-child(10) a, html #id .frame .menu .card:nth-child(11) a {
+  color: #898989;
+  font-family: "GalanoSemiBold";
+}
 html body#vm .frame .menu .card:nth-child(7) button:after, html body#vm .frame .menu .card:nth-child(8) button:after, html body#vm .frame .menu .card:nth-child(9) button:after, html body#vm .frame .menu .card:nth-child(10) button:after, html body#vm .frame .menu .card:nth-child(11) button:after, html #id .frame .menu .card:nth-child(7) button:after, html #id .frame .menu .card:nth-child(8) button:after, html #id .frame .menu .card:nth-child(9) button:after, html #id .frame .menu .card:nth-child(10) button:after, html #id .frame .menu .card:nth-child(11) button:after {
   display: none;
 }
@@ -96,11 +100,11 @@ html body#vm .frame .menu .card .card-header, html #id .frame .menu .card .card-
   text-align: left;
   border: 0;
 }
-html body#vm .frame .menu a, html #id .frame .menu a {
-  font-family: "GalanoSemiBold";
+html body#vm .frame .menu .card-body a, html #id .frame .menu .card-body a {
+  font-family: "GalanoRegular";
   color: #898989;
 }
-html body#vm .frame .menu a:hover, html body#vm .frame .menu a:active, html #id .frame .menu a:hover, html #id .frame .menu a:active {
+html body#vm .frame .menu .card-body a:hover, html body#vm .frame .menu .card-body a:active, html #id .frame .menu .card-body a:hover, html #id .frame .menu .card-body a:active {
   color: #00b2ff;
 }
 html body#vm .frame header, html #id .frame header {
@@ -239,6 +243,7 @@ html body#vm .frame header .breadcrumbs .breadcrumb-container i, html #id .frame
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container span, html #id .frame header .breadcrumbs .breadcrumb-container span {
   padding: 0 5px;
+  font-size: 13px;
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
   html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {

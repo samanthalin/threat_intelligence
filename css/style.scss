@@ -51,7 +51,7 @@ $light-blue: #ccf0ff;
 
 html{
 	body#vm, #id{
-		font-size: 14px;
+		font-size: 16px;
 		.frame{
 			background-color: white;
 			.menu{
@@ -123,6 +123,10 @@ html{
 						}
 					}
 					&:nth-child(7), &:nth-child(8),&:nth-child(9), &:nth-child(10), &:nth-child(11){
+						a{
+							color: #898989;
+							font-family: 'GalanoSemiBold';
+						}
 						button:after{
 							display: none;
 						}
@@ -132,8 +136,8 @@ html{
 						border: 0;
 					}
 				}//card
-				a{
-					font-family: 'GalanoSemiBold';
+				.card-body a{
+					font-family: 'GalanoRegular';
 					color: #898989;
 					&:hover, &:active{
 						color: $blue;
@@ -261,6 +265,7 @@ html{
 						}
 						span{
 							padding: 0 5px;
+							font-size: 13px;
 						}
 						@media screen and (min-width: 768px){
 							@media screen and (min-width: 992px){
