@@ -151,7 +151,7 @@
 <!---------- menu --------------->
 
 		<header>
-			<nav>
+			<nav class="full">
 				<div class="nav-container">
 					<a href="" class="logo">
 						<img src="img/logo-zyxel.png" alt="Zyxel Logo">
@@ -178,7 +178,7 @@
 					<i class="fas fa-angle-right"></i>
 					<a href="https://www.zyxel.com/solutions/All-Solutions.shtml" target="_blank">Solutions</a>
 					<i class="fas fa-angle-right"></i>
-					<a href="https://www.zyxel.com/solutions/All-Solutions.shtml" target="_blank">One Security Solution</a>
+					<a href="http://172.23.10.12:8000/solutions/one-security-solution/one-security-solution.shtml" target="_blank">One Security Solution</a>
 					<i class="fas fa-angle-right"></i>
 					<span>Threat Intelligence</span>
 				</div>
@@ -229,21 +229,29 @@
 						
 						<div class="intro">
 							<p>Welcome to the Zyxel Encyclopedia. </p>
-							<p>What are “virus/malware” and how do cybercriminals exploit them?</p>
-							<p>Your Zywall blocks virus and what’s description for this virus?</p>
-							<p>The answers to these and other questions are right here.</p>
-							<p>You can search encyclopedia through virus/malware name or file hash of virus/malware.</p>
+							<p>In this encyclopedia, you can get the description of avirus and how ZyWALL defends against that particular virus.Search in the encyclopedia for virus/malware name or file hash of virus/malware.</p>
 							<div class="question">
 								<div class="title">What is virus/malware name?</div>
-								<p>malware is any software intentionally designed to cause damage to a computer, server or network. For example, Wannacry</p>
+								<p>For example, Wannacry or any partial name of a virus/malware.</p>
 							</div>
 							<div class="question">
 								<div class="title">How to search with file hash? </div>
-								<p>To search, just enter its hash. Currently the allowed hashes are File Hash. For example ‘fe31f2fac5ca0919d29bcf1fe79b9645’</p>
+								<p>To search, just enter its hash. For example, ‘fe31f2fac5ca0919d29bcf1fe79b9645’</p>
 							</div>
-							<p style="margin: 25px 0 15px 0;">Or you can check find Virus/Malware name and Hash on device GUI Summary>> Statistics</p>
-							<img src="img/ency_manual.jpg" alt="" class="manual">
-							<img src="img/human.png" alt="illustration" class="illustration">
+							<p style="margin: 25px 0 15px 0;">If you are a ZyWALL/USG or ATP users, and you would like to know the virus information detected by your device, you can search through encyclopedia.</p>
+							<div class="question">
+								<div class="title">How to find the virus name/file hash on your device?</div>
+								<div class="series">
+									<p>ATP series: Monitor>>Security Statistics>>Anti-Malware</p>
+									<img src="img/thumbnail_summary_ATP200.jpg" alt="" class="manual">
+								</div>
+								<div class="series">
+									<p>USG/ ZyWALL series: Monitor>> UTM statistics>>Anti-Virus</p>
+									<img src="img/thumbnail_summary_USG60.jpg" alt="" class="manual">
+								</div>
+							</div>
+							
+							<!-- <img src="img/human.png" alt="illustration" class="illustration"> -->
 						</div><!-- intro -->
 
 						<div class="list">
@@ -712,14 +720,14 @@
 					<div class="search-bar">
 						
 						<div class="model-version-select">
-							<select name="" id="" class="selectpicker" data-width="115px">
+							<select name="" id="" class="selectpicker" data-width="115px" data-dropup-auto="false">
 								<option value="Model">Model</option>
 								<option value="Version">Version</option>
 							</select>
 						</div>	
 												
 						<div class="model-search model-select">
-							<select name="" id="" class="selectpicker" data-live-search="true" title="Choose one of the following..." data-width="100%">
+							<select name="" id="" class="selectpicker" data-live-search="true" title="Choose one of the following..." data-width="100%" data-dropup-auto="false">
 								<option value="ATP100">ATP100</option>
 								<option value="ATP200">ATP200</option>
 								<option value="ATP500">ATP500</option>
@@ -934,7 +942,7 @@
 				</ul>
 			</div><!-- social media -->
 			<div class="legal">
-				<div class="legal-text">Copyright © <span class="current-year">2016</span> Zyxel Communications Corp. <br>All Rights Reserved.</div>
+				<div class="legal-text">Copyright © <span class="current-year">2016</span> Zyxel and/or its affiliates.  <br>All Rights Reserved.</div>
 				<div class="legal-links">
 					<a href="https://www.zyxel.com/legal_notices.shtml">Legal Notice</a>
 					<a href="https://www.zyxel.com/Terms-of-Use.shtml">Terms of Use</a>

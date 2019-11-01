@@ -231,3 +231,12 @@ $(document).ready(function(){
 	});
 });
 
+$(window).scroll(function() {
+    var top = $(this).scrollTop();
+    if ( top < 20 ){
+    	$('nav').addClass('full');
+    } else{
+    	$('nav').removeClass('full');
+    }
+});
+

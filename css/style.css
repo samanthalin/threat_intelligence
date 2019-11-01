@@ -109,7 +109,7 @@ html body#vm .frame header, html #id .frame header {
   padding-top: 70px;
 }
 html body#vm .frame header nav, html #id .frame header nav {
-  height: 70px;
+  height: 56px;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   width: 100%;
   background-color: white;
@@ -120,7 +120,7 @@ html body#vm .frame header nav, html #id .frame header nav {
 }
 html body#vm .frame header nav .nav-container, html #id .frame header nav .nav-container {
   width: 100%;
-  height: 70px;
+  height: 100%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -132,7 +132,7 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
   display: block;
 }
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
-  height: 70px;
+  height: 100%;
 }
 html body#vm .frame header nav .nav-container .nav-right, html #id .frame header nav .nav-container .nav-right {
   display: flex;
@@ -160,7 +160,7 @@ html body#vm .frame header nav .nav-container .nav-right .hamburger, html #id .f
   color: black;
   opacity: 0.5;
   transition: opacity 0.22s linear;
-  padding: 10px 24px;
+  padding: 4px 24px;
 }
 html body#vm .frame header nav .nav-container .nav-right .hamburger:visited, html body#vm .frame header nav .nav-container .nav-right .hamburger:active, html #id .frame header nav .nav-container .nav-right .hamburger:visited, html #id .frame header nav .nav-container .nav-right .hamburger:active {
   color: black;
@@ -184,20 +184,45 @@ html body#vm .frame header nav .nav-container .nav-right .hamburger:hover, html 
     max-width: 1200px;
   }
 }
+@media screen and (min-width: 992px) {
+  html body#vm .frame header nav, html #id .frame header nav {
+    height: 66px;
+  }
+}
+html body#vm .frame header .full, html #id .frame header .full {
+  height: 70px;
+  box-shadow: none;
+}
+html body#vm .frame header .full .nav-container .nav-right .hamburger, html #id .frame header .full .nav-container .nav-right .hamburger {
+  padding: 10px 24px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header .full, html #id .frame header .full {
+    height: 100px;
+  }
+}
 html body#vm .frame header .breadcrumbs, html #id .frame header .breadcrumbs {
-  padding: 35px 0;
-  display: none;
+  padding-top: 25px;
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
   display: flex;
   align-items: center;
   width: calc(100% - 30px);
   margin: auto;
+  flex-wrap: wrap;
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container h1, html #id .frame header .breadcrumbs .breadcrumb-container h1 {
   font-family: "GalanoSemiBold";
   font-size: 24px;
   margin-right: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header .breadcrumbs .breadcrumb-container h1, html #id .frame header .breadcrumbs .breadcrumb-container h1 {
+    width: initial;
+    margin-bottom: 0;
+  }
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container a, html #id .frame header .breadcrumbs .breadcrumb-container a {
   color: #00b2ff;
@@ -212,11 +237,14 @@ html body#vm .frame header .breadcrumbs .breadcrumb-container i, html #id .frame
   color: #ccc;
   padding: 0 5px;
 }
+html body#vm .frame header .breadcrumbs .breadcrumb-container span, html #id .frame header .breadcrumbs .breadcrumb-container span {
+  padding: 0 5px;
+}
 @media screen and (min-width: 768px) and (min-width: 992px) {
   html body#vm .frame header .breadcrumbs .breadcrumb-container, html #id .frame header .breadcrumbs .breadcrumb-container {
     max-width: 992px;
     margin: auto;
-    padding: 0 15px;
+    padding: 25px 15px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
@@ -270,7 +298,7 @@ html body#vm .frame header .main_menu .main-menu-container a span, html #id .fra
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a {
-    flex: initial;
+    flex: none;
     padding: 10px 50px;
   }
 }
@@ -296,7 +324,7 @@ html body#vm .frame header .main_menu .main-menu-container .active, html #id .fr
     max-width: 1200px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   html body#vm .frame header .main_menu, html #id .frame header .main_menu {
     padding: 0 0 30px 10px;
   }
@@ -431,8 +459,8 @@ html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .f
 }
 @media screen and (min-width: 768px) {
   html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .frame .content .panel .encyclopedia .search-bar input {
-    font-size: 14px;
-    padding: 0 10px;
+    font-size: 16px;
+    padding: 0 10px 0 15px;
   }
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
@@ -494,23 +522,13 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro .questi
   border: none;
   font-size: 16px;
 }
-html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.manual, html #id .frame .content .panel .encyclopedia .ency-container .intro img.manual {
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .series, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .series {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .series img.manual, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .series img.manual {
+  margin-top: 10px;
   width: 100%;
-}
-html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.illustration, html #id .frame .content .panel .encyclopedia .ency-container .intro img.illustration {
-  width: 100px;
-  position: absolute;
-  right: 0;
-  bottom: -150px;
-}
-@media screen and (min-width: 992px) {
-  html body#vm .frame .content .panel .encyclopedia .ency-container .intro img.illustration, html #id .frame .content .panel .encyclopedia .ency-container .intro img.illustration {
-    position: relative;
-    bottom: auto;
-    display: block;
-    margin-left: 90%;
-    margin-top: 40px;
-  }
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list, html #id .frame .content .panel .encyclopedia .ency-container .list {
   display: none;
@@ -758,6 +776,9 @@ html body#vm .frame .content .panel .release-note .search-bar .model-version-sel
   color: #00b2ff;
   border-radius: 4px 0 0 4px;
 }
+html body#vm .frame .content .panel .release-note .search-bar .model-version-select button .filter-option, html #id .frame .content .panel .release-note .search-bar .model-version-select button .filter-option {
+  text-align: center;
+}
 html body#vm .frame .content .panel .release-note .search-bar .model-select, html #id .frame .content .panel .release-note .search-bar .model-select {
   margin-left: -1px;
   width: calc(100% - 114px);
@@ -827,7 +848,8 @@ html body#vm .frame .content .panel .release-note .search-bar .version-number, h
   border: 1px solid #00b2ff;
   border-radius: 0 4px 4px 0;
   margin-left: -1px;
-  padding-left: 5px;
+  padding-left: 15px;
+  font-size: 16px;
 }
 html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn {
   width: 100%;
