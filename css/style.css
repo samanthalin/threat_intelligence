@@ -1223,7 +1223,7 @@ select::-ms-expand {
 }
 
 .loading-overlay-content {
-  vertical-align: top;
+  vertical-align: top !important;
 }
 
 /*# sourceMappingURL=style.css.map */
