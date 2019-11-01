@@ -381,7 +381,8 @@ html{
 							padding: 0;
 							border-radius: 0;
 							border-bottom: 1px solid #e8e8e8;
-							margin-top: 15px;				
+							margin-top: 15px;	
+							position: relative;			
 						}
 					}//li
 					.active{
@@ -394,11 +395,19 @@ html{
 							}
 						}
 						@media screen and (min-width: 992px){
-							border-left: 4px solid $blue;
+							// border-left: 4px solid $blue;
 							padding-left: 0;
 							background-color: white;
 							a{
 								color: #878787;
+							}
+							&:before{
+								content: ' ';
+							    width: 4px;
+							    height: 100%;
+							    position: absolute;
+							    background-color: $blue;
+							    left: 0;
 							}
 						}
 					}
@@ -1148,4 +1157,8 @@ select::-ms-expand{
 .menu-open{
 	transform: translateX(-300px);
 	transition: all 0.2s ease; 
+}
+
+.loading-overlay-content {
+    vertical-align: top;
 }

@@ -391,6 +391,7 @@ html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_
     border-radius: 0;
     border-bottom: 1px solid #e8e8e8;
     margin-top: 15px;
+    position: relative;
   }
 }
 html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
@@ -405,12 +406,19 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active {
-    border-left: 4px solid #00b2ff;
     padding-left: 0;
     background-color: white;
   }
   html body#vm .frame .content .sub_menu .active a, html #id .frame .content .sub_menu .active a {
     color: #878787;
+  }
+  html body#vm .frame .content .sub_menu .active:before, html #id .frame .content .sub_menu .active:before {
+    content: " ";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    background-color: #00b2ff;
+    left: 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1212,6 +1220,10 @@ select::-ms-expand {
 .menu-open {
   transform: translateX(-300px);
   transition: all 0.2s ease;
+}
+
+.loading-overlay-content {
+  vertical-align: top;
 }
 
 /*# sourceMappingURL=style.css.map */
