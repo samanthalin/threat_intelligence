@@ -483,6 +483,7 @@ html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .
   border-radius: 4px;
   margin-left: 5px;
   outline: none;
+  padding-bottom: 2px;
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar button i, html #id .frame .content .panel .encyclopedia .search-bar button i {
   font-size: 12px;
@@ -1236,10 +1237,6 @@ select::-ms-expand {
 
 .loading-overlay-content {
   vertical-align: top !important;
-}
-
-i {
-  vertical-align: middle !important;
 }
 
 /*# sourceMappingURL=style.css.map */
