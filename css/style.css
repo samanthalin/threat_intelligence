@@ -856,6 +856,12 @@ html body#vm .frame .content .panel .release-note .search-bar .date-picker:after
     line-height: 40px;
   }
 }
+html body#vm .frame .content .panel .release-note .search-bar .model-search i, html #id .frame .content .panel .release-note .search-bar .model-search i {
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search i, html #id .frame .content .panel .release-note .search-bar .version-search i {
+  font-size: 12px;
+}
 html body#vm .frame .content .panel .release-note .search-bar .version-number, html #id .frame .content .panel .release-note .search-bar .version-number {
   flex: 1;
   border: 1px solid #00b2ff;
@@ -916,6 +922,7 @@ html body#vm .frame .content .panel .release-note .release-container .list table
     -o-flex: 1;
     flex: 1;
     padding: 4%;
+    padding-top: 35px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1229,6 +1236,10 @@ select::-ms-expand {
 
 .loading-overlay-content {
   vertical-align: top !important;
+}
+
+i {
+  vertical-align: middle !important;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -830,10 +830,14 @@ html{
 								}
 							}//date-picker
 							.model-search{
-
+								i{
+									font-size: 12px;
+								}
 							}//model-search
 							.version-search{
-								
+								i{
+									font-size: 12px;
+								}
 							}//version-search
 							.version-number{
 								flex: 1;
@@ -893,6 +897,7 @@ html{
 						@media screen and (min-width: 992px){
 							@include flex(1);
 							padding: 4%;
+							padding-top: 35px;
 						}
 					}
 				}//panel
@@ -1166,4 +1171,7 @@ select::-ms-expand{
 
 .loading-overlay-content {
     vertical-align: top !important;
+}
+i{
+	vertical-align: middle !important;
 }

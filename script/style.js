@@ -182,7 +182,9 @@ $(document).ready(function(){
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
-
+	$('.selectpicker').selectpicker({
+		dropupAuto: false, 
+	});
 	//footer-year
 	var currentYear = (new Date).getFullYear();
 	$(".current-year").text( (new Date).getFullYear() );
