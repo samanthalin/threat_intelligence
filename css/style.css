@@ -1178,8 +1178,9 @@ select::-ms-expand {
   padding: 0;
   width: 30px;
   line-height: 30px;
+  box-shadow: none;
 }
-#encyclopedia .dataTables_paginate .paginate_button:hover, #release_note .dataTables_paginate .paginate_button:hover {
+#encyclopedia .dataTables_paginate .paginate_button:hover, #encyclopedia .dataTables_paginate .paginate_button:focus, #release_note .dataTables_paginate .paginate_button:hover, #release_note .dataTables_paginate .paginate_button:focus {
   border: 0;
   background: none;
 }
@@ -1189,8 +1190,9 @@ select::-ms-expand {
   font-family: "GalanoSemiBold";
   border: 0;
 }
-#encyclopedia .dataTables_paginate .current:hover, #release_note .dataTables_paginate .current:hover {
-  background-color: #00b2ff;
+#encyclopedia .dataTables_paginate .current:hover, #encyclopedia .dataTables_paginate .current:active, #release_note .dataTables_paginate .current:hover, #release_note .dataTables_paginate .current:active {
+  background-color: white;
+  box-shadow: none;
 }
 #encyclopedia .dataTables_paginate .first, #release_note .dataTables_paginate .first {
   border-radius: 4px 0 0 4px;

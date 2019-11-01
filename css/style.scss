@@ -1113,7 +1113,8 @@ select::-ms-expand{
 			width: 30px;
 			// height: 30px;
 			line-height: 30px;
-			&:hover{
+			box-shadow: none;
+			&:hover, &:focus{
 				border: 0;
 				background: none;
 			}
@@ -1124,8 +1125,9 @@ select::-ms-expand{
 			font-family: 'GalanoSemiBold';
 			//background-color: $blue;
 			border: 0;
-			&:hover{
-				background-color: $blue;
+			&:hover, &:active{
+				background-color: white;
+				box-shadow: none;
 			}
 		}
 		.first{
