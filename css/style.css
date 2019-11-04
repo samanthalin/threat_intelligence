@@ -882,6 +882,9 @@ html body#vm .frame .content .panel .release-note .search-bar #version_search_bt
   color: white;
   background-color: #00b2ff;
   margin-top: 10px;
+  line-height: 18px;
+  vertical-align: middle;
+  font-family: "Open Sans", sans-serif;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn {
