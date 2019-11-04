@@ -181,6 +181,13 @@ $(document).ready(function(){
 	    }, 1000);
 	});
 
+	$('.paginate_button').click(function(){
+		// $('html, body').animate({
+	 //        scrollTop: $('.breadcrumbs').offset().top
+	 //    }, 1000);
+	 alert('click');
+	});
+
 	$('[data-toggle="tooltip"]').tooltip();
 	$('.selectpicker').selectpicker({
 		dropupAuto: false, 

@@ -115,6 +115,7 @@ html body#vm .frame header, html #id .frame header {
 }
 html body#vm .frame header nav, html #id .frame header nav {
   height: 56px;
+  width: auto;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   width: 100%;
   background-color: white;
@@ -138,6 +139,7 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
 }
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
   height: 100%;
+  width: auto;
 }
 html body#vm .frame header nav .nav-container .nav-right, html #id .frame header nav .nav-container .nav-right {
   display: flex;
