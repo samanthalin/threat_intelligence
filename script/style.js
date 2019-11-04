@@ -184,6 +184,7 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 	$('.selectpicker').selectpicker({
 		dropupAuto: false, 
+		//mobile: true,
 	});
 	//footer-year
 	var currentYear = (new Date).getFullYear();
