@@ -351,6 +351,7 @@ html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
   display: flex;
   width: 100%;
   justify-content: center;
+  font-size: 14px;
 }
 html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li {
   text-align: center;
@@ -380,7 +381,6 @@ html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_
   html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
     font-family: "GalanoRegular";
     display: block;
-    font-size: 16px;
     margin: auto;
     line-height: 40px;
   }
@@ -428,17 +428,23 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
     left: 0;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 350px) {
   html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
-    width: 145px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 350px) and (min-width: 992px) {
+  html body#vm .frame .content .sub_menu, html #id .frame .content .sub_menu {
+    width: 155px;
     display: block;
     margin: 0;
     flex: none;
+    font-size: 18px;
   }
 }
 html body#vm .frame .content .panel, html #id .frame .content .panel {
   padding: 10px;
-  min-height: 800px;
+  min-height: 700px;
 }
 html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
   color: #00b2ff;
@@ -485,6 +491,7 @@ html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .
   border-radius: 4px;
   margin-left: 5px;
   outline: none;
+  font-size: 14px;
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar button i, html #id .frame .content .panel .encyclopedia .search-bar button i {
   font-size: 12px;
@@ -497,11 +504,11 @@ html body#vm .frame .content .panel .encyclopedia .search-bar button:active, htm
     font-size: 14px;
     margin-left: 10px;
     padding: 0 12px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1200px) {
   html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
-    font-size: 16px;
     margin-left: 10px;
     padding: 0 22px;
   }
@@ -535,7 +542,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro .questi
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .title {
   border: none;
-  font-size: 16px;
+  font-size: 18px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .series, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .series {
   margin-top: 20px;
@@ -547,12 +554,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro .questi
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .list, html #id .frame .content .panel .encyclopedia .ency-container .list {
   display: none;
-}
-html body#vm .frame .content .panel .encyclopedia .ency-container .list p.search-by, html #id .frame .content .panel .encyclopedia .ency-container .list p.search-by {
-  margin-bottom: 18px;
-}
-html body#vm .frame .content .panel .encyclopedia .ency-container .list p.search-by span, html #id .frame .content .panel .encyclopedia .ency-container .list p.search-by span {
-  font-family: "GalanoSemiBold";
+  line-height: 18px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail, html #id .frame .content .panel .encyclopedia .ency-container .detail {
   width: 100%;
@@ -782,6 +784,12 @@ html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .
   display: flex;
   flex-wrap: wrap;
 }
+html body#vm .frame .content .panel .release-note .search-bar .bootstrap-select .active, html #id .frame .content .panel .release-note .search-bar .bootstrap-select .active {
+  background-color: #00b2ff;
+}
+html body#vm .frame .content .panel .release-note .search-bar .dropdown-item:active, html #id .frame .content .panel .release-note .search-bar .dropdown-item:active {
+  background-color: #00b2ff;
+}
 html body#vm .frame .content .panel .release-note .search-bar .model-version-select, html #id .frame .content .panel .release-note .search-bar .model-version-select {
   width: 115px;
 }
@@ -803,6 +811,7 @@ html body#vm .frame .content .panel .release-note .search-bar .model-select butt
   background-color: white;
   color: #00b2ff;
   border-radius: 0 4px 4px 0;
+  padding: 6px 12px 6px 22px;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar .model-select, html #id .frame .content .panel .release-note .search-bar .model-select {
@@ -816,6 +825,7 @@ html body#vm .frame .content .panel .release-note .search-bar #model_search_btn,
   margin-top: 10px;
   line-height: 18px;
   vertical-align: middle;
+  font-size: 18px;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar #model_search_btn, html #id .frame .content .panel .release-note .search-bar #model_search_btn {
@@ -823,6 +833,12 @@ html body#vm .frame .content .panel .release-note .search-bar #model_search_btn,
     margin-top: 0;
     margin-left: 10px;
   }
+}
+html body#vm .frame .content .panel .release-note .search-bar .model-search i, html #id .frame .content .panel .release-note .search-bar .model-search i {
+  font-size: 12px;
+}
+html body#vm .frame .content .panel .release-note .search-bar .version-search i, html #id .frame .content .panel .release-note .search-bar .version-search i {
+  font-size: 12px;
 }
 html body#vm .frame .content .panel .release-note .search-bar .date-picker, html #id .frame .content .panel .release-note .search-bar .date-picker {
   width: 100%;
@@ -835,18 +851,29 @@ html body#vm .frame .content .panel .release-note .search-bar .date-picker, html
   line-height: 35px;
   position: relative;
   margin-top: 10px;
+  font-size: 16px;
 }
 html body#vm .frame .content .panel .release-note .search-bar .date-picker:after, html #id .frame .content .panel .release-note .search-bar .date-picker:after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
-  right: 0;
+  right: 4px;
   top: 0;
   color: #00b2ff;
   width: 25px;
   line-height: 35px;
   text-align: center;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  html body#vm .frame .content .panel .release-note .search-bar .date-picker:after, html #id .frame .content .panel .release-note .search-bar .date-picker:after {
+    line-height: 33px;
+    font-size: 12px;
+  }
+}
+html body#vm .frame .content .panel .release-note .search-bar .date-picker i, html #id .frame .content .panel .release-note .search-bar .date-picker i {
+  font-size: 16px;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar .date-picker, html #id .frame .content .panel .release-note .search-bar .date-picker {
@@ -856,15 +883,6 @@ html body#vm .frame .content .panel .release-note .search-bar .date-picker:after
     margin-top: 0;
     margin-left: 10px;
   }
-  html body#vm .frame .content .panel .release-note .search-bar .date-picker:after, html #id .frame .content .panel .release-note .search-bar .date-picker:after {
-    line-height: 40px;
-  }
-}
-html body#vm .frame .content .panel .release-note .search-bar .model-search i, html #id .frame .content .panel .release-note .search-bar .model-search i {
-  font-size: 12px;
-}
-html body#vm .frame .content .panel .release-note .search-bar .version-search i, html #id .frame .content .panel .release-note .search-bar .version-search i {
-  font-size: 12px;
 }
 html body#vm .frame .content .panel .release-note .search-bar .version-number, html #id .frame .content .panel .release-note .search-bar .version-number {
   border: 1px solid #00b2ff;
@@ -909,6 +927,10 @@ html body#vm .frame .content .panel .release-note .release-container .intro img.
 }
 html body#vm .frame .content .panel .release-note .release-container .list, html #id .frame .content .panel .release-note .release-container .list {
   display: none;
+}
+html body#vm .frame .content .panel .release-note .release-container .list p.searchby, html #id .frame .content .panel .release-note .release-container .list p.searchby {
+  margin-bottom: 18px;
+  font-size: 14px;
 }
 html body#vm .frame .content .panel .release-note .release-container .list table tr th:last-child, html body#vm .frame .content .panel .release-note .release-container .list table tr td:last-child, html #id .frame .content .panel .release-note .release-container .list table tr th:last-child, html #id .frame .content .panel .release-note .release-container .list table tr td:last-child {
   text-align: center;
@@ -1248,6 +1270,29 @@ select::-ms-expand {
 
 .loading-overlay-content {
   vertical-align: top !important;
+}
+
+.daterangepicker {
+  border-color: #00b2ff;
+}
+.daterangepicker:before, .daterangepicker:after {
+  display: none;
+}
+.daterangepicker button.cancelBtn {
+  border: 1px solid #99e0fe;
+  border-radius: 0;
+  color: #00b2ff;
+  font-family: "GalanoSemiBold";
+}
+.daterangepicker button.applyBtn {
+  background-color: #00b2ff;
+  border-radius: 0;
+  color: white;
+  font-family: "GalanoSemiBold";
+  border: none;
+}
+.daterangepicker button.applyBtn:active {
+  background-color: #009aff !important;
 }
 
 /*# sourceMappingURL=Style.css.map */

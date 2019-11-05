@@ -352,6 +352,7 @@ html{
 					@include display-flex;
 					width: 100%;
 					justify-content: center;
+					font-size: 14px;
 					li{
 						text-align: center;
 						padding: 8px 20px;
@@ -374,7 +375,6 @@ html{
 								@media screen and (min-width: 992px){
 									font-family: 'GalanoRegular';
 									display: block;
-									font-size: 16px;
 									margin: auto;
 									line-height: 40px;
 								}
@@ -420,16 +420,20 @@ html{
 							}
 						}
 					}
-					@media screen and (min-width: 992px){
-						width: 145px;
-						display: block;
-						margin: 0;
-						flex: none;
+					@media screen and (min-width: 350px) {
+						font-size: 16px;
+						@media screen and (min-width: 992px){
+							width: 155px;
+							display: block;
+							margin: 0;
+							flex: none;
+							font-size: 18px;
+						}
 					}
 				}//sub_menu
 				.panel{
 					padding: 10px;
-					min-height: 800px;
+					min-height: 700px;
 					.encyclopedia{	
 						.title{
 							color: $blue;
@@ -464,6 +468,7 @@ html{
 								border-radius: 4px;
 								margin-left: 5px;
 								outline: none;
+								font-size: 14px;
 								i{
 									font-size: 12px;
 								}
@@ -474,9 +479,9 @@ html{
 									font-size: 14px;
 									margin-left: 10px;
 									padding: 0 12px;
+									font-size: 18px;
 									@media screen and (min-width: 992px) {
 										@media screen and (min-width: 1200px) {
-											font-size: 16px;
 										    margin-left: 10px;
 										    padding: 0 22px;
 										}
@@ -510,7 +515,7 @@ html{
 									}
 									.title{
 										border: none;
-										font-size: 16px;
+										font-size: 18px;
 									}
 									.series{
 										margin-top: 20px;
@@ -535,17 +540,10 @@ html{
 								// 	}
 								// }
 							}//intro
-
 							.list{
 								display: none;
-								p.search-by{
-									margin-bottom: 18px;
-									span{
-										font-family: 'GalanoSemiBold';
-									}
-								}
-							}//list
-
+								line-height: 18px;
+							}
 							.detail{
 								width: 100%;
 								height: 100%;
@@ -763,6 +761,12 @@ html{
 							margin-top: 15px;
 							display: flex;
 							flex-wrap: wrap;
+							.bootstrap-select .active{
+								background-color: $blue;
+							}
+							.dropdown-item:active{
+								background-color: $blue;
+							}
 							.model-version-select{
 								width: 115px;
 								button{
@@ -783,6 +787,7 @@ html{
 									background-color: white;
 									color: $blue;
 									border-radius: 0 4px 4px 0;
+									padding: 6px 12px 6px 22px;
 								}
 								@media screen and (min-width: 992px) {
 									width: calc(100% - 507px);
@@ -795,12 +800,23 @@ html{
 								margin-top: 10px;
 								line-height: 18px;
 								vertical-align: middle;
+								font-size: 18px;
 								@media screen and (min-width: 992px){
 									width: 113px;
 									margin-top: 0;
 									margin-left: 10px;
 								}
 							}
+							.model-search{
+								i{
+									font-size: 12px;
+								}
+							}//model-search
+							.version-search{
+								i{
+									font-size: 12px;
+								}
+							}//version-search
 							.date-picker{
 								width: 100%;
 								border: 1px solid $blue;
@@ -812,17 +828,26 @@ html{
 								line-height: 35px;
 								position: relative;
 								margin-top: 10px;
+								font-size: 16px;
 								&:after{
 									content: '\f0d7';
 									font-family: 'Font Awesome 5 Free';
 									font-weight: 900;
 									position: absolute;
-									right: 0;
+									right: 4px;
 									top: 0;
 									color: $blue;
 									width: 25px;
     								line-height: 35px;
     								text-align: center;
+    								font-size: 14px;
+    								@media screen and (min-width: 768px) {
+    									line-height: 33px;
+    									font-size: 12px;
+    								}
+								}
+								i{
+									font-size: 16px;
 								}
 								@media screen and (min-width: 992px) {
 									width: 260px;
@@ -830,21 +855,8 @@ html{
 								    line-height: 40px;
 								    margin-top: 0;
 								    margin-left: 10px;
-								    &:after{
-											line-height: 40px;
-										}
 								}
 							}//date-picker
-							.model-search{
-								i{
-									font-size: 12px;
-								}
-							}//model-search
-							.version-search{
-								i{
-									font-size: 12px;
-								}
-							}//version-search
 							.version-number{
 								//flex: 1;
 								border: 1px solid $blue;
@@ -885,6 +897,10 @@ html{
 							}//intro
 							.list{
 								display: none;
+								p.searchby{
+									margin-bottom: 18px;
+									font-size: 14px;
+								}
 								table{
 									tr{
 										th, td{
@@ -1186,3 +1202,25 @@ select::-ms-expand{
     vertical-align: top !important;
 }
 
+.daterangepicker{
+	border-color: $blue;
+	&:before, &:after{
+		display: none;
+	}
+	button.cancelBtn{
+		border: 1px solid #99e0fe;
+		border-radius: 0;
+		color: $blue;
+		font-family: 'GalanoSemiBold';
+	}
+	button.applyBtn{
+		background-color: $blue;
+		border-radius: 0;
+		color: white;
+		font-family: 'GalanoSemiBold';
+		border: none;
+		&:active{
+			background-color: #009aff !important;
+		}
+	}
+}
