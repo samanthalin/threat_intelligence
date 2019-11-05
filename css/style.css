@@ -3,11 +3,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @font-face {
   font-family: "GalanoRegular";
-  src: url("../fonts/GalanoGrotesque-Regular.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular.eot") format("embedded-opentype");
+  src: url("../fonts/GalanoGrotesque-Regular-webfont.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular-webfont.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular-webfont.eot") format("embedded-opentype");
 }
 @font-face {
   font-family: "GalanoSemiBold";
-  src: url("../fonts/GalanoGrotesque-SemiBold.woff") format("woff"), url("../fonts/GalanoGrotesque-SemiBold.otf") format("opentype"), url("../fonts/GalanoGrotesque-SemiBold.eot") format("embedded-opentype");
+  src: url("../fonts/GalanoGrotesque-SemiBold-webfont.woff") format("woff"), url("../fonts/GalanoGrotesque-SemiBold-webfont.otf") format("opentype"), url("../fonts/GalanoGrotesque-SemiBold-webfont.eot") format("embedded-opentype");
 }
 * {
   font-family: "GalanoRegular", Helvetica, Arial, sans-serif;
@@ -139,7 +139,6 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
 }
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
   height: 100%;
-  width: auto;
 }
 html body#vm .frame header nav .nav-container .nav-right, html #id .frame header nav .nav-container .nav-right {
   display: flex;

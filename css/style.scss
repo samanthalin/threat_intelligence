@@ -4,15 +4,15 @@
 //fonts
 @font-face {
 	font-family: 'GalanoRegular';
-	src: url('../fonts/GalanoGrotesque-Regular.woff') format("woff"),
-		 url('../fonts/GalanoGrotesque-Regular.otf') format("opentype"),
-		 url('../fonts/GalanoGrotesque-Regular.eot') format("embedded-opentype"); 
+	src: url('../fonts/GalanoGrotesque-Regular-webfont.woff') format("woff"),
+		 url('../fonts/GalanoGrotesque-Regular-webfont.otf') format("opentype"),
+		 url('../fonts/GalanoGrotesque-Regular-webfont.eot') format("embedded-opentype"); 
 }
 @font-face {
 	font-family: 'GalanoSemiBold';
-	src: url('../fonts/GalanoGrotesque-SemiBold.woff') format("woff"),
-		 url('../fonts/GalanoGrotesque-SemiBold.otf') format("opentype"),
-		 url('../fonts/GalanoGrotesque-SemiBold.eot') format("embedded-opentype"); 
+	src: url('../fonts/GalanoGrotesque-SemiBold-webfont.woff') format("woff"),
+		 url('../fonts/GalanoGrotesque-SemiBold-webfont.otf') format("opentype"),
+		 url('../fonts/GalanoGrotesque-SemiBold-webfont.eot') format("embedded-opentype"); 
 }
 
 
@@ -170,7 +170,6 @@ html{
 							display: block;
 							img{
 								height: 100%;
-								width: auto;
 							}
 						}//logo
 						.nav-right{
