@@ -89,9 +89,6 @@ html{
 						font-size: 16px;
 						color:#898989;
 						text-decoration: none;
-						&:hover{
-							color: $blue;
-						}
 						&:after{
 							font-family: Ionicons;
     						font-weight: 400;
@@ -136,6 +133,7 @@ html{
 					.card-header{
 						text-align: left;
 						border: 0;
+						background-color: #f9f9f9;
 					}
 				}//card
 				.card-body a{
@@ -169,6 +167,10 @@ html{
 							display: block;
 							img{
 								height: 100%;
+								width: 117px;
+								@media screen and (min-width: 992px) {
+									width: 139px;
+								}
 							}
 						}//logo
 						.nav-right{
@@ -223,7 +225,16 @@ html{
 				.full{
 					height: 70px;
 					box-shadow: none;
+					transition: all 0.2s ease;
 					.nav-container{
+						.logo{
+							img{
+								width: 147px;
+								@media screen and (min-width: 992px) {
+									width: 210px;
+								}
+							}
+						}	
 						.nav-right{
 							.hamburger{
 								padding: 10px 24px; 
@@ -433,7 +444,6 @@ html{
 				}//sub_menu
 				.panel{
 					padding: 10px;
-					min-height: 700px;
 					.encyclopedia{	
 						.title{
 							color: $blue;
@@ -730,6 +740,7 @@ html{
 									right: 0;
 									margin-top: 20px;
 									width: 80px;
+									font-size: 16px;
 									&:hover{
 										background-color: $blue;
 										color: white;
@@ -927,6 +938,7 @@ html{
 							@include flex(1);
 							padding: 4%;
 							padding-top: 35px;
+							min-height: 700px;
 						}
 					}
 				}//panel
@@ -1151,6 +1163,7 @@ select::-ms-expand{
 		@include display-flex; 
 		justify-content: center;
 		margin-top: 20px;
+		font-size: 14px;
 		.paginate_button{
 			color: black !important;
 			//border: 1px solid $blue;
@@ -1203,7 +1216,7 @@ select::-ms-expand{
 }
 
 .daterangepicker{
-	border-color: $blue;
+	// border-color: $blue;
 	&:before, &:after{
 		display: none;
 	}

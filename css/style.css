@@ -55,9 +55,6 @@ html body#vm .frame .menu .card button, html #id .frame .menu .card button {
   color: #898989;
   text-decoration: none;
 }
-html body#vm .frame .menu .card button:hover, html #id .frame .menu .card button:hover {
-  color: #00b2ff;
-}
 html body#vm .frame .menu .card button:after, html #id .frame .menu .card button:after {
   font-family: Ionicons;
   font-weight: 400;
@@ -99,6 +96,7 @@ html body#vm .frame .menu .card:nth-child(7) button:after, html body#vm .frame .
 html body#vm .frame .menu .card .card-header, html #id .frame .menu .card .card-header {
   text-align: left;
   border: 0;
+  background-color: #f9f9f9;
 }
 html body#vm .frame .menu .card-body a, html #id .frame .menu .card-body a {
   font-family: "GalanoRegular";
@@ -138,6 +136,12 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
 }
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
   height: 100%;
+  width: 117px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
+    width: 139px;
+  }
 }
 html body#vm .frame header nav .nav-container .nav-right, html #id .frame header nav .nav-container .nav-right {
   display: flex;
@@ -197,6 +201,15 @@ html body#vm .frame header nav .nav-container .nav-right .hamburger:hover, html 
 html body#vm .frame header .full, html #id .frame header .full {
   height: 70px;
   box-shadow: none;
+  transition: all 0.2s ease;
+}
+html body#vm .frame header .full .nav-container .logo img, html #id .frame header .full .nav-container .logo img {
+  width: 147px;
+}
+@media screen and (min-width: 992px) {
+  html body#vm .frame header .full .nav-container .logo img, html #id .frame header .full .nav-container .logo img {
+    width: 210px;
+  }
 }
 html body#vm .frame header .full .nav-container .nav-right .hamburger, html #id .frame header .full .nav-container .nav-right .hamburger {
   padding: 10px 24px;
@@ -444,7 +457,6 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
 }
 html body#vm .frame .content .panel, html #id .frame .content .panel {
   padding: 10px;
-  min-height: 700px;
 }
 html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title {
   color: #00b2ff;
@@ -753,6 +765,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail button
   right: 0;
   margin-top: 20px;
   width: 80px;
+  font-size: 16px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back:hover, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back:hover {
   background-color: #00b2ff;
@@ -957,6 +970,7 @@ html body#vm .frame .content .panel .release-note .release-container .list table
     flex: 1;
     padding: 4%;
     padding-top: 35px;
+    min-height: 700px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1223,6 +1237,7 @@ select::-ms-expand {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  font-size: 14px;
 }
 #encyclopedia .dataTables_paginate .paginate_button, #release_note .dataTables_paginate .paginate_button {
   color: black !important;
@@ -1272,9 +1287,6 @@ select::-ms-expand {
   vertical-align: top !important;
 }
 
-.daterangepicker {
-  border-color: #00b2ff;
-}
 .daterangepicker:before, .daterangepicker:after {
   display: none;
 }

@@ -154,7 +154,7 @@ $(document).ready(function(){
 	  	$('.version-search').hide();
 	  }
 	});
-
+	
 	$('#EncyTable tbody tr').click(function(){
 		$('.list').hide();
 		$('.detail').show();
