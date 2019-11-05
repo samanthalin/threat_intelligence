@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url(reset.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @font-face {
   font-family: "GalanoRegular";
   src: url("../fonts/GalanoGrotesque-Regular-webfont.woff") format("woff"), url("../fonts/GalanoGrotesque-Regular-webfont.otf") format("opentype"), url("../fonts/GalanoGrotesque-Regular-webfont.eot") format("embedded-opentype");
@@ -15,7 +14,7 @@
 }
 
 html body#vm, html #id {
-  font-size: 16px;
+  font-size: 18px;
 }
 html body#vm .frame, html #id .frame {
   background-color: white;
@@ -373,7 +372,6 @@ html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu 
   text-decoration: none;
   line-height: 18px;
   vertical-align: middle;
-  font-family: "Open Sans", sans-serif;
 }
 html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_menu li a span {
   display: inline-block;
@@ -389,7 +387,7 @@ html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a {
-    color: #b2b2b2;
+    color: #878787;
     font-size: 18px;
   }
 }
@@ -419,7 +417,7 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
     background-color: white;
   }
   html body#vm .frame .content .sub_menu .active a, html #id .frame .content .sub_menu .active a {
-    color: #878787;
+    color: black;
   }
   html body#vm .frame .content .sub_menu .active:before, html #id .frame .content .sub_menu .active:before {
     content: " ";
@@ -481,7 +479,6 @@ html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .f
   }
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button {
-  font-family: "Open Sans", sans-serif;
   background-color: #00b2ff;
   color: white;
   border: none;
@@ -819,7 +816,6 @@ html body#vm .frame .content .panel .release-note .search-bar #model_search_btn,
   margin-top: 10px;
   line-height: 18px;
   vertical-align: middle;
-  font-family: "Open Sans", sans-serif;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar #model_search_btn, html #id .frame .content .panel .release-note .search-bar #model_search_btn {
@@ -891,7 +887,6 @@ html body#vm .frame .content .panel .release-note .search-bar #version_search_bt
   margin-top: 10px;
   line-height: 18px;
   vertical-align: middle;
-  font-family: "Open Sans", sans-serif;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn {
@@ -1255,4 +1250,4 @@ select::-ms-expand {
   vertical-align: top !important;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=Style.css.map */

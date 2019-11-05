@@ -1,5 +1,4 @@
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 //fonts
 @font-face {
@@ -54,7 +53,7 @@ $light-blue: #ccf0ff;
 
 html{
 	body#vm, #id{
-		font-size: 16px;
+		font-size: 18px;
 		.frame{
 			background-color: white;
 			.menu{
@@ -370,7 +369,6 @@ html{
 							text-decoration: none;
 							line-height: 18px;
 							vertical-align: middle;
-							font-family: 'Open Sans', sans-serif;
 							span{
 								display: inline-block;
 								@media screen and (min-width: 992px){
@@ -382,7 +380,7 @@ html{
 								}
 							}
 							@media screen and (min-width: 992px){
-								color: #b2b2b2;
+								color: #878787;
 								font-size: 18px;
 							}
 						}
@@ -410,7 +408,7 @@ html{
 							padding-left: 0;
 							background-color: white;
 							a{
-								color: #878787;
+								color: black;
 							}
 							&:before{
 								content: ' ';
@@ -460,7 +458,6 @@ html{
 								}
 							}
 							button{
-								font-family: 'Open Sans', sans-serif;
 								background-color: $blue;
 								color: white;
 								border: none;
@@ -798,7 +795,6 @@ html{
 								margin-top: 10px;
 								line-height: 18px;
 								vertical-align: middle;
-								font-family: 'Open Sans', sans-serif;
 								@media screen and (min-width: 992px){
 									width: 113px;
 									margin-top: 0;
@@ -869,7 +865,6 @@ html{
 								margin-top: 10px;
 								line-height: 18px;
 								vertical-align: middle;
-								font-family: 'Open Sans', sans-serif;
 								@media screen and (min-width: 992px){
 									width: 113px;
 									margin-top: 0;
