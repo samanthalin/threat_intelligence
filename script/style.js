@@ -154,7 +154,7 @@ $(document).ready(function(){
 	  	$('.version-search').hide();
 	  }
 	});
-	
+
 	$('#EncyTable tbody tr').click(function(){
 		$('.list').hide();
 		$('.detail').show();
@@ -196,6 +196,25 @@ $(document).ready(function(){
 	//footer-year
 	var currentYear = (new Date).getFullYear();
 	$(".current-year").text( (new Date).getFullYear() );
+
+	$('.footer-column .more-btn').click(function() {
+		$('.more').toggleClass('open');
+		$('.more').toggleClass('close');
+		$(this).toggle();
+		$('.less-btn').toggle();
+	});
+
+	$('.footer-column .less-btn').click(function() {
+		$('.more').toggleClass('open');
+		$('.more').toggleClass('close');
+		$(this).toggle();
+		$('.more-btn').toggle();
+	});
+
+	$('.footer-column li a').attr({
+		target: '_blank',
+	});
+
 });
 
 $(document).ready(function(){
