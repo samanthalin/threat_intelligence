@@ -219,6 +219,17 @@ $(document).ready(function(){
 		target: '_blank',
 	});
 
+	$('nav a').attr({
+		target: '_blank',
+	});
+
+	$('.gotop').click(function(){
+		$('html, body').animate({
+	        scrollTop: 0,
+	    }, 500);
+	    return false;
+	});
+
 });
 
 $(document).ready(function(){
@@ -270,6 +281,15 @@ $(window).scroll(function() {
     	$('nav').addClass('full');
     } else{
     	$('nav').removeClass('full');
+    }
+});
+
+$(window).scroll(function() {
+    var top = $(this).scrollTop();
+    if ( top > 0 ){
+    	$('.gotop').fadeIn();
+    } else{
+    	$('.gotop').fadeOut();
     }
 });
 

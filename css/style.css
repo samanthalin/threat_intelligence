@@ -136,7 +136,6 @@ html body#vm .frame header nav, html #id .frame header nav {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   width: 100%;
   background-color: white;
-  transition: all 0.2s ease;
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -155,7 +154,7 @@ html body#vm .frame header nav .nav-container .logo, html #id .frame header nav 
   display: block;
 }
 html body#vm .frame header nav .nav-container .logo img, html #id .frame header nav .nav-container .logo img {
-  height: 100%;
+  animation: 0.2s ease;
   width: 117px;
 }
 @media screen and (min-width: 992px) {
@@ -221,7 +220,6 @@ html body#vm .frame header nav .nav-container .nav-right .hamburger:hover, html 
 html body#vm .frame header .full, html #id .frame header .full {
   height: 70px;
   box-shadow: none;
-  transition: all 0.2s ease;
 }
 html body#vm .frame header .full .nav-container .logo img, html #id .frame header .full .nav-container .logo img {
   width: 147px;
@@ -1223,6 +1221,28 @@ html body#vm .frame footer .legal .legal-links a:hover, html #id .frame footer .
   html body#vm .frame footer .legal, html #id .frame footer .legal {
     padding: 10px calc(50vw - 600px);
   }
+}
+html body#vm .frame footer .gotop, html #id .frame footer .gotop {
+  position: fixed;
+  bottom: 58px;
+  right: 20px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 38px;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: none;
+}
+html body#vm .frame footer .gotop:hover, html #id .frame footer .gotop:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+  bottom: 62px;
+  transition: all 0.2s ease;
 }
 
 select {
