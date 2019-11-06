@@ -215,6 +215,10 @@ $(document).ready(function(){
 		target: '_blank',
 	});
 
+	$('.social-media li a').attr({
+		target: '_blank',
+	});
+
 });
 
 $(document).ready(function(){
