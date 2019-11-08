@@ -910,6 +910,7 @@ html{
 								margin-top: 10px;
 								line-height: 18px;
 								vertical-align: middle;
+								font-size: 18px;
 								@media screen and (min-width: 992px){
 									width: 113px;
 									margin-top: 0;
@@ -936,6 +937,7 @@ html{
 								}
 								table{
 									tr{
+										cursor: pointer;
 										th, td{
 											&:last-child{
 												text-align: center;
@@ -1214,6 +1216,7 @@ select::-ms-expand{
 			}
 		}
 		tbody tr{
+			cursor: pointer;
 			td:last-child{
 				text-align: center;
 			}

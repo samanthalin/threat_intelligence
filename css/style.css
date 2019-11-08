@@ -936,6 +936,7 @@ html body#vm .frame .content .panel .release-note .search-bar #version_search_bt
   margin-top: 10px;
   line-height: 18px;
   vertical-align: middle;
+  font-size: 18px;
 }
 @media screen and (min-width: 992px) {
   html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn {
@@ -962,6 +963,9 @@ html body#vm .frame .content .panel .release-note .release-container .list, html
 html body#vm .frame .content .panel .release-note .release-container .list p.searchby, html #id .frame .content .panel .release-note .release-container .list p.searchby {
   margin-bottom: 18px;
   font-size: 14px;
+}
+html body#vm .frame .content .panel .release-note .release-container .list table tr, html #id .frame .content .panel .release-note .release-container .list table tr {
+  cursor: pointer;
 }
 html body#vm .frame .content .panel .release-note .release-container .list table tr th:last-child, html body#vm .frame .content .panel .release-note .release-container .list table tr td:last-child, html #id .frame .content .panel .release-note .release-container .list table tr th:last-child, html #id .frame .content .panel .release-note .release-container .list table tr td:last-child {
   text-align: center;
@@ -1276,6 +1280,9 @@ select::-ms-expand {
 #encyclopedia table thead tr th:last-child, #release_note table thead tr th:last-child {
   text-align: center;
 }
+#encyclopedia table tbody tr, #release_note table tbody tr {
+  cursor: pointer;
+}
 #encyclopedia table tbody tr td:last-child, #release_note table tbody tr td:last-child {
   text-align: center;
 }
@@ -1384,4 +1391,4 @@ select::-ms-expand {
   background-color: #009aff !important;
 }
 
-/*# sourceMappingURL=Style.css.map */
+/*# sourceMappingURL=style.css.map */

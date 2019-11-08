@@ -284,7 +284,7 @@
   margin-left: 8px;
   font-size: 12px;
   font-weight: bold;
-  padding: 5px 20px;
+  padding: 5px 7px;
 }
 
 .daterangepicker.show-ranges.single.rtl .drp-calendar.left {
@@ -408,5 +408,11 @@
 
   .daterangepicker .drp-calendar.left {
     clear: none !important;
+  }
+}
+
+@media (min-width: 768px){
+  .daterangepicker .drp-buttons .btn{
+    padding: 5px 20px;
   }
 }
