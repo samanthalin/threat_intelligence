@@ -193,6 +193,8 @@ $(document).ready(function(){
 		dropupAuto: false, 
 		//mobile: true,
 	});
+
+	$('.drp-buttons button').wrap('<div class="right"></div>');
 	//footer-year
 	var currentYear = (new Date).getFullYear();
 	$(".current-year").text( (new Date).getFullYear() );
@@ -292,4 +294,3 @@ $(window).scroll(function() {
     	$('.gotop').fadeOut();
     }
 });
-

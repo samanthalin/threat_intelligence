@@ -103,6 +103,7 @@
 .daterangepicker.show-calendar .drp-buttons {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .daterangepicker.auto-apply .drp-buttons {
@@ -279,13 +280,14 @@
   display: block;
   font-size: 12px;
   line-height: 30px;
+  width: 100%;
 }
 
 .daterangepicker .drp-buttons .btn {
   margin-left: 8px;
   font-size: 12px;
   font-weight: bold;
-  padding: 5px 7px;
+  padding: 5px 20px;
 }
 
 .daterangepicker.show-ranges.single.rtl .drp-calendar.left {
@@ -411,7 +413,8 @@
     clear: none !important;
   }
 
-  .daterangepicker .drp-buttons .btn{
-    padding: 5px 20px;
+  .daterangepicker .drp-selected{
+    width: auto;
   }
+
 }
