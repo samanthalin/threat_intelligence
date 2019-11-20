@@ -221,7 +221,7 @@ $(document).ready(function(){
 		target: '_blank',
 	});
 
-	$('nav a').attr({
+	$('nav .desktop-menu a').attr({
 		target: '_blank',
 	});
 
