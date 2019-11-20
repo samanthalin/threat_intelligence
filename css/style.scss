@@ -43,29 +43,17 @@
     }
 }
 
-@keyframes blind-right {
+@keyframes float {
   0% {
-    width: 0;
-    opacity: 0;
-  }
-  1% {
-    width: 0;
-    opacity: 1;
+    transform: translateY(0%);  
   }
   50% {
-    width: 35px;
-    opacity: 1;
-  }
-  99% {
-    width: 35px;
-    opacity: 0;
-  }
+    transform: translateY(3%);
+  } 
   100% {
-    width: 0;
-    opacity: 0;
-  }
+    transform: translateY(0%); 
+  }     
 }
-
 
 
 //color variables
@@ -1392,15 +1380,15 @@ select::-ms-expand{
     0 0 0 0.375em #00b2ff,
     -2.1875em 0.6875em 0 -0.3125em #00b2ff,
     2.0625em 0.9375em 0 -0.5625em #00b2ff;
-    .check-mark{
-    	animation: blind-right (10s / 7) ease-out infinite;
-    	overflow: hidden;
-    	left: 50%;
-	    position: absolute;
-	    margin-left: -18px;
-	    top: 50%;
-	    margin-top: -15px;
-	}
+}
+.shield{
+	animation: float (10s / 7) ease-out infinite;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin-left: -16px;
+    margin-top: -20px;
 }
 .cloud:after {
   content: '';
