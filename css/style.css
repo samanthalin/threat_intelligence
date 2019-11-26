@@ -591,11 +591,11 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro .questi
   position: absolute;
   top: 0;
   left: 0;
+  color: #00b2ff;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .title {
   border: none;
   font-size: 18px;
-  color: black;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .series, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .series {
   margin-top: 20px;
