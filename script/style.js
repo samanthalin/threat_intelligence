@@ -31,7 +31,7 @@ $(document).ready(function(){
 	});
 
 	//Encyclopedia-table
-	$('#ency_search_btn').click(function(){
+	$('#vm #ency_search_btn').click(function(){
 		
 		$('.detail').hide();
 		$('.encyclopedia .intro').hide();
@@ -73,6 +73,62 @@ $(document).ready(function(){
 
 	    }else{
 	    	var description = $('#id #EncyTable tbody tr td:nth-child(2)')
+	    	var $len = 100;
+	    	$(description).each(function(){
+		        if($(this).text().length > $len){
+		            var text = $(this).text().substring(0,$len-1)+"...";
+		            $(this).text(text);
+		        }
+		    });
+	    }
+	});
+
+	$('#id #ency_search_btn').click(function(){
+		$('.detail').hide();
+		$('.encyclopedia .intro').hide();
+		$('.encyclopedia .list').show();
+		
+		$('#EncyTable').dataTable({
+			"destroy": true,
+	    	"scrollX": true,
+	    	"lengthChange": false,
+	    	"ordering": false,
+	    	"searching": false,
+	    	"pageLength": 20,
+	    	"info": true,
+	    	"pagingType": 'full_numbers',
+	    	"language": {
+			    "paginate": {
+			      "previous": "<i class='fas fa-angle-left'></i>",
+			      "next": "<i class='fas fa-angle-right'></i>",
+			      "first": "<i class='fas fa-angle-double-left'></i>",
+			      "last": "<i class='fas fa-angle-double-right'></i>",
+			    },
+		  	},
+		  	"columns": [
+			    { "width": "30%" },
+			    { "width": "110px" },
+			    { "width": "40%" },
+			    { "width": "100px" },
+			  ]
+	    });
+
+	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
+
+	    //RWD
+	    var wdth = $(window).width();
+	    if (wdth <= 767){
+	    	var description = $('#id #EncyTable tbody tr td:nth-child(3)');
+	    	var $len = 30;
+	    	$(description).each(function(){
+		        if($(this).text().length > $len){
+		            var text = $(this).text().substring(0,$len-1)+"...";
+		            $(this).text(text);
+		        }
+		    });
+
+	    }else{
+	    	var description = $('#id #EncyTable tbody tr td:nth-child(3)');
 	    	var $len = 100;
 	    	$(description).each(function(){
 		        if($(this).text().length > $len){
