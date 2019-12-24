@@ -684,6 +684,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
   text-decoration: underline;
   display: inline-block;
   position: relative;
+  margin-right: 35px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .file-hash a:after {
   content: "";
