@@ -956,10 +956,14 @@ html{
 						.release-container{
 							padding-top: 15px;
 							.intro{
-								img.manual{
-									width: 100%;
-									margin-top: 15px;
-								}						
+								.series{
+									margin-top: 20px;
+									margin-bottom: 35px;
+									img.manual{
+										margin-top: 10px;
+										width: 100%;
+									}
+								}		
 							}//intro
 							.list{
 								display: none;

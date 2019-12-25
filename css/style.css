@@ -987,9 +987,13 @@ html body#vm .frame .content .panel .release-note .search-bar #version_search_bt
 html body#vm .frame .content .panel .release-note .release-container, html #id .frame .content .panel .release-note .release-container {
   padding-top: 15px;
 }
-html body#vm .frame .content .panel .release-note .release-container .intro img.manual, html #id .frame .content .panel .release-note .release-container .intro img.manual {
+html body#vm .frame .content .panel .release-note .release-container .intro .series, html #id .frame .content .panel .release-note .release-container .intro .series {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+html body#vm .frame .content .panel .release-note .release-container .intro .series img.manual, html #id .frame .content .panel .release-note .release-container .intro .series img.manual {
+  margin-top: 10px;
   width: 100%;
-  margin-top: 15px;
 }
 html body#vm .frame .content .panel .release-note .release-container .list, html #id .frame .content .panel .release-note .release-container .list {
   display: none;
