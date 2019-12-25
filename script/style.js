@@ -117,6 +117,7 @@ $(document).ready(function(){
 
 	    //RWD
 	    var wdth = $(window).width();
+
 	    if (wdth <= 767){
 	    	var description = $('#id #EncyTable tbody tr td:nth-child(3)');
 	    	var $len = 30;
