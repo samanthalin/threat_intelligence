@@ -1272,7 +1272,10 @@ select::-ms-expand{
 		display: none;
 	}
 	.dataTables_scrollBody{
-	border: 0 !important;
+		border: 0 !important;
+		table thead{
+			display: none;
+		}
 	}
 	.dataTables_info{
 		font-size: 10px;
