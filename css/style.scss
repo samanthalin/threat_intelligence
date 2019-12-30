@@ -1273,9 +1273,6 @@ select::-ms-expand{
 	}
 	.dataTables_scrollBody{
 		border: 0 !important;
-		table thead{
-			display: none;
-		}
 	}
 	.dataTables_info{
 		font-size: 10px;
@@ -1331,7 +1328,7 @@ select::-ms-expand{
 		}
 	}//dataTables_paginate
 }
- 
+
 .menu-open{
 	transform: translateX(-300px);
 	transition: all 0.2s ease; 

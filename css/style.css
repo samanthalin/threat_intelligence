@@ -1341,9 +1341,6 @@ select::-ms-expand {
 #encyclopedia .dataTables_scrollBody, #release_note .dataTables_scrollBody {
   border: 0 !important;
 }
-#encyclopedia .dataTables_scrollBody table thead, #release_note .dataTables_scrollBody table thead {
-  display: none;
-}
 #encyclopedia .dataTables_info, #release_note .dataTables_info {
   font-size: 10px;
   float: none !important;
