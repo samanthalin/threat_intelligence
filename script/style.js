@@ -30,6 +30,13 @@ $(document).ready(function(){
 		$('.menu-open').removeClass('menu-open');
 	});
 
+	//APP Patrol search switch
+	$('input[type=radio][name=searchBy]').click(function() {
+	    var value = $(this).val();
+	    $(value).show();
+	    $(value).siblings().hide();
+	});
+
 	//Encyclopedia-table
 	$('#vm #ency_search_btn').click(function(){
 		
@@ -62,7 +69,7 @@ $(document).ready(function(){
 	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
 	    var wdth = $(window).width();
 	    if (wdth <= 320){
-	    	var description = $('#id #EncyTable tbody tr td:nth-child(2)')
+	    	var description = $('#vm #EncyTable tbody tr td:nth-child(2)')
 	    	var $len = 30;
 	    	$(description).each(function(){
 		        if($(this).text().length > $len){
@@ -72,7 +79,7 @@ $(document).ready(function(){
 		    });
 
 	    }else{
-	    	var description = $('#id #EncyTable tbody tr td:nth-child(2)')
+	    	var description = $('#vm #EncyTable tbody tr td:nth-child(2)')
 	    	var $len = 100;
 	    	$(description).each(function(){
 		        if($(this).text().length > $len){
@@ -138,6 +145,37 @@ $(document).ready(function(){
 		        }
 		    });
 	    }
+	});
+
+	$('#app #ency_search_btn_name').click(function(){
+		
+		$('#search-by-name .detail').hide();
+		$('#search-by-name .ency-container .name-list').show();
+		$('#EncyTableName').dataTable({
+			"destroy": true,
+	    	"scrollX": true,
+	    	"lengthChange": false,
+	    	"ordering": false,
+	    	"searching": false,
+	    	"pageLength": 20,
+	    	"info": true,
+	    	"pagingType": 'full_numbers',
+	    	"language": {
+			    "paginate": {
+			      "previous": "<i class='fas fa-angle-left'></i>",
+			      "next": "<i class='fas fa-angle-right'></i>",
+			      "first": "<i class='fas fa-angle-double-left'></i>",
+			      "last": "<i class='fas fa-angle-double-right'></i>",
+			    },
+		  	},
+		  	"columns": [
+			    { "width": "40%" },
+			    { "width": "20%" },
+			    { "width": "40%" },
+			  ]
+	    });
+
+	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
 	});
 
 	//ReleaseNote-table
@@ -222,7 +260,14 @@ $(document).ready(function(){
 	    $(this).addClass('check');
 	});
 
-	$('.detail .back').click(function(){
+	$('#id .detail .back').click(function(){
+		$('.detail').hide();
+		$('.list').show();
+		$('html, body').animate({
+	        scrollTop: $('table').offset().top
+	    }, 1000);
+	});
+	$('#vm .detail .back').click(function(){
 		$('.detail').hide();
 		$('.list').show();
 		$('html, body').animate({
@@ -230,12 +275,37 @@ $(document).ready(function(){
 	    }, 1000);
 	});
 
-	$('.detail .back_text').click(function(){
+	$('#id .detail .back_text').click(function(){
 		$('.detail').hide();
 		$('.list').show();
 		$('html, body').animate({
 	        scrollTop: $('table').offset().top
 	    }, 1000);
+	});
+	$('#vm .detail .back_text').click(function(){
+		$('.detail').hide();
+		$('.list').show();
+		$('html, body').animate({
+	        scrollTop: $('table').offset().top
+	    }, 1000);
+	});
+
+	$('#EncyTableName tbody tr').click(function(){
+		$('#search-by-name .name-list').hide();
+		$('#search-by-name .detail').show();
+	    $('.check').removeClass('check');
+	    $(this).addClass('check');
+	});
+
+	$('#search-by-name .detail .back').click(function(){
+		$('#search-by-name .detail').hide();
+		$('#search-by-name .name-list').show();
+	});
+
+	$('#search-by-name .detail .back_text').click(function(){
+		$('#search-by-name .detail').hide();
+		$('#search-by-name .name-list').show();
+		return false;
 	});
 
 	$('.paginate_button').click(function(){

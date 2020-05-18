@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="last-modified" content="2019-11-19 15:10:14">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Zyxel, onesecurity, one security, threat intelligence, security advisory, ATP, advanced threat protection, next generation firewall, next-gen firewall, NGFW, Cyber Security, Zyxel Firewall, ZyWALL, ATP Firewall, Cyber threat, Cyber attack, Unknown threat, Unknown attack, Advanced Persistent Threats, Sandbox, Sandboxing, Cloud intelligence, Intelligence, Machine learning, Multi-layer protection, SecuReporter, Fortinet, FortiGate, Sophos, SonicWall, Barracuda, Check Point, Palo Alto, Juniper Networks, trendmicro, mcafee, Kaspersky, Bitdefender, IP Reputation, Cloud Query, content filter, VPN, malware blocker, Network, Security, CyberCrime , DataProtection, Cloud. DigitalTransformation, Malware, Ransomeware, DDoS, SMB, AI, anti virus, anti spam, Virus, Malware, Intrusion, Application patrol, IDP, Botnet, UTM,  Next Generation Firewall, Security Gateway, Access Point, AP Controller, HA Pro, cloud security, hotspot gateway, nebula security gateway">
+	<meta name="description" content="threat Intelligence provides information about cyber threat: malware/virus, intrusion,  and Zywall release notes.">
+	<meta property="og:site_name" content="Zyxel.com">
+	<meta property="og:title" content="Threat Intelligence | Zyxel">
+	<meta property="og:description" content="Threat Intelligence provides information about cyber threat: malware/virus, intrusion,  and Zywall release notes.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://52.194.142.80:8888/img/ogimg.jpg">
+	<meta property="og:url" content="http://52.194.142.80:8888/">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Threat Intelligence | Zyxel">
+	<meta name="twitter:description" content="Threat Intelligence provides information about cyber threat: malware/virus, intrusion,  and Zywall release notes.">
+	<meta name="twitter:image" content="http://52.194.142.80:8888/img/ogimg.jpg">
+	<meta name="twitter:url" content="http://52.194.142.80:8888/">
+	<title>Threat Intelligence | Zyxel</title>
+	<link rel="shortcut icon" href="https://www.zyxel.com/library/images/favicon.ico">
+	<link rel="apple-touch-icon" href="https://www.zyxel.com/library/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.zyxel.com/library/images/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.zyxel.com/library/images/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.zyxel.com/library/images/touch-icon-ipad-retina.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.zyxel.com/library/images/touch-icon-iphone6-plus.png">
+
+
+	
+	<link rel="stylesheet" href="fontawesome/all.css">
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
+	<link rel="stylesheet" href="flag-icon-css-master/css/flag-icon.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="bootstrap-select-1.13.9/dist/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script src="script/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="script/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="bootstrap-select-1.13.9/dist/js/bootstrap-select.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
+	<script type="text/javascript" src="script/moment.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+	<script type="text/javascript" src="script/daterangepicker.min.js"></script>
+	<script src="script/style.js"></script>
+	<!-- <script src="script/cookie-agree.js"></script> -->
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NC6C4GZ');</script>
+	<!-- End Google Tag Manager -->
+	 
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC6C4GZ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	</head>
+<body id="app">
+	<div class="frame">
+<!---------- menu --------------->
+		<div id="accordion" class="menu">
+		  <a href="#" class="menu-close-btn"><i class="ionicons ion-ios-close-empty"></i></a>
+		  <div class="card">
+		    <button class="card-header btn btn-link collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		      Solution
+		    </button>
+		    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+		      <ul class="card-body">
+		        <li><a href="https://www.zyxel.com/solutions/All-Solutions.shtml">Home</a></li>
+		        <li><a href="https://www.zyxel.com/solutions/all_solution_type_20101206_605494.shtml">Business</a></li>
+		        <li><a href="https://www.zyxel.com/solutions/all_solution_type_20101206_605527.shtml">Service Provider</a></li>
+		        <li><a href="https://www.zyxel.com/solutions/success_stories_list.shtml">All Success Stories</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		  
+		  <div class="card">
+		    <button class="card-header btn btn-link collapsed" id="headingThree"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		      Product
+		    </button>
+		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+		      <ul class="card-body">
+		        <li><a href="hhttps://www.zyxel.com/products_services/home.shtml?t=s">Home</a></li>
+		        <li><a href="https://www.zyxel.com/products_services/smb.shtml?t=s">Business</a></li>
+		        <li><a href="https://www.zyxel.com/products_services/service_provider.shtml?t=s">Service Provider</a></li>
+		        <li><a href="https://www.zyxel.com/products_services/product_overview.shtml">Product Overview</a></li>
+		        <li><a href="https://www.zyxel.com/promotions/myZyxel-20130916-299398.shtml">myZyxel</a></li>
+		        <li><a href="http://onesecurity.zyxel.com/">OneSecurity</a></li>
+		        <li><a href="https://nebula.zyxel.com/">Nebula Control Center</a></li>
+		        <li><a href="https://www.zyxel.com/products_services/Technology-Library-for-Business-Users.shtml">Technology Library</a></li>
+		        <li><a href=""></a></li>
+		      </ul>
+		    </div>
+		  </div>
+		  
+		  <div class="card">
+		    <button class="card-header btn btn-link collapsed" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+		      Support
+		    </button>
+		    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+		      <ul class="card-body">
+		        <li><a href="https://www.zyxel.com/support/support_landing.shtml">Support Center</a></li>
+		        <li><a href="https://www.zyxel.com/support/download_landing.shtml">Doanload Library</a></li>
+		        <li><a href="https://www.zyxel.com/support/KnowledgebaseLandingSR.shtml?c=gb&l=en&md=&s=1">knowledge Base</a></li>
+		        <li><a href="https://www.zyxel.com/support/training.shtml">Training</a></li>
+		        <li><a href="https://www.zyxel.com/support/howto_video_list.shtml">How to Video</a></li>
+		        <li><a href="https://www.zyxel.com/support/warranty_information.shtml">Warranty Information</a></li>
+		        <li><a href="https://www.zyxel.com/form/product_registration.shtml">Product Registration</a></li>
+		        <li><a href="https://www.zyxel.com/form/gpl_oss_software_notice.shtml">GPL-OSS Software Notice</a></li>
+		        <li><a href="https://www.zyxel.com/support/security_advisories.shtml">Security Advisories</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		  
+		  <div class="card">
+		    <button class="card-header btn btn-link collapsed" id="headingFive" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+		      News
+		    </button>
+		    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+		      <ul class="card-body">
+		        <li><a href="https://www.zyxel.com/news/press_room_list.shtml">Press Room</a></li>
+		        <li><a href="https://www.zyxel.com/news/award_list.shtml">Awards & Reviews</a></li>
+		        <li><a href="https://www.zyxel.com/news/newsletter_list.shtml">Newsletters</a></li>
+		        <li><a href="https://www.zyxel.com/news/event_list.shtml">Events</a></li>
+		        <li><a href="http://blog.zyxel.eu/">Blog</a></li>
+		        
+		      </ul>
+		    </div>
+		  </div>
+
+		  <div class="card">
+		    <button class="card-header btn btn-link collapsed" id="headingSix" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+		      About Zyxel
+		    </button>
+		    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+		      <ul class="card-body">
+		        <li><a href="https://www.zyxel.com/about_zyxel/company_overview.shtml">Company Overview</a></li>
+		        <li><a href="https://www.zyxel.com/about_zyxel/jobs_at_zyxel.shtml">Careers</a></li>
+		        <li><a href="#">Green & Social Responsibility</a></li>
+		        <li><a href="https://www.zyxel.com/about_zyxel/green_social_responsibility_csr_commitment.shtml">CSR Commitment</a></li>
+		        <li><a href="https://www.zyxel.com/about_zyxel/green_social_responsibility_zyxel_green_networks.shtml">Zyxel's Green Networks</a></li>
+		      </ul>
+		    </div>
+		  </div>
+
+		  <div class="card">
+				<button class="btn btn-link card-header"  id="headingSeven" data-toggle="collapse" aria-expanded="false" aria-controls="collapseSeven">
+				  <a target="_blank" href="https://www.zyxel.com/contact_us/contact-us-overview.shtml">Contact Us</a>
+				</button>
+		 </div>
+
+		  <div class="card">
+				<button class="btn btn-link card-header"  id="headingEight" data-toggle="collapse" aria-expanded="false" aria-controls="collapseEight">
+				  <a target="_blank" href="https://www.zyxel.com/where_to_buy/where-to-buy.shtml">Where to Buy</a>
+				</button>
+		  </div>
+
+		  <div class="card">
+			<button class="btn btn-link card-header"  id="headingNine" data-toggle="collapse" aria-expanded="false" aria-controls="collapseNine">
+				<a target="_blank" href="http://zypartner.zyxel.com/">Partner</a>
+			</button>
+		  </div>
+
+		  <div class="card">
+			<button class="btn btn-link card-header"  id="headingTen" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTen">
+				<a target="_blank" href="https://www.zyxel.com/news/newsletter_list.shtml">Subscribe</a>
+			</button>
+		  </div>
+
+		  <div class="card">
+			<button class="btn btn-link card-header"  id="headingEleven" data-toggle="collapse" aria-expanded="false" aria-controls="collapseEleven">
+				<a target="_blank" href="https://www.zyxel.com/support/zyxel-forum.shtml">Community</a>
+			</button>
+		  </div>
+
+		</div>		
+<!---------- menu --------------->
+
+		<header>
+			<nav class="full">
+				<div class="nav-container">
+					<a href="https://zyxel.com/homepage.shtml" class="logo" target="_blank">
+						<img src="img/logo-zyxel.png" alt="Zyxel Logo">
+					</a>
+					<div class="nav-right">
+						<ul class="desktop-menu">
+							<li><a href="https://www.zyxel.com/solutions/All-Solutions.shtml">Solution</a></li>
+							<li><a href="https://www.zyxel.com/solutions/success_stories_list.shtml">Success Story</a></li>
+							<li><a href="https://www.zyxel.com/products_services/product_overview.shtml">Product</a></li>
+							<li><a href="https://www.zyxel.com/support/support_landing.shtml">Support</a></li>
+							<li><a href="https://www.zyxel.com/where_to_buy/where-to-buy.shtml">Where to Buy</a></li>
+							<li><a href="https://zypartner.zyxel.com/user/login.php">Partner</a></li>
+						</ul>
+						<a href="#" class="hamburger">
+							<i class="ionicons ion-navicon"></i>
+						</a>
+					</div>
+				</div>
+			</nav>
+			<div class="breadcrumbs">
+				<div class="breadcrumb-container">
+					<h1>Threat Intelligence</h1>
+					<a href="https://www.zyxel.com/homepage.shtml" target="_blank">Homepage</a>
+					<i class="fas fa-angle-right"></i>
+					<a href="https://www.zyxel.com/solutions/All-Solutions.shtml" target="_blank">Solutions</a>
+					<i class="fas fa-angle-right"></i>
+					<a href="http://172.23.10.12:8000/solutions/one-security-solution/one-security-solution.shtml" target="_blank">One Security Solution</a>
+					<i class="fas fa-angle-right"></i>
+					<span>Threat Intelligence</span>
+				</div>
+				
+			</div>
+			<div class="main_menu">
+				<div class="main-menu-container">
+					<a href="index.html" class="vm">
+						<img src="img/virus.png" alt="">
+						<span>Virus / Malware</span>
+					</a>
+					<a href="intrusion_detection.html" class="id">
+						<img src="img/detect.png" alt="">
+						<span>Intrusion Detection</span>
+					</a>
+					<a href="app_patrol.html" class="app active">
+						<img src="img/app_patrol.png" alt="" width="60">
+						<span>Application Patrol</span>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="content ">
+			<ul class="sub_menu">
+				<li class="encyclopedia-btn">
+					<a href="#encyclopedia">
+						<!-- <img src="img/ency_color.png" alt=""> -->
+						<span>Encyclopedia</span>
+					</a>
+				</li>
+				<li class="release-note-btn">
+					<a href="#release_note">
+						<!-- <img src="img/rele_color.png" alt=""> -->
+						<span>Release Note</span>
+					</a>
+				</li>
+			</ul><!-- sub_menu -->
+			<div class="panel animated fadeInUp faster">
+
+<!-- ----------------------------------Encyclopedia--------------------------------------- -->
+				<div id="encyclopedia" class="encyclopedia">
+					<h1 class="title">Encyclopedia</h1>
+					<p class="intro" style="margin: 0;">Welcome to the Zyxel Encyclopedia. </p>
+					<p class="intro" style="margin: 0;">Zyxel Application Patrol is designed to provide the layer 7 application management, categorize covers the well-known network applications such as social, gaming, productivity, and other web applications and behaviors.  Zyxel database supports over thousands of applications and its behaviors, along with the growing and ever-changing applications, our operate work with the repeating collect, analyze and Inspect verify flow cycle.</p>
+					<p class="intro" style="margin: 0;">In this encyclopedia, you can get the description of threat and how ZyWALL defends against that particular threat. Search in the encyclopedia for application name or categories</p>
+
+					<div class="search-switch">
+						<div class="switch">
+							<input type="radio" name="searchBy" id="s1"  value="#search-by-name" checked>
+							<label for="s1">Search by Application Name</label>
+						</div>
+						<div class="switch">
+							<input type="radio" name="searchBy" id="s2" value="#search-by-cat" >
+							<label for="s2">Browse Applications in Category</label>
+						</div>
+					</div>
+					<div class="search-panel">
+						<div id="search-by-name">
+							<div class="search-bar">
+								<input type="search" id="ency_search" placeholder="Search by virus/malware name or file hash">
+								<button id="ency_search_btn_name">
+									<i class="fas fa-search"></i>
+									Search
+								</button>
+							</div>
+							<div class="ency-container">
+
+								<div class="name-list">
+									<table class="table table-striped hover" id="EncyTableName">
+										<caption></caption>
+										<thead>
+										    <tr>
+										      <th scope="col">Application</th>
+										      <th scope="col">Category</th>
+										      <th scope="col">Description</th>
+										    </tr>
+										 </thead>
+										 <tbody>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    
+										 </tbody>
+									</table>
+								</div><!-- list -->
+
+								<div class="detail">
+									<a href="#" class="back_text"><i class="fas fa-angle-left"></i>Back to search result</a>
+									<div class="detail-container">
+										<div class="application-detail">
+											<div class="title">Application Detail</div>
+											<div class="field name">
+												<h3>Application Nmae</h3>
+												<p class="name">Line</p>
+											</div>
+											<div class="field description">
+												<h3>Description</h3>
+												<p>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs. Please note : the parent attribute 'call' and its children are deprecated for Line (since mid-2014) but can be extracted from SIP.</p>
+											</div>
+											<div class="field category">
+												<h3>Category</h3>
+												<a href="">Instant Messenger</a>
+											</div>
+											<div class="field tag">
+												<h3>Tag</h3>
+												<p>Instant Messaging & Multimedia Conference, VOIP, Mobile</p>
+											</div>
+										</div><!-- virus-profile -->
+										
+										<div class="application-detail-table">
+											<div class="table-head">
+												<div class="table-cell">OS</div>
+												<div class="table-cell">Client/Standard</div>
+												<div class="table-cell">Latest Version</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">Windows</div>
+												<div class="table-cell">Line</div>
+												<div class="table-cell">5.18.3.2001</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">Windows</div>
+												<div class="table-cell">Chrome</div>
+												<div class="table-cell">76.0.3809.100</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">Android</div>
+												<div class="table-cell">Line</div>
+												<div class="table-cell">9.14.1</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">MacOS</div>
+												<div class="table-cell">Line</div>
+												<div class="table-cell">5.18.3.2001</div>
+											</div>
+										</div>
+									</div><!-- detail-container -->
+										
+									
+									<button class="back">
+		 								<i class="icon ion-ios-arrow-back"></i>
+										back
+									</button>
+
+								</div><!-- detail -->
+							</div>
+						</div>
+						<div id="search-by-cat">
+							<div class="cat-list">
+								<div class="cat">
+									<a href="">Antivirus (<span class="number">4)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Application Service (<span class="number">53)
+								</div></span></a>
+								<div class="cat">
+									<a href="">Audio/Video (<span class="number">162)</span>
+								</div></a>
+								<div class="cat">
+									<a href="">Authentication (<span class="number">10)</span>
+								</div></a>
+								<div class="cat">
+									<a href="">Behavioral (<span class="number">2)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Compression (<span class="number">2)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Database (<span class="number">20)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Encrypted (<span class="number">8)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">ERP (<span class="number">2)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">File Server (<span class="number">33)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">File Transfer (<span class="number">8)</span>
+								</div></a>
+								<div class="cat">
+									<a href="">Forum (<span class="number">17)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Game (<span class="number">96)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Instant Messaging (<span class="number">111)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Mail (<span class="number">10)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Microsoft Office (<span class="number">1)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Middleware (<span class="number">28)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Network Management (<span class="number">31)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Network Service (<span class="number">318)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Peer to peer (<span class="number">57)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Printer (<span class="number">7)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Routing (<span class="number">13)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Security Service (<span class="number">7)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Standard (<span class="number">7)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Telephony (<span class="number">5)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Terminal (<span class="number">6)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Thin Client (<span class="number">19)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Tunneling (<span class="number">16)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Wap (<span class="number">7)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Web (<span class="number">14)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Webmail (<span class="number">37)</span></a>
+								</div>
+								<div class="cat">
+									<a href="">Custom (<span class="number">1)</span></a>
+								</div>
+							</div>
+							<div class="ency-container">
+
+								<div class="search-cat-list">
+									<table class="table table-striped hover" id="EncyTableName">
+										<caption></caption>
+										<thead>
+										    <tr>
+										      <th scope="col">Application</th>
+										      <th scope="col">Category</th>
+										      <th scope="col">Description</th>
+										    </tr>
+										 </thead>
+										 <tbody>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lcp (Line Control Protocol)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LCP is used to establish, configure and test the data-link connection for a PPP link</td>
+										    </tr>
+										    <tr>
+										      <td>lpr (Line Printer Remote)</td>
+										      <td>Instnat Messenger</td>
+										      <td>LPR is a protocol providing printing services and used in Berkeley distributions of the</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>line (Line)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Lineage2 is a MMORPG developed by NCSoft.</td>
+										    </tr>
+										    <tr>
+										      <td>line_wind_runner (LINE WIND runner application)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    <tr>
+										      <td>lineage2 (Lineage II)</td>
+										      <td>Instnat Messenger</td>
+										      <td>Line Wind Runner is a popular asian mobile device game accessible from the Line</td>
+										    </tr>
+										    
+										 </tbody>
+									</table>
+								</div><!-- list -->
+
+								<div class="detail">
+									<a href="#" class="back_text"><i class="fas fa-angle-left"></i>Back to search result</a>
+									<div class="detail-container">
+										<div class="application-detail">
+											<div class="title">Application Detail</div>
+											<div class="field name">
+												<h3>Application Nmae</h3>
+												<p class="name">Line</p>
+											</div>
+											<div class="field description">
+												<h3>Description</h3>
+												<p>Line is a Japanese Instant Messaging and Voip application for smartphones and PCs. Please note : the parent attribute 'call' and its children are deprecated for Line (since mid-2014) but can be extracted from SIP.</p>
+											</div>
+											<div class="field category">
+												<h3>Category</h3>
+												<a href="">Instant Messenger</a>
+											</div>
+											<div class="field tag">
+												<h3>Tag</h3>
+												<p>Instant Messaging & Multimedia Conference, VOIP, Mobile</p>
+											</div>
+										</div><!-- virus-profile -->
+										
+										<div class="application-detail-table">
+											<div class="table-head">
+												<div class="table-cell">OS</div>
+												<div class="table-cell">Client/Standard</div>
+												<div class="table-cell">Latest Version</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">Windows</div>
+												<div class="table-cell">Line</div>
+												<div class="table-cell">5.18.3.2001</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">Windows</div>
+												<div class="table-cell">Chrome</div>
+												<div class="table-cell">76.0.3809.100</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">Android</div>
+												<div class="table-cell">Line</div>
+												<div class="table-cell">9.14.1</div>
+											</div>
+											<div class="table-row">
+												<div class="table-cell">MacOS</div>
+												<div class="table-cell">Line</div>
+												<div class="table-cell">5.18.3.2001</div>
+											</div>
+										</div>
+									</div><!-- detail-container -->
+										
+									
+									<button class="back">
+		 								<i class="icon ion-ios-arrow-back"></i>
+										back
+									</button>
+
+								</div><!-- detail -->
+							</div>
+						</div>
+					</div>
+						
+				</div><!-- encyclopedia -->
+<!-- ------------------------------Encyclopedia End--------------------------------------- -->
+
+<!-- ------------------------------Release Note------------------------------------------- -->
+				<div id="release_note" class="release-note">
+					<h1 class="title">Release Note</h1>
+					<div class="search-bar">
+						
+						<div class="model-version-select">
+							<select name="" id="" class="selectpicker" data-width="115px" data-dropup-auto="false">
+								<option value="Model">Model</option>
+								<option value="Version">Version</option>
+							</select>
+						</div>	
+												
+						<div class="model-search model-select">
+							<select name="" id="" class="selectpicker" title="Choose one of the following..." data-width="100%" data-display="static" data-dropup-auto="false">
+								<option value="ATP100">ATP100</option>
+								<option value="ATP200">ATP200</option>
+								<option value="ATP500">ATP500</option>
+								<option value="ATP800">ATP800</option>
+								<option value="USG110">USG110</option>
+								<option value="USG1100">USG1100</option>
+								<option value="USG1900">USG1900</option>
+								<option value="USG210">USG210</option>
+								<option value="USG2200">USG2200</option>
+								<option value="USG310">USG310</option>
+								<option value="USG40">USG40</option>
+								<option value="USG40W">USG40W</option>
+								<option value="USG60">USG60</option>
+								<option value="USG60W">USG60W</option>
+								<option value="ZyWALL 110">ZyWALL 110</option>
+								<option value="ZyWALL 1100">ZyWALL 1100</option>
+								<option value="ZyWALL 310">ZyWALL 310</option>
+							</select>
+						</div>
+							
+
+						<div class="model-search date-picker">
+							<i class="far fa-calendar-alt"></i>
+							<span></span>
+						</div>
+						<button id="model_search_btn" class="btn model-search">
+							<i class="fas fa-search"></i>
+							search
+						</button>
+<!-- ------------------------------------------------------------------------------------------ -->
+						<input type="text" placeholder="search by version" class="version-search version-number">
+						<button id="version_search_btn" class="btn version-search">
+							<i class="fas fa-search"></i>
+							search
+						</button>	
+					</div>
+					<div class="release-container">
+						
+						<div class="intro">
+							<div class="series">
+								<p>Zywalls regular update last virus/malware signature to protect more malware.</p>
+								<p>ATP series: Please go to Service Status > Anti-Malware > Current Version  to check signature version on your device,</p>
+								<img src="img/ATP500_Signature Info.jpg" class="manual" alt="image of ATP interface">
+							</div>
+							<div class="series">
+								<p>USG/ ZyWALL series: Please go to Configuration >> Licensing>>Signature Update >> Anti-Virus. Licensing>>Signature Update >> IDP/AppPatrol</p>
+								<img src="img/USG_release_Note_AV.jpg" class="manual" alt="image of USG interface">
+							</div>
+								
+						</div><!-- intro -->
+
+						<div class="list">
+							<p class="searchby">search by 
+								<span class="kind">model</span> : 
+								<span class="name">ATG 110</span> 
+								<span class="date">2018/12/10 ~ 2018/12/31</span>
+							</p>
+							<table class="table table-striped" id="ReleTable">
+								<caption></caption>
+								<thead>
+								    <tr>
+								      <th scope="col">Release Date</th>
+								      <th scope="col">Version</th>
+								      <th scope="col">Download</th>
+								    </tr>
+								 </thead>
+								 <tbody>
+								   <tr>
+								   	<td>2018/12/27</td>
+								   	<td>V3.0.1.20190103.0</td>
+								   	<td>
+								   		<a href=""><i class="fas fa-download"></i></a>
+								   	</td>
+								   </tr>
+								   <tr>
+								   	<td>2018/12/27</td>
+								   	<td>V3.0.1.20190103.0</td>
+								   	<td>
+								   		<a href=""><i class="fas fa-download"></i></a>
+								   	</td>
+								   </tr>
+								   <tr>
+								   	<td>2018/12/27</td>
+								   	<td>V3.0.1.20190103.0</td>
+								   	<td>
+								   		<a href=""><i class="fas fa-download"></i></a>
+								   	</td>
+								   </tr>
+								    
+								 </tbody>
+							</table>
+						</div><!-- list -->
+						<div class="detail"></div><!-- detail -->
+					</div>
+				</div><!-- release-note -->
+<!-- ----------------------------Release Note End----------------------------------------- -->
+			</div><!-- panel -->
+		</div><!-- content -->
+		<footer class="">
+			<div class="footer-container">
+				<ul class="footer-column">
+					<li><a href="https://www.zyxel.com/solutions/All-Solutions.shtml" class="menu-head">Solution</a></li>
+					<li><a href="https://www.zyxel.com/solutions/all_solution_type_20101206_605464.shtml">Home</a></li>
+					<li><a href="https://www.zyxel.com/solutions/all_solution_type_20101206_605494.shtml">Business</a></li>
+					<li><a href="https://www.zyxel.com/solutions/all_solution_type_20101206_605527.shtml">Service Provider</a></li>
+					<li><a href="https://www.zyxel.com/solutions/success_stories_list.shtml">All Success Stories</a></li>
+				</ul>
+
+
+				<ul class="footer-column">
+					<li><a href="https://www.zyxel.com/products_services/product_overview.shtml" class="menu-head">Products</a></li>
+					<li><a href="https://www.zyxel.com/products_services/home.shtml?t=s">Home</a></li>
+					<li><a href="https://www.zyxel.com/products_services/smb.shtml?t=s">Business</a></li>
+					<li><a href="https://www.zyxel.com/products_services/service_provider.shtml?t=s">Service Provider</a></li>
+					<li><a href="https://www.zyxel.com/products_services/product_overview.shtml">Product Overview</a></li>
+					<li><a href="https://www.zyxel.com/promotions/myZyxel-20130916-299398.shtml">myZyxel</a></li>
+					<li><a href="http://onesecurity.zyxel.com/">OneSecurity</a></li>
+					<li><a href="https://nebula.zyxel.com/">Nebula Control Center</a></li>
+					<li><a href="https://selector.zyxel.com/">Product Selector</a></li>
+					<li><a href="https://www.zyxel.com/products_services/Technology-Library-for-Business-Users.shtml">Technology Library</a></li>
+				</ul>
+
+				<ul class="footer-column">
+					<li><a href="#" class="menu-head">Support</a></li>
+					<li><a href="https://www.zyxel.com/support/support_landing.shtml">Support Center</a></li>
+					<li><a href="https://www.zyxel.com/support/download_landing.shtml">Download Library</a></li>
+					<li><a href="https://www.zyxel.com/support/KnowledgebaseLandingSR.shtml?c=gb&l=en&md=&s=1">Knowledge Base</a></li>
+					<li><a href="https://www.zyxel.com/support/training.shtml">Training</a></li>
+					<li><a href="https://www.zyxel.com/support/howto_video_list.shtml">How to Video</a></li>
+					<li><a href="https://www.zyxel.com/support/warranty_information.shtml">Warranty Information</a></li>
+					<li>
+						<ul class="more close">
+							<li><a href="https://www.zyxel.com/form/product_registration.shtml">Product Registration</a></li>
+							<li><a href="https://www.zyxel.com/form/gpl_oss_software_notice.shtml">GPL-OSS Software Notice</a></li>
+							<li><a href="https://www.zyxel.com/support/security_advisories.shtml">Security Advisories</a></li>
+						</ul>
+					</li>		
+					<li><span class="more-btn"><i class="ionicons ion-ios-arrow-down"></i>More</span><span class="less-btn" style="display: none;"><i class="ionicons ion-ios-arrow-up"></i>Less</span></li>
+				</ul>
+
+
+				<ul class="footer-column">
+					<li><a href="https://www.zyxel.com/news/press_room_list.shtml" class="menu-head">News</a></li>
+					<li><a href="https://www.zyxel.com/news/press_room_list.shtml">Press Room</a></li>
+					<li><a href="https://www.zyxel.com/news/award_list.shtml">Awards &amp; Reviews</a></li>
+					<li><a href="https://www.zyxel.com/news/newsletter_list.shtml">Newsletters</a></li>
+					<li><a href="https://www.zyxel.com/news/event_list.shtml">Events</a></li>
+					<li><a href="http://blog.zyxel.eu/">Blog</a></li>
+				</ul>
+
+				<ul class="footer-column">
+					<li><a href="https://www.zyxel.com/about_zyxel/company_overview.shtml" class="menu-head">About Zyxel</a></li>                
+					<li><a href="https://www.zyxel.com/about_zyxel/company_overview.shtml">Company Overview</a></li>
+					<li><a href="https://www.zyxel.com/about_zyxel/jobs_at_zyxel.shtml">Careers</a></li>
+					<li><a href="https://www.zyxel.com/homepage.shtml#">Green &amp; Social Responsibility</a></li>
+					<li><a href="https://www.zyxel.com/about_zyxel/green_social_responsibility_csr_commitment.shtml" class="indent"><i class="ionicons ion-ios-arrow-right"></i>CSR Commitment</a></li>
+					<li><a href="https://www.zyxel.com/about_zyxel/green_social_responsibility_zyxel_green_networks.shtml" class="indent"><i class="ionicons ion-ios-arrow-right"></i>Zyxel's Green Networks</a></li>
+				</ul>
+
+				<ul class="footer-column">
+					<li><a href="https://www.zyxel.com/contact_us/contact-us-overview.shtml" class="menu-head">Contact Us</a></li>
+					<li><a href="https://www.zyxel.com/where_to_buy/where-to-buy.shtml" class="menu-head">Where to Buy</a></li>
+					<li><a href="http://zypartner.zyxel.com/" class="menu-head">Partner</a></li>
+					<li><a href="https://www.zyxel.com/news/newsletter_list.shtml" class="menu-head">Subscribe</a></li>
+					<li><a href="https://www.zyxel.com/support/zyxel-forum.shtml" class="menu-head">Community</a></li>
+				</ul>
+			</div><!-- footer-container -->
+			<div class="social-media">
+				<ul class="icons">
+					<span>FOLLOW US</span>
+					<li class="facebook">
+						<a href="https://www.facebook.com/ZyXEL">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</li>
+					<li class="linkedin">
+						<a href="https://www.linkedin.com/company/zyxel">
+							<i class="fab fa-linkedin-in"></i>                                        
+						</a>
+					</li>
+					<li class="twitter">
+						<a href="https://twitter.com/zyxelhome">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<!-- <li class="google">
+						<a href="">
+							<i class="fab fa-google-plus-g"></i>
+						</a>
+					</li> -->
+					<li class="blog">
+						<a href="http://blog.zyxel.eu/">
+							<i class="fas fa-blog"></i>
+						</a>
+					</li>
+					<li class="instagram">
+						<a href="https://www.instagram.com/zyxelworldwide/">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li class="youtube">
+						<a href="https://www.youtube.com/user/ZyXELVideo">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</li>
+					
+					<!-- <li class="xing">
+						<a href="">
+							<i class="fab fa-xing"></i>
+						</a>
+					</li> -->
+					<!-- <li class="pinterest">
+						<a href="">
+							<i class="fab fa-pinterest-p"></i>
+						</a>
+					</li> -->
+					<li class="comments">
+						<a href="https://www.zyxel.com/support/zyxel-forum.shtml">
+							<i class="fas fa-comments"></i>
+						</a>
+					</li>
+					<li class="email">
+						<a href="https://www.zyxel.com/news/newsletter_list.shtml">
+							<i class="fas fa-envelope"></i>
+						</a>
+					</li>
+					<!-- <li class="habr">
+						<a href="">
+							<img src="img/ico-habr.png" alt="">
+						</a>
+					</li> -->
+				</ul>
+			</div><!-- social media -->
+			<div class="legal">
+				<div class="legal-text">Copyright © <span class="current-year">2016</span> Zyxel and/or its affiliates.  <br>All Rights Reserved.</div>
+				<div class="legal-links">
+					<a href="https://www.zyxel.com/legal_notices.shtml">Legal Notice</a>
+					<a href="https://www.zyxel.com/Terms-of-Use.shtml">Terms of Use</a>
+					<a href="https://www.zyxel.com/privacy_statement.shtml">Privacy Policy</a>
+					<a href="https://www.zyxel.com/privacy_policy_cookie.shtml">Cookie Settings</a>
+				</div>
+			</div>
+			<a href="#" class="gotop">
+				<i class="fa fa-chevron-up"></i>
+			</a>
+		</footer>
+	</div><!-- frame -->
+
+
+	
+	
+</body>
+</html>

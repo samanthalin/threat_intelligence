@@ -92,7 +92,7 @@ $light-blue: #ccf0ff;
 
 
 html{
-	body#vm, #id{
+	body#vm, #id, #app{
 		font-size: 18px;
 		.frame{
 			background-color: white;
@@ -366,7 +366,7 @@ html{
 							}
 							@media screen and (min-width: 992px){
 								flex: none;
-								padding: 10px 50px;
+								padding: 20px 50px;
 							}
 						}
 						.active{
@@ -1223,6 +1223,77 @@ html{
 	}//body
 }
 
+#app{
+	header{
+
+	}
+	.content{
+		.panel{
+			.encyclopedia{
+				.title{
+
+				}
+				.intro{
+					margin-top: 20px !important;
+				}
+				.search-switch{
+					margin-top: 40px;
+					display: flex;
+					.switch{
+						&:last-child{
+							margin-left: 35px;
+						}
+						label{
+							cursor: pointer;
+							margin-left: 5px;
+							font-family: 'GalanoSemiBold';
+						}
+					}//switch
+				}//search-switch
+				#search-by-name{
+					.search-bar{
+
+					}//search-bar
+					.ency-container{
+						.name-list{
+							display: none;
+							line-height: 18px;
+						}
+					}
+				}//search-by-name
+				#search-by-cat{
+					display: none;
+					.cat-list{
+						display: flex;
+						flex-wrap: wrap;
+						.cat{
+							font-size: 14px;
+							padding: 8px 0;
+							width: 100%;
+							a{
+								display: inline-block;
+								color: #2d2d2d;
+								&:hover{
+									color: #00b2ff;
+								}
+							}
+							@media screen and (min-width: 350px) {
+								width: 50%;
+								@media screen and (min-width: 680px) {
+									width: calc(100%/3);
+									@media screen and (min-width: 1200px) {
+										width: 25%;
+									}
+								}
+							}
+						}
+					}
+				}//search-by-cat
+			}//encyclopedia
+		}//panel
+	}
+}
+
 select{
 	@include appearance(none);
 	outline: none;
@@ -1329,6 +1400,171 @@ select::-ms-expand{
 	}//dataTables_paginate
 }
 
+#app{
+	.encyclopedia{
+		.title{}
+		.intro{}
+		.search-switch{}
+		.search-panel{
+			#search-by-name{
+				.search-bar{}
+				.ency-container{
+					.name-list{
+						table{
+							width: 100% !important;
+							font-size: 12px;
+							border: 0;
+							thead{
+								background-color: #d9d9d9;
+								color: black;
+								border: 0;
+								tr th{
+									padding: 10px;
+									border: 0 !important;
+									font-family: 'GalanoSemiBold';
+									&:last-child{
+										text-align: left;
+										display: none;
+										@media screen and (min-width: 768px) {
+											display: table-cell;
+										}
+									}
+								}
+							}
+							tbody tr{
+								cursor: pointer;
+								td:last-child{
+									text-align: left;
+									display: none;
+									@media screen and (min-width: 768px){
+										display: table-cell;
+									}
+								}
+								&:hover{
+									background-color: $light-blue;
+								}
+							}
+							.check{
+								background-color: $light-blue;
+							}
+							@media screen and (min-width: 768px){
+								font-size: 14px;
+							}
+						}//table
+					}//name-list
+					.detail{
+						a.back_text{
+
+						}//back_text
+						.detail-container{
+							.application-detail{
+								border: 1px solid $blue;
+								padding: 10px 20px 20px 20px;
+								.title{
+									font-size: 18px;
+									border: none;
+									text-align: center;
+									width: 100%;
+								}
+								.field{
+									margin-top: 20px;
+									font-size: 12px;
+									p{
+										margin: 0;
+									}
+									h3{
+										font-size: 12px;
+										color: $blue;
+										font-family: 'GalanoSemiBold';
+										padding-left: 23px;
+										margin-bottom: 5px;
+										position: relative;
+										&:before{
+											content: '\f2c2';
+											font-family: 'Font Awesome 5 Free';
+											font-weight: 900;
+											position: absolute;
+											left: 0px;
+										}
+										@media screen and (min-width: 350px){
+											font-size: 14px;
+										}
+									}//h3
+									@media screen and (min-width: 350px){
+										font-size: 14px;
+									}
+								}//field
+								.description{
+									h3:before{
+										content: '\f15c';
+									}
+								}//file-hash
+								.category{
+									h3:before{
+										content: '\f468';
+									}
+									a{
+										color: #00b2ff;
+										text-decoration: underline;
+									}
+								}//popularity
+								.tag{
+									h3:before{
+										content: '\f02b';
+									}
+								}//file-type
+								@media screen and (min-width: 992px){;
+									@include flex(1);
+								}
+							}//applicaion-detail
+							.application-detail-table{
+								border: 1px solid #00b2ff;
+								margin-top: 40px;
+								.table-head{
+									color: white;
+									display: flex;
+									background-color: #00b2ff;
+									padding: 10px 0;
+									font-size: 18px;
+									.table-cell{
+										flex: 1;
+										font-family: 'GalanoSemiBold';
+										text-align: center;
+									}
+								}
+								.table-row{
+									display: flex;
+									padding: 10px 0;
+									font-size: 14px;
+									border-bottom: 1px solid #00b2ff;
+									.table-cell{
+										flex: 1;
+										text-align: center;
+									}
+									&:last-child{
+										border: 0;
+									}
+								}
+							}//application-detail-table
+							@media screen and (min-width: 992px) {
+								display: block !important;
+							}
+
+						}//detail-container
+						button.back{
+							float: right;
+							@media screen and (min-width: 992px) {
+								margin: 0;
+							}
+						}//back
+					}//.detail
+				}//ency-container
+			}//search-by-names
+		}//search-panel
+	}//#encyclopedia
+						
+	
+}
 .menu-open{
 	transform: translateX(-300px);
 	transition: all 0.2s ease; 
