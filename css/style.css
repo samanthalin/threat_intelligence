@@ -1454,6 +1454,29 @@ select::-ms-expand {
   }
 }
 
+#app .encyclopedia .search-switch .switch .selected-cat {
+  display: none;
+}
+#app .encyclopedia .search-switch .switch .selected-cat .text {
+  font-family: "GalanoSemiBold";
+  color: #00b2ff;
+  position: relative;
+  padding-left: 10px;
+  cursor: pointer;
+}
+#app .encyclopedia .search-switch .switch .selected-cat .text:hover {
+  text-decoration: underline;
+}
+#app .encyclopedia .search-switch .switch .selected-cat .text:before {
+  content: ":";
+  position: absolute;
+  left: 0;
+  color: black;
+}
+#app .encyclopedia .search-switch .switch .selected-cat i {
+  font-size: 14px;
+  color: #00b2ff;
+}
 #app .encyclopedia .search-panel #search-by-name .ency-container .name-list table {
   width: 100% !important;
   font-size: 12px;
@@ -1501,24 +1524,43 @@ select::-ms-expand {
     font-size: 14px;
   }
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail {
+#app .encyclopedia .search-panel #search-by-cat .cat-list {
+  margin-top: 15px;
+}
+#app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list {
+  display: none;
+}
+#app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list .intable-search {
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list .intable-search input {
+  border: 1px solid #5e5e5e;
+  width: 200px;
+  padding-left: 5px;
+}
+#app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table thead th:last-child, #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table tbody tr td:last-child {
+  text-align: left;
+}
+#app .encyclopedia .search-panel .detail .detail-container .application-detail {
   border: 1px solid #00b2ff;
   padding: 10px 20px 20px 20px;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .title {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .title {
   font-size: 18px;
   border: none;
   text-align: center;
   width: 100%;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .field {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .field {
   margin-top: 20px;
   font-size: 12px;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .field p {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .field p {
   margin: 0;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .field h3 {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .field h3 {
   font-size: 12px;
   color: #00b2ff;
   font-family: "GalanoSemiBold";
@@ -1526,7 +1568,7 @@ select::-ms-expand {
   margin-bottom: 5px;
   position: relative;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .field h3:before {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .field h3:before {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -1534,30 +1576,31 @@ select::-ms-expand {
   left: 0px;
 }
 @media screen and (min-width: 350px) {
-  #app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .field h3 {
+  #app .encyclopedia .search-panel .detail .detail-container .application-detail .field h3 {
     font-size: 14px;
   }
 }
 @media screen and (min-width: 350px) {
-  #app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .field {
+  #app .encyclopedia .search-panel .detail .detail-container .application-detail .field {
     font-size: 14px;
   }
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .description h3:before {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .description h3:before {
   content: "";
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .category h3:before {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .category h3:before {
   content: "";
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .category a {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .category a {
   color: #00b2ff;
   text-decoration: underline;
+  display: inline-block;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail .tag h3:before {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail .tag h3:before {
   content: "";
 }
 @media screen and (min-width: 992px) {
-  #app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail {
+  #app .encyclopedia .search-panel .detail .detail-container .application-detail {
     -webkit-flex: 1;
     -moz-flex: 1;
     -ms-flex: 1;
@@ -1565,47 +1608,42 @@ select::-ms-expand {
     flex: 1;
   }
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail-table {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail-table {
   border: 1px solid #00b2ff;
   margin-top: 40px;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail-table .table-head {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-head {
   color: white;
   display: flex;
   background-color: #00b2ff;
   padding: 10px 0;
   font-size: 18px;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail-table .table-head .table-cell {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-head .table-cell {
   flex: 1;
   font-family: "GalanoSemiBold";
   text-align: center;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail-table .table-row {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row {
   display: flex;
   padding: 10px 0;
   font-size: 14px;
   border-bottom: 1px solid #00b2ff;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail-table .table-row .table-cell {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row .table-cell {
   flex: 1;
   text-align: center;
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container .application-detail-table .table-row:last-child {
+#app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row:last-child {
   border: 0;
 }
 @media screen and (min-width: 992px) {
-  #app .encyclopedia .search-panel #search-by-name .ency-container .detail .detail-container {
+  #app .encyclopedia .search-panel .detail .detail-container {
     display: block !important;
   }
 }
-#app .encyclopedia .search-panel #search-by-name .ency-container .detail button.back {
+#app .encyclopedia .search-panel .detail button.back {
   float: right;
-}
-@media screen and (min-width: 992px) {
-  #app .encyclopedia .search-panel #search-by-name .ency-container .detail button.back {
-    margin: 0;
-  }
 }
 
 .menu-open {

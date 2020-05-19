@@ -178,6 +178,48 @@ $(document).ready(function(){
 	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
 	});
 
+	$('#app #search-by-cat .cat a').click(function(){
+		
+		$('#search-by-cat .detail').hide();
+		$('#search-by-cat .ency-container .search-cat-list').show();
+		$('#EncyTableCat').dataTable({
+			"destroy": true,
+	    	"scrollX": true,
+	    	"lengthChange": false,
+	    	"ordering": false,
+	    	"searching": false,
+	    	"pageLength": 20,
+	    	"info": true,
+	    	"pagingType": 'full_numbers',
+	    	"language": {
+			    "paginate": {
+			      "previous": "<i class='fas fa-angle-left'></i>",
+			      "next": "<i class='fas fa-angle-right'></i>",
+			      "first": "<i class='fas fa-angle-double-left'></i>",
+			      "last": "<i class='fas fa-angle-double-right'></i>",
+			    },
+		  	},
+		  	"columns": [
+			    { "width": "40%" },
+			    { "width": "20%" },
+			    { "width": "40%" },
+			  ]
+	    });
+
+	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
+
+	    var catName = $(this).find('.cat-name').text();
+	    $('#app .search-switch .switch .selected-cat').show();
+	    $('#app .search-switch .switch .selected-cat .text').html(catName);
+	    $('#app #search-by-cat .cat-list').hide();
+
+	    return false;
+	});
+
+	$('#app .search-switch .selected-cat .text').click(function() {
+		$('#app #search-by-cat .cat-list').toggle();
+	});
+
 	//ReleaseNote-table
 	$('#model_search_btn').click(function(){
 		$('.release-note .intro').hide();
@@ -297,6 +339,13 @@ $(document).ready(function(){
 	    $(this).addClass('check');
 	});
 
+	$('#EncyTableCat tbody tr').click(function(){
+		$('#search-by-cat .search-cat-list').hide();
+		$('#search-by-cat .detail').show();
+	    $('.check').removeClass('check');
+	    $(this).addClass('check');
+	});
+
 	$('#search-by-name .detail .back').click(function(){
 		$('#search-by-name .detail').hide();
 		$('#search-by-name .name-list').show();
@@ -307,6 +356,37 @@ $(document).ready(function(){
 		$('#search-by-name .name-list').show();
 		return false;
 	});
+
+	$('#EncyTableName tbody tr').click(function(){
+		$('#search-by-name .name-list').hide();
+		$('#search-by-name .detail').show();
+	    $('.check').removeClass('check');
+	    $(this).addClass('check');
+	});
+
+	$('#search-by-name .detail .back').click(function(){
+		$('#search-by-name .detail').hide();
+		$('#search-by-name .name-list').show();
+	});
+
+	$('#search-by-name .detail .back_text').click(function(){
+		$('#search-by-name .detail').hide();
+		$('#search-by-name .name-list').show();
+		return false;
+	});
+
+	$('#search-by-cat .detail .back').click(function(){
+		$('#search-by-cat .detail').hide();
+		$('#search-by-cat .search-cat-list').show();
+	});
+
+	$('#search-by-cat .detail .back_text').click(function(){
+		$('#search-by-cat .detail').hide();
+		$('#search-by-cat .search-cat-list').show();
+		return false;
+	});
+
+
 
 	$('.paginate_button').click(function(){
 		// $('html, body').animate({

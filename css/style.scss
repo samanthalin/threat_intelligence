@@ -1404,7 +1404,35 @@ select::-ms-expand{
 	.encyclopedia{
 		.title{}
 		.intro{}
-		.search-switch{}
+		.search-switch{
+			.switch{
+				label[for="s2"]{
+				}
+				.selected-cat{
+					display: none;
+					.text{
+						font-family: 'GalanoSemiBold';
+						color: #00b2ff;
+						position: relative;
+						padding-left: 10px;
+						cursor: pointer;
+						&:hover{
+							text-decoration: underline;
+						}
+						&:before{
+							content: ':';
+							position: absolute;
+							left: 0;
+							color: black;
+						}
+					}
+					i{
+						font-size: 14px;
+						color: #00b2ff;
+					}		
+				}	
+			}//switch
+		}
 		.search-panel{
 			#search-by-name{
 				.search-bar{}
@@ -1452,114 +1480,137 @@ select::-ms-expand{
 							}
 						}//table
 					}//name-list
-					.detail{
-						a.back_text{
-
-						}//back_text
-						.detail-container{
-							.application-detail{
-								border: 1px solid $blue;
-								padding: 10px 20px 20px 20px;
-								.title{
-									font-size: 18px;
-									border: none;
-									text-align: center;
-									width: 100%;
-								}
-								.field{
-									margin-top: 20px;
-									font-size: 12px;
-									p{
-										margin: 0;
-									}
-									h3{
-										font-size: 12px;
-										color: $blue;
-										font-family: 'GalanoSemiBold';
-										padding-left: 23px;
-										margin-bottom: 5px;
-										position: relative;
-										&:before{
-											content: '\f2c2';
-											font-family: 'Font Awesome 5 Free';
-											font-weight: 900;
-											position: absolute;
-											left: 0px;
-										}
-										@media screen and (min-width: 350px){
-											font-size: 14px;
-										}
-									}//h3
-									@media screen and (min-width: 350px){
-										font-size: 14px;
-									}
-								}//field
-								.description{
-									h3:before{
-										content: '\f15c';
-									}
-								}//file-hash
-								.category{
-									h3:before{
-										content: '\f468';
-									}
-									a{
-										color: #00b2ff;
-										text-decoration: underline;
-									}
-								}//popularity
-								.tag{
-									h3:before{
-										content: '\f02b';
-									}
-								}//file-type
-								@media screen and (min-width: 992px){;
-									@include flex(1);
-								}
-							}//applicaion-detail
-							.application-detail-table{
-								border: 1px solid #00b2ff;
-								margin-top: 40px;
-								.table-head{
-									color: white;
-									display: flex;
-									background-color: #00b2ff;
-									padding: 10px 0;
-									font-size: 18px;
-									.table-cell{
-										flex: 1;
-										font-family: 'GalanoSemiBold';
-										text-align: center;
-									}
-								}
-								.table-row{
-									display: flex;
-									padding: 10px 0;
-									font-size: 14px;
-									border-bottom: 1px solid #00b2ff;
-									.table-cell{
-										flex: 1;
-										text-align: center;
-									}
-									&:last-child{
-										border: 0;
-									}
-								}
-							}//application-detail-table
-							@media screen and (min-width: 992px) {
-								display: block !important;
-							}
-
-						}//detail-container
-						button.back{
-							float: right;
-							@media screen and (min-width: 992px) {
-								margin: 0;
-							}
-						}//back
-					}//.detail
 				}//ency-container
 			}//search-by-names
+			#search-by-cat{
+				.cat-list{
+					margin-top: 15px;
+					.cat{
+						a{
+
+						}
+					}
+				}
+				.ency-container{
+					.search-cat-list{
+						display: none;
+						.intable-search{
+							text-align: right;
+							margin-bottom: 10px;
+							font-size: 14px;
+							input{
+								border: 1px solid #5e5e5e;
+								width: 200px;
+								padding-left: 5px;
+							}
+						}
+						table thead th:last-child, table tbody tr td:last-child{
+							text-align: left;
+						}
+					}
+				}
+			}//search-by-cat
+			.detail{
+				.detail-container{
+					.application-detail{
+						border: 1px solid $blue;
+						padding: 10px 20px 20px 20px;
+						.title{
+							font-size: 18px;
+							border: none;
+							text-align: center;
+							width: 100%;
+						}
+						.field{
+							margin-top: 20px;
+							font-size: 12px;
+							p{
+								margin: 0;
+							}
+							h3{
+								font-size: 12px;
+								color: $blue;
+								font-family: 'GalanoSemiBold';
+								padding-left: 23px;
+								margin-bottom: 5px;
+								position: relative;
+								&:before{
+									content: '\f2c2';
+									font-family: 'Font Awesome 5 Free';
+									font-weight: 900;
+									position: absolute;
+									left: 0px;
+								}
+								@media screen and (min-width: 350px){
+									font-size: 14px;
+								}
+							}//h3
+							@media screen and (min-width: 350px){
+								font-size: 14px;
+							}
+						}//field
+						.description{
+							h3:before{
+								content: '\f15c';
+							}
+						}//file-hash
+						.category{
+							h3:before{
+								content: '\f468';
+							}
+							a{
+								color: #00b2ff;
+								text-decoration: underline;
+								display: inline-block;
+							}
+						}//popularity
+						.tag{
+							h3:before{
+								content: '\f02b';
+							}
+						}//file-type
+						@media screen and (min-width: 992px){;
+							@include flex(1);
+						}
+					}//applicaion-detail
+					.application-detail-table{
+						border: 1px solid #00b2ff;
+						margin-top: 40px;
+						.table-head{
+							color: white;
+							display: flex;
+							background-color: #00b2ff;
+							padding: 10px 0;
+							font-size: 18px;
+							.table-cell{
+								flex: 1;
+								font-family: 'GalanoSemiBold';
+								text-align: center;
+							}
+						}
+						.table-row{
+							display: flex;
+							padding: 10px 0;
+							font-size: 14px;
+							border-bottom: 1px solid #00b2ff;
+							.table-cell{
+								flex: 1;
+								text-align: center;
+							}
+							&:last-child{
+								border: 0;
+							}
+						}
+					}//application-detail-table
+					@media screen and (min-width: 992px) {
+						display: block !important;
+					}
+
+				}//detail-container
+				button.back{
+					float: right;
+				}//back
+			}//.detail
 		}//search-panel
 	}//#encyclopedia
 						
