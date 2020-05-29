@@ -36,6 +36,12 @@ $(document).ready(function(){
 	    $(value).show();
 	    $(value).siblings().hide();
 	});
+	$('#app .release-note .version-table a').click(function() {
+		var show = $(this).attr('href');
+		$('#app .content-wrap').removeClass('show');
+		$(show).addClass('show');
+		return false;
+	});
 
 	//Encyclopedia-table
 	$('#vm #ency_search_btn').click(function(){

@@ -250,7 +250,7 @@
 				<li class="release-note-btn">
 					<a href="#release_note">
 						<!-- <img src="img/rele_color.png" alt=""> -->
-						<span>Release Note</span>
+						<span>Last Update</span>
 					</a>
 				</li>
 			</ul><!-- sub_menu -->
@@ -1268,111 +1268,127 @@
 
 <!-- ------------------------------Release Note------------------------------------------- -->
 				<div id="release_note" class="release-note">
-					<h1 class="title">Release Note</h1>
-					<div class="search-bar">
-						
-						<div class="model-version-select">
-							<select name="" id="" class="selectpicker" data-width="115px" data-dropup-auto="false">
-								<option value="Model">Model</option>
-								<option value="Version">Version</option>
-							</select>
-						</div>	
-												
-						<div class="model-search model-select">
-							<select name="" id="" class="selectpicker" title="Choose one of the following..." data-width="100%" data-display="static" data-dropup-auto="false">
-								<option value="ATP100">ATP100</option>
-								<option value="ATP200">ATP200</option>
-								<option value="ATP500">ATP500</option>
-								<option value="ATP800">ATP800</option>
-								<option value="USG110">USG110</option>
-								<option value="USG1100">USG1100</option>
-								<option value="USG1900">USG1900</option>
-								<option value="USG210">USG210</option>
-								<option value="USG2200">USG2200</option>
-								<option value="USG310">USG310</option>
-								<option value="USG40">USG40</option>
-								<option value="USG40W">USG40W</option>
-								<option value="USG60">USG60</option>
-								<option value="USG60W">USG60W</option>
-								<option value="ZyWALL 110">ZyWALL 110</option>
-								<option value="ZyWALL 1100">ZyWALL 1100</option>
-								<option value="ZyWALL 310">ZyWALL 310</option>
-							</select>
-						</div>
-							
-
-						<div class="model-search date-picker">
-							<i class="far fa-calendar-alt"></i>
-							<span></span>
-						</div>
-						<button id="model_search_btn" class="btn model-search">
-							<i class="fas fa-search"></i>
-							search
-						</button>
-<!-- ------------------------------------------------------------------------------------------ -->
-						<input type="text" placeholder="search by version" class="version-search version-number">
-						<button id="version_search_btn" class="btn version-search">
-							<i class="fas fa-search"></i>
-							search
-						</button>	
+					<div class="title-wrap">
+						<h1 class="title">Latest Version</h1>
+						<div class="version">1.45.0.0-20</div>
 					</div>
-					<div class="release-container">
-						
-						<div class="intro">
-							<div class="series">
-								<p>Zywalls regular update last virus/malware signature to protect more malware.</p>
-								<p>ATP series: Please go to Service Status > Anti-Malware > Current Version  to check signature version on your device,</p>
-								<img src="img/ATP500_Signature Info.jpg" class="manual" alt="image of ATP interface">
+					<ul class="version-table">
+						<li class="version-row">
+							<div class="data-name">Update Date</div>
+							<div class="data-value">Mar 09th, 2020-09:10</div>
+						</li>
+						<li class="version-row">
+							<div class="data-name">All Application</div>
+							<div class="data-value">4320</div>
+						</li>
+						<li class="version-row">
+							<div class="data-name">Added Application</div>
+							<div class="data-value">
+								<a href="#added-panel">
+									<span class="data-number">35</span> added
+								</a>
 							</div>
-							<div class="series">
-								<p>USG/ ZyWALL series: Please go to Configuration >> Licensing>>Signature Update >> Anti-Virus. Licensing>>Signature Update >> IDP/AppPatrol</p>
-								<img src="img/USG_release_Note_AV.jpg" class="manual" alt="image of USG interface">
+						</li>
+						<li class="version-row">
+							<div class="data-name">Updated Application</div>
+							<div class="data-value">
+								<a href="#updated-panel"><span class="data-number">187</span> updated</a>
 							</div>
-								
-						</div><!-- intro -->
+						</li>
+						<li class="version-row">
+							<div class="data-name">Categories</div>
+							<div class="data-value">
+								<a href="#category-panel"><span class="data-number">35</span></a>
+							</div>
+						</li>
+					</ul>
 
-						<div class="list">
-							<p class="searchby">search by 
-								<span class="kind">model</span> : 
-								<span class="name">ATG 110</span> 
-								<span class="date">2018/12/10 ~ 2018/12/31</span>
-							</p>
-							<table class="table table-striped" id="ReleTable">
-								<caption></caption>
-								<thead>
-								    <tr>
-								      <th scope="col">Release Date</th>
-								      <th scope="col">Version</th>
-								      <th scope="col">Download</th>
-								    </tr>
-								 </thead>
-								 <tbody>
-								   <tr>
-								   	<td>2018/12/27</td>
-								   	<td>V3.0.1.20190103.0</td>
-								   	<td>
-								   		<a href=""><i class="fas fa-download"></i></a>
-								   	</td>
-								   </tr>
-								   <tr>
-								   	<td>2018/12/27</td>
-								   	<td>V3.0.1.20190103.0</td>
-								   	<td>
-								   		<a href=""><i class="fas fa-download"></i></a>
-								   	</td>
-								   </tr>
-								   <tr>
-								   	<td>2018/12/27</td>
-								   	<td>V3.0.1.20190103.0</td>
-								   	<td>
-								   		<a href=""><i class="fas fa-download"></i></a>
-								   	</td>
-								   </tr>
-								    
-								 </tbody>
-							</table>
-						</div><!-- list -->
-						<div class="detail"></div><!-- detail -->
+					<div class="info-panel">
+						<div class="content-wrap" id="added-panel">
+							<div class="title">Added Application</div>
+							<ul class="info-table">
+								<li class="info-row info-row-header">
+									<div class="application">Application</div>
+									<div class="category">Category</div>
+									<div class="description">Description</div>
+								</li>
+								<li class="info-row">
+									<div class="application">aajtak (AAJTAK)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">AAJTAK is a popular site in India used for streaming videos.</div>
+								</li>
+								<li class="info-row">
+									<div class="application">afreeca (Afreeca TV)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">Afreeca TV (Any FREE broadCAsting TV) is a P2P-based video streaming service based in South Korea, launched in 2005.</div>
+								</li>
+								<li class="info-row">
+									<div class="application">allmusic (AllMusic.com)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">Allmusic is an online music guide, launched in 1991 as AMG (pre-dating the world wide web). This plug-in classifies navigation on the AllMusic web...</div>
+								</li>
+								<li class="info-row">
+									<div class="application">amazon (Amazon Generic Services)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">This protocol plug-in classifies the generic web traffic related to Amazon services.</div>
+								</li>
+							</ul>
+						</div>
+						<div class="content-wrap" id="updated-panel">
+							<div class="title">Updated Application</div>
+							<ul class="info-table">
+								<li class="info-row info-row-header">
+									<div class="application">Application</div>
+									<div class="category">Category</div>
+									<div class="description">Description</div>
+								</li>
+								<li class="info-row">
+									<div class="application">aajtak (AAJTAK)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">AAJTAK is a popular site in India used for streaming videos.</div>
+								</li>
+								<li class="info-row">
+									<div class="application">afreeca (Afreeca TV)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">Afreeca TV (Any FREE broadCAsting TV) is a P2P-based video streaming service based in South Korea, launched in 2005.</div>
+								</li>
+								<li class="info-row">
+									<div class="application">allmusic (AllMusic.com)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">Allmusic is an online music guide, launched in 1991 as AMG (pre-dating the world wide web). This plug-in classifies navigation on the AllMusic web...</div>
+								</li>
+								<li class="info-row">
+									<div class="application">amazon (Amazon Generic Services)</div>
+									<div class="category">Instant Messenger</div>
+									<div class="description">This protocol plug-in classifies the generic web traffic related to Amazon services.</div>
+								</li>
+							</ul>
+						</div>
+						<div class="content-wrap" id="category-panel">
+							<div class="title">Categories</div>
+							<ul class="info-table">
+								<li class="info-row info-row-header">
+									<div class="category">Category</div>
+									<div class="description">Description</div>
+								</li>
+								<li class="info-row">
+									<div class="category">Instant Messenger</div>
+									<div class="description">AAJTAK is a popular site in India used for streaming videos.</div>
+								</li>
+								<li class="info-row">
+									<div class="category">Instant Messenger</div>
+									<div class="description">Afreeca TV (Any FREE broadCAsting TV) is a P2P-based video streaming service based in South Korea, launched in 2005.</div>
+								</li>
+								<li class="info-row">
+									<div class="category">Instant Messenger</div>
+									<div class="description">Allmusic is an online music guide, launched in 1991 as AMG (pre-dating the world wide web). This plug-in classifies navigation on the AllMusic web...</div>
+								</li>
+								<li class="info-row">
+									<div class="category">Instant Messenger</div>
+									<div class="description">This protocol plug-in classifies the generic web traffic related to Amazon services.</div>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div><!-- release-note -->
 <!-- ----------------------------Release Note End----------------------------------------- -->

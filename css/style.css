@@ -1287,60 +1287,6 @@ html body#vm .frame footer .gotop:hover, html #id .frame footer .gotop:hover, ht
   transition: all 0.2s ease;
 }
 
-#app .content .panel .encyclopedia .intro {
-  margin-top: 20px !important;
-}
-#app .content .panel .encyclopedia .search-switch {
-  margin-top: 40px;
-  display: flex;
-}
-#app .content .panel .encyclopedia .search-switch .switch:last-child {
-  margin-left: 35px;
-}
-#app .content .panel .encyclopedia .search-switch .switch label {
-  cursor: pointer;
-  margin-left: 5px;
-  font-family: "GalanoSemiBold";
-}
-#app .content .panel .encyclopedia #search-by-name .ency-container .name-list {
-  display: none;
-  line-height: 18px;
-}
-#app .content .panel .encyclopedia #search-by-cat {
-  display: none;
-}
-#app .content .panel .encyclopedia #search-by-cat .cat-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-#app .content .panel .encyclopedia #search-by-cat .cat-list .cat {
-  font-size: 14px;
-  padding: 8px 0;
-  width: 100%;
-}
-#app .content .panel .encyclopedia #search-by-cat .cat-list .cat a {
-  display: inline-block;
-  color: #2d2d2d;
-}
-#app .content .panel .encyclopedia #search-by-cat .cat-list .cat a:hover {
-  color: #00b2ff;
-}
-@media screen and (min-width: 350px) {
-  #app .content .panel .encyclopedia #search-by-cat .cat-list .cat {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 350px) and (min-width: 680px) {
-  #app .content .panel .encyclopedia #search-by-cat .cat-list .cat {
-    width: calc(100%/3);
-  }
-}
-@media screen and (min-width: 350px) and (min-width: 680px) and (min-width: 1200px) {
-  #app .content .panel .encyclopedia #search-by-cat .cat-list .cat {
-    width: 25%;
-  }
-}
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1454,6 +1400,23 @@ select::-ms-expand {
   }
 }
 
+#app .encyclopedia .intro {
+  margin-top: 20px !important;
+}
+#app .encyclopedia .search-switch {
+  font-size: 15px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  #app .encyclopedia .search-switch .switch:last-child {
+    margin-left: 35px;
+  }
+}
+#app .encyclopedia .search-switch .switch label {
+  cursor: pointer;
+  margin-left: 5px;
+  font-family: "GalanoSemiBold";
+}
 #app .encyclopedia .search-switch .switch .selected-cat {
   display: none;
 }
@@ -1476,6 +1439,16 @@ select::-ms-expand {
 #app .encyclopedia .search-switch .switch .selected-cat i {
   font-size: 14px;
   color: #00b2ff;
+}
+@media screen and (min-width: 768px) {
+  #app .encyclopedia .search-switch {
+    display: flex;
+    font-size: 18px;
+  }
+}
+#app .encyclopedia .search-panel #search-by-name .ency-container .name-list {
+  display: none;
+  line-height: 18px;
 }
 #app .encyclopedia .search-panel #search-by-name .ency-container .name-list table {
   width: 100% !important;
@@ -1524,8 +1497,40 @@ select::-ms-expand {
     font-size: 14px;
   }
 }
+#app .encyclopedia .search-panel #search-by-cat {
+  display: none;
+}
 #app .encyclopedia .search-panel #search-by-cat .cat-list {
   margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#app .encyclopedia .search-panel #search-by-cat .cat-list .cat {
+  font-size: 14px;
+  padding: 8px 0;
+  width: 100%;
+}
+#app .encyclopedia .search-panel #search-by-cat .cat-list .cat a {
+  display: inline-block;
+  color: #2d2d2d;
+}
+#app .encyclopedia .search-panel #search-by-cat .cat-list .cat a:hover {
+  color: #00b2ff;
+}
+@media screen and (min-width: 350px) {
+  #app .encyclopedia .search-panel #search-by-cat .cat-list .cat {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 350px) and (min-width: 680px) {
+  #app .encyclopedia .search-panel #search-by-cat .cat-list .cat {
+    width: calc(100%/3);
+  }
+}
+@media screen and (min-width: 350px) and (min-width: 680px) and (min-width: 1200px) {
+  #app .encyclopedia .search-panel #search-by-cat .cat-list .cat {
+    width: 25%;
+  }
 }
 #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list {
   display: none;
@@ -1542,6 +1547,12 @@ select::-ms-expand {
 }
 #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table thead th:last-child, #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table tbody tr td:last-child {
   text-align: left;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table thead th:last-child, #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table tbody tr td:last-child {
+    display: table-cell;
+  }
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail {
   border: 1px solid #00b2ff;
@@ -1644,6 +1655,136 @@ select::-ms-expand {
 }
 #app .encyclopedia .search-panel .detail button.back {
   float: right;
+}
+#app .release-note .title-wrap {
+  display: flex;
+}
+#app .release-note .title-wrap .title {
+  color: black !important;
+  padding-right: 10px;
+  font-size: 18px !important;
+}
+@media screen and (min-width: 992px) {
+  #app .release-note .title-wrap .title {
+    font-size: 28px !important;
+  }
+}
+#app .release-note .title-wrap .version {
+  font-size: 18px;
+  font-family: "GalanoSemiBold";
+  line-height: 1.2em;
+  flex: 1;
+}
+@media screen and (min-width: 992px) {
+  #app .release-note .title-wrap .version {
+    font-size: 28px;
+  }
+}
+#app .release-note .version-table {
+  border: 1px solid #d9d9d9;
+  margin-top: 10px;
+  font-size: 14px;
+}
+#app .release-note .version-table .version-row {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid #d9d9d9;
+}
+#app .release-note .version-table .version-row:nth-child(even) {
+  background-color: #ededed;
+}
+#app .release-note .version-table .version-row:last-child {
+  border: none;
+}
+#app .release-note .version-table .version-row .data-name {
+  width: 50%;
+  padding-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  #app .release-note .version-table .version-row .data-name {
+    width: 40%;
+  }
+}
+#app .release-note .version-table .version-row .data-value {
+  flex: 1;
+}
+#app .release-note .version-table .version-row .data-value a {
+  color: #00b2ff;
+  text-decoration: underline;
+  display: inline-block;
+}
+#app .release-note .version-table .version-row .data-value a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+  #app .release-note .version-table {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+#app .release-note .info-panel .content-wrap {
+  margin-top: 15px;
+  display: none;
+}
+#app .release-note .info-panel .content-wrap .title {
+  font-size: 18px !important;
+}
+#app .release-note .info-panel .content-wrap .info-table {
+  font-size: 14px;
+  border: 1px solid #00b2ff;
+  margin-top: 10px;
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #00b2ff;
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row .application {
+  width: 50%;
+  padding-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  #app .release-note .info-panel .content-wrap .info-table .info-row .application {
+    width: 30%;
+  }
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row .category {
+  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  #app .release-note .info-panel .content-wrap .info-table .info-row .category {
+    width: 30%;
+    padding-right: 10px;
+  }
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row .description {
+  flex: 1;
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row .description:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #app .release-note .info-panel .content-wrap .info-table .info-row .description:nth-child(3) {
+    display: block;
+  }
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row-header {
+  background-color: #00b2ff;
+  color: white;
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row-header * {
+  font-family: "GalanoSemiBold";
+}
+#app .release-note .info-panel .content-wrap .info-table .info-row:last-child {
+  border: 0;
+}
+@media screen and (min-width: 992px) {
+  #app .release-note .info-panel .content-wrap {
+    margin-top: 25px;
+  }
+}
+#app .release-note .info-panel .show {
+  display: block;
 }
 
 .menu-open {

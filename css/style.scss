@@ -1223,77 +1223,6 @@ html{
 	}//body
 }
 
-#app{
-	header{
-
-	}
-	.content{
-		.panel{
-			.encyclopedia{
-				.title{
-
-				}
-				.intro{
-					margin-top: 20px !important;
-				}
-				.search-switch{
-					margin-top: 40px;
-					display: flex;
-					.switch{
-						&:last-child{
-							margin-left: 35px;
-						}
-						label{
-							cursor: pointer;
-							margin-left: 5px;
-							font-family: 'GalanoSemiBold';
-						}
-					}//switch
-				}//search-switch
-				#search-by-name{
-					.search-bar{
-
-					}//search-bar
-					.ency-container{
-						.name-list{
-							display: none;
-							line-height: 18px;
-						}
-					}
-				}//search-by-name
-				#search-by-cat{
-					display: none;
-					.cat-list{
-						display: flex;
-						flex-wrap: wrap;
-						.cat{
-							font-size: 14px;
-							padding: 8px 0;
-							width: 100%;
-							a{
-								display: inline-block;
-								color: #2d2d2d;
-								&:hover{
-									color: #00b2ff;
-								}
-							}
-							@media screen and (min-width: 350px) {
-								width: 50%;
-								@media screen and (min-width: 680px) {
-									width: calc(100%/3);
-									@media screen and (min-width: 1200px) {
-										width: 25%;
-									}
-								}
-							}
-						}
-					}
-				}//search-by-cat
-			}//encyclopedia
-		}//panel
-	}
-}
-
 select{
 	@include appearance(none);
 	outline: none;
@@ -1403,10 +1332,22 @@ select::-ms-expand{
 #app{
 	.encyclopedia{
 		.title{}
-		.intro{}
+		.intro{
+			margin-top: 20px !important;
+		}
 		.search-switch{
+			font-size: 15px;
+			margin-top: 30px;
 			.switch{
-				label[for="s2"]{
+				&:last-child{
+					@media screen and (min-width: 768px){
+						margin-left: 35px;
+					}	
+				}
+				label{
+					cursor: pointer;
+					margin-left: 5px;
+					font-family: 'GalanoSemiBold';
 				}
 				.selected-cat{
 					display: none;
@@ -1432,12 +1373,18 @@ select::-ms-expand{
 					}		
 				}	
 			}//switch
-		}
+			@media screen and (min-width: 768px) {
+				display: flex;
+				font-size: 18px;
+			}
+		}//search-switch
 		.search-panel{
 			#search-by-name{
 				.search-bar{}
 				.ency-container{
 					.name-list{
+						display: none;
+						line-height: 18px;
 						table{
 							width: 100% !important;
 							font-size: 12px;
@@ -1483,14 +1430,33 @@ select::-ms-expand{
 				}//ency-container
 			}//search-by-names
 			#search-by-cat{
+				display: none;
 				.cat-list{
 					margin-top: 15px;
+					display: flex;
+					flex-wrap: wrap;
 					.cat{
+						font-size: 14px;
+						padding: 8px 0;
+						width: 100%;
 						a{
-
+							display: inline-block;
+							color: #2d2d2d;
+							&:hover{
+								color: #00b2ff;
+							}
 						}
-					}
-				}
+						@media screen and (min-width: 350px) {
+							width: 50%;
+							@media screen and (min-width: 680px) {
+								width: calc(100%/3);
+								@media screen and (min-width: 1200px) {
+									width: 25%;
+								}
+							}
+						}
+					}//cat
+				}//cat-list
 				.ency-container{
 					.search-cat-list{
 						display: none;
@@ -1506,6 +1472,10 @@ select::-ms-expand{
 						}
 						table thead th:last-child, table tbody tr td:last-child{
 							text-align: left;
+							display: none;
+							@media screen  and (min-width: 768px){
+								display: table-cell;
+							}
 						}
 					}
 				}
@@ -1613,6 +1583,124 @@ select::-ms-expand{
 			}//.detail
 		}//search-panel
 	}//#encyclopedia
+	.release-note{
+		.title-wrap{
+			display: flex;
+			.title{
+				color:  black !important;
+				padding-right: 10px;
+				font-size: 18px !important;
+				@media screen and (min-width: 992px){
+					font-size: 28px !important;
+				}
+			}
+			.version{
+				font-size: 18px;
+				font-family: 'GalanoSemiBold';
+				line-height: 1.2em;
+				flex: 1;
+				@media screen and (min-width: 992px) {
+					font-size: 28px;
+				}
+			}
+		}//title-wrap
+		.version-table{
+			border: 1px solid #d9d9d9;
+			margin-top: 10px;
+			font-size: 14px;
+			.version-row{
+				padding: 10px;
+				display: flex;
+				border-bottom: 1px solid #d9d9d9;
+				&:nth-child(even){
+					background-color: #ededed;
+				}
+				&:last-child{
+					border: none;
+				}
+				.data-name{
+					width: 50%;
+					padding-right: 10px;
+					@media screen and (min-width: 768px) {
+						width: 40%;
+					}
+				}
+				.data-value{
+					flex: 1;
+					a{
+						color: #00b2ff;
+						text-decoration: underline;
+						display: inline-block;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			@media screen and (min-width: 992px) {
+				font-size: 16px;
+				margin-top: 20px;
+			}
+		}//version-table
+		.info-panel{
+			.content-wrap{
+				margin-top: 15px;
+				display: none;
+				.title{
+					font-size: 18px !important;
+				}
+				.info-table{
+					font-size: 14px;
+					border: 1px solid #00b2ff;
+					margin-top: 10px;
+					.info-row{
+						display: flex;
+						padding: 10px;
+						border-bottom: 1px solid #00b2ff;
+						.application{
+							width: 50%;
+							padding-right: 10px;
+							@media screen and (min-width: 768px) {
+								width: 30%;
+							}
+						}
+						.category{
+							width: 50%;
+							@media screen and (min-width: 768px) {
+								width: 30%;
+								padding-right: 10px;
+							}
+						}
+						.description{
+							flex: 1;
+							&:nth-child(3){
+								display: none;
+								@media screen and (min-width: 768px) {
+									display: block;
+								}
+							}
+						}
+						&-header{
+							background-color: #00b2ff;
+							color: white;
+							& *{
+								font-family: 'GalanoSemiBold';
+							}
+						}
+						&:last-child{
+							border: 0;
+						}
+					}//info-row
+				}
+				@media screen and (min-width: 992px) {
+					margin-top: 25px;
+				}
+			}//content-wrap
+			.show{
+				display: block;
+			}
+		}
+	}//release-note
 						
 	
 }
