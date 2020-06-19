@@ -215,7 +215,13 @@ $(document).ready(function(){
 	    $("#encyclopedia .dataTables_info").insertAfter("#encyclopedia .dataTables_paginate");
 
 	    var catName = $(this).find('.cat-name').text();
-	    $('#app .search-switch .switch .selected-cat').show();
+	    var wdth = $(window).innerWidth();
+	    if (wdth > 1200){
+	    	$('#app .search-switch .switch .selected-cat').css('display','inline-block');
+	    }else{
+	    	$('#app .search-switch .switch .selected-cat').css('display','flex');
+	    }
+	    
 	    $('#app .search-switch .switch .selected-cat .text').html(catName);
 	    $('#app #search-by-cat .cat-list').hide();
 

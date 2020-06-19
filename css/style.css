@@ -1424,21 +1424,22 @@ select::-ms-expand {
   font-family: "GalanoSemiBold";
   color: #00b2ff;
   position: relative;
-  padding-left: 10px;
+  padding-left: 21px;
   cursor: pointer;
 }
 #app .encyclopedia .search-switch .switch .selected-cat .text:hover {
   text-decoration: underline;
 }
-#app .encyclopedia .search-switch .switch .selected-cat .text:before {
-  content: ":";
-  position: absolute;
-  left: 0;
-  color: black;
+@media screen and (min-width: 1200px) {
+  #app .encyclopedia .search-switch .switch .selected-cat .text {
+    padding-left: 10px;
+  }
 }
 #app .encyclopedia .search-switch .switch .selected-cat i {
   font-size: 14px;
   color: #00b2ff;
+  align-self: center;
+  margin-left: 10px;
 }
 @media screen and (min-width: 768px) {
   #app .encyclopedia .search-switch {
@@ -1542,7 +1543,7 @@ select::-ms-expand {
 }
 #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list .intable-search input {
   border: 1px solid #5e5e5e;
-  width: 200px;
+  max-width: 200px;
   padding-left: 5px;
 }
 #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table thead th:last-child, #app .encyclopedia .search-panel #search-by-cat .ency-container .search-cat-list table tbody tr td:last-child {
@@ -1628,12 +1629,17 @@ select::-ms-expand {
   display: flex;
   background-color: #00b2ff;
   padding: 10px 0;
-  font-size: 18px;
+  font-size: 14px;
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-head .table-cell {
   flex: 1;
   font-family: "GalanoSemiBold";
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-head {
+    font-size: 18px;
+  }
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row {
   display: flex;
@@ -1644,6 +1650,12 @@ select::-ms-expand {
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row .table-cell {
   flex: 1;
   text-align: center;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row .table-cell {
+    font-size: 16px;
+  }
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row:last-child {
   border: 0;
@@ -1658,24 +1670,34 @@ select::-ms-expand {
 }
 #app .release-note .title-wrap {
   display: flex;
+  color: #00b2ff;
 }
 #app .release-note .title-wrap .title {
-  color: black !important;
   padding-right: 10px;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+  #app .release-note .title-wrap .title {
+    font-size: 18px !important;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
   #app .release-note .title-wrap .title {
     font-size: 28px !important;
   }
 }
 #app .release-note .title-wrap .version {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "GalanoSemiBold";
   line-height: 1.2em;
   flex: 1;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+  #app .release-note .title-wrap .version {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
   #app .release-note .title-wrap .version {
     font-size: 28px;
   }
