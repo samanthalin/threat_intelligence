@@ -92,7 +92,7 @@ $light-blue: #ccf0ff;
 
 
 html{
-	body#vm, #id, #app{
+	body#vm, #id, #app, #checker{
 		font-size: 18px;
 		.frame{
 			background-color: white;
@@ -1431,6 +1431,20 @@ select::-ms-expand{
 								font-size: 14px;
 							}
 						}//table
+						.URL-search-result{
+							padding: 20px 0;
+    						border-bottom: 1px solid #dfdfdf;
+    						&:first-child{
+    							padding-top: 0;
+    						}
+							h4{
+								font-size: 18px;
+								font-family: 'GalanoSemiBold';
+							}
+							p{
+								margin-top: 10px;
+							}
+						}
 					}//name-list
 				}//ency-container
 			}//search-by-names
@@ -1737,6 +1751,7 @@ select::-ms-expand{
 
 .loading-overlay-content {
     vertical-align: top !important;
+    width: calc(100% + 1px);
 }
 
 .daterangepicker{
