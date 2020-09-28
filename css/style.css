@@ -127,7 +127,7 @@ html body#vm .frame .menu .card .collapse ul.card-body li a, html body#vm .frame
   color: #898989;
 }
 html body#vm .frame .menu .card .collapse ul.card-body li a:hover, html body#vm .frame .menu .card .collapsing ul.card-body li a:hover, html #id .frame .menu .card .collapse ul.card-body li a:hover, html #id .frame .menu .card .collapsing ul.card-body li a:hover, html #app .frame .menu .card .collapse ul.card-body li a:hover, html #app .frame .menu .card .collapsing ul.card-body li a:hover, html #checker .frame .menu .card .collapse ul.card-body li a:hover, html #checker .frame .menu .card .collapsing ul.card-body li a:hover {
-  color: #00b2ff;
+  color: #64be00;
 }
 html body#vm .frame .menu .card:nth-child(7) a, html body#vm .frame .menu .card:nth-child(8) a, html body#vm .frame .menu .card:nth-child(9) a, html body#vm .frame .menu .card:nth-child(10) a, html body#vm .frame .menu .card:nth-child(11) a, html #id .frame .menu .card:nth-child(7) a, html #id .frame .menu .card:nth-child(8) a, html #id .frame .menu .card:nth-child(9) a, html #id .frame .menu .card:nth-child(10) a, html #id .frame .menu .card:nth-child(11) a, html #app .frame .menu .card:nth-child(7) a, html #app .frame .menu .card:nth-child(8) a, html #app .frame .menu .card:nth-child(9) a, html #app .frame .menu .card:nth-child(10) a, html #app .frame .menu .card:nth-child(11) a, html #checker .frame .menu .card:nth-child(7) a, html #checker .frame .menu .card:nth-child(8) a, html #checker .frame .menu .card:nth-child(9) a, html #checker .frame .menu .card:nth-child(10) a, html #checker .frame .menu .card:nth-child(11) a {
   color: #898989;
@@ -146,7 +146,7 @@ html body#vm .frame .menu .card-body a, html #id .frame .menu .card-body a, html
   color: #898989;
 }
 html body#vm .frame .menu .card-body a:hover, html body#vm .frame .menu .card-body a:active, html #id .frame .menu .card-body a:hover, html #id .frame .menu .card-body a:active, html #app .frame .menu .card-body a:hover, html #app .frame .menu .card-body a:active, html #checker .frame .menu .card-body a:hover, html #checker .frame .menu .card-body a:active {
-  color: #00b2ff;
+  color: #64be00;
 }
 html body#vm .frame header, html #id .frame header, html #app .frame header, html #checker .frame header {
   transition: all 0.2s ease;
@@ -284,7 +284,7 @@ html body#vm .frame header .breadcrumbs .breadcrumb-container h1, html #id .fram
   }
 }
 html body#vm .frame header .breadcrumbs .breadcrumb-container a, html #id .frame header .breadcrumbs .breadcrumb-container a, html #app .frame header .breadcrumbs .breadcrumb-container a, html #checker .frame header .breadcrumbs .breadcrumb-container a {
-  color: #00b2ff;
+  color: #64be00;
   font-size: 13px;
   padding: 0 5px;
 }
@@ -330,7 +330,7 @@ html body#vm .frame header .main_menu .main-menu-container, html #id .frame head
 }
 html body#vm .frame header .main_menu .main-menu-container a, html #id .frame header .main_menu .main-menu-container a, html #app .frame header .main_menu .main-menu-container a, html #checker .frame header .main_menu .main-menu-container a {
   display: block;
-  color: #00b2ff;
+  color: #64be00;
   font-family: "GalanoSemiBold";
   font-size: 16px;
   text-align: center;
@@ -411,7 +411,7 @@ html body#vm .frame .content .sub_menu li, html #id .frame .content .sub_menu li
   text-align: center;
   padding: 8px 20px;
   cursor: pointer;
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   border-radius: 20px;
 }
 html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .sub_menu li:last-child, html #app .frame .content .sub_menu li:last-child, html #checker .frame .content .sub_menu li:last-child {
@@ -423,7 +423,7 @@ html body#vm .frame .content .sub_menu li:last-child, html #id .frame .content .
   }
 }
 html body#vm .frame .content .sub_menu li a, html #id .frame .content .sub_menu li a, html #app .frame .content .sub_menu li a, html #checker .frame .content .sub_menu li a {
-  color: #00b2ff;
+  color: #64be00;
   text-decoration: none;
   line-height: 18px;
   vertical-align: middle;
@@ -456,7 +456,7 @@ html body#vm .frame .content .sub_menu li a span, html #id .frame .content .sub_
   }
 }
 html body#vm .frame .content .sub_menu .active, html #id .frame .content .sub_menu .active, html #app .frame .content .sub_menu .active, html #checker .frame .content .sub_menu .active {
-  background-color: #00b2ff;
+  background-color: #64be00;
 }
 html body#vm .frame .content .sub_menu .active a, html #id .frame .content .sub_menu .active a, html #app .frame .content .sub_menu .active a, html #checker .frame .content .sub_menu .active a {
   color: white;
@@ -478,7 +478,7 @@ html body#vm .frame .content .sub_menu .active a img, html #id .frame .content .
     width: 4px;
     height: 100%;
     position: absolute;
-    background-color: #00b2ff;
+    background-color: #64be00;
     left: 0;
   }
 }
@@ -500,7 +500,7 @@ html body#vm .frame .content .panel, html #id .frame .content .panel, html #app 
   padding: 10px;
 }
 html body#vm .frame .content .panel .encyclopedia .title, html #id .frame .content .panel .encyclopedia .title, html #app .frame .content .panel .encyclopedia .title, html #checker .frame .content .panel .encyclopedia .title {
-  color: #00b2ff;
+  color: #64be00;
   font-family: "GalanoSemiBold";
   font-size: 22px;
   display: inline-block;
@@ -520,7 +520,7 @@ html body#vm .frame .content .panel .encyclopedia .search-bar, html #id .frame .
   margin-top: 15px;
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .frame .content .panel .encyclopedia .search-bar input, html #app .frame .content .panel .encyclopedia .search-bar input, html #checker .frame .content .panel .encyclopedia .search-bar input {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   border-radius: 4px;
   -webkit-flex: 1;
   -moz-flex: 1;
@@ -538,7 +538,7 @@ html body#vm .frame .content .panel .encyclopedia .search-bar input, html #id .f
   }
 }
 html body#vm .frame .content .panel .encyclopedia .search-bar button, html #id .frame .content .panel .encyclopedia .search-bar button, html #app .frame .content .panel .encyclopedia .search-bar button, html #checker .frame .content .panel .encyclopedia .search-bar button {
-  background-color: #00b2ff;
+  background-color: #64be00;
   color: white;
   border: none;
   border-radius: 4px;
@@ -591,7 +591,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .intro .questi
   position: absolute;
   top: 0;
   left: 0;
-  color: #00b2ff;
+  color: #64be00;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #id .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #app .frame .content .panel .encyclopedia .ency-container .intro .question .title, html #checker .frame .content .panel .encyclopedia .ency-container .intro .question .title {
   border: none;
@@ -617,7 +617,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail, html 
   display: none;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #id .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #app .frame .content .panel .encyclopedia .ency-container .detail a.back_text, html #checker .frame .content .panel .encyclopedia .ency-container .detail a.back_text {
-  color: #00b2ff;
+  color: #64be00;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
@@ -635,7 +635,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail a.back
   }
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #app .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile, html #checker .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   padding: 10px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title, html #app .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title, html #checker .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .title {
@@ -653,7 +653,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #app .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3, html #checker .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .field h3 {
   font-size: 12px;
-  color: #00b2ff;
+  color: #64be00;
   font-family: "GalanoSemiBold";
   padding-left: 23px;
   margin-bottom: 5px;
@@ -711,10 +711,10 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill, html #app .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill, html #checker .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .popularity ul li.fill {
-  background-color: #00b2ff;
+  background-color: #64be00;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before, html #id .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before, html #app .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before, html #checker .frame .content .panel .encyclopedia .ency-container .detail .detail-container .virus-profile .countries h3:before {
   content: "";
@@ -805,8 +805,8 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail .detai
   }
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back, html #app .frame .content .panel .encyclopedia .ency-container .detail button.back, html #checker .frame .content .panel .encyclopedia .ency-container .detail button.back {
-  color: #00b2ff;
-  border: 1px solid #00b2ff;
+  color: #64be00;
+  border: 1px solid #64be00;
   border-radius: 4px;
   background: white;
   text-transform: uppercase;
@@ -820,7 +820,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail button
   font-size: 16px;
 }
 html body#vm .frame .content .panel .encyclopedia .ency-container .detail button.back:hover, html #id .frame .content .panel .encyclopedia .ency-container .detail button.back:hover, html #app .frame .content .panel .encyclopedia .ency-container .detail button.back:hover, html #checker .frame .content .panel .encyclopedia .ency-container .detail button.back:hover {
-  background-color: #00b2ff;
+  background-color: #64be00;
   color: white;
   transition: all 0.2s linear;
 }
@@ -834,7 +834,7 @@ html body#vm .frame .content .panel .encyclopedia .ency-container .detail button
   }
 }
 html body#vm .frame .content .panel .release-note .title, html #id .frame .content .panel .release-note .title, html #app .frame .content .panel .release-note .title, html #checker .frame .content .panel .release-note .title {
-  color: #00b2ff;
+  color: #64be00;
   font-family: "GalanoSemiBold";
   font-size: 22px;
   display: inline-block;
@@ -850,18 +850,18 @@ html body#vm .frame .content .panel .release-note .search-bar, html #id .frame .
   flex-wrap: wrap;
 }
 html body#vm .frame .content .panel .release-note .search-bar .bootstrap-select .active, html #id .frame .content .panel .release-note .search-bar .bootstrap-select .active, html #app .frame .content .panel .release-note .search-bar .bootstrap-select .active, html #checker .frame .content .panel .release-note .search-bar .bootstrap-select .active {
-  background-color: #00b2ff;
+  background-color: #64be00;
 }
 html body#vm .frame .content .panel .release-note .search-bar .dropdown-item:active, html #id .frame .content .panel .release-note .search-bar .dropdown-item:active, html #app .frame .content .panel .release-note .search-bar .dropdown-item:active, html #checker .frame .content .panel .release-note .search-bar .dropdown-item:active {
-  background-color: #00b2ff;
+  background-color: #64be00;
 }
 html body#vm .frame .content .panel .release-note .search-bar .model-version-select, html #id .frame .content .panel .release-note .search-bar .model-version-select, html #app .frame .content .panel .release-note .search-bar .model-version-select, html #checker .frame .content .panel .release-note .search-bar .model-version-select {
   width: 115px;
 }
 html body#vm .frame .content .panel .release-note .search-bar .model-version-select button, html #id .frame .content .panel .release-note .search-bar .model-version-select button, html #app .frame .content .panel .release-note .search-bar .model-version-select button, html #checker .frame .content .panel .release-note .search-bar .model-version-select button {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   background-color: white;
-  color: #00b2ff;
+  color: #64be00;
   border-radius: 4px 0 0 4px;
 }
 html body#vm .frame .content .panel .release-note .search-bar .model-version-select button .filter-option, html #id .frame .content .panel .release-note .search-bar .model-version-select button .filter-option, html #app .frame .content .panel .release-note .search-bar .model-version-select button .filter-option, html #checker .frame .content .panel .release-note .search-bar .model-version-select button .filter-option {
@@ -872,9 +872,9 @@ html body#vm .frame .content .panel .release-note .search-bar .model-select, htm
   width: calc(100% - 114px);
 }
 html body#vm .frame .content .panel .release-note .search-bar .model-select button, html #id .frame .content .panel .release-note .search-bar .model-select button, html #app .frame .content .panel .release-note .search-bar .model-select button, html #checker .frame .content .panel .release-note .search-bar .model-select button {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   background-color: white;
-  color: #00b2ff;
+  color: #64be00;
   border-radius: 0 4px 4px 0;
   padding: 6px 12px 6px 22px;
 }
@@ -886,7 +886,7 @@ html body#vm .frame .content .panel .release-note .search-bar .model-select butt
 html body#vm .frame .content .panel .release-note .search-bar #model_search_btn, html #id .frame .content .panel .release-note .search-bar #model_search_btn, html #app .frame .content .panel .release-note .search-bar #model_search_btn, html #checker .frame .content .panel .release-note .search-bar #model_search_btn {
   width: 100%;
   color: white;
-  background-color: #00b2ff;
+  background-color: #64be00;
   margin-top: 10px;
   line-height: 18px;
   vertical-align: middle;
@@ -907,9 +907,9 @@ html body#vm .frame .content .panel .release-note .search-bar .version-search i,
 }
 html body#vm .frame .content .panel .release-note .search-bar .date-picker, html #id .frame .content .panel .release-note .search-bar .date-picker, html #app .frame .content .panel .release-note .search-bar .date-picker, html #checker .frame .content .panel .release-note .search-bar .date-picker {
   width: 100%;
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   border-radius: 4px;
-  color: #00b2ff;
+  color: #64be00;
   height: 35px;
   cursor: pointer;
   padding-left: 10px;
@@ -925,7 +925,7 @@ html body#vm .frame .content .panel .release-note .search-bar .date-picker:after
   position: absolute;
   right: 4px;
   top: 0;
-  color: #00b2ff;
+  color: #64be00;
   width: 25px;
   line-height: 35px;
   text-align: center;
@@ -950,7 +950,7 @@ html body#vm .frame .content .panel .release-note .search-bar .date-picker i, ht
   }
 }
 html body#vm .frame .content .panel .release-note .search-bar .version-number, html #id .frame .content .panel .release-note .search-bar .version-number, html #app .frame .content .panel .release-note .search-bar .version-number, html #checker .frame .content .panel .release-note .search-bar .version-number {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   border-radius: 0 4px 4px 0;
   margin-left: -1px;
   padding-left: 15px;
@@ -966,7 +966,7 @@ html body#vm .frame .content .panel .release-note .search-bar .version-number, h
 html body#vm .frame .content .panel .release-note .search-bar #version_search_btn, html #id .frame .content .panel .release-note .search-bar #version_search_btn, html #app .frame .content .panel .release-note .search-bar #version_search_btn, html #checker .frame .content .panel .release-note .search-bar #version_search_btn {
   width: 100%;
   color: white;
-  background-color: #00b2ff;
+  background-color: #64be00;
   margin-top: 10px;
   line-height: 18px;
   vertical-align: middle;
@@ -1013,7 +1013,7 @@ html body#vm .frame .content .panel .release-note .release-container .list table
   color: #575755;
 }
 html body#vm .frame .content .panel .release-note .release-container .list table tr td a:hover, html #id .frame .content .panel .release-note .release-container .list table tr td a:hover, html #app .frame .content .panel .release-note .release-container .list table tr td a:hover, html #checker .frame .content .panel .release-note .release-container .list table tr td a:hover {
-  color: #00b2ff;
+  color: #64be00;
   transition: all 0.2s linear;
 }
 @media screen and (min-width: 768px) {
@@ -1079,7 +1079,7 @@ html body#vm .frame footer .footer-container .footer-column li a, html #id .fram
 }
 html body#vm .frame footer .footer-container .footer-column li a:hover, html #id .frame footer .footer-container .footer-column li a:hover, html #app .frame footer .footer-container .footer-column li a:hover, html #checker .frame footer .footer-container .footer-column li a:hover {
   text-decoration: none;
-  color: #00b2ff;
+  color: #64be00;
 }
 html body#vm .frame footer .footer-container .footer-column .menu-head, html #id .frame footer .footer-container .footer-column .menu-head, html #app .frame footer .footer-container .footer-column .menu-head, html #checker .frame footer .footer-container .footer-column .menu-head {
   font-family: "GalanoSemiBold";
@@ -1107,7 +1107,7 @@ html body#vm .frame footer .footer-container .footer-column .more-btn, html body
   cursor: pointer;
 }
 html body#vm .frame footer .footer-container .footer-column .more-btn:hover, html body#vm .frame footer .footer-container .footer-column .less-btn:hover, html #id .frame footer .footer-container .footer-column .more-btn:hover, html #id .frame footer .footer-container .footer-column .less-btn:hover, html #app .frame footer .footer-container .footer-column .more-btn:hover, html #app .frame footer .footer-container .footer-column .less-btn:hover, html #checker .frame footer .footer-container .footer-column .more-btn:hover, html #checker .frame footer .footer-container .footer-column .less-btn:hover {
-  color: #00b2ff;
+  color: #64be00;
 }
 html body#vm .frame footer .footer-container .footer-column .more-btn i, html body#vm .frame footer .footer-container .footer-column .less-btn i, html #id .frame footer .footer-container .footer-column .more-btn i, html #id .frame footer .footer-container .footer-column .less-btn i, html #app .frame footer .footer-container .footer-column .more-btn i, html #app .frame footer .footer-container .footer-column .less-btn i, html #checker .frame footer .footer-container .footer-column .more-btn i, html #checker .frame footer .footer-container .footer-column .less-btn i {
   font-size: 12px;
@@ -1325,10 +1325,10 @@ select::-ms-expand {
   text-align: center;
 }
 #encyclopedia table tbody tr:hover, #release_note table tbody tr:hover {
-  background-color: #ccf0ff;
+  background-color: #d8ffcc;
 }
 #encyclopedia table .check, #release_note table .check {
-  background-color: #ccf0ff;
+  background-color: #d8ffcc;
 }
 @media screen and (min-width: 768px) {
   #encyclopedia table, #release_note table {
@@ -1377,7 +1377,7 @@ select::-ms-expand {
 }
 #encyclopedia .dataTables_paginate .current, #release_note .dataTables_paginate .current {
   background: none;
-  color: #00b2ff !important;
+  color: #64be00 !important;
   font-family: "GalanoSemiBold";
   border: 0;
 }
@@ -1422,7 +1422,7 @@ select::-ms-expand {
 }
 #app .encyclopedia .search-switch .switch .selected-cat .text {
   font-family: "GalanoSemiBold";
-  color: #00b2ff;
+  color: #64be00;
   position: relative;
   padding-left: 21px;
   cursor: pointer;
@@ -1437,7 +1437,7 @@ select::-ms-expand {
 }
 #app .encyclopedia .search-switch .switch .selected-cat i {
   font-size: 14px;
-  color: #00b2ff;
+  color: #64be00;
   align-self: center;
   margin-left: 10px;
 }
@@ -1488,10 +1488,10 @@ select::-ms-expand {
   }
 }
 #app .encyclopedia .search-panel #search-by-name .ency-container .name-list table tbody tr:hover {
-  background-color: #ccf0ff;
+  background-color: #d8ffcc;
 }
 #app .encyclopedia .search-panel #search-by-name .ency-container .name-list table .check {
-  background-color: #ccf0ff;
+  background-color: #d8ffcc;
 }
 @media screen and (min-width: 768px) {
   #app .encyclopedia .search-panel #search-by-name .ency-container .name-list table {
@@ -1530,7 +1530,7 @@ select::-ms-expand {
   color: #2d2d2d;
 }
 #app .encyclopedia .search-panel #search-by-cat .cat-list .cat a:hover {
-  color: #00b2ff;
+  color: #64be00;
 }
 @media screen and (min-width: 350px) {
   #app .encyclopedia .search-panel #search-by-cat .cat-list .cat {
@@ -1570,7 +1570,7 @@ select::-ms-expand {
   }
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   padding: 10px 20px 20px 20px;
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail .title {
@@ -1588,7 +1588,7 @@ select::-ms-expand {
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail .field h3 {
   font-size: 12px;
-  color: #00b2ff;
+  color: #64be00;
   font-family: "GalanoSemiBold";
   padding-left: 23px;
   margin-bottom: 5px;
@@ -1618,7 +1618,7 @@ select::-ms-expand {
   content: "";
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail .category a {
-  color: #00b2ff;
+  color: #64be00;
   text-decoration: underline;
   display: inline-block;
 }
@@ -1635,13 +1635,13 @@ select::-ms-expand {
   }
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table {
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   margin-top: 40px;
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-head {
   color: white;
   display: flex;
-  background-color: #00b2ff;
+  background-color: #64be00;
   padding: 10px 0;
   font-size: 14px;
 }
@@ -1659,7 +1659,7 @@ select::-ms-expand {
   display: flex;
   padding: 10px 0;
   font-size: 14px;
-  border-bottom: 1px solid #00b2ff;
+  border-bottom: 1px solid #64be00;
 }
 #app .encyclopedia .search-panel .detail .detail-container .application-detail-table .table-row .table-cell {
   flex: 1;
@@ -1684,7 +1684,7 @@ select::-ms-expand {
 }
 #app .release-note .title-wrap {
   display: flex;
-  color: #00b2ff;
+  color: #64be00;
 }
 #app .release-note .title-wrap .title {
   padding-right: 10px;
@@ -1745,7 +1745,7 @@ select::-ms-expand {
   flex: 1;
 }
 #app .release-note .version-table .version-row .data-value a {
-  color: #00b2ff;
+  color: #64be00;
   text-decoration: underline;
   display: inline-block;
 }
@@ -1767,13 +1767,13 @@ select::-ms-expand {
 }
 #app .release-note .info-panel .content-wrap .info-table {
   font-size: 14px;
-  border: 1px solid #00b2ff;
+  border: 1px solid #64be00;
   margin-top: 10px;
 }
 #app .release-note .info-panel .content-wrap .info-table .info-row {
   display: flex;
   padding: 10px;
-  border-bottom: 1px solid #00b2ff;
+  border-bottom: 1px solid #64be00;
 }
 #app .release-note .info-panel .content-wrap .info-table .info-row .application {
   width: 50%;
@@ -1805,7 +1805,7 @@ select::-ms-expand {
   }
 }
 #app .release-note .info-panel .content-wrap .info-table .info-row-header {
-  background-color: #00b2ff;
+  background-color: #64be00;
   color: white;
 }
 #app .release-note .info-panel .content-wrap .info-table .info-row-header * {
@@ -1837,20 +1837,20 @@ select::-ms-expand {
   display: none;
 }
 .daterangepicker button.cancelBtn {
-  border: 1px solid #99e0fe;
+  border: 1px solid #64be00;
   border-radius: 0;
-  color: #00b2ff;
+  color: #64be00;
   font-family: "GalanoSemiBold";
 }
 .daterangepicker button.applyBtn {
-  background-color: #00b2ff;
+  background-color: #64be00;
   border-radius: 0;
   color: white;
   font-family: "GalanoSemiBold";
   border: none;
 }
 .daterangepicker button.applyBtn:active {
-  background-color: #009aff !important;
+  background-color: #64be00 !important;
 }
 
 .zyxel-solution .icon {
@@ -1872,7 +1872,7 @@ select::-ms-expand {
   margin: -1.84375em;
   background: white;
   border-radius: 50%;
-  box-shadow: -2.1875em 0.6875em 0 -0.6875em, 2.0625em 0.9375em 0 -0.9375em, 0 0 0 0.375em #00b2ff, -2.1875em 0.6875em 0 -0.3125em #00b2ff, 2.0625em 0.9375em 0 -0.5625em #00b2ff;
+  box-shadow: -2.1875em 0.6875em 0 -0.6875em, 2.0625em 0.9375em 0 -0.9375em, 0 0 0 0.375em #64be00, -2.1875em 0.6875em 0 -0.3125em #64be00, 2.0625em 0.9375em 0 -0.5625em #64be00;
 }
 
 .shield {
@@ -1894,20 +1894,20 @@ select::-ms-expand {
   width: 4.5625em;
   height: 1em;
   background: white;
-  box-shadow: 0 0.4375em 0 -0.0625em #00b2ff;
+  box-shadow: 0 0.4375em 0 -0.0625em #64be00;
 }
 
 .cloud:nth-child(2) {
   z-index: 0;
-  background: #00b2ff;
-  box-shadow: -2.1875em 0.6875em 0 -0.6875em #00b2ff, 2.0625em 0.9375em 0 -0.9375em #00b2ff, 0 0 0 0.375em #00b2ff, -2.1875em 0.6875em 0 -0.3125em #00b2ff, 2.0625em 0.9375em 0 -0.5625em #00b2ff;
+  background: #64be00;
+  box-shadow: -2.1875em 0.6875em 0 -0.6875em #64be00, 2.0625em 0.9375em 0 -0.9375em #64be00, 0 0 0 0.375em #64be00, -2.1875em 0.6875em 0 -0.3125em #64be00, 2.0625em 0.9375em 0 -0.5625em #64be00;
   opacity: 0.3;
   transform: scale(0.5) translate(6em, -3em);
   animation: cloud 4s linear infinite;
 }
 
 .cloud:nth-child(2):after {
-  background: #00b2ff;
+  background: #64be00;
 }
 
 /*# sourceMappingURL=style.css.map */
